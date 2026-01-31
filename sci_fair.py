@@ -204,11 +204,13 @@ with cam_tab:
 
     webrtc_ctx = webrtc_streamer(
         key="eye_cam",
+        rtc_configuration={ 
+            "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
+        },
         video_processor_factory=FrameCollector,
         media_stream_constraints={"video": True, "audio": False},
-        async_processing=False,
+        async_processing=True,
     )
-
     st.subheader("Step 2: Where are you from?")
     patient_country = st.selectbox("Country:", get_countries(), key="h_country")
     patient_city = st.selectbox("City:", get_cities(patient_country), key="h_city")
@@ -296,3 +298,4 @@ Patient context:
                         file_name="eye_health_recommendations.pdf",
                         mime="application/pdf"
                     )
+
