@@ -1,13 +1,9 @@
 import io
 import re
-import time
+import base64
 import streamlit as st
 import google.generativeai as genai
 import pandas as pd
-import av
-import cv2
-
-from streamlit_webrtc import webrtc_streamer, VideoProcessorBase
 
 from reportlab.platypus import (
     SimpleDocTemplate, Spacer, Table, TableStyle, Paragraph, Image as RLImage
@@ -28,7 +24,6 @@ model = genai.GenerativeModel("gemini-2.5-flash")
 @st.cache_data
 def load_data():
     try:
-        # Use raw string to avoid backslash escaping on Windows
         df = pd.read_csv(r"countries.csv")
 
         expected = {"Country", "City", "Currency_Code", "Number"}
@@ -69,10 +64,6 @@ def get_cities(country: str):
 
 
 def get_numbers_from_file():
-    """
-    Returns the unique numbers from the 'Number' column as a sorted list of ints.
-    Used for Age selectbox options.
-    """
     if df.empty or "Number" not in df.columns:
         return []
     nums = df["Number"].dropna().unique().tolist()
@@ -133,7 +124,6 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
             i += 1
             continue
 
-        # markdown-ish table support
         if "|" in stripped and i + 1 < len(lines) and "|" in lines[i + 1]:
             table_data = []
             while i < len(lines) and "|" in lines[i].strip():
@@ -176,109 +166,143 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
 
 
 # ----------------------------
-# Webcam frame collector
+# JavaScript Webcam Component
 # ----------------------------
-class FrameCollector(VideoProcessorBase):
-    def __init__(self):
-        self.latest_bgr = None
+def webcam_component():
+    """Renders a JavaScript-based webcam capture component"""
+    html_code = """
+    <div style="text-align: center;">
+        <video id="video" width="640" height="480" autoplay style="border: 2px solid #3498db; border-radius: 8px;"></video>
+        <br><br>
+        <button id="startBtn" style="padding: 10px 20px; font-size: 16px; background-color: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer; margin: 5px;">
+            Start Camera
+        </button>
+        <button id="captureBtn" style="padding: 10px 20px; font-size: 16px; background-color: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer; margin: 5px;" disabled>
+            Capture 120 Frames
+        </button>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <p id="status" style="margin-top: 10px; font-size: 14px; color: #555;"></p>
+        <p id="progress" style="margin-top: 5px; font-size: 14px; font-weight: bold; color: #3498db;"></p>
+    </div>
 
-    def recv(self, frame: av.VideoFrame) -> av.VideoFrame:
-        img = frame.to_ndarray(format="bgr24")
-        self.latest_bgr = img
-        return frame
+    <script>
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const startBtn = document.getElementById('startBtn');
+        const captureBtn = document.getElementById('captureBtn');
+        const status = document.getElementById('status');
+        const progress = document.getElementById('progress');
+        const ctx = canvas.getContext('2d');
+        
+        let stream = null;
+        let capturedFrames = [];
+
+        // Start camera
+        startBtn.onclick = async () => {
+            try {
+                status.textContent = 'Requesting camera access...';
+                stream = await navigator.mediaDevices.getUserMedia({ 
+                    video: { width: 640, height: 480 } 
+                });
+                video.srcObject = stream;
+                status.textContent = 'Camera active! Ready to capture.';
+                captureBtn.disabled = false;
+                startBtn.disabled = true;
+            } catch (err) {
+                status.textContent = 'Error: ' + err.message;
+                console.error('Camera error:', err);
+            }
+        };
+
+        // Capture frames
+        captureBtn.onclick = async () => {
+            if (!stream) {
+                status.textContent = 'Please start the camera first!';
+                return;
+            }
+
+            capturedFrames = [];
+            captureBtn.disabled = true;
+            status.textContent = 'Capturing frames... Please look at the camera and blink normally.';
+            
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+
+            // Capture 120 frames with small delay
+            for (let i = 0; i < 120; i++) {
+                ctx.drawImage(video, 0, 0);
+                const dataUrl = canvas.toDataURL('image/jpeg', 0.8);
+                const base64 = dataUrl.split(',')[1];
+                capturedFrames.push(base64);
+                
+                progress.textContent = `Captured ${i + 1}/120 frames`;
+                
+                // Small delay between frames (~30ms = ~33 fps)
+                await new Promise(resolve => setTimeout(resolve, 30));
+            }
+
+            status.textContent = 'Capture complete! Sending frames to Streamlit...';
+            progress.textContent = '';
+            
+            // Send data to Streamlit
+            window.parent.postMessage({
+                type: 'streamlit:setComponentValue',
+                value: capturedFrames
+            }, '*');
+            
+            status.textContent = 'Frames sent successfully! You can now proceed with analysis.';
+            captureBtn.disabled = false;
+        };
+    </script>
+    """
+    
+    return st.components.v1.html(html_code, height=650)
 
 
-def bgr_to_jpeg_bytes(bgr_img) -> bytes:
-    ok, buf = cv2.imencode(".jpg", bgr_img, [int(cv2.IMWRITE_JPEG_QUALITY), 90])
-    if not ok:
-        return b""
-    return buf.tobytes()
+# ----------------------------
+# Main App
+# ----------------------------
+st.title("Check your Eye Health & Safety")
 
+st.subheader("Step 1: Camera Stream (capture 120 frames)")
 
-(cam_tab,) = st.tabs(["camera_tab"])
+# Initialize session state for frames
+if 'captured_frames' not in st.session_state:
+    st.session_state.captured_frames = None
 
+# Render webcam component
+frames_data = webcam_component()
 
-with cam_tab:
-    st.title("Check your Eye health & Safety")
-    st.subheader("Step 1: Camera Stream (capture 120 frames)")
+# Store frames in session state when received
+if frames_data and frames_data != st.session_state.captured_frames:
+    st.session_state.captured_frames = frames_data
+    st.success(f"✅ Received {len(frames_data)} frames!")
 
-    webrtc_ctx = webrtc_streamer(
-        key="eye_cam",
-        rtc_configuration={ 
-            "iceServers": [
-                {"urls": ["stun:stun.l.google.com:19302"]}, # Google STUN Server
-                {
-                    # Use the credentials you just generated:
-                    "urls": ["turn:openrelay.metered.ca:80", "turn:openrelay.metered.ca:443"],
-                    "username": "580d6e4980a6e439cce5df2f",
-                    "credential": "05dry6LMa88dQMlm"
-                }
-            ]
-        },
-        video_processor_factory=FrameCollector,
-        media_stream_constraints={"video": True, "audio": False},
-        async_processing=True, 
-        # Add these to stabilize the connection:
-        video_html_attrs={
-            "style": {"width": "100%"},
-            "controls": False,
-            "autoPlay": True,
-        },
-    )
-    st.subheader("Step 2: Where are you from?")
-    patient_country = st.selectbox("Country:", get_countries(), key="h_country")
-    patient_city = st.selectbox("City:", get_cities(patient_country), key="h_city")
+st.subheader("Step 2: Where are you from?")
+patient_country = st.selectbox("Country:", get_countries(), key="h_country")
+patient_city = st.selectbox("City:", get_cities(patient_country), key="h_city")
 
-    st.subheader("Step 3: your Age")
-    numbers = get_numbers_from_file()
-    if not numbers:
-        st.error("No numbers found in the 'Number' column in countries.csv.")
-        st.stop()
+st.subheader("Step 3: Your Age")
+numbers = get_numbers_from_file()
+if not numbers:
+    st.error("No numbers found in the 'Number' column in countries.csv.")
+    st.stop()
 
-    age_num = st.selectbox("Age", numbers, key="an")
+age_num = st.selectbox("Age", numbers, key="an")
 
-    st.write("---")
-    st.caption("Look straight at the camera and blink normally for ~3–4 seconds after you press the button.")
+st.write("---")
 
-    if st.button("Step 4: 📸 Capture 120 frames + Analyze", key="eye_check"):
-        if not webrtc_ctx.state.playing or webrtc_ctx.video_processor is None:
-            st.error("Webcam is not active. Please allow camera access and wait until the video starts.")
-        else:
-            frames_jpeg = []
+if st.button("Step 4: 📊 Analyze Frames with AI", key="eye_check"):
+    if st.session_state.captured_frames is None:
+        st.error("⚠️ Please capture frames first using the 'Capture 120 Frames' button above!")
+    else:
+        frames = st.session_state.captured_frames
+        
+        # Decode first frame for display and PDF
+        first_frame_bytes = base64.b64decode(frames[0])
+        st.image(first_frame_bytes, caption="First captured frame", use_container_width=True)
 
-            # Progress UI
-            progress = st.progress(0)
-            status = st.empty()
-
-            total_frames = 120
-
-            with st.spinner("Capturing 120 frames..."):
-                for i in range(total_frames):
-                    bgr = None # Reset bgr at the start of every loop
-                    processor = webrtc_ctx.video_processor
-                    if processor and hasattr(processor, "latest_bgr"):
-                        bgr = processor.latest_bgr
-                    
-                    if bgr is not None:
-                        jpg = bgr_to_jpeg_bytes(bgr)
-                        if jpg:
-                            frames_jpeg.append(jpg)
-
-                    progress.progress(int(((i + 1) / total_frames) * 100))
-                    status.write(f"Capturing frames: {len(frames_jpeg)}/{total_frames}")
-                    
-
-            status.empty()
-
-            if not frames_jpeg:
-                st.error("Could not capture frames. Try again and make sure the camera is running.")
-            else:
-                first_frame = frames_jpeg[0]
-
-                # Show ONLY the first frame
-                st.image(first_frame, caption="First captured frame (only one shown)", use_container_width=True)
-
-                prompt = f"""
+        prompt = f"""
 You are given 120 sequential eye images (frames) from a webcam.
 Task: Check for possible blinking problems or abnormal blinking patterns.
 - You cannot diagnose.
@@ -292,30 +316,26 @@ Patient context:
 - Age: {age_num}
 """
 
-                contents = [prompt]
-                for jpg in frames_jpeg:
-                    contents.append({"mime_type": "image/jpeg", "data": jpg})
+        # Prepare content for Gemini
+        contents = [prompt]
+        for frame_b64 in frames:
+            frame_bytes = base64.b64decode(frame_b64)
+            contents.append({"mime_type": "image/jpeg", "data": frame_bytes})
 
-                with st.spinner("Analyzing frames with Gemini..."):
-                    response = model.generate_content(contents)
+        with st.spinner("Analyzing frames with Gemini AI..."):
+            response = model.generate_content(contents)
 
-                st.write(response.text)
+        st.subheader("Analysis Results:")
+        st.write(response.text)
 
-                # PDF with first frame + Gemini text
-                pdf_content = generate_pdf_from_text_and_image(response.text, first_frame)
+        # Generate PDF
+        pdf_content = generate_pdf_from_text_and_image(response.text, first_frame_bytes)
 
-                if pdf_content:
-                    st.subheader("Step 5: Download and Save your data")
-                    st.download_button(
-                        label="Download PDF ⬇️",
-                        data=pdf_content,
-                        file_name="eye_health_recommendations.pdf",
-                        mime="application/pdf"
-                    )
-
-
-
-
-
-
-
+        if pdf_content:
+            st.subheader("Step 5: Download and Save your data")
+            st.download_button(
+                label="Download PDF Report ⬇️",
+                data=pdf_content,
+                file_name="eye_health_recommendations.pdf",
+                mime="application/pdf"
+            )
