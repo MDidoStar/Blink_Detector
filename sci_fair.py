@@ -274,9 +274,10 @@ if 'captured_frames' not in st.session_state:
 frames_data = webcam_component()
 
 # Store frames in session state when received
-if frames_data and frames_data != st.session_state.captured_frames:
-    st.session_state.captured_frames = frames_data
-    st.success(f"✅ Received {len(frames_data)} frames!")
+if frames_data is not None and isinstance(frames_data, list) and len(frames_data) > 0:
+    if frames_data != st.session_state.captured_frames:
+        st.session_state.captured_frames = frames_data
+        st.success(f"✅ Received {len(frames_data)} frames!")
 
 st.subheader("Step 2: Where are you from?")
 patient_country = st.selectbox("Country:", get_countries(), key="h_country")
