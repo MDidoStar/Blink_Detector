@@ -329,7 +329,7 @@ if uploaded_zip is not None:
                 st.success(f"✅ Loaded {len(frames_bytes)} frames!")
                 
                 # Show first frame
-                st.image(frames_bytes[0], caption=f"First frame (total: {len(frames_bytes)} frames)", use_container_width=True)
+                st.image(frames_bytes[0], caption=f"First frame (total: {len(frames_bytes)} frames)", use_column_width=True)
     
     except Exception as e:
         st.error(f"Error reading ZIP file: {e}")
@@ -351,12 +351,15 @@ age_num = st.selectbox("Age", numbers, key="an")
 st.write("---")
 
 if st.button("Step 4: 📊 Analyze Frames with AI", key="analyze_btn"):
-    if st.session_state.captured_frames is None:
+    if st.session_state.captured_frames is None or len(st.session_state.captured_frames) == 0:
         st.error("⚠️ Please capture frames first using the button above!")
     else:
         frames = st.session_state.captured_frames
         
-        st.image(frames[0], caption="Analyzing this frame and others...", use_container_width=True)
+        try:
+            st.image(frames[0], caption="Analyzing this frame and others...", use_column_width=True)
+        except Exception as e:
+            st.warning(f"Could not display preview image: {e}")
 
         prompt = f"""
 You are given {len(frames)} sequential eye images (frames) from a webcam.
