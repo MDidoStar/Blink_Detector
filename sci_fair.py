@@ -205,7 +205,15 @@ with cam_tab:
     webrtc_ctx = webrtc_streamer(
         key="eye_cam",
         rtc_configuration={ 
-            "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
+            "iceServers": [
+                {"urls": ["stun:stun.l.google.com:19302"]}, # Google STUN Server
+                {
+                    # Use the credentials you just generated:
+                    "urls": ["turn:openrelay.metered.ca:80", "turn:openrelay.metered.ca:443"],
+                    "username": "580d6e4980a6e439cce5df2f",
+                    "credential": "05dry6LMa88dQMlm"
+                }
+            ]
         },
         video_processor_factory=FrameCollector,
         media_stream_constraints={"video": True, "audio": False},
@@ -304,6 +312,7 @@ Patient context:
                         file_name="eye_health_recommendations.pdf",
                         mime="application/pdf"
                     )
+
 
 
 
