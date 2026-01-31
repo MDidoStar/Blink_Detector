@@ -1,1 +1,5 @@
-pip install google-genai
+streamlit
+google-generativeai
+pandas
+av
+opencv-python
