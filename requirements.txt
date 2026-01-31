@@ -1,10 +1,10 @@
-streamlit==1.41.1
-streamlit-webrtc==0.47.9
-aiortc==1.9.0
+streamlit
+streamlit-webrtc
+aiortc
 opencv-python-headless
 numpy
 pandas
-google-generativeai
+google-genai
 reportlab
 Pillow
 av
