@@ -246,21 +246,19 @@ with cam_tab:
 
             with st.spinner("Capturing 120 frames..."):
                 for i in range(total_frames):
+                    bgr = None # Reset bgr at the start of every loop
                     processor = webrtc_ctx.video_processor
                     if processor and hasattr(processor, "latest_bgr"):
                         bgr = processor.latest_bgr
+                    
                     if bgr is not None:
                         jpg = bgr_to_jpeg_bytes(bgr)
                         if jpg:
                             frames_jpeg.append(jpg)
 
-                    # Progress bar: attempts (keeps behavior)
                     progress.progress(int(((i + 1) / total_frames) * 100))
-
-                    # Optional improvement: show saved count too
-                    status.write(f"Capturing frames: {i + 1}/{total_frames}  |  Saved: {len(frames_jpeg)}")
-
-                    time.sleep(0.03)  # ~3.6 seconds total at ~30-33fps
+                    status.write(f"Capturing frames: {len(frames_jpeg)}/{total_frames}")
+                    time.sleep(0.05) # Increased slightly to 20fps for cloud stability
 
             status.empty()
 
@@ -306,5 +304,6 @@ Patient context:
                         file_name="eye_health_recommendations.pdf",
                         mime="application/pdf"
                     )
+
 
 
