@@ -209,7 +209,13 @@ with cam_tab:
         },
         video_processor_factory=FrameCollector,
         media_stream_constraints={"video": True, "audio": False},
-        async_processing=True,
+        async_processing=True, 
+        # Add these to stabilize the connection:
+        video_html_attrs={
+            "style": {"width": "100%"},
+            "controls": False,
+            "autoPlay": True,
+        },
     )
     st.subheader("Step 2: Where are you from?")
     patient_country = st.selectbox("Country:", get_countries(), key="h_country")
@@ -240,7 +246,9 @@ with cam_tab:
 
             with st.spinner("Capturing 120 frames..."):
                 for i in range(total_frames):
-                    bgr = webrtc_ctx.video_processor.latest_bgr
+                    processor = webrtc_ctx.video_processor
+                    if processor and hasattr(processor, "latest_bgr"):
+                        bgr = processor.latest_bgr
                     if bgr is not None:
                         jpg = bgr_to_jpeg_bytes(bgr)
                         if jpg:
@@ -298,4 +306,5 @@ Patient context:
                         file_name="eye_health_recommendations.pdf",
                         mime="application/pdf"
                     )
+
 
