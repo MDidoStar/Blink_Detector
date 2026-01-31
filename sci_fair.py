@@ -1,6 +1,7 @@
 import io
 import re
 import base64
+import zipfile
 import streamlit as st
 import google.generativeai as genai
 import pandas as pd
@@ -168,8 +169,8 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
 # ----------------------------
 # JavaScript Webcam Component
 # ----------------------------
-def webcam_component():
-    """Renders a JavaScript-based webcam capture component"""
+def webcam_capture_interface():
+    """Renders webcam capture with download option"""
     html_code = """
     <div style="text-align: center;">
         <video id="video" width="640" height="480" autoplay style="border: 2px solid #3498db; border-radius: 8px;"></video>
@@ -180,16 +181,21 @@ def webcam_component():
         <button id="captureBtn" style="padding: 10px 20px; font-size: 16px; background-color: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer; margin: 5px;" disabled>
             Capture 120 Frames
         </button>
+        <button id="downloadBtn" style="padding: 10px 20px; font-size: 16px; background-color: #e74c3c; color: white; border: none; border-radius: 5px; cursor: pointer; margin: 5px; display: none;">
+            Download ZIP
+        </button>
         <canvas id="canvas" style="display: none;"></canvas>
         <p id="status" style="margin-top: 10px; font-size: 14px; color: #555;"></p>
         <p id="progress" style="margin-top: 5px; font-size: 14px; font-weight: bold; color: #3498db;"></p>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <script>
         const video = document.getElementById('video');
         const canvas = document.getElementById('canvas');
         const startBtn = document.getElementById('startBtn');
         const captureBtn = document.getElementById('captureBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
         const status = document.getElementById('status');
         const progress = document.getElementById('progress');
         const ctx = canvas.getContext('2d');
@@ -197,7 +203,6 @@ def webcam_component():
         let stream = null;
         let capturedFrames = [];
 
-        // Start camera
         startBtn.onclick = async () => {
             try {
                 status.textContent = 'Requesting camera access...';
@@ -205,16 +210,15 @@ def webcam_component():
                     video: { width: 640, height: 480 } 
                 });
                 video.srcObject = stream;
-                status.textContent = 'Camera active! Ready to capture.';
+                status.textContent = '✅ Camera active! Ready to capture.';
                 captureBtn.disabled = false;
                 startBtn.disabled = true;
             } catch (err) {
-                status.textContent = 'Error: ' + err.message;
+                status.textContent = '❌ Error: ' + err.message;
                 console.error('Camera error:', err);
             }
         };
 
-        // Capture frames
         captureBtn.onclick = async () => {
             if (!stream) {
                 status.textContent = 'Please start the camera first!';
@@ -223,40 +227,60 @@ def webcam_component():
 
             capturedFrames = [];
             captureBtn.disabled = true;
-            status.textContent = 'Capturing frames... Please look at the camera and blink normally.';
+            status.textContent = '📸 Capturing... Look at camera and blink normally.';
             
             canvas.width = video.videoWidth;
             canvas.height = video.videoHeight;
 
-            // Capture 120 frames with small delay
             for (let i = 0; i < 120; i++) {
                 ctx.drawImage(video, 0, 0);
-                const dataUrl = canvas.toDataURL('image/jpeg', 0.8);
-                const base64 = dataUrl.split(',')[1];
-                capturedFrames.push(base64);
+                canvas.toBlob((blob) => {
+                    capturedFrames.push(blob);
+                }, 'image/jpeg', 0.85);
                 
                 progress.textContent = `Captured ${i + 1}/120 frames`;
-                
-                // Small delay between frames (~30ms = ~33 fps)
                 await new Promise(resolve => setTimeout(resolve, 30));
             }
+            
+            // Wait a bit for all blobs to be created
+            await new Promise(resolve => setTimeout(resolve, 100));
 
-            status.textContent = 'Capture complete! Sending frames to Streamlit...';
+            status.textContent = '✅ Capture complete! Click "Download ZIP" to save frames.';
             progress.textContent = '';
-            
-            // Send data to Streamlit
-            window.parent.postMessage({
-                type: 'streamlit:setComponentValue',
-                value: capturedFrames
-            }, '*');
-            
-            status.textContent = 'Frames sent successfully! You can now proceed with analysis.';
+            downloadBtn.style.display = 'inline-block';
             captureBtn.disabled = false;
+        };
+
+        downloadBtn.onclick = async () => {
+            if (capturedFrames.length === 0) {
+                status.textContent = 'No frames to download!';
+                return;
+            }
+
+            status.textContent = '📦 Creating ZIP file...';
+            const zip = new JSZip();
+            
+            for (let i = 0; i < capturedFrames.length; i++) {
+                const blob = capturedFrames[i];
+                zip.file(`frame_${String(i).padStart(3, '0')}.jpg`, blob);
+            }
+            
+            const zipBlob = await zip.generateAsync({type: 'blob'});
+            const url = URL.createObjectURL(zipBlob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'eye_frames.zip';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            status.textContent = '✅ ZIP downloaded! Upload it below to analyze.';
         };
     </script>
     """
     
-    return st.components.v1.html(html_code, height=650)
+    st.components.v1.html(html_code, height=680)
 
 
 # ----------------------------
@@ -264,20 +288,44 @@ def webcam_component():
 # ----------------------------
 st.title("Check your Eye Health & Safety")
 
-st.subheader("Step 1: Camera Stream (capture 120 frames)")
+st.subheader("Step 1A: Capture Frames with Your Camera")
+st.info("📱 Use the camera below to capture 120 frames, then download the ZIP file and upload it in Step 1B.")
 
-# Initialize session state for frames
-if 'captured_frames' not in st.session_state:
-    st.session_state.captured_frames = None
+webcam_capture_interface()
 
-# Render webcam component
-frames_data = webcam_component()
+st.write("---")
 
-# Store frames in session state when received
-if frames_data is not None and isinstance(frames_data, list) and len(frames_data) > 0:
-    if frames_data != st.session_state.captured_frames:
-        st.session_state.captured_frames = frames_data
-        st.success(f"✅ Received {len(frames_data)} frames!")
+st.subheader("Step 1B: Upload Your Captured Frames")
+uploaded_zip = st.file_uploader("Upload the ZIP file you downloaded above", type=['zip'], key="zip_upload")
+
+# Initialize session state
+if 'frames_bytes' not in st.session_state:
+    st.session_state.frames_bytes = None
+
+# Process uploaded ZIP
+if uploaded_zip is not None:
+    try:
+        with zipfile.ZipFile(uploaded_zip, 'r') as zip_ref:
+            frame_files = sorted([f for f in zip_ref.namelist() if f.endswith('.jpg')])
+            
+            if len(frame_files) < 1:
+                st.error("No JPG files found in the ZIP!")
+            else:
+                frames_bytes = []
+                for frame_file in frame_files:
+                    with zip_ref.open(frame_file) as f:
+                        frames_bytes.append(f.read())
+                
+                st.session_state.frames_bytes = frames_bytes
+                st.success(f"✅ Loaded {len(frames_bytes)} frames from ZIP!")
+                
+                # Show first frame
+                st.image(frames_bytes[0], caption=f"First frame preview (total: {len(frames_bytes)} frames)", use_container_width=True)
+    
+    except Exception as e:
+        st.error(f"Error reading ZIP file: {e}")
+
+st.write("---")
 
 st.subheader("Step 2: Where are you from?")
 patient_country = st.selectbox("Country:", get_countries(), key="h_country")
@@ -293,18 +341,17 @@ age_num = st.selectbox("Age", numbers, key="an")
 
 st.write("---")
 
-if st.button("Step 4: 📊 Analyze Frames with AI", key="eye_check"):
-    if st.session_state.captured_frames is None:
-        st.error("⚠️ Please capture frames first using the 'Capture 120 Frames' button above!")
+if st.button("Step 4: 📊 Analyze Frames with AI", key="analyze_btn"):
+    if st.session_state.frames_bytes is None:
+        st.error("⚠️ Please upload your captured frames ZIP file first!")
     else:
-        frames = st.session_state.captured_frames
+        frames = st.session_state.frames_bytes
         
-        # Decode first frame for display and PDF
-        first_frame_bytes = base64.b64decode(frames[0])
-        st.image(first_frame_bytes, caption="First captured frame", use_container_width=True)
+        # Show first frame again
+        st.image(frames[0], caption="Analyzing this frame and others...", use_container_width=True)
 
         prompt = f"""
-You are given 120 sequential eye images (frames) from a webcam.
+You are given {len(frames)} sequential eye images (frames) from a webcam.
 Task: Check for possible blinking problems or abnormal blinking patterns.
 - You cannot diagnose.
 - Give careful observations and safe advice only.
@@ -319,18 +366,17 @@ Patient context:
 
         # Prepare content for Gemini
         contents = [prompt]
-        for frame_b64 in frames:
-            frame_bytes = base64.b64decode(frame_b64)
+        for frame_bytes in frames:
             contents.append({"mime_type": "image/jpeg", "data": frame_bytes})
 
-        with st.spinner("Analyzing frames with Gemini AI..."):
+        with st.spinner(f"Analyzing {len(frames)} frames with Gemini AI... This may take a moment."):
             response = model.generate_content(contents)
 
         st.subheader("Analysis Results:")
         st.write(response.text)
 
         # Generate PDF
-        pdf_content = generate_pdf_from_text_and_image(response.text, first_frame_bytes)
+        pdf_content = generate_pdf_from_text_and_image(response.text, frames[0])
 
         if pdf_content:
             st.subheader("Step 5: Download and Save your data")
