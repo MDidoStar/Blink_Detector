@@ -2,7 +2,7 @@ import io
 import re
 import time
 import streamlit as st
-import google.genai as genai
+import google.generativeai as genai
 import pandas as pd
 import av
 import cv2
@@ -312,6 +312,7 @@ Patient context:
                         file_name="eye_health_recommendations.pdf",
                         mime="application/pdf"
                     )
+
 
 
 
