@@ -3,3 +3,4 @@ google-generativeai
 pandas
 av
 opencv-python
+cv2
