@@ -266,7 +266,7 @@ with cam_tab:
 
                     progress.progress(int(((i + 1) / total_frames) * 100))
                     status.write(f"Capturing frames: {len(frames_jpeg)}/{total_frames}")
-                    time.sleep(0.05) # Increased slightly to 20fps for cloud stability
+                    
 
             status.empty()
 
@@ -312,6 +312,7 @@ Patient context:
                         file_name="eye_health_recommendations.pdf",
                         mime="application/pdf"
                     )
+
 
 
 
