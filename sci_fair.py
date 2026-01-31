@@ -206,7 +206,7 @@ with cam_tab:
         key="eye_cam",
         video_processor_factory=FrameCollector,
         media_stream_constraints={"video": True, "audio": False},
-        async_processing=True,
+        async_processing=False,
     )
 
     st.subheader("Step 2: Where are you from?")
