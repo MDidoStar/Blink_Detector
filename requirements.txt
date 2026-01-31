@@ -1,10 +1,8 @@
 streamlit
 google-generativeai
 pandas
-av
+reportlab
+Pillow
 opencv-python-headless
 streamlit-webrtc
-reportlab.platypus
-reportlab.lib.styles
-reportlab.lib.pagesizes
-reportlab.lib
+av
