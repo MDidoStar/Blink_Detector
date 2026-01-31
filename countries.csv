@@ -1,3842 +1,3842 @@
-Country	City	Currency_Code	Number
-Afghanistan	Kabul	AFN	1
-Afghanistan	Kandahar	AFN	2
-Afghanistan	Herat	AFN	3
-Afghanistan	Mazar-i-Sharif	AFN	4
-Afghanistan	Jalalabad	AFN	5
-Afghanistan	Kunduz	AFN	6
-Afghanistan	Ghazni	AFN	7
-Afghanistan	Balkh	AFN	8
-Afghanistan	Baghlan	AFN	9
-Afghanistan	Gardez	AFN	10
-Afghanistan	Khost	AFN	11
-Afghanistan	Maymana	AFN	12
-Afghanistan	Taloqan	AFN	13
-Afghanistan	Bamyan	AFN	14
-Afghanistan	Pol-e Khomri	AFN	15
-Afghanistan	Sheberghan	AFN	16
-Afghanistan	Zaranj	AFN	17
-Afghanistan	Lashkar Gah	AFN	18
-Afghanistan	Farah	AFN	19
-Afghanistan	Ghor	AFN	20
-Albania	Tirana	ALL	21
-Albania	Durres	ALL	22
-Albania	Vlore	ALL	23
-Albania	Shkoder	ALL	24
-Albania	Fier	ALL	25
-Albania	Korce	ALL	26
-Albania	Elbasan	ALL	27
-Albania	Berat	ALL	28
-Albania	Lushnje	ALL	29
-Albania	Kavaje	ALL	30
-Albania	Gjirokaster	ALL	31
-Albania	Sarande	ALL	32
-Albania	Kukes	ALL	33
-Albania	Lezhe	ALL	34
-Albania	Patos	ALL	35
-Albania	Peshkopi	ALL	36
-Albania	Burrel	ALL	37
-Albania	Kucove	ALL	38
-Albania	Kruje	ALL	39
-Albania	Gramsh	ALL	40
-Algeria	Algiers	DZD	41
-Algeria	Oran	DZD	42
-Algeria	Constantine	DZD	43
-Algeria	Annaba	DZD	44
-Algeria	Blida	DZD	45
-Algeria	Batna	DZD	46
-Algeria	Djelfa	DZD	47
-Algeria	Setif	DZD	48
-Algeria	Sidi Bel Abbes	DZD	49
-Algeria	Biskra	DZD	50
-Algeria	Tebessa	DZD	51
-Algeria	El Oued	DZD	52
-Algeria	Skikda	DZD	53
-Algeria	Tiaret	DZD	54
-Algeria	Bejaia	DZD	55
-Algeria	Tlemcen	DZD	56
-Algeria	Ouargla	DZD	57
-Algeria	Bechar	DZD	58
-Algeria	Mostaganem	DZD	59
-Algeria	Bordj Bou Arreridj	DZD	60
-Andorra	Andorra la Vella	EUR	61
-Andorra	Escaldes-Engordany	EUR	62
-Andorra	Encamp	EUR	63
-Andorra	Sant Julia de Loria	EUR	64
-Andorra	La Massana	EUR	65
-Andorra	Canillo	EUR	66
-Andorra	Ordino	EUR	67
-Andorra	Pas de la Casa	EUR	68
-Andorra	Arinsal	EUR	69
-Andorra	El Tarter	EUR	70
-Andorra	Soldeu	EUR	71
-Andorra	Grau Roig	EUR	72
-Andorra	Les Bons	EUR	73
-Andorra	Sispony	EUR	74
-Andorra	Anyos	EUR	75
-Andorra	Aldosa	EUR	76
-Andorra	Meritxell	EUR	77
-Andorra	Pal	EUR	78
-Andorra	Ransol	EUR	79
-Andorra	Llorts	EUR	80
-Angola	Luanda	AOA	81
-Angola	Huambo	AOA	82
-Angola	Lobito	AOA	83
-Angola	Lubango	AOA	84
-Angola	Kuito	AOA	85
-Angola	Malanje	AOA	86
-Angola	Benguela	AOA	87
-Angola	Lucapa	AOA	88
-Angola	Menongue	AOA	89
-Angola	MoÃ§amedes	AOA	90
-Angola	Soyo	AOA	91
-Angola	N'dalatando	AOA	92
-Angola	Uige	AOA	93
-Angola	Saurimo	AOA	94
-Angola	Sumbe	AOA	95
-Angola	Caluquembe	AOA	96
-Angola	Gabela	AOA	97
-Angola	Caxito	AOA	98
-Angola	Longonjo	AOA	99
-Angola	Caala	AOA	100
-Antigua and Barbuda	St. John's	XCD	101
-Antigua and Barbuda	All Saints	XCD	102
-Antigua and Barbuda	Liberta	XCD	103
-Antigua and Barbuda	Potters Village	XCD	104
-Antigua and Barbuda	Bolans	XCD	105
-Antigua and Barbuda	Swetes	XCD	106
-Antigua and Barbuda	Seaview Farm	XCD	107
-Antigua and Barbuda	Pigotts	XCD	108
-Antigua and Barbuda	Parham	XCD	109
-Antigua and Barbuda	Codrington	XCD	110
-Antigua and Barbuda	Old Road	XCD	111
-Antigua and Barbuda	Cedar Grove	XCD	112
-Antigua and Barbuda	New Winthorpes	XCD	113
-Antigua and Barbuda	Jennings	XCD	114
-Antigua and Barbuda	Freemans	XCD	115
-Antigua and Barbuda	Carlisle	XCD	116
-Antigua and Barbuda	Freetown	XCD	117
-Antigua and Barbuda	Willikies	XCD	118
-Antigua and Barbuda	Bethesda	XCD	119
-Antigua and Barbuda	Pares	XCD	120
-Argentina	Buenos Aires	ARS	121
-Argentina	Cordoba	ARS	122
-Argentina	Rosario	ARS	123
-Argentina	Mendoza	ARS	
-Argentina	Tucuman	ARS	
-Argentina	La Plata	ARS	
-Argentina	Mar del Plata	ARS	
-Argentina	Salta	ARS	
-Argentina	Santa Fe	ARS	
-Argentina	San Juan	ARS	
-Argentina	Resistencia	ARS	
-Argentina	Santiago del Estero	ARS	
-Argentina	Corrientes	ARS	
-Argentina	Posadas	ARS	
-Argentina	Neuquen	ARS	
-Argentina	Bahia Blanca	ARS	
-Argentina	San Salvador de Jujuy	ARS	
-Argentina	Parana	ARS	
-Argentina	Formosa	ARS	
-Argentina	San Luis	ARS	
-Armenia	Yerevan	AMD	
-Armenia	Gyumri	AMD	
-Armenia	Vanadzor	AMD	
-Armenia	Vagharshapat	AMD	
-Armenia	Abovyan	AMD	
-Armenia	Kapan	AMD	
-Armenia	Hrazdan	AMD	
-Armenia	Armavir	AMD	
-Armenia	Artashat	AMD	
-Armenia	Ijevan	AMD	
-Armenia	Gavar	AMD	
-Armenia	Goris	AMD	
-Armenia	Charentsavan	AMD	
-Armenia	Ararat	AMD	
-Armenia	Masis	AMD	
-Armenia	Ashtarak	AMD	
-Armenia	Sevan	AMD	
-Armenia	Spitak	AMD	
-Armenia	Dilijan	AMD	
-Armenia	Sisian	AMD	
-Australia	Sydney	AUD	
-Australia	Melbourne	AUD	
-Australia	Brisbane	AUD	
-Australia	Perth	AUD	
-Australia	Adelaide	AUD	
-Australia	Gold Coast	AUD	
-Australia	Canberra	AUD	
-Australia	Newcastle	AUD	
-Australia	Wollongong	AUD	
-Australia	Geelong	AUD	
-Australia	Hobart	AUD	
-Australia	Townsville	AUD	
-Australia	Cairns	AUD	
-Australia	Darwin	AUD	
-Australia	Toowoomba	AUD	
-Australia	Ballarat	AUD	
-Australia	Bendigo	AUD	
-Australia	Albury	AUD	
-Australia	Launceston	AUD	
-Australia	Mackay	AUD	
-Austria	Vienna	EUR	
-Austria	Graz	EUR	
-Austria	Linz	EUR	
-Austria	Salzburg	EUR	
-Austria	Innsbruck	EUR	
-Austria	Klagenfurt	EUR	
-Austria	Villach	EUR	
-Austria	Wels	EUR	
-Austria	Sankt Polten	EUR	
-Austria	Dornbirn	EUR	
-Austria	Wiener Neustadt	EUR	
-Austria	Steyr	EUR	
-Austria	Feldkirch	EUR	
-Austria	Bregenz	EUR	
-Austria	Leonding	EUR	
-Austria	Klosterneuburg	EUR	
-Austria	Baden	EUR	
-Austria	Wolfsberg	EUR	
-Austria	Leoben	EUR	
-Austria	Krems	EUR	
-Azerbaijan	Baku	AZN	
-Azerbaijan	Ganja	AZN	
-Azerbaijan	Sumqayit	AZN	
-Azerbaijan	Mingachevir	AZN	
-Azerbaijan	Lankaran	AZN	
-Azerbaijan	Shirvan	AZN	
-Azerbaijan	Nakhchivan	AZN	
-Azerbaijan	Shamkir	AZN	
-Azerbaijan	Shaki	AZN	
-Azerbaijan	Yevlakh	AZN	
-Azerbaijan	Khachmaz	AZN	
-Azerbaijan	Jalilabad	AZN	
-Azerbaijan	Agjabadi	AZN	
-Azerbaijan	Barda	AZN	
-Azerbaijan	Salyan	AZN	
-Azerbaijan	Imishli	AZN	
-Azerbaijan	Masally	AZN	
-Azerbaijan	Agdam	AZN	
-Azerbaijan	Goychay	AZN	
-Azerbaijan	Khirdalan	AZN	
-Bahamas	Nassau	BSD	
-Bahamas	Freeport	BSD	
-Bahamas	West End	BSD	
-Bahamas	Coopers Town	BSD	
-Bahamas	Marsh Harbour	BSD	
-Bahamas	Freetown	BSD	
-Bahamas	High Rock	BSD	
-Bahamas	Andros Town	BSD	
-Bahamas	Clarence Town	BSD	
-Bahamas	Dunmore Town	BSD	
-Bahamas	Rock Sound	BSD	
-Bahamas	Arthur's Town	BSD	
-Bahamas	George Town	BSD	
-Bahamas	Alice Town	BSD	
-Bahamas	Cockburn Town	BSD	
-Bahamas	Matthew Town	BSD	
-Bahamas	Snug Corner	BSD	
-Bahamas	Williams Town	BSD	
-Bahamas	Port Nelson	BSD	
-Bahamas	Colonel Hill	BSD	
-Bahrain	Manama	BHD	
-Bahrain	Riffa	BHD	
-Bahrain	Muharraq	BHD	
-Bahrain	Hamad Town	BHD	
-Bahrain	A'ali	BHD	
-Bahrain	Isa Town	BHD	
-Bahrain	Sitra	BHD	
-Bahrain	Budaiya	BHD	
-Bahrain	Jidhafs	BHD	
-Bahrain	Al-Malikiyah	BHD	
-Bahrain	Adliya	BHD	
-Bahrain	Sanabis	BHD	
-Bahrain	Tubli	BHD	
-Bahrain	Saar	BHD	
-Bahrain	Busaiteen	BHD	
-Bahrain	Hidd	BHD	
-Bahrain	Zallaq	BHD	
-Bahrain	Awali	BHD	
-Bahrain	Juffair	BHD	
-Bahrain	Mahooz	BHD	
-Bangladesh	Dhaka	BDT	
-Bangladesh	Chittagong	BDT	
-Bangladesh	Khulna	BDT	
-Bangladesh	Rajshahi	BDT	
-Bangladesh	Sylhet	BDT	
-Bangladesh	Barisal	BDT	
-Bangladesh	Rangpur	BDT	
-Bangladesh	Comilla	BDT	
-Bangladesh	Narayanganj	BDT	
-Bangladesh	Gazipur	BDT	
-Bangladesh	Mymensingh	BDT	
-Bangladesh	Jessore	BDT	
-Bangladesh	Cox's Bazar	BDT	
-Bangladesh	Bogra	BDT	
-Bangladesh	Dinajpur	BDT	
-Bangladesh	Saidpur	BDT	
-Bangladesh	Tangail	BDT	
-Bangladesh	Jamalpur	BDT	
-Bangladesh	Naogaon	BDT	
-Bangladesh	Narsingdi	BDT	
-Barbados	Bridgetown	BBD	
-Barbados	Speightstown	BBD	
-Barbados	Oistins	BBD	
-Barbados	Bathsheba	BBD	
-Barbados	Holetown	BBD	
-Barbados	The Crane	BBD	
-Barbados	Crab Hill	BBD	
-Barbados	Blackmans	BBD	
-Barbados	Greenland	BBD	
-Barbados	Hillaby	BBD	
-Barbados	Kuramathi	BBD	
-Barbados	Mullins	BBD	
-Barbados	Six Cross Roads	BBD	
-Barbados	Sark	BBD	
-Barbados	St. Lawrence Gap	BBD	
-Barbados	Worthing	BBD	
-Barbados	Hastings	BBD	
-Barbados	Rockley	BBD	
-Barbados	Maxwell	BBD	
-Barbados	Welches	BBD	
-Belarus	Minsk	BYN	
-Belarus	Gomel	BYN	
-Belarus	Mogilev	BYN	
-Belarus	Vitebsk	BYN	
-Belarus	Grodno	BYN	
-Belarus	Brest	BYN	
-Belarus	Bobruisk	BYN	
-Belarus	Baranovichi	BYN	
-Belarus	Borisov	BYN	
-Belarus	Pinsk	BYN	
-Belarus	Orsha	BYN	
-Belarus	Mozyr	BYN	
-Belarus	Soligorsk	BYN	
-Belarus	Novopolotsk	BYN	
-Belarus	Lida	BYN	
-Belarus	Molodechno	BYN	
-Belarus	Polotsk	BYN	
-Belarus	Zhlobin	BYN	
-Belarus	Svetlogorsk	BYN	
-Belarus	Rechitsa	BYN	
-Belgium	Brussels	EUR	
-Belgium	Antwerp	EUR	
-Belgium	Ghent	EUR	
-Belgium	Charleroi	EUR	
-Belgium	Liege	EUR	
-Belgium	Bruges	EUR	
-Belgium	Namur	EUR	
-Belgium	Leuven	EUR	
-Belgium	Mons	EUR	
-Belgium	Aalst	EUR	
-Belgium	Mechelen	EUR	
-Belgium	La Louviere	EUR	
-Belgium	Kortrijk	EUR	
-Belgium	Hasselt	EUR	
-Belgium	Ostend	EUR	
-Belgium	Sint-Niklaas	EUR	
-Belgium	Tournai	EUR	
-Belgium	Genk	EUR	
-Belgium	Seraing	EUR	
-Belgium	Roeselare	EUR	
-Belize	Belize City	BZD	
-Belize	San Ignacio	BZD	
-Belize	Belmopan	BZD	
-Belize	Orange Walk Town	BZD	
-Belize	Corozal Town	BZD	
-Belize	Dangriga	BZD	
-Belize	San Pedro	BZD	
-Belize	Benque Viejo del Carmen	BZD	
-Belize	Punta Gorda	BZD	
-Belize	Trial Farm	BZD	
-Belize	Ladyville	BZD	
-Belize	Hattieville	BZD	
-Belize	San Jose	BZD	
-Belize	Valley of Peace	BZD	
-Belize	Shipyard	BZD	
-Belize	Blue Creek	BZD	
-Belize	Little Belize	BZD	
-Belize	Sarteneja	BZD	
-Belize	Hopkins	BZD	
-Belize	Placencia	BZD	
-Benin	Cotonou	XOF	
-Benin	Porto-Novo	XOF	
-Benin	Parakou	XOF	
-Benin	Djougou	XOF	
-Benin	Bohicon	XOF	
-Benin	Kandi	XOF	
-Benin	Abomey	XOF	
-Benin	Natitingou	XOF	
-Benin	Lokossa	XOF	
-Benin	Ouidah	XOF	
-Benin	Abomey-Calavi	XOF	
-Benin	Malanville	XOF	
-Benin	Sakete	XOF	
-Benin	Pobe	XOF	
-Benin	Ketou	XOF	
-Benin	Savie	XOF	
-Benin	Savalou	XOF	
-Benin	Bembereke	XOF	
-Benin	Bassila	XOF	
-Benin	Banikoara	XOF	
-Bhutan	Thimphu	BTN	
-Bhutan	Phuntsholing	BTN	
-Bhutan	Paro	BTN	
-Bhutan	Gelephu	BTN	
-Bhutan	Samdrup Jongkhar	BTN	
-Bhutan	Wangdue Phodrang	BTN	
-Bhutan	Punakha	BTN	
-Bhutan	Jakar	BTN	
-Bhutan	Trashigang	BTN	
-Bhutan	Mongar	BTN	
-Bhutan	Trongsa	BTN	
-Bhutan	Dagana	BTN	
-Bhutan	Lhuentse	BTN	
-Bhutan	Pemagatshel	BTN	
-Bhutan	Sarpang	BTN	
-Bhutan	Tsirang	BTN	
-Bhutan	Zhemgang	BTN	
-Bhutan	Haa	BTN	
-Bhutan	Gasa	BTN	
-Bhutan	Trashi Yangtse	BTN	
-Bolivia	Santa Cruz de la Sierra	BOB	
-Bolivia	El Alto	BOB	
-Bolivia	La Paz	BOB	
-Bolivia	Cochabamba	BOB	
-Bolivia	Oruro	BOB	
-Bolivia	Sucre	BOB	
-Bolivia	Tarija	BOB	
-Bolivia	Potosi	BOB	
-Bolivia	Sacaba	BOB	
-Bolivia	Montero	BOB	
-Bolivia	Trinidad	BOB	
-Bolivia	Riberalta	BOB	
-Bolivia	Warnes	BOB	
-Bolivia	La Guardia	BOB	
-Bolivia	Viacha	BOB	
-Bolivia	Yacuiba	BOB	
-Bolivia	Colcapirhua	BOB	
-Bolivia	Cobija	BOB	
-Bolivia	Tiquipaya	BOB	
-Bolivia	Guayaramerin	BOB	
-Bosnia and Herzegovina	Sarajevo	BAM	
-Bosnia and Herzegovina	Banja Luka	BAM	
-Bosnia and Herzegovina	Tuzla	BAM	
-Bosnia and Herzegovina	Zenica	BAM	
-Bosnia and Herzegovina	Mostar	BAM	
-Bosnia and Herzegovina	Bijeljina	BAM	
-Bosnia and Herzegovina	Brcko	BAM	
-Bosnia and Herzegovina	Bihac	BAM	
-Bosnia and Herzegovina	Prijedor	BAM	
-Bosnia and Herzegovina	Doboj	BAM	
-Bosnia and Herzegovina	Trebinje	BAM	
-Bosnia and Herzegovina	Sanski Most	BAM	
-Bosnia and Herzegovina	Zivinice	BAM	
-Bosnia and Herzegovina	Bugojno	BAM	
-Bosnia and Herzegovina	Travnik	BAM	
-Bosnia and Herzegovina	Gradacac	BAM	
-Bosnia and Herzegovina	Cazin	BAM	
-Bosnia and Herzegovina	Gracanica	BAM	
-Bosnia and Herzegovina	Derventa	BAM	
-Bosnia and Herzegovina	Zvornik	BAM	
-Botswana	Gaborone	BWP	
-Botswana	Francistown	BWP	
-Botswana	Molepolole	BWP	
-Botswana	Maun	BWP	
-Botswana	Serowe	BWP	
-Botswana	Selibe Phikwe	BWP	
-Botswana	Kanye	BWP	
-Botswana	Mahalapye	BWP	
-Botswana	Mogoditshane	BWP	
-Botswana	Mochudi	BWP	
-Botswana	Lobatse	BWP	
-Botswana	Palapye	BWP	
-Botswana	Ramotswa	BWP	
-Botswana	Moshupa	BWP	
-Botswana	Tonota	BWP	
-Botswana	Tutume	BWP	
-Botswana	Orapa	BWP	
-Botswana	Kasane	BWP	
-Botswana	Nata	BWP	
-Botswana	Ghanzi	BWP	
-Brazil	Sao Paulo	BRL	
-Brazil	Rio de Janeiro	BRL	
-Brazil	Brasilia	BRL	
-Brazil	Salvador	BRL	
-Brazil	Fortaleza	BRL	
-Brazil	Belo Horizonte	BRL	
-Brazil	Manaus	BRL	
-Brazil	Curitiba	BRL	
-Brazil	Recife	BRL	
-Brazil	Goiania	BRL	
-Brazil	Belem	BRL	
-Brazil	Porto Alegre	BRL	
-Brazil	Guarulhos	BRL	
-Brazil	Campinas	BRL	
-Brazil	Sao Luis	BRL	
-Brazil	Sao Goncalo	BRL	
-Brazil	Maceio	BRL	
-Brazil	Duque de Caxias	BRL	
-Brazil	Natal	BRL	
-Brazil	Teresina	BRL	
-Brunei	Bandar Seri Begawan	BND	
-Brunei	Kuala Belait	BND	
-Brunei	Seria	BND	
-Brunei	Tutong	BND	
-Brunei	Bangar	BND	
-Brunei	Kampong Ayer	BND	
-Brunei	Muara	BND	
-Brunei	Jerudong	BND	
-Brunei	Gadong	BND	
-Brunei	Berakas	BND	
-Brunei	Lamunin	BND	
-Brunei	Lumut	BND	
-Brunei	Labi	BND	
-Brunei	Telisai	BND	
-Brunei	Sukang	BND	
-Brunei	Melilas	BND	
-Brunei	Kupang	BND	
-Brunei	Keriam	BND	
-Brunei	Sinaut	BND	
-Brunei	Panchor	BND	
-Bulgaria	Sofia	BGN	
-Bulgaria	Plovdiv	BGN	
-Bulgaria	Varna	BGN	
-Bulgaria	Burgas	BGN	
-Bulgaria	Ruse	BGN	
-Bulgaria	Stara Zagora	BGN	
-Bulgaria	Pleven	BGN	
-Bulgaria	Sliven	BGN	
-Bulgaria	Dobrich	BGN	
-Bulgaria	Shumen	BGN	
-Bulgaria	Pernik	BGN	
-Bulgaria	Haskovo	BGN	
-Bulgaria	Yambol	BGN	
-Bulgaria	Pazardzhik	BGN	
-Bulgaria	Blagoevgrad	BGN	
-Bulgaria	Veliko Tarnovo	BGN	
-Bulgaria	Vratsa	BGN	
-Bulgaria	Gabrovo	BGN	
-Bulgaria	Asenovgrad	BGN	
-Bulgaria	Vidin	BGN	
-Burkina Faso	Ouagadougou	XOF	
-Burkina Faso	Bobo-Dioulasso	XOF	
-Burkina Faso	Koudougou	XOF	
-Burkina Faso	Banfora	XOF	
-Burkina Faso	Ouahigouya	XOF	
-Burkina Faso	Kaya	XOF	
-Burkina Faso	Tenkodogo	XOF	
-Burkina Faso	Fada N'gourma	XOF	
-Burkina Faso	Dedougou	XOF	
-Burkina Faso	Hounde	XOF	
-Burkina Faso	Djibo	XOF	
-Burkina Faso	Koupela	XOF	
-Burkina Faso	Mango	XOF	
-Burkina Faso	Garango	XOF	
-Burkina Faso	Leo	XOF	
-Burkina Faso	Kongoussi	XOF	
-Burkina Faso	Diapaga	XOF	
-Burkina Faso	Zorgho	XOF	
-Burkina Faso	Pouytenga	XOF	
-Burkina Faso	Reo	XOF	
-Burundi	Bujumbura	BIF	
-Burundi	Gitega	BIF	
-Burundi	Muyinga	BIF	
-Burundi	Ngozi	BIF	
-Burundi	Ruyigi	BIF	
-Burundi	Kayanza	BIF	
-Burundi	Bururi	BIF	
-Burundi	Rutana	BIF	
-Burundi	Muramvya	BIF	
-Burundi	Makamba	BIF	
-Burundi	Cankuzo	BIF	
-Burundi	Karuzi	BIF	
-Burundi	Kirundo	BIF	
-Burundi	Mwaro	BIF	
-Burundi	Bubanza	BIF	
-Burundi	Cibitoke	BIF	
-Burundi	Rumonge	BIF	
-Burundi	Isale	BIF	
-Burundi	Kanyosha	BIF	
-Burundi	Mpanda	BIF	
-Cambodia	Phnom Penh	KHR	
-Cambodia	Siem Reap	KHR	
-Cambodia	Battambang	KHR	
-Cambodia	Serei Saophoan	KHR	
-Cambodia	Poipet	KHR	
-Cambodia	Kampong Cham	KHR	
-Cambodia	Sihanoukville	KHR	
-Cambodia	Kampong Speu	KHR	
-Cambodia	Kampot	KHR	
-Cambodia	Kampong Thom	KHR	
-Cambodia	Pursat	KHR	
-Cambodia	Ta Khmau	KHR	
-Cambodia	Prey Veng	KHR	
-Cambodia	Svay Rieng	KHR	
-Cambodia	Stung Treng	KHR	
-Cambodia	Kratie	KHR	
-Cambodia	Banlung	KHR	
-Cambodia	Kep	KHR	
-Cambodia	Pailin	KHR	
-Cambodia	Samraong	KHR	
-Cameroon	Douala	XAF	
-Cameroon	Yaounde	XAF	
-Cameroon	Bamenda	XAF	
-Cameroon	Bafoussam	XAF	
-Cameroon	Garoua	XAF	
-Cameroon	Maroua	XAF	
-Cameroon	Ngaoundere	XAF	
-Cameroon	Kumba	XAF	
-Cameroon	Buea	XAF	
-Cameroon	Nkongsamba	XAF	
-Cameroon	Limbe	XAF	
-Cameroon	Edea	XAF	
-Cameroon	Foumban	XAF	
-Cameroon	Dschang	XAF	
-Cameroon	Bertoua	XAF	
-Cameroon	Loum	XAF	
-Cameroon	Kousseri	XAF	
-Cameroon	Mbalmayo	XAF	
-Cameroon	Bafang	XAF	
-Cameroon	Tiko	XAF	
-Canada	Toronto	CAD	
-Canada	Montreal	CAD	
-Canada	Vancouver	CAD	
-Canada	Calgary	CAD	
-Canada	Edmonton	CAD	
-Canada	Ottawa	CAD	
-Canada	Winnipeg	CAD	
-Canada	Quebec City	CAD	
-Canada	Hamilton	CAD	
-Canada	Kitchener	CAD	
-Canada	London	CAD	
-Canada	Victoria	CAD	
-Canada	Halifax	CAD	
-Canada	Oshawa	CAD	
-Canada	Windsor	CAD	
-Canada	Saskatoon	CAD	
-Canada	Regina	CAD	
-Canada	St. John's	CAD	
-Canada	Kelowna	CAD	
-Canada	Barrie	CAD	
-Cape Verde	Praia	CVE	
-Cape Verde	Mindelo	CVE	
-Cape Verde	Espargos	CVE	
-Cape Verde	Assomada	CVE	
-Cape Verde	Pedra Badejo	CVE	
-Cape Verde	Porto Novo	CVE	
-Cape Verde	Sao Filipe	CVE	
-Cape Verde	Tarrafal	CVE	
-Cape Verde	Santa Maria	CVE	
-Cape Verde	Sal Rei	CVE	
-Cape Verde	Mosteiros	CVE	
-Cape Verde	Vila do Maio	CVE	
-Cape Verde	Ribeira Brava	CVE	
-Cape Verde	Sao Domingos	CVE	
-Cape Verde	Picos	CVE	
-Cape Verde	Ponta do Sol	CVE	
-Cape Verde	Cidade Velha	CVE	
-Cape Verde	Cova Figueira	CVE	
-Cape Verde	Vila Nova Sintra	CVE	
-Cape Verde	Furna	CVE	
-Central African Republic	Bangui	XAF	
-Central African Republic	Bimbo	XAF	
-Central African Republic	Berberati	XAF	
-Central African Republic	Carnot	XAF	
-Central African Republic	Bambari	XAF	
-Central African Republic	Bouar	XAF	
-Central African Republic	Bossangoa	XAF	
-Central African Republic	Bria	XAF	
-Central African Republic	Bangassou	XAF	
-Central African Republic	Nola	XAF	
-Central African Republic	Kaga-Bandoro	XAF	
-Central African Republic	Sibut	XAF	
-Central African Republic	Mbaiki	XAF	
-Central African Republic	Bozoum	XAF	
-Central African Republic	Paoua	XAF	
-Central African Republic	Batangafo	XAF	
-Central African Republic	Ippy	XAF	
-Central African Republic	Zemio	XAF	
-Central African Republic	Obo	XAF	
-Central African Republic	Mobaye	XAF	
-Chad	N'Djamena	XAF	
-Chad	Moundou	XAF	
-Chad	Sarh	XAF	
-Chad	Abeche	XAF	
-Chad	Kelo	XAF	
-Chad	Koumra	XAF	
-Chad	Pala	XAF	
-Chad	Am Timan	XAF	
-Chad	Bongor	XAF	
-Chad	Mongo	XAF	
-Chad	Doba	XAF	
-Chad	Ati	XAF	
-Chad	Lai	XAF	
-Chad	Oum Hadjer	XAF	
-Chad	Bitkine	XAF	
-Chad	Mao	XAF	
-Chad	Massaguet	XAF	
-Chad	Dourbali	XAF	
-Chad	Lere	XAF	
-Chad	Kyabe	XAF	
-Chile	Santiago	CLP	
-Chile	Valparaiso	CLP	
-Chile	Concepcion	CLP	
-Chile	La Serena	CLP	
-Chile	Antofagasta	CLP	
-Chile	Temuco	CLP	
-Chile	Rancagua	CLP	
-Chile	Talca	CLP	
-Chile	Arica	CLP	
-Chile	Chillan	CLP	
-Chile	Iquique	CLP	
-Chile	Puerto Montt	CLP	
-Chile	Copiapo	CLP	
-Chile	Osorno	CLP	
-Chile	Quillota	CLP	
-Chile	Valdivia	CLP	
-Chile	Los Angeles	CLP	
-Chile	Calama	CLP	
-Chile	Punta Arenas	CLP	
-Chile	Curico	CLP	
-China	Shanghai	CNY	
-China	Beijing	CNY	
-China	Guangzhou	CNY	
-China	Shenzhen	CNY	
-China	Chengdu	CNY	
-China	Tianjin	CNY	
-China	Chongqing	CNY	
-China	Wuhan	CNY	
-China	Xi'an	CNY	
-China	Hangzhou	CNY	
-China	Nanjing	CNY	
-China	Shenyang	CNY	
-China	Harbin	CNY	
-China	Jinan	CNY	
-China	Qingdao	CNY	
-China	Dalian	CNY	
-China	Zhengzhou	CNY	
-China	Suzhou	CNY	
-China	Changsha	CNY	
-China	Kunming	CNY	
-Colombia	Bogota	COP	
-Colombia	Medellin	COP	
-Colombia	Cali	COP	
-Colombia	Barranquilla	COP	
-Colombia	Cartagena	COP	
-Colombia	Cucuta	COP	
-Colombia	Bucaramanga	COP	
-Colombia	Pereira	COP	
-Colombia	Santa Marta	COP	
-Colombia	Ibague	COP	
-Colombia	Bello	COP	
-Colombia	Pasto	COP	
-Colombia	Manizales	COP	
-Colombia	Neiva	COP	
-Colombia	Soledad	COP	
-Colombia	Villavicencio	COP	
-Colombia	Armenia	COP	
-Colombia	Soacha	COP	
-Colombia	Valledupar	COP	
-Colombia	Monteria	COP	
-Comoros	Moroni	KMF	
-Comoros	Mutsamudu	KMF	
-Comoros	Fomboni	KMF	
-Comoros	Domoni	KMF	
-Comoros	Tsembehou	KMF	
-Comoros	Ongojou	KMF	
-Comoros	Sima	KMF	
-Comoros	Ouani	KMF	
-Comoros	Mirontsi	KMF	
-Comoros	Mkazi	KMF	
-Comoros	Koni Djodjo	KMF	
-Comoros	Moya	KMF	
-Comoros	Iconi	KMF	
-Comoros	Ouzioini	KMF	
-Comoros	Mbeni	KMF	
-Comoros	Mitsamiouli	KMF	
-Comoros	Barakani	KMF	
-Comoros	Chindini	KMF	
-Comoros	Foumbouni	KMF	
-Comoros	Hahaya	KMF	
-Congo (Democratic Republic)	Kinshasa	CDF	
-Congo (Democratic Republic)	Lubumbashi	CDF	
-Congo (Democratic Republic)	Mbuji-Mayi	CDF	
-Congo (Democratic Republic)	Kananga	CDF	
-Congo (Democratic Republic)	Kisangani	CDF	
-Congo (Democratic Republic)	Bukavu	CDF	
-Congo (Democratic Republic)	Tshikapa	CDF	
-Congo (Democratic Republic)	Kolwezi	CDF	
-Congo (Democratic Republic)	Likasi	CDF	
-Congo (Democratic Republic)	Goma	CDF	
-Congo (Democratic Republic)	Kikwit	CDF	
-Congo (Democratic Republic)	Uvira	CDF	
-Congo (Democratic Republic)	Bunia	CDF	
-Congo (Democratic Republic)	Mbandaka	CDF	
-Congo (Democratic Republic)	Matadi	CDF	
-Congo (Democratic Republic)	Kabinda	CDF	
-Congo (Democratic Republic)	Butembo	CDF	
-Congo (Democratic Republic)	Mwene-Ditu	CDF	
-Congo (Democratic Republic)	Isiro	CDF	
-Congo (Democratic Republic)	Kindu	CDF	
-Congo (Republic)	Brazzaville	XAF	
-Congo (Republic)	Pointe-Noire	XAF	
-Congo (Republic)	Dolisie	XAF	
-Congo (Republic)	Nkayi	XAF	
-Congo (Republic)	Impfondo	XAF	
-Congo (Republic)	Ouesso	XAF	
-Congo (Republic)	Madingou	XAF	
-Congo (Republic)	Owando	XAF	
-Congo (Republic)	Sibiti	XAF	
-Congo (Republic)	Loutete	XAF	
-Congo (Republic)	Bouansa	XAF	
-Congo (Republic)	Gamboma	XAF	
-Congo (Republic)	Mossendjo	XAF	
-Congo (Republic)	Kinkala	XAF	
-Congo (Republic)	Makoua	XAF	
-Congo (Republic)	Djambala	XAF	
-Congo (Republic)	Ewo	XAF	
-Congo (Republic)	Oyo	XAF	
-Congo (Republic)	SembÃ©	XAF	
-Congo (Republic)	Zanaga	XAF	
-Costa Rica	San Jose	CRC	
-Costa Rica	Alajuela	CRC	
-Costa Rica	Cartago	CRC	
-Costa Rica	Heredia	CRC	
-Costa Rica	Liberia	CRC	
-Costa Rica	Puntarenas	CRC	
-Costa Rica	Limon	CRC	
-Costa Rica	San Vicente	CRC	
-Costa Rica	San Isidro de El General	CRC	
-Costa Rica	Curridabat	CRC	
-Costa Rica	San Rafael	CRC	
-Costa Rica	San Pedro	CRC	
-Costa Rica	Paraiso	CRC	
-Costa Rica	San Ramon	CRC	
-Costa Rica	Quesada	CRC	
-Costa Rica	Turrialba	CRC	
-Costa Rica	Guapiles	CRC	
-Costa Rica	Siquirres	CRC	
-Costa Rica	Escazu	CRC	
-Costa Rica	Santa Ana	CRC	
-Croatia	Zagreb	EUR	
-Croatia	Split	EUR	
-Croatia	Rijeka	EUR	
-Croatia	Osijek	EUR	
-Croatia	Zadar	EUR	
-Croatia	Velika Gorica	EUR	
-Croatia	Slavonski Brod	EUR	
-Croatia	Pula	EUR	
-Croatia	Karlovac	EUR	
-Croatia	Sisak	EUR	
-Croatia	Varazdin	EUR	
-Croatia	Sibenik	EUR	
-Croatia	Dubrovnik	EUR	
-Croatia	Bjelovar	EUR	
-Croatia	Kastela	EUR	
-Croatia	Samobor	EUR	
-Croatia	Vinkovci	EUR	
-Croatia	Koprivnica	EUR	
-Croatia	Dakovo	EUR	
-Croatia	Vukovar	EUR	
-Cuba	Havana	CUP	
-Cuba	Santiago de Cuba	CUP	
-Cuba	Camaguey	CUP	
-Cuba	Holguin	CUP	
-Cuba	Santa Clara	CUP	
-Cuba	Guantanamo	CUP	
-Cuba	Bayamo	CUP	
-Cuba	Las Tunas	CUP	
-Cuba	Cienfuegos	CUP	
-Cuba	Pinar del Rio	CUP	
-Cuba	Matanzas	CUP	
-Cuba	Ciego de Avila	CUP	
-Cuba	Sancti Spiritus	CUP	
-Cuba	Manzanillo	CUP	
-Cuba	Cardenas	CUP	
-Cuba	Palma Soriano	CUP	
-Cuba	Moa	CUP	
-Cuba	Moron	CUP	
-Cuba	Florida	CUP	
-Cuba	Contramaestre	CUP	
-Cyprus	Nicosia	EUR	
-Cyprus	Limassol	EUR	
-Cyprus	Larnaca	EUR	
-Cyprus	Famagusta	EUR	
-Cyprus	Paphos	EUR	
-Cyprus	Kyrenia	EUR	
-Cyprus	Protaras	EUR	
-Cyprus	Paralimni	EUR	
-Cyprus	Morphou	EUR	
-Cyprus	Aradippou	EUR	
-Cyprus	Mesa Geitonia	EUR	
-Cyprus	Germasogeia	EUR	
-Cyprus	Lakatamia	EUR	
-Cyprus	Strovolos	EUR	
-Cyprus	Aglantzia	EUR	
-Cyprus	Engomi	EUR	
-Cyprus	Latsia	EUR	
-Cyprus	Dali	EUR	
-Cyprus	Geri	EUR	
-Cyprus	Ypsonas	EUR	
-Czech Republic	Prague	CZK	
-Czech Republic	Brno	CZK	
-Czech Republic	Ostrava	CZK	
-Czech Republic	Plzen	CZK	
-Czech Republic	Liberec	CZK	
-Czech Republic	Olomouc	CZK	
-Czech Republic	Ceske Budejovice	CZK	
-Czech Republic	Hradec Kralove	CZK	
-Czech Republic	Usti nad Labem	CZK	
-Czech Republic	Pardubice	CZK	
-Czech Republic	Zlin	CZK	
-Czech Republic	Havirov	CZK	
-Czech Republic	Kladno	CZK	
-Czech Republic	Most	CZK	
-Czech Republic	Opava	CZK	
-Czech Republic	Frydek-Mistek	CZK	
-Czech Republic	Karvina	CZK	
-Czech Republic	Jihlava	CZK	
-Czech Republic	Teplice	CZK	
-Czech Republic	Decin	CZK	
-Denmark	Copenhagen	DKK	
-Denmark	Aarhus	DKK	
-Denmark	Odense	DKK	
-Denmark	Aalborg	DKK	
-Denmark	Esbjerg	DKK	
-Denmark	Randers	DKK	
-Denmark	Kolding	DKK	
-Denmark	Horsens	DKK	
-Denmark	Vejle	DKK	
-Denmark	Roskilde	DKK	
-Denmark	Herning	DKK	
-Denmark	HÃ¸rsholm	DKK	
-Denmark	HelsingÃ¸r	DKK	
-Denmark	Silkeborg	DKK	
-Denmark	Naestved	DKK	
-Denmark	Fredericia	DKK	
-Denmark	Viborg	DKK	
-Denmark	KÃ¸ge	DKK	
-Denmark	Holstebro	DKK	
-Denmark	Taastrup	DKK	
-Djibouti	Djibouti City	DJF	
-Djibouti	Ali Sabieh	DJF	
-Djibouti	Tadjoura	DJF	
-Djibouti	Obock	DJF	
-Djibouti	Dikhil	DJF	
-Djibouti	Arta	DJF	
-Djibouti	Holhol	DJF	
-Djibouti	Dorra	DJF	
-Djibouti	Galafi	DJF	
-Djibouti	Loyada	DJF	
-Djibouti	Alaili Dadda	DJF	
-Djibouti	Balho	DJF	
-Djibouti	Chorogo	DJF	
-Djibouti	Daimoli	DJF	
-Djibouti	Daoudaouya	DJF	
-Djibouti	Assamo	DJF	
-Djibouti	Dasbiyo	DJF	
-Djibouti	Gueini	DJF	
-Djibouti	Yoboki	DJF	
-Djibouti	Randa	DJF	
-Dominica	Roseau	XCD	
-Dominica	Portsmouth	XCD	
-Dominica	Marigot	XCD	
-Dominica	Berikua	XCD	
-Dominica	Mahaut	XCD	
-Dominica	Saint Joseph	XCD	
-Dominica	Wesley	XCD	
-Dominica	Salisbury	XCD	
-Dominica	Castle Bruce	XCD	
-Dominica	La Plaine	XCD	
-Dominica	Pointe Michel	XCD	
-Dominica	Woodford Hill	XCD	
-Dominica	Calibishie	XCD	
-Dominica	Soufriere	XCD	
-Dominica	Grand Bay	XCD	
-Dominica	Rosalie	XCD	
-Dominica	Pont Casse	XCD	
-Dominica	Colihaut	XCD	
-Dominica	Vieille Case	XCD	
-Dominica	Scotts Head	XCD	
-Dominican Republic	Santo Domingo	DOP	
-Dominican Republic	Santiago	DOP	
-Dominican Republic	La Romana	DOP	
-Dominican Republic	San Pedro de Macoris	DOP	
-Dominican Republic	Higuey	DOP	
-Dominican Republic	San Francisco de Macoris	DOP	
-Dominican Republic	Puerto Plata	DOP	
-Dominican Republic	La Vega	DOP	
-Dominican Republic	Bonao	DOP	
-Dominican Republic	San Juan de la Maguana	DOP	
-Dominican Republic	Bani	DOP	
-Dominican Republic	Moca	DOP	
-Dominican Republic	Azua	DOP	
-Dominican Republic	Barahona	DOP	
-Dominican Republic	Mao	DOP	
-Dominican Republic	Nagua	DOP	
-Dominican Republic	CotuÃ­	DOP	
-Dominican Republic	Villa Altagracia	DOP	
-Dominican Republic	Hato Mayor	DOP	
-Dominican Republic	Bajos de Haina	DOP	
-Ecuador	Guayaquil	USD	
-Ecuador	Quito	USD	
-Ecuador	Cuenca	USD	
-Ecuador	Santo Domingo	USD	
-Ecuador	Machala	USD	
-Ecuador	Duran	USD	
-Ecuador	Manta	USD	
-Ecuador	Portoviejo	USD	
-Ecuador	Loja	USD	
-Ecuador	Ambato	USD	
-Ecuador	Esmeraldas	USD	
-Ecuador	Quevedo	USD	
-Ecuador	Riobamba	USD	
-Ecuador	Milagro	USD	
-Ecuador	Ibarra	USD	
-Ecuador	La Libertad	USD	
-Ecuador	Babahoyo	USD	
-Ecuador	Sangolqui	USD	
-Ecuador	Daule	USD	
-Ecuador	Latacunga	USD	
-Egypt	Cairo	EGP	
-Egypt	Alexandria	EGP	
-Egypt	Giza	EGP	
-Egypt	Shubra El Kheima	EGP	
-Egypt	Port Said	EGP	
-Egypt	Suez	EGP	
-Egypt	Luxor	EGP	
-Egypt	Mansoura	EGP	
-Egypt	El Mahalla El Kubra	EGP	
-Egypt	Tanta	EGP	
-Egypt	Asyut	EGP	
-Egypt	Ismailia	EGP	
-Egypt	Faiyum	EGP	
-Egypt	Zagazig	EGP	
-Egypt	Aswan	EGP	
-Egypt	Damietta	EGP	
-Egypt	Damanhur	EGP	
-Egypt	Minya	EGP	
-Egypt	Beni Suef	EGP	
-Egypt	Qena	EGP	
-El Salvador	San Salvador	USD	
-El Salvador	Soyapango	USD	
-El Salvador	Santa Ana	USD	
-El Salvador	San Miguel	USD	
-El Salvador	Mejicanos	USD	
-El Salvador	Santa Tecla	USD	
-El Salvador	Apopa	USD	
-El Salvador	Delgado	USD	
-El Salvador	Sonsonate	USD	
-El Salvador	San Marcos	USD	
-El Salvador	Usulutan	USD	
-El Salvador	Cojutepeque	USD	
-El Salvador	Cuscatancingo	USD	
-El Salvador	Zacatecoluca	USD	
-El Salvador	San Martin	USD	
-El Salvador	Ilopango	USD	
-El Salvador	San Vicente	USD	
-El Salvador	Ahuachapan	USD	
-El Salvador	Antiguo Cuscatlan	USD	
-El Salvador	Chalchuapa	USD	
-Equatorial Guinea	Malabo	XAF	
-Equatorial Guinea	Bata	XAF	
-Equatorial Guinea	Ebebiyin	XAF	
-Equatorial Guinea	Mongomo	XAF	
-Equatorial Guinea	Evinayong	XAF	
-Equatorial Guinea	Luba	XAF	
-Equatorial Guinea	Anisok	XAF	
-Equatorial Guinea	Acurenam	XAF	
-Equatorial Guinea	Niefang	XAF	
-Equatorial Guinea	Mbini	XAF	
-Equatorial Guinea	Micomeseng	XAF	
-Equatorial Guinea	Nsok	XAF	
-Equatorial Guinea	Aconibe	XAF	
-Equatorial Guinea	Bicurga	XAF	
-Equatorial Guinea	Nkimi	XAF	
-Equatorial Guinea	Machinda	XAF	
-Equatorial Guinea	Bitica	XAF	
-Equatorial Guinea	Rio Campo	XAF	
-Equatorial Guinea	Riaba	XAF	
-Equatorial Guinea	Ureka	XAF	
-Eritrea	Asmara	ERN	
-Eritrea	Keren	ERN	
-Eritrea	Massawa	ERN	
-Eritrea	Assab	ERN	
-Eritrea	Mendefera	ERN	
-Eritrea	Barentu	ERN	
-Eritrea	Adi Keyh	ERN	
-Eritrea	Edd	ERN	
-Eritrea	Ghinda	ERN	
-Eritrea	Beylul	ERN	
-Eritrea	Decemhare	ERN	
-Eritrea	Nakfa	ERN	
-Eritrea	Agordat	ERN	
-Eritrea	Segheneyti	ERN	
-Eritrea	Afabet	ERN	
-Eritrea	Tessenei	ERN	
-Eritrea	Adi Quala	ERN	
-Eritrea	Senafe	ERN	
-Eritrea	Musa Ali	ERN	
-Eritrea	Zula	ERN	
-Estonia	Tallinn	EUR	
-Estonia	Tartu	EUR	
-Estonia	Narva	EUR	
-Estonia	Parnu	EUR	
-Estonia	Kohtla-Jarve	EUR	
-Estonia	Viljandi	EUR	
-Estonia	Rakvere	EUR	
-Estonia	Maardu	EUR	
-Estonia	Sillamae	EUR	
-Estonia	Kuressaare	EUR	
-Estonia	Voru	EUR	
-Estonia	Valga	EUR	
-Estonia	Haapsalu	EUR	
-Estonia	Johvi	EUR	
-Estonia	Paide	EUR	
-Estonia	Keila	EUR	
-Estonia	Kivioli	EUR	
-Estonia	Tapa	EUR	
-Estonia	Polva	EUR	
-Estonia	Jarve	EUR	
-Eswatini	Manzini	SZL	
-Eswatini	Mbabane	SZL	
-Eswatini	Big Bend	SZL	
-Eswatini	Malkerns	SZL	
-Eswatini	Nhlangano	SZL	
-Eswatini	Mhlume	SZL	
-Eswatini	Hlatikulu	SZL	
-Eswatini	Siteki	SZL	
-Eswatini	Piggs Peak	SZL	
-Eswatini	Lobamba	SZL	
-Eswatini	Kwaluseni	SZL	
-Eswatini	Simunye	SZL	
-Eswatini	Bhunya	SZL	
-Eswatini	Mondlo	SZL	
-Eswatini	Tabankulu	SZL	
-Eswatini	Tshaneni	SZL	
-Eswatini	Vuvulane	SZL	
-Eswatini	Ngomane	SZL	
-Eswatini	Mpaka	SZL	
-Eswatini	Sidvokodvo	SZL	
-Ethiopia	Addis Ababa	ETB	
-Ethiopia	Dire Dawa	ETB	
-Ethiopia	Mek'ele	ETB	
-Ethiopia	Gondar	ETB	
-Ethiopia	Bahir Dar	ETB	
-Ethiopia	Hawassa	ETB	
-Ethiopia	Jimma	ETB	
-Ethiopia	Jijiga	ETB	
-Ethiopia	Shashamane	ETB	
-Ethiopia	Bishoftu	ETB	
-Ethiopia	Arba Minch	ETB	
-Ethiopia	Hosaena	ETB	
-Ethiopia	Harar	ETB	
-Ethiopia	Dilla	ETB	
-Ethiopia	Nekemte	ETB	
-Ethiopia	Debre Birhan	ETB	
-Ethiopia	Asella	ETB	
-Ethiopia	Debre Markos	ETB	
-Ethiopia	Kombolcha	ETB	
-Ethiopia	Debre Tabor	ETB	
-Fiji	Suva	FJD	
-Fiji	Lautoka	FJD	
-Fiji	Nadi	FJD	
-Fiji	Labasa	FJD	
-Fiji	Ba	FJD	
-Fiji	Lami	FJD	
-Fiji	Sigatoka	FJD	
-Fiji	Savusavu	FJD	
-Fiji	Vatukoula	FJD	
-Fiji	Nausori	FJD	
-Fiji	Levuka	FJD	
-Fiji	Tavua	FJD	
-Fiji	Navua	FJD	
-Fiji	Rakiraki	FJD	
-Fiji	Korovou	FJD	
-Fiji	Nasinu	FJD	
-Fiji	Keiyasi	FJD	
-Fiji	Lomawai	FJD	
-Fiji	Nataruala	FJD	
-Fiji	Tubou	FJD	
-Finland	Helsinki	EUR	
-Finland	Espoo	EUR	
-Finland	Tampere	EUR	
-Finland	Vantaa	EUR	
-Finland	Oulu	EUR	
-Finland	Turku	EUR	
-Finland	Jyvaskyla	EUR	
-Finland	Lahti	EUR	
-Finland	Kuopio	EUR	
-Finland	Pori	EUR	
-Finland	Kouvola	EUR	
-Finland	Joensuu	EUR	
-Finland	Lappeenranta	EUR	
-Finland	Hameenlinna	EUR	
-Finland	Vaasa	EUR	
-Finland	Seinajoki	EUR	
-Finland	Rovaniemi	EUR	
-Finland	Mikkeli	EUR	
-Finland	Kotka	EUR	
-Finland	Salo	EUR	
-France	Paris	EUR	
-France	Marseille	EUR	
-France	Lyon	EUR	
-France	Toulouse	EUR	
-France	Nice	EUR	
-France	Nantes	EUR	
-France	Strasbourg	EUR	
-France	Montpellier	EUR	
-France	Bordeaux	EUR	
-France	Lille	EUR	
-France	Rennes	EUR	
-France	Reims	EUR	
-France	Le Havre	EUR	
-France	Saint-Etienne	EUR	
-France	Toulon	EUR	
-France	Grenoble	EUR	
-France	Dijon	EUR	
-France	Nimes	EUR	
-France	Angers	EUR	
-France	Villeurbanne	EUR	
-Gabon	Libreville	XAF	
-Gabon	Port-Gentil	XAF	
-Gabon	Franceville	XAF	
-Gabon	Oyem	XAF	
-Gabon	Moanda	XAF	
-Gabon	Mouila	XAF	
-Gabon	Lambarene	XAF	
-Gabon	Tchibanga	XAF	
-Gabon	Koulamoutou	XAF	
-Gabon	Makokou	XAF	
-Gabon	Bitam	XAF	
-Gabon	Tsogni	XAF	
-Gabon	Gamba	XAF	
-Gabon	Mounana	XAF	
-Gabon	Ntoum	XAF	
-Gabon	Nkan	XAF	
-Gabon	Lastoursville	XAF	
-Gabon	Okondja	XAF	
-Gabon	Ndende	XAF	
-Gabon	Booue	XAF	
-Gambia	Banjul	GMD	
-Gambia	Serekunda	GMD	
-Gambia	Brikama	GMD	
-Gambia	Bakau	GMD	
-Gambia	Farafenni	GMD	
-Gambia	Lamin	GMD	
-Gambia	Sukuta	GMD	
-Gambia	Basse Santa Su	GMD	
-Gambia	Gunjur	GMD	
-Gambia	Soma	GMD	
-Gambia	Brufut	GMD	
-Gambia	Kerr Seringe Ngaga	GMD	
-Gambia	Wellingara	GMD	
-Gambia	Busumbala	GMD	
-Gambia	Yundum	GMD	
-Gambia	Mandinari	GMD	
-Gambia	Sabi	GMD	
-Gambia	Bansang	GMD	
-Gambia	Gambissara	GMD	
-Gambia	Barra	GMD	
-Georgia	Tbilisi	GEL	
-Georgia	Batumi	GEL	
-Georgia	Kutaisi	GEL	
-Georgia	Rustavi	GEL	
-Georgia	Gori	GEL	
-Georgia	Zugdidi	GEL	
-Georgia	Poti	GEL	
-Georgia	Sokhumi	GEL	
-Georgia	Khashuri	GEL	
-Georgia	Samtredia	GEL	
-Georgia	Senaki	GEL	
-Georgia	Zestafoni	GEL	
-Georgia	Marneuli	GEL	
-Georgia	Telavi	GEL	
-Georgia	Akhaltsikhe	GEL	
-Georgia	Kobuleti	GEL	
-Georgia	Ozurgeti	GEL	
-Georgia	Kaspi	GEL	
-Georgia	Chiatura	GEL	
-Georgia	Tskaltubo	GEL	
-Germany	Berlin	EUR	
-Germany	Hamburg	EUR	
-Germany	Munich	EUR	
-Germany	Cologne	EUR	
-Germany	Frankfurt	EUR	
-Germany	Stuttgart	EUR	
-Germany	Dusseldorf	EUR	
-Germany	Dortmund	EUR	
-Germany	Essen	EUR	
-Germany	Leipzig	EUR	
-Germany	Bremen	EUR	
-Germany	Dresden	EUR	
-Germany	Hanover	EUR	
-Germany	Nuremberg	EUR	
-Germany	Duisburg	EUR	
-Germany	Bochum	EUR	
-Germany	Wuppertal	EUR	
-Germany	Bielefeld	EUR	
-Germany	Bonn	EUR	
-Germany	Munster	EUR	
-Ghana	Accra	GHS	
-Ghana	Kumasi	GHS	
-Ghana	Tamale	GHS	
-Ghana	Takoradi	GHS	
-Ghana	Ashaiman	GHS	
-Ghana	Tema	GHS	
-Ghana	Teshie	GHS	
-Ghana	Cape Coast	GHS	
-Ghana	Sekondi-Takoradi	GHS	
-Ghana	Obuasi	GHS	
-Ghana	Madina	GHS	
-Ghana	Koforidua	GHS	
-Ghana	Wa	GHS	
-Ghana	Techiman	GHS	
-Ghana	Ho	GHS	
-Ghana	Sunyani	GHS	
-Ghana	Nungua	GHS	
-Ghana	Tema New Town	GHS	
-Ghana	Dome	GHS	
-Ghana	Lashibi	GHS	
-Greece	Athens	EUR	
-Greece	Thessaloniki	EUR	
-Greece	Patras	EUR	
-Greece	Heraklion	EUR	
-Greece	Ioannina	EUR	
-Greece	Larissa	EUR	
-Greece	Volos	EUR	
-Greece	Rhodes	EUR	
-Greece	Chania	EUR	
-Greece	Agrinio	EUR	
-Greece	Katerini	EUR	
-Greece	Trikala	EUR	
-Greece	Serres	EUR	
-Greece	Lamia	EUR	
-Greece	Alexandroupoli	EUR	
-Greece	Kozani	EUR	
-Greece	Kavala	EUR	
-Greece	Kalamata	EUR	
-Greece	Veria	EUR	
-Greece	Komotini	EUR	
-Grenada	St. George's	XCD	
-Grenada	Gouyave	XCD	
-Grenada	Grenville	XCD	
-Grenada	Victoria	XCD	
-Grenada	Saint Davids	XCD	
-Grenada	Sauteurs	XCD	
-Grenada	Hillsborough	XCD	
-Grenada	Grand Roy	XCD	
-Grenada	Calivigny	XCD	
-Grenada	Tivoli	XCD	
-Grenada	Belmont	XCD	
-Grenada	Grand Anse	XCD	
-Grenada	Morne Rouge	XCD	
-Grenada	Willis	XCD	
-Grenada	Snug Corner	XCD	
-Grenada	Constantine	XCD	
-Grenada	Vendome	XCD	
-Grenada	Crochu	XCD	
-Grenada	Union	XCD	
-Grenada	Marquis	XCD	
-Guatemala	Guatemala City	GTQ	
-Guatemala	Mixco	GTQ	
-Guatemala	Villa Nueva	GTQ	
-Guatemala	Petapa	GTQ	
-Guatemala	Quetzaltenango	GTQ	
-Guatemala	San Juan Sacatepequez	GTQ	
-Guatemala	Chimaltenango	GTQ	
-Guatemala	Escuintla	GTQ	
-Guatemala	Chinautla	GTQ	
-Guatemala	Chimaltenango	GTQ	
-Guatemala	Amatitlan	GTQ	
-Guatemala	Huehuetenango	GTQ	
-Guatemala	Santa Lucia Cotzumalguapa	GTQ	
-Guatemala	Puerto Barrios	GTQ	
-Guatemala	Coban	GTQ	
-Guatemala	Chichicastenango	GTQ	
-Guatemala	Retalhuleu	GTQ	
-Guatemala	San Pedro Ayampuc	GTQ	
-Guatemala	Totonicapan	GTQ	
-Guatemala	Mazatenango	GTQ	
-Guinea	Conakry	GNF	
-Guinea	Nzerekore	GNF	
-Guinea	Kankan	GNF	
-Guinea	Kindia	GNF	
-Guinea	Siguiri	GNF	
-Guinea	Kissidougou	GNF	
-Guinea	Labe	GNF	
-Guinea	Kamsar	GNF	
-Guinea	Mamou	GNF	
-Guinea	Fria	GNF	
-Guinea	Macenta	GNF	
-Guinea	Coyah	GNF	
-Guinea	Faranah	GNF	
-Guinea	Gueckedou	GNF	
-Guinea	Pita	GNF	
-Guinea	Dabola	GNF	
-Guinea	Dinguiraye	GNF	
-Guinea	Telimele	GNF	
-Guinea	Tougue	GNF	
-Guinea	Yomou	GNF	
-Guinea-Bissau	Bissau	XOF	
-Guinea-Bissau	Bafata	XOF	
-Guinea-Bissau	Gabu	XOF	
-Guinea-Bissau	BissorÃ£	XOF	
-Guinea-Bissau	Bolama	XOF	
-Guinea-Bissau	Cacheu	XOF	
-Guinea-Bissau	Bubaque	XOF	
-Guinea-Bissau	Catio	XOF	
-Guinea-Bissau	Mansoa	XOF	
-Guinea-Bissau	Buba	XOF	
-Guinea-Bissau	Quebo	XOF	
-Guinea-Bissau	Canchungo	XOF	
-Guinea-Bissau	Farim	XOF	
-Guinea-Bissau	QuinhÃ¡mel	XOF	
-Guinea-Bissau	Fulacunda	XOF	
-Guinea-Bissau	Bedanda	XOF	
-Guinea-Bissau	Safim	XOF	
-Guinea-Bissau	Prabis	XOF	
-Guinea-Bissau	Bigene	XOF	
-Guinea-Bissau	Sao Domingos	XOF	
-Guyana	Georgetown	GYD	
-Guyana	Linden	GYD	
-Guyana	New Amsterdam	GYD	
-Guyana	Anna Regina	GYD	
-Guyana	Bartica	GYD	
-Guyana	Skeldon	GYD	
-Guyana	Rosignol	GYD	
-Guyana	Mahaica	GYD	
-Guyana	Parika	GYD	
-Guyana	Vreed en Hoop	GYD	
-Guyana	Mabaruma	GYD	
-Guyana	Lethem	GYD	
-Guyana	Fort Wellington	GYD	
-Guyana	Kumaka	GYD	
-Guyana	Ituni	GYD	
-Guyana	Kwakwani	GYD	
-Guyana	Mahdia	GYD	
-Guyana	Matthews Ridge	GYD	
-Guyana	Port Kaituma	GYD	
-Guyana	Charity	GYD	
-Haiti	Port-au-Prince	HTG	
-Haiti	Carrefour	HTG	
-Haiti	Delmas	HTG	
-Haiti	Petion-Ville	HTG	
-Haiti	Gonaives	HTG	
-Haiti	Cap-Haitien	HTG	
-Haiti	Saint-Marc	HTG	
-Haiti	Verrettes	HTG	
-Haiti	Port-de-Paix	HTG	
-Haiti	Jacmel	HTG	
-Haiti	Limbe	HTG	
-Haiti	Jeremie	HTG	
-Haiti	Petite Riviere de l'Artibonite	HTG	
-Haiti	Hinche	HTG	
-Haiti	Petit-Goave	HTG	
-Haiti	Desdunes	HTG	
-Haiti	Dessalines	HTG	
-Haiti	Saint-Michel-de-l'Attalaye	HTG	
-Haiti	Leogane	HTG	
-Haiti	Fort-Liberte	HTG	
-Honduras	Tegucigalpa	HNL	
-Honduras	San Pedro Sula	HNL	
-Honduras	Choloma	HNL	
-Honduras	La Ceiba	HNL	
-Honduras	El Progreso	HNL	
-Honduras	Choluteca	HNL	
-Honduras	Comayagua	HNL	
-Honduras	Puerto Cortes	HNL	
-Honduras	La Lima	HNL	
-Honduras	Danli	HNL	
-Honduras	Siguatepeque	HNL	
-Honduras	Juticalpa	HNL	
-Honduras	Catacamas	HNL	
-Honduras	Villanueva	HNL	
-Honduras	Tocoa	HNL	
-Honduras	Tela	HNL	
-Honduras	Santa Rosa de Copan	HNL	
-Honduras	Olanchito	HNL	
-Honduras	San Lorenzo	HNL	
-Honduras	Cofradia	HNL	
-Hungary	Budapest	HUF	
-Hungary	Debrecen	HUF	
-Hungary	Szeged	HUF	
-Hungary	Miskolc	HUF	
-Hungary	Pecs	HUF	
-Hungary	Gyor	HUF	
-Hungary	Nyiregyhaza	HUF	
-Hungary	Kecskemet	HUF	
-Hungary	Szekesfehervar	HUF	
-Hungary	Szombathely	HUF	
-Hungary	Szolnok	HUF	
-Hungary	Tatabanya	HUF	
-Hungary	Kaposvar	HUF	
-Hungary	Erd	HUF	
-Hungary	Veszprem	HUF	
-Hungary	Bekescsaba	HUF	
-Hungary	Zalaegerszeg	HUF	
-Hungary	Sopron	HUF	
-Hungary	Eger	HUF	
-Hungary	Nagykanizsa	HUF	
-Iceland	Reykjavik	ISK	
-Iceland	Kopavogur	ISK	
-Iceland	Hafnarfjordur	ISK	
-Iceland	Akureyri	ISK	
-Iceland	Reykjanesbaer	ISK	
-Iceland	Gardabaer	ISK	
-Iceland	Mosfellsbaer	ISK	
-Iceland	Arborg	ISK	
-Iceland	Akranes	ISK	
-Iceland	Fjardabyggd	ISK	
-Iceland	Mulathing	ISK	
-Iceland	Seltjarnarnes	ISK	
-Iceland	Vestmannaeyjar	ISK	
-Iceland	Skagafjordur	ISK	
-Iceland	Isafjordur	ISK	
-Iceland	Borgarbyggd	ISK	
-Iceland	Grindavik	ISK	
-Iceland	Nordurthing	ISK	
-Iceland	Hveragerdi	ISK	
-Iceland	Hornafjordur	ISK	
-India	Mumbai	INR	
-India	Delhi	INR	
-India	Bangalore	INR	
-India	Hyderabad	INR	
-India	Ahmedabad	INR	
-India	Chennai	INR	
-India	Kolkata	INR	
-India	Surat	INR	
-India	Pune	INR	
-India	Jaipur	INR	
-India	Lucknow	INR	
-India	Kanpur	INR	
-India	Nagpur	INR	
-India	Indore	INR	
-India	Thane	INR	
-India	Bhopal	INR	
-India	Visakhapatnam	INR	
-India	Pimpri-Chinchwad	INR	
-India	Patna	INR	
-India	Vadodara	INR	
-Indonesia	Jakarta	IDR	
-Indonesia	Surabaya	IDR	
-Indonesia	Bandung	IDR	
-Indonesia	Bekasi	IDR	
-Indonesia	Medan	IDR	
-Indonesia	Tangerang	IDR	
-Indonesia	Depok	IDR	
-Indonesia	Semarang	IDR	
-Indonesia	Palembang	IDR	
-Indonesia	South Tangerang	IDR	
-Indonesia	Makassar	IDR	
-Indonesia	Batam	IDR	
-Indonesia	Pekanbaru	IDR	
-Indonesia	Bogor	IDR	
-Indonesia	Bandar Lampung	IDR	
-Indonesia	Padang	IDR	
-Indonesia	Malang	IDR	
-Indonesia	Denpasar	IDR	
-Indonesia	Samarinda	IDR	
-Indonesia	Tasikmalaya	IDR	
-Iran	Tehran	IRR	
-Iran	Mashhad	IRR	
-Iran	Isfahan	IRR	
-Iran	Karaj	IRR	
-Iran	Shiraz	IRR	
-Iran	Tabriz	IRR	
-Iran	Qom	IRR	
-Iran	Ahvaz	IRR	
-Iran	Kermanshah	IRR	
-Iran	Urmia	IRR	
-Iran	Rasht	IRR	
-Iran	Zahedan	IRR	
-Iran	Hamadan	IRR	
-Iran	Kerman	IRR	
-Iran	Yazd	IRR	
-Iran	Ardabil	IRR	
-Iran	Bandar Abbas	IRR	
-Iran	Arak	IRR	
-Iran	Islamshahr	IRR	
-Iran	Zanjan	IRR	
-Iraq	Baghdad	IQD	
-Iraq	Basra	IQD	
-Iraq	Mosul	IQD	
-Iraq	Erbil	IQD	
-Iraq	Kirkuk	IQD	
-Iraq	Najaf	IQD	
-Iraq	Karbala	IQD	
-Iraq	Nasiriyah	IQD	
-Iraq	Amarah	IQD	
-Iraq	Samarra	IQD	
-Iraq	Diwaniyah	IQD	
-Iraq	Kut	IQD	
-Iraq	Hilla	IQD	
-Iraq	Ramadi	IQD	
-Iraq	Fallujah	IQD	
-Iraq	Baqubah	IQD	
-Iraq	Sulaymaniyah	IQD	
-Iraq	Duhok	IQD	
-Iraq	Zakho	IQD	
-Iraq	Halabja	IQD	
-Ireland	Dublin	EUR	
-Ireland	Cork	EUR	
-Ireland	Limerick	EUR	
-Ireland	Galway	EUR	
-Ireland	Waterford	EUR	
-Ireland	Drogheda	EUR	
-Ireland	Dundalk	EUR	
-Ireland	Swords	EUR	
-Ireland	Bray	EUR	
-Ireland	Navan	EUR	
-Ireland	Kilkenny	EUR	
-Ireland	Ennis	EUR	
-Ireland	Carlow	EUR	
-Ireland	Tralee	EUR	
-Ireland	Newbridge	EUR	
-Ireland	Portlaoise	EUR	
-Ireland	Balbriggan	EUR	
-Ireland	Naas	EUR	
-Ireland	Athlone	EUR	
-Ireland	Mullingar	EUR	
-Israel	Jerusalem	ILS	
-Israel	Tel Aviv	ILS	
-Israel	Haifa	ILS	
-Israel	Rishon LeZion	ILS	
-Israel	Petah Tikva	ILS	
-Israel	Ashdod	ILS	
-Israel	Netanya	ILS	
-Israel	Beersheba	ILS	
-Israel	Holon	ILS	
-Israel	Bnei Brak	ILS	
-Israel	Ramat Gan	ILS	
-Israel	Rehovot	ILS	
-Israel	Ashkelon	ILS	
-Israel	Bat Yam	ILS	
-Israel	Beit Shemesh	ILS	
-Israel	Kfar Saba	ILS	
-Israel	Herzliya	ILS	
-Israel	Hadera	ILS	
-Israel	Modiin-Maccabim-Reut	ILS	
-Israel	Nazareth	ILS	
-Italy	Rome	EUR	
-Italy	Milan	EUR	
-Italy	Naples	EUR	
-Italy	Turin	EUR	
-Italy	Palermo	EUR	
-Italy	Genoa	EUR	
-Italy	Bologna	EUR	
-Italy	Florence	EUR	
-Italy	Bari	EUR	
-Italy	Catania	EUR	
-Italy	Venice	EUR	
-Italy	Verona	EUR	
-Italy	Messina	EUR	
-Italy	Padua	EUR	
-Italy	Trieste	EUR	
-Italy	Taranto	EUR	
-Italy	Brescia	EUR	
-Italy	Parma	EUR	
-Italy	Prato	EUR	
-Italy	Modena	EUR	
-Jamaica	Kingston	JMD	
-Jamaica	Portmore	JMD	
-Jamaica	Spanish Town	JMD	
-Jamaica	Montego Bay	JMD	
-Jamaica	May Pen	JMD	
-Jamaica	Mandeville	JMD	
-Jamaica	Old Harbour	JMD	
-Jamaica	Savanna-la-Mar	JMD	
-Jamaica	Ocho Rios	JMD	
-Jamaica	Linstead	JMD	
-Jamaica	Port Antonio	JMD	
-Jamaica	Saint Ann's Bay	JMD	
-Jamaica	Morant Bay	JMD	
-Jamaica	Falmouth	JMD	
-Jamaica	Santa Cruz	JMD	
-Jamaica	Brown's Town	JMD	
-Jamaica	Black River	JMD	
-Jamaica	Albert Town	JMD	
-Jamaica	Bamboo	JMD	
-Jamaica	Anchovy	JMD	
-Japan	Tokyo	JPY	
-Japan	Yokohama	JPY	
-Japan	Osaka	JPY	
-Japan	Nagoya	JPY	
-Japan	Sapporo	JPY	
-Japan	Kobe	JPY	
-Japan	Fukuoka	JPY	
-Japan	Kyoto	JPY	
-Japan	Kawasaki	JPY	
-Japan	Saitama	JPY	
-Japan	Hiroshima	JPY	
-Japan	Sendai	JPY	
-Japan	Chiba	JPY	
-Japan	Kitakyushu	JPY	
-Japan	Sakai	JPY	
-Japan	Niigata	JPY	
-Japan	Hamamatsu	JPY	
-Japan	Kumamoto	JPY	
-Japan	Sagamihara	JPY	
-Japan	Shizuoka	JPY	
-Jordan	Amman	JOD	
-Jordan	Zarqa	JOD	
-Jordan	Irbid	JOD	
-Jordan	Russeifa	JOD	
-Jordan	Sahab	JOD	
-Jordan	Ramtha	JOD	
-Jordan	Aqaba	JOD	
-Jordan	Mafraq	JOD	
-Jordan	Madaba	JOD	
-Jordan	As-Salt	JOD	
-Jordan	Al-Jizah	JOD	
-Jordan	Ain Al-Basha	JOD	
-Jordan	Aydoun	JOD	
-Jordan	Ad-Dhlail	JOD	
-Jordan	Jerash	JOD	
-Jordan	As-Sarih	JOD	
-Jordan	Al-Hashimiyah	JOD	
-Jordan	Ma'an	JOD	
-Jordan	Bayt Ras	JOD	
-Jordan	Al Husn	JOD	
-Kazakhstan	Almaty	KZT	
-Kazakhstan	Astana	KZT	
-Kazakhstan	Shymkent	KZT	
-Kazakhstan	Karaganda	KZT	
-Kazakhstan	Aktobe	KZT	
-Kazakhstan	Taraz	KZT	
-Kazakhstan	Pavlodar	KZT	
-Kazakhstan	Ust-Kamenogorsk	KZT	
-Kazakhstan	Semey	KZT	
-Kazakhstan	Atyrau	KZT	
-Kazakhstan	Kostanay	KZT	
-Kazakhstan	Kyzylorda	KZT	
-Kazakhstan	Uralsk	KZT	
-Kazakhstan	Petropavl	KZT	
-Kazakhstan	Turkistan	KZT	
-Kazakhstan	Kokshetau	KZT	
-Kazakhstan	Temirtau	KZT	
-Kazakhstan	Taldykorgan	KZT	
-Kazakhstan	Ekibastuz	KZT	
-Kazakhstan	Rudny	KZT	
-Kenya	Nairobi	KES	
-Kenya	Mombasa	KES	
-Kenya	Kisumu	KES	
-Kenya	Nakuru	KES	
-Kenya	Eldoret	KES	
-Kenya	Kehancha	KES	
-Kenya	Ruiru	KES	
-Kenya	Kikuyu	KES	
-Kenya	Kangundo-Tala	KES	
-Kenya	Malindi	KES	
-Kenya	Naivasha	KES	
-Kenya	Kitui	KES	
-Kenya	Machakos	KES	
-Kenya	Thika	KES	
-Kenya	Athi River	KES	
-Kenya	Karuri	KES	
-Kenya	Nyeri	KES	
-Kenya	Kilifi	KES	
-Kenya	Garissa	KES	
-Kenya	Vihiga	KES	
-Kiribati	South Tarawa	AUD	
-Kiribati	Betio	AUD	
-Kiribati	Bikenibeu	AUD	
-Kiribati	Teaoraereke	AUD	
-Kiribati	Bairiki	AUD	
-Kiribati	Eita	AUD	
-Kiribati	Bonriki	AUD	
-Kiribati	Temwaiku	AUD	
-Kiribati	Ambo	AUD	
-Kiribati	Banraeaba	AUD	
-Kiribati	Abarao	AUD	
-Kiribati	Nanikai	AUD	
-Kiribati	Taborio	AUD	
-Kiribati	Rungata	AUD	
-Kiribati	Makarite	AUD	
-Kiribati	Bungitaki	AUD	
-Kiribati	Tabwakea	AUD	
-Kiribati	London	AUD	
-Kiribati	Banana	AUD	
-Kiribati	Tabiang	AUD	
-Kuwait	Kuwait City	KWD	
-Kuwait	Al Ahmadi	KWD	
-Kuwait	Hawalli	KWD	
-Kuwait	Al Farwaniyah	KWD	
-Kuwait	Al Jahra	KWD	
-Kuwait	Mubarak Al-Kabeer	KWD	
-Kuwait	Salmiya	KWD	
-Kuwait	Sabah Al-Salem	KWD	
-Kuwait	Jleeb Al-Shuyoukh	KWD	
-Kuwait	Salwa	KWD	
-Kuwait	Jabriya	KWD	
-Kuwait	Rumaithiya	KWD	
-Kuwait	Fahaheel	KWD	
-Kuwait	Mangaf	KWD	
-Kuwait	Mahboula	KWD	
-Kuwait	Khaitan	KWD	
-Kuwait	Ardiya	KWD	
-Kuwait	Bayan	KWD	
-Kuwait	Qurtuba	KWD	
-Kuwait	Yarmouk	KWD	
-Kyrgyzstan	Bishkek	KGS	
-Kyrgyzstan	Osh	KGS	
-Kyrgyzstan	Jalal-Abad	KGS	
-Kyrgyzstan	Karakol	KGS	
-Kyrgyzstan	Tokmok	KGS	
-Kyrgyzstan	Uzgen	KGS	
-Kyrgyzstan	Balykchy	KGS	
-Kyrgyzstan	Kara-Balta	KGS	
-Kyrgyzstan	Naryn	KGS	
-Kyrgyzstan	Talas	KGS	
-Kyrgyzstan	Kyzyl-Kiya	KGS	
-Kyrgyzstan	Bazarkorgon	KGS	
-Kyrgyzstan	Tash-Kumyr	KGS	
-Kyrgyzstan	Isfana	KGS	
-Kyrgyzstan	Kant	KGS	
-Kyrgyzstan	Kara-Suu	KGS	
-Kyrgyzstan	Toktogul	KGS	
-Kyrgyzstan	Kemin	KGS	
-Kyrgyzstan	Shopokov	KGS	
-Kyrgyzstan	Kajisay	KGS	
-Laos	Vientiane	LAK	
-Laos	Pakse	LAK	
-Laos	Savannakhet	LAK	
-Laos	Luang Prabang	LAK	
-Laos	Xam Neua	LAK	
-Laos	Phonsavan	LAK	
-Laos	Thakhek	LAK	
-Laos	Muang Xay	LAK	
-Laos	Vang Vieng	LAK	
-Laos	Pakxan	LAK	
-Laos	Attapeu	LAK	
-Laos	Huay Xai	LAK	
-Laos	Luang Namtha	LAK	
-Laos	Sekong	LAK	
-Laos	Salavan	LAK	
-Laos	Phonhong	LAK	
-Laos	Samakkhiphex	LAK	
-Laos	Kaysone Phomvihane	LAK	
-Laos	Sayabouly	LAK	
-Laos	Viengxay	LAK	
-Latvia	Riga	EUR	
-Latvia	Daugavpils	EUR	
-Latvia	Liepaja	EUR	
-Latvia	Jelgava	EUR	
-Latvia	Jurmala	EUR	
-Latvia	Ventspils	EUR	
-Latvia	Rezekne	EUR	
-Latvia	Ogre	EUR	
-Latvia	Valmiera	EUR	
-Latvia	Jekabpils	EUR	
-Latvia	Salaspils	EUR	
-Latvia	Tukums	EUR	
-Latvia	Cesis	EUR	
-Latvia	Sigulda	EUR	
-Latvia	Olaine	EUR	
-Latvia	Kuldiga	EUR	
-Latvia	Saldus	EUR	
-Latvia	Talsi	EUR	
-Latvia	Dobele	EUR	
-Latvia	Bauska	EUR	
-Lebanon	Beirut	LBP	
-Lebanon	Tripoli	LBP	
-Lebanon	Sidon	LBP	
-Lebanon	Tyre	LBP	
-Lebanon	Nabatieh	LBP	
-Lebanon	Jounieh	LBP	
-Lebanon	Zahle	LBP	
-Lebanon	Baalbek	LBP	
-Lebanon	Batroun	LBP	
-Lebanon	Byblos	LBP	
-Lebanon	Aley	LBP	
-Lebanon	Bsharri	LBP	
-Lebanon	Zgharta	LBP	
-Lebanon	Hermel	LBP	
-Lebanon	Chekka	LBP	
-Lebanon	Enfeh	LBP	
-Lebanon	Halba	LBP	
-Lebanon	Jbeil	LBP	
-Lebanon	Rayak	LBP	
-Lebanon	Qab Elias	LBP	
-Lesotho	Maseru	LSL	
-Lesotho	Teyateyaneng	LSL	
-Lesotho	Mafeteng	LSL	
-Lesotho	Hlotse	LSL	
-Lesotho	Mohale's Hoek	LSL	
-Lesotho	Maputsoe	LSL	
-Lesotho	Qacha's Nek	LSL	
-Lesotho	Quthing	LSL	
-Lesotho	Peka	LSL	
-Lesotho	Butha-Buthe	LSL	
-Lesotho	Mokhotlong	LSL	
-Lesotho	Thaba-Tseka	LSL	
-Lesotho	Roma	LSL	
-Lesotho	Morija	LSL	
-Lesotho	Mazinod	LSL	
-Lesotho	Matsieng	LSL	
-Lesotho	Makhakhe	LSL	
-Lesotho	Tsa-Kholo	LSL	
-Lesotho	Ribaneng	LSL	
-Lesotho	Semonkong	LSL	
-Liberia	Monrovia	LRD	
-Liberia	Gbarnga	LRD	
-Liberia	Buchanan	LRD	
-Liberia	Ganta	LRD	
-Liberia	Kakata	LRD	
-Liberia	Zwedru	LRD	
-Liberia	Harbel	LRD	
-Liberia	Pleebo	LRD	
-Liberia	Voinjama	LRD	
-Liberia	Harper	LRD	
-Liberia	Greenville	LRD	
-Liberia	Tubmanburg	LRD	
-Liberia	Sanniquellie	LRD	
-Liberia	Bensonville	LRD	
-Liberia	Robertsport	LRD	
-Liberia	Zorzor	LRD	
-Liberia	Karnplay	LRD	
-Liberia	River Cess	LRD	
-Liberia	Bopolu	LRD	
-Liberia	Fish Town	LRD	
-Libya	Tripoli	LYD	
-Libya	Benghazi	LYD	
-Libya	Misrata	LYD	
-Libya	Bayda	LYD	
-Libya	Zawiya	LYD	
-Libya	Zliten	LYD	
-Libya	Tobruk	LYD	
-Libya	Ajdabiya	LYD	
-Libya	Derna	LYD	
-Libya	Sabha	LYD	
-Libya	Khoms	LYD	
-Libya	Sirte	LYD	
-Libya	Sabratha	LYD	
-Libya	Zuwara	LYD	
-Libya	Kufra	LYD	
-Libya	Marj	LYD	
-Libya	Tarhuna	LYD	
-Libya	Gharyan	LYD	
-Libya	Bani Walid	LYD	
-Libya	Murzuq	LYD	
-Liechtenstein	Vaduz	CHF	
-Liechtenstein	Schaan	CHF	
-Liechtenstein	Triesen	CHF	
-Liechtenstein	Balzers	CHF	
-Liechtenstein	Eschen	CHF	
-Liechtenstein	Mauren	CHF	
-Liechtenstein	Triesenberg	CHF	
-Liechtenstein	Ruggell	CHF	
-Liechtenstein	Gamprin	CHF	
-Liechtenstein	Planken	CHF	
-Liechtenstein	Schellenberg	CHF	
-Liechtenstein	Nendeln	CHF	
-Liechtenstein	Bendern	CHF	
-Liechtenstein	Steg	CHF	
-Liechtenstein	Malbun	CHF	
-Liechtenstein	Masescha	CHF	
-Liechtenstein	Silum	CHF	
-Liechtenstein	Rotenboden	CHF	
-Liechtenstein	Hinter-Schellenberg	CHF	
-Liechtenstein	Vorder-Schellenberg	CHF	
-Lithuania	Vilnius	EUR	
-Lithuania	Kaunas	EUR	
-Lithuania	Klaipeda	EUR	
-Lithuania	Siauliai	EUR	
-Lithuania	Panevezys	EUR	
-Lithuania	Alytus	EUR	
-Lithuania	Marijampole	EUR	
-Lithuania	Mazeikiai	EUR	
-Lithuania	Jonava	EUR	
-Lithuania	Utena	EUR	
-Lithuania	Kedainiai	EUR	
-Lithuania	Taurage	EUR	
-Lithuania	Telsiai	EUR	
-Lithuania	Ukmerge	EUR	
-Lithuania	Visaginas	EUR	
-Lithuania	Plunge	EUR	
-Lithuania	Kretinga	EUR	
-Lithuania	Silute	EUR	
-Lithuania	Radviliskis	EUR	
-Lithuania	Palanga	EUR	
-Luxembourg	Luxembourg City	EUR	
-Luxembourg	Esch-sur-Alzette	EUR	
-Luxembourg	Differdange	EUR	
-Luxembourg	Dudelange	EUR	
-Luxembourg	Ettelbruck	EUR	
-Luxembourg	Diekirch	EUR	
-Luxembourg	Wiltz	EUR	
-Luxembourg	Echternach	EUR	
-Luxembourg	Rumelange	EUR	
-Luxembourg	Grevenmacher	EUR	
-Luxembourg	Remich	EUR	
-Luxembourg	Vianden	EUR	
-Luxembourg	Steinfort	EUR	
-Luxembourg	Mondorf-les-Bains	EUR	
-Luxembourg	Petange	EUR	
-Luxembourg	Sanem	EUR	
-Luxembourg	Hesperange	EUR	
-Luxembourg	Bettembourg	EUR	
-Luxembourg	Schifflange	EUR	
-Luxembourg	Mamer	EUR	
-Madagascar	Antananarivo	MGA	
-Madagascar	Toamasina	MGA	
-Madagascar	Antsirabe	MGA	
-Madagascar	Fianarantsoa	MGA	
-Madagascar	Mahajanga	MGA	
-Madagascar	Toliara	MGA	
-Madagascar	Antsiranana	MGA	
-Madagascar	Antanifotsy	MGA	
-Madagascar	Ambovombe	MGA	
-Madagascar	Ambilobe	MGA	
-Madagascar	Andapa	MGA	
-Madagascar	Farafangana	MGA	
-Madagascar	Nosy Varika	MGA	
-Madagascar	Vavatenina	MGA	
-Madagascar	Morondava	MGA	
-Madagascar	Ambatondrazaka	MGA	
-Madagascar	Mananara Nord	MGA	
-Madagascar	Soanierana Ivongo	MGA	
-Madagascar	Mahanoro	MGA	
-Madagascar	Soavinandriana	MGA	
-Malawi	Lilongwe	MWK	
-Malawi	Blantyre	MWK	
-Malawi	Mzuzu	MWK	
-Malawi	Zomba	MWK	
-Malawi	Kasungu	MWK	
-Malawi	Mangochi	MWK	
-Malawi	Karonga	MWK	
-Malawi	Salima	MWK	
-Malawi	Nkhotakota	MWK	
-Malawi	Liwonde	MWK	
-Malawi	Nsanje	MWK	
-Malawi	Rumphi	MWK	
-Malawi	Mzimba	MWK	
-Malawi	Balaka	MWK	
-Malawi	Dedza	MWK	
-Malawi	Luchenza	MWK	
-Malawi	Mchinji	MWK	
-Malawi	Chitipa	MWK	
-Malawi	Mulatje	MWK	
-Malawi	Ntcheu	MWK	
-Malaysia	Kuala Lumpur	MYR	
-Malaysia	George Town	MYR	
-Malaysia	Ipoh	MYR	
-Malaysia	Shah Alam	MYR	
-Malaysia	Petaling Jaya	MYR	
-Malaysia	Johor Bahru	MYR	
-Malaysia	Melaka	MYR	
-Malaysia	Kota Kinabalu	MYR	
-Malaysia	Kuantan	MYR	
-Malaysia	Alor Setar	MYR	
-Malaysia	Kuala Terengganu	MYR	
-Malaysia	Kuching	MYR	
-Malaysia	Seremban	MYR	
-Malaysia	Sandakan	MYR	
-Malaysia	Miri	MYR	
-Malaysia	Taiping	MYR	
-Malaysia	Klang	MYR	
-Malaysia	Subang Jaya	MYR	
-Malaysia	Kajang	MYR	
-Malaysia	Selayang	MYR	
-Maldives	Male	MVR	
-Maldives	Addu City	MVR	
-Maldives	Fuvahmulah	MVR	
-Maldives	Kulhudhuffushi	MVR	
-Maldives	Thinadhoo	MVR	
-Maldives	Naifaru	MVR	
-Maldives	Dhuvaafaru	MVR	
-Maldives	Mahibadhoo	MVR	
-Maldives	Eydhafushi	MVR	
-Maldives	Fonadhoo	MVR	
-Maldives	Gan	MVR	
-Maldives	Hithadhoo	MVR	
-Maldives	Hulhumale	MVR	
-Maldives	Villingili	MVR	
-Maldives	Maafushi	MVR	
-Maldives	Rasdhoo	MVR	
-Maldives	Ukulhas	MVR	
-Maldives	Thoddoo	MVR	
-Maldives	Guraidhoo	MVR	
-Maldives	Himmafushi	MVR	
-Mali	Bamako	XOF	
-Mali	Sikasso	XOF	
-Mali	Kalabancoro	XOF	
-Mali	Koutiala	XOF	
-Mali	Segou	XOF	
-Mali	Kayes	XOF	
-Mali	Mopti	XOF	
-Mali	Niono	XOF	
-Mali	Gao	XOF	
-Mali	San	XOF	
-Mali	Kati	XOF	
-Mali	Timbuktu	XOF	
-Mali	Koro	XOF	
-Mali	Bla	XOF	
-Mali	Bougouni	XOF	
-Mali	MandÃ©	XOF	
-Mali	BaguinÃ©da-Camp	XOF	
-Mali	Kolokani	XOF	
-Mali	Pelengana	XOF	
-Mali	Kita	XOF	
-Malta	Valletta	EUR	
-Malta	Birkirkara	EUR	
-Malta	Mosta	EUR	
-Malta	Qormi	EUR	
-Malta	Zabbar	EUR	
-Malta	San Gwann	EUR	
-Malta	Sliema	EUR	
-Malta	Rabat	EUR	
-Malta	Zejtun	EUR	
-Malta	Naxxar	EUR	
-Malta	Fgura	EUR	
-Malta	St. Paul's Bay	EUR	
-Malta	Mellieha	EUR	
-Malta	Zurrieq	EUR	
-Malta	Msida	EUR	
-Malta	Tarxien	EUR	
-Malta	Gzira	EUR	
-Malta	Marsaskala	EUR	
-Malta	Paola	EUR	
-Malta	Santa Venera	EUR	
-Marshall Islands	Majuro	USD	
-Marshall Islands	Ebeye	USD	
-Marshall Islands	Arrak	USD	
-Marshall Islands	Laura	USD	
-Marshall Islands	Ajeltake	USD	
-Marshall Islands	Woja	USD	
-Marshall Islands	Delap	USD	
-Marshall Islands	Uliga	USD	
-Marshall Islands	Rairok	USD	
-Marshall Islands	Djarrit	USD	
-Marshall Islands	Enubirr	USD	
-Marshall Islands	Jabor	USD	
-Marshall Islands	Wotje	USD	
-Marshall Islands	Kili	USD	
-Marshall Islands	Namdrik	USD	
-Marshall Islands	Ebon	USD	
-Marshall Islands	Mili	USD	
-Marshall Islands	Likiep	USD	
-Marshall Islands	Mejit	USD	
-Marshall Islands	Ailuk	USD	
-Mauritania	Nouakchott	MRU	
-Mauritania	Nouadhibou	MRU	
-Mauritania	Kiffa	MRU	
-Mauritania	Rosso	MRU	
-Mauritania	Kaedi	MRU	
-Mauritania	Zouerat	MRU	
-Mauritania	Atar	MRU	
-Mauritania	Boutilimit	MRU	
-Mauritania	Selibaby	MRU	
-Mauritania	Nema	MRU	
-Mauritania	Aleg	MRU	
-Mauritania	Tidjikja	MRU	
-Mauritania	Aioun	MRU	
-Mauritania	Magta Lahjar	MRU	
-Mauritania	Guerou	MRU	
-Mauritania	Tintane	MRU	
-Mauritania	Timbedra	MRU	
-Mauritania	Akjoujt	MRU	
-Mauritania	Amourj	MRU	
-Mauritania	Seolibabi	MRU	
-Mauritius	Port Louis	MUR	
-Mauritius	Vacoas-Phoenix	MUR	
-Mauritius	Beau Bassin-Rose Hill	MUR	
-Mauritius	Curepipe	MUR	
-Mauritius	Quatre Bornes	MUR	
-Mauritius	Triolet	MUR	
-Mauritius	Goodlands	MUR	
-Mauritius	Centre de Flacq	MUR	
-Mauritius	Bel Air Riviere Seche	MUR	
-Mauritius	Mahebourg	MUR	
-Mauritius	Saint Pierre	MUR	
-Mauritius	Le Hochet	MUR	
-Mauritius	Baie du Tombeau	MUR	
-Mauritius	Bambous	MUR	
-Mauritius	Rose Belle	MUR	
-Mauritius	Chemin Grenier	MUR	
-Mauritius	Riviere du Rempart	MUR	
-Mauritius	Grand Baie	MUR	
-Mauritius	Plaine Magnien	MUR	
-Mauritius	Pailles	MUR	
-Mexico	Mexico City	MXN	
-Mexico	Guadalajara	MXN	
-Mexico	Monterrey	MXN	
-Mexico	Puebla	MXN	
-Mexico	Toluca	MXN	
-Mexico	Tijuana	MXN	
-Mexico	Leon	MXN	
-Mexico	Ciudad Juarez	MXN	
-Mexico	Torreon	MXN	
-Mexico	Queretaro	MXN	
-Mexico	San Luis Potosi	MXN	
-Mexico	Merida	MXN	
-Mexico	Mexicali	MXN	
-Mexico	Aguascalientes	MXN	
-Mexico	Cuernavaca	MXN	
-Mexico	Acapulco	MXN	
-Mexico	Tampico	MXN	
-Mexico	Chihuahua	MXN	
-Mexico	Saltillo	MXN	
-Mexico	Morelia	MXN	
-Micronesia	Palikir	USD	
-Micronesia	Weno	USD	
-Micronesia	Colonia	USD	
-Micronesia	Tofol	USD	
-Micronesia	Lelu	USD	
-Micronesia	Kolonia	USD	
-Micronesia	Tol	USD	
-Micronesia	Madolenihmw	USD	
-Micronesia	Nett	USD	
-Micronesia	Kitti	USD	
-Micronesia	U	USD	
-Micronesia	Sokehs	USD	
-Micronesia	Fefan	USD	
-Micronesia	Uman	USD	
-Micronesia	Tonowas	USD	
-Micronesia	Moch	USD	
-Micronesia	Satowan	USD	
-Micronesia	Ta	USD	
-Micronesia	Kutu	USD	
-Micronesia	Ettal	USD	
-Moldova	Chisinau	MDL	
-Moldova	Balti	MDL	
-Moldova	Tiraspol	MDL	
-Moldova	Bender	MDL	
-Moldova	Ribnita	MDL	
-Moldova	Cahul	MDL	
-Moldova	Ungheni	MDL	
-Moldova	Soroca	MDL	
-Moldova	Orhei	MDL	
-Moldova	Comrat	MDL	
-Moldova	Dubasari	MDL	
-Moldova	Struseni	MDL	
-Moldova	Ceadir-Lunga	MDL	
-Moldova	Drochia	MDL	
-Moldova	Causeni	MDL	
-Moldova	Edinet	MDL	
-Moldova	Falesti	MDL	
-Moldova	Hincesti	MDL	
-Moldova	Slobozia	MDL	
-Moldova	Vulcanesti	MDL	
-Monaco	Monaco	EUR	
-Monaco	Monte Carlo	EUR	
-Monaco	La Condamine	EUR	
-Monaco	Fontvieille	EUR	
-Monaco	Moneghetti	EUR	
-Monaco	Larvotto	EUR	
-Monaco	Saint Roman	EUR	
-Monaco	Saint Michel	EUR	
-Monaco	La Colle	EUR	
-Monaco	Les Revoires	EUR	
-Monaco	Le Portier	EUR	
-Monaco	Monaco-Ville	EUR	
-Monaco	Spelugues	EUR	
-Monaco	Vallon de la Noix	EUR	
-Monaco	Saint Devote	EUR	
-Monaco	La Rousse	EUR	
-Monaco	Tenao	EUR	
-Monaco	Les Salines	EUR	
-Monaco	Jardin Exotique	EUR	
-Monaco	Plages	EUR	
-Mongolia	Ulaanbaatar	MNT	
-Mongolia	Erdenet	MNT	
-Mongolia	Darkhan	MNT	
-Mongolia	Choibalsan	MNT	
-Mongolia	Moron	MNT	
-Mongolia	Nalaikh	MNT	
-Mongolia	Khovd	MNT	
-Mongolia	Olgii	MNT	
-Mongolia	Bayankhongor	MNT	
-Mongolia	Arvaikheer	MNT	
-Mongolia	Ulaangom	MNT	
-Mongolia	Sainshand	MNT	
-Mongolia	Baruun-Urt	MNT	
-Mongolia	Sukhbaatar	MNT	
-Mongolia	Altai	MNT	
-Mongolia	Zuunmod	MNT	
-Mongolia	Zamiin-Uud	MNT	
-Mongolia	Bulgan	MNT	
-Mongolia	Mandalgovi	MNT	
-Mongolia	Dalanzadgad	MNT	
-Montenegro	Podgorica	EUR	
-Montenegro	Niksic	EUR	
-Montenegro	Pljevlja	EUR	
-Montenegro	Bijelo Polje	EUR	
-Montenegro	Cetinje	EUR	
-Montenegro	Bar	EUR	
-Montenegro	Herceg Novi	EUR	
-Montenegro	Berane	EUR	
-Montenegro	Budva	EUR	
-Montenegro	Ulcinj	EUR	
-Montenegro	Tivat	EUR	
-Montenegro	Rozaje	EUR	
-Montenegro	Kotor	EUR	
-Montenegro	Danilovgrad	EUR	
-Montenegro	Mojkovac	EUR	
-Montenegro	Plav	EUR	
-Montenegro	Kolasin	EUR	
-Montenegro	Zabljak	EUR	
-Montenegro	Pluzine	EUR	
-Montenegro	Andrijevica	EUR	
-Morocco	Casablanca	MAD	
-Morocco	Rabat	MAD	
-Morocco	Fes	MAD	
-Morocco	Marrakesh	MAD	
-Morocco	Tangier	MAD	
-Morocco	Agadir	MAD	
-Morocco	Meknes	MAD	
-Morocco	Oujda	MAD	
-Morocco	Kenitra	MAD	
-Morocco	Tetouan	MAD	
-Morocco	Safi	MAD	
-Morocco	Temara	MAD	
-Morocco	Inezgane	MAD	
-Morocco	Mohammedia	MAD	
-Morocco	Laayoune	MAD	
-Morocco	Khouribga	MAD	
-Morocco	Beni Mellal	MAD	
-Morocco	Jdida	MAD	
-Morocco	Taza	MAD	
-Morocco	Nador	MAD	
-Mozambique	Maputo	MZN	
-Mozambique	Matola	MZN	
-Mozambique	Beira	MZN	
-Mozambique	Nampula	MZN	
-Mozambique	Chimoio	MZN	
-Mozambique	Nacala	MZN	
-Mozambique	Quelimane	MZN	
-Mozambique	Tete	MZN	
-Mozambique	Xai-Xai	MZN	
-Mozambique	Maxixe	MZN	
-Mozambique	Lichinga	MZN	
-Mozambique	Pemba	MZN	
-Mozambique	Dondo	MZN	
-Mozambique	Antonio Enes	MZN	
-Mozambique	Inhambane	MZN	
-Mozambique	Cuamba	MZN	
-Mozambique	Montepuez	MZN	
-Mozambique	Chokwe	MZN	
-Mozambique	Chibuto	MZN	
-Mozambique	Ilha de Mocambique	MZN	
-Myanmar	Yangon	MMK	
-Myanmar	Mandalay	MMK	
-Myanmar	Naypyidaw	MMK	
-Myanmar	Mawlamyine	MMK	
-Myanmar	Bago	MMK	
-Myanmar	Pathein	MMK	
-Myanmar	Monywa	MMK	
-Myanmar	Sittwe	MMK	
-Myanmar	Meiktila	MMK	
-Myanmar	Taunggyi	MMK	
-Myanmar	Myeik	MMK	
-Myanmar	Pyay	MMK	
-Myanmar	Dawei	MMK	
-Myanmar	Lashio	MMK	
-Myanmar	Pakokku	MMK	
-Myanmar	Magway	MMK	
-Myanmar	Henzada	MMK	
-Myanmar	Myingyan	MMK	
-Myanmar	Hakha	MMK	
-Myanmar	Loikaw	MMK	
-Namibia	Windhoek	NAD	
-Namibia	Walvis Bay	NAD	
-Namibia	Swakopmund	NAD	
-Namibia	Henties Bay	NAD	
-Namibia	Omaruru	NAD	
-Namibia	Otjiwarongo	NAD	
-Namibia	Okahandja	NAD	
-Namibia	Grootfontein	NAD	
-Namibia	Mariental	NAD	
-Namibia	Outjo	NAD	
-Namibia	Gobabis	NAD	
-Namibia	Tsumeb	NAD	
-Namibia	Keetmanshoop	NAD	
-Namibia	Luderitz	NAD	
-Namibia	Karasburg	NAD	
-Namibia	Rundu	NAD	
-Namibia	Katima Mulilo	NAD	
-Namibia	Rehoboth	NAD	
-Namibia	Arandis	NAD	
-Namibia	Oranjemund	NAD	
-Nauru	Yaren	AUD	
-Nauru	Boe	AUD	
-Nauru	Aiwo	AUD	
-Nauru	Anabar	AUD	
-Nauru	Anetan	AUD	
-Nauru	Anibare	AUD	
-Nauru	Baiti	AUD	
-Nauru	Buada	AUD	
-Nauru	Denigomodu	AUD	
-Nauru	Ewa	AUD	
-Nauru	Ijuw	AUD	
-Nauru	Meneng	AUD	
-Nauru	Nibok	AUD	
-Nauru	Uaboe	AUD	
-Nauru	Yangor	AUD	
-Nauru	Arubo	AUD	
-Nauru	Arenibek	AUD	
-Nauru	Arijejen	AUD	
-Nauru	Ibwenape	AUD	
-Nauru	Orro	AUD	
-Nepal	Kathmandu	NPR	
-Nepal	Pokhara	NPR	
-Nepal	Lalitpur	NPR	
-Nepal	Biratnagar	NPR	
-Nepal	Bharatpur	NPR	
-Nepal	Birgunj	NPR	
-Nepal	Butwal	NPR	
-Nepal	Dharan	NPR	
-Nepal	Bhimdatta	NPR	
-Nepal	Dhangadhi	NPR	
-Nepal	Janakpur	NPR	
-Nepal	Hetauda	NPR	
-Nepal	Madhyapur Thimi	NPR	
-Nepal	Nepalgunj	NPR	
-Nepal	Itahari	NPR	
-Nepal	Triyuga	NPR	
-Nepal	Siddharthanagar	NPR	
-Nepal	Ghorahi	NPR	
-Nepal	Tulsipur	NPR	
-Nepal	Kirtipur	NPR	
-Netherlands	Amsterdam	EUR	
-Netherlands	Rotterdam	EUR	
-Netherlands	The Hague	EUR	
-Netherlands	Utrecht	EUR	
-Netherlands	Eindhoven	EUR	
-Netherlands	Tilburg	EUR	
-Netherlands	Groningen	EUR	
-Netherlands	Almere	EUR	
-Netherlands	Breda	EUR	
-Netherlands	Nijmegen	EUR	
-Netherlands	Apeldoorn	EUR	
-Netherlands	Haarlem	EUR	
-Netherlands	Enschede	EUR	
-Netherlands	Arnhem	EUR	
-Netherlands	Amersfoort	EUR	
-Netherlands	Zaanstad	EUR	
-Netherlands	Den Bosch	EUR	
-Netherlands	Haarlemmermeer	EUR	
-Netherlands	Zwolle	EUR	
-Netherlands	Zoetermeer	EUR	
-New Zealand	Auckland	NZD	
-New Zealand	Wellington	NZD	
-New Zealand	Christchurch	NZD	
-New Zealand	Hamilton	NZD	
-New Zealand	Tauranga	NZD	
-New Zealand	Napier-Hastings	NZD	
-New Zealand	Dunedin	NZD	
-New Zealand	Palmerston North	NZD	
-New Zealand	Nelson	NZD	
-New Zealand	Rotorua	NZD	
-New Zealand	Whangarei	NZD	
-New Zealand	New Plymouth	NZD	
-New Zealand	Invercargill	NZD	
-New Zealand	Whanganui	NZD	
-New Zealand	Gisborne	NZD	
-New Zealand	Blenheim	NZD	
-New Zealand	Timaru	NZD	
-New Zealand	Taupo	NZD	
-New Zealand	Masterton	NZD	
-New Zealand	Levin	NZD	
-Nicaragua	Managua	NIO	
-Nicaragua	Leon	NIO	
-Nicaragua	Masaya	NIO	
-Nicaragua	Matagalpa	NIO	
-Nicaragua	Chinandega	NIO	
-Nicaragua	Granada	NIO	
-Nicaragua	Esteli	NIO	
-Nicaragua	Tipitapa	NIO	
-Nicaragua	Bluefields	NIO	
-Nicaragua	Juigalpa	NIO	
-Nicaragua	Jinotega	NIO	
-Nicaragua	Puerto Cabezas	NIO	
-Nicaragua	El Viejo	NIO	
-Nicaragua	Nueva Guinea	NIO	
-Nicaragua	San Carlos	NIO	
-Nicaragua	Rivas	NIO	
-Nicaragua	Nandaime	NIO	
-Nicaragua	Masatepe	NIO	
-Nicaragua	Sebaco	NIO	
-Nicaragua	Boaco	NIO	
-Niger	Niamey	XOF	
-Niger	Zinder	XOF	
-Niger	Maradi	XOF	
-Niger	Tahoua	XOF	
-Niger	Agadez	XOF	
-Niger	Arlit	XOF	
-Niger	Dosso	XOF	
-Niger	Birni-N'Konni	XOF	
-Niger	Tessaoua	XOF	
-Niger	Gaya	XOF	
-Niger	Dogondoutchi	XOF	
-Niger	Diffa	XOF	
-Niger	Ayorou	XOF	
-Niger	Madaoua	XOF	
-Niger	Mayahi	XOF	
-Niger	Tera	XOF	
-Niger	Mirriah	XOF	
-Niger	Magaria	XOF	
-Niger	Dakoro	XOF	
-Niger	Tibiri	XOF	
-Nigeria	Lagos	NGN	
-Nigeria	Kano	NGN	
-Nigeria	Ibadan	NGN	
-Nigeria	Kaduna	NGN	
-Nigeria	Port Harcourt	NGN	
-Nigeria	Benin City	NGN	
-Nigeria	Maiduguri	NGN	
-Nigeria	Zaria	NGN	
-Nigeria	Aba	NGN	
-Nigeria	Jos	NGN	
-Nigeria	Ilorin	NGN	
-Nigeria	Oyo	NGN	
-Nigeria	Enugu	NGN	
-Nigeria	Abeokuta	NGN	
-Nigeria	Abuja	NGN	
-Nigeria	Sokoto	NGN	
-Nigeria	Onitsha	NGN	
-Nigeria	Warri	NGN	
-Nigeria	Ebute Ikorodu	NGN	
-Nigeria	Okene	NGN	
-North Macedonia	Skopje	MKD	
-North Macedonia	Bitola	MKD	
-North Macedonia	Kumanovo	MKD	
-North Macedonia	Prilep	MKD	
-North Macedonia	Tetovo	MKD	
-North Macedonia	Veles	MKD	
-North Macedonia	Stip	MKD	
-North Macedonia	Ohrid	MKD	
-North Macedonia	Gostivar	MKD	
-North Macedonia	Strumica	MKD	
-North Macedonia	Kavadarci	MKD	
-North Macedonia	Kocani	MKD	
-North Macedonia	Kicevo	MKD	
-North Macedonia	Struga	MKD	
-North Macedonia	Radovis	MKD	
-North Macedonia	Gevgelija	MKD	
-North Macedonia	Debar	MKD	
-North Macedonia	Kriva Palanka	MKD	
-North Macedonia	Sveti Nikole	MKD	
-North Macedonia	Negotino	MKD	
-Norway	Oslo	NOK	
-Norway	Bergen	NOK	
-Norway	Trondheim	NOK	
-Norway	Stavanger	NOK	
-Norway	Drammen	NOK	
-Norway	Fredrikstad	NOK	
-Norway	Kristiansand	NOK	
-Norway	Sandnes	NOK	
-Norway	Tromso	NOK	
-Norway	Sarpsborg	NOK	
-Norway	Skien	NOK	
-Norway	Alesund	NOK	
-Norway	Sandefjord	NOK	
-Norway	Haugesund	NOK	
-Norway	Tonsberg	NOK	
-Norway	Moss	NOK	
-Norway	Porsgrunn	NOK	
-Norway	Bodo	NOK	
-Norway	Arendal	NOK	
-Norway	Hamar	NOK	
-Oman	Muscat	OMR	
-Oman	Seeb	OMR	
-Oman	Salalah	OMR	
-Oman	Bawshar	OMR	
-Oman	Sohar	OMR	
-Oman	Suwayq	OMR	
-Oman	Ibri	OMR	
-Oman	Saham	OMR	
-Oman	Barka	OMR	
-Oman	Rustaq	OMR	
-Oman	Nizwa	OMR	
-Oman	Buraimi	OMR	
-Oman	Sur	OMR	
-Oman	Mussanah	OMR	
-Oman	Bahla	OMR	
-Oman	Al Khaburah	OMR	
-Oman	Shinas	OMR	
-Oman	Samail	OMR	
-Oman	Amrat	OMR	
-Oman	Qurayyat	OMR	
-Pakistan	Karachi	PKR	
-Pakistan	Lahore	PKR	
-Pakistan	Faisalabad	PKR	
-Pakistan	Rawalpindi	PKR	
-Pakistan	Gujranwala	PKR	
-Pakistan	Peshawar	PKR	
-Pakistan	Multan	PKR	
-Pakistan	Hyderabad	PKR	
-Pakistan	Islamabad	PKR	
-Pakistan	Quetta	PKR	
-Pakistan	Bahawalpur	PKR	
-Pakistan	Sargodha	PKR	
-Pakistan	Sialkot	PKR	
-Pakistan	Sukkur	PKR	
-Pakistan	Larkana	PKR	
-Pakistan	Sheikhupura	PKR	
-Pakistan	Rahim Yar Khan	PKR	
-Pakistan	Jhang	PKR	
-Pakistan	Dera Ghazi Khan	PKR	
-Pakistan	Gujrat	PKR	
-Palau	Ngerulmud	USD	
-Palau	Koror	USD	
-Palau	Airai	USD	
-Palau	Kloulklubed	USD	
-Palau	Meyuns	USD	
-Palau	Ngerkeai	USD	
-Palau	Ngermid	USD	
-Palau	Ngerbeched	USD	
-Palau	Ngerbodel	USD	
-Palau	Iyebukel	USD	
-Palau	Idid	USD	
-Palau	Meketii	USD	
-Palau	Ikelau	USD	
-Palau	Medalaii	USD	
-Palau	Dngeronger	USD	
-Palau	Ngerkesoaol	USD	
-Palau	Ngaremlengui	USD	
-Palau	Melekeok	USD	
-Palau	Ngaraard	USD	
-Palau	Kayangel	USD	
-Panama	Panama City	USD	
-Panama	San Miguelito	USD	
-Panama	Tocumen	USD	
-Panama	David	USD	
-Panama	Las Cumbres	USD	
-Panama	Colon	USD	
-Panama	La Chorrera	USD	
-Panama	Pacora	USD	
-Panama	Santiago de Veraguas	USD	
-Panama	Chitre	USD	
-Panama	Arraijan	USD	
-Panama	Penonome	USD	
-Panama	Vista Alegre	USD	
-Panama	Chilibre	USD	
-Panama	Cativa	USD	
-Panama	Nuevo Arraijan	USD	
-Panama	Changuinola	USD	
-Panama	Alcalde Diaz	USD	
-Panama	Anton	USD	
-Panama	Puerto Armuelles	USD	
-Papua New Guinea	Port Moresby	PGK	
-Papua New Guinea	Lae	PGK	
-Papua New Guinea	Arawa	PGK	
-Papua New Guinea	Mount Hagen	PGK	
-Papua New Guinea	Popondetta	PGK	
-Papua New Guinea	Madang	PGK	
-Papua New Guinea	Kokopo	PGK	
-Papua New Guinea	Mendi	PGK	
-Papua New Guinea	Kimbe	PGK	
-Papua New Guinea	Goroka	PGK	
-Papua New Guinea	Wewak	PGK	
-Papua New Guinea	Bulolo	PGK	
-Papua New Guinea	Daru	PGK	
-Papua New Guinea	Kavieng	PGK	
-Papua New Guinea	Alotau	PGK	
-Papua New Guinea	Vanimo	PGK	
-Papua New Guinea	Kundiawa	PGK	
-Papua New Guinea	Lorengau	PGK	
-Papua New Guinea	Kerema	PGK	
-Papua New Guinea	Ialibu	PGK	
-Paraguay	Asuncion	PYG	
-Paraguay	Ciudad del Este	PYG	
-Paraguay	Luque	PYG	
-Paraguay	San Lorenzo	PYG	
-Paraguay	Capiata	PYG	
-Paraguay	Lambare	PYG	
-Paraguay	Fernando de la Mora	PYG	
-Paraguay	Limpio	PYG	
-Paraguay	Nemby	PYG	
-Paraguay	Encarnacion	PYG	
-Paraguay	Mariano Roque Alonso	PYG	
-Paraguay	Itaugua	PYG	
-Paraguay	Pedro Juan Caballero	PYG	
-Paraguay	Villa Elisa	PYG	
-Paraguay	San Antonio	PYG	
-Paraguay	Hernandarias	PYG	
-Paraguay	Presidente Franco	PYG	
-Paraguay	Caaguazu	PYG	
-Paraguay	Coronel Oviedo	PYG	
-Paraguay	Concepcion	PYG	
-Peru	Lima	PEN	
-Peru	Arequipa	PEN	
-Peru	Trujillo	PEN	
-Peru	Chiclayo	PEN	
-Peru	Piura	PEN	
-Peru	Iquitos	PEN	
-Peru	Cusco	PEN	
-Peru	Chimbote	PEN	
-Peru	Huancayo	PEN	
-Peru	Tacna	PEN	
-Peru	Ica	PEN	
-Peru	Juliaca	PEN	
-Peru	Pucallpa	PEN	
-Peru	Sullana	PEN	
-Peru	Cajamarca	PEN	
-Peru	Chincha Alta	PEN	
-Peru	Ayacucho	PEN	
-Peru	Huanuco	PEN	
-Peru	Puno	PEN	
-Peru	Tarapoto	PEN	
-Philippines	Manila	PHP	
-Philippines	Quezon City	PHP	
-Philippines	Davao City	PHP	
-Philippines	Caloocan	PHP	
-Philippines	Cebu City	PHP	
-Philippines	Zamboanga City	PHP	
-Philippines	Taguig	PHP	
-Philippines	Antipolo	PHP	
-Philippines	Pasig	PHP	
-Philippines	Cagayan de Oro	PHP	
-Philippines	Paranaque	PHP	
-Philippines	Dasmarinas	PHP	
-Philippines	Valenzuela	PHP	
-Philippines	Bacoor	PHP	
-Philippines	General Santos	PHP	
-Philippines	Las Pinas	PHP	
-Philippines	Makati	PHP	
-Philippines	San Jose del Monte	PHP	
-Philippines	Bacolod	PHP	
-Philippines	Muntinlupa	PHP	
-Poland	Warsaw	PLN	
-Poland	Krakow	PLN	
-Poland	Lodz	PLN	
-Poland	Wroclaw	PLN	
-Poland	Poznan	PLN	
-Poland	Gdansk	PLN	
-Poland	Szczecin	PLN	
-Poland	Bydgoszcz	PLN	
-Poland	Lublin	PLN	
-Poland	Katowice	PLN	
-Poland	Bialystok	PLN	
-Poland	Gdynia	PLN	
-Poland	Czestochowa	PLN	
-Poland	Radom	PLN	
-Poland	Sosnowiec	PLN	
-Poland	Torun	PLN	
-Poland	Kielce	PLN	
-Poland	Rzeszow	PLN	
-Poland	Gliwice	PLN	
-Poland	Zabrze	PLN	
-Portugal	Lisbon	EUR	
-Portugal	Porto	EUR	
-Portugal	Vila Nova de Gaia	EUR	
-Portugal	Amadora	EUR	
-Portugal	Braga	EUR	
-Portugal	Funchal	EUR	
-Portugal	Coimbra	EUR	
-Portugal	Setubal	EUR	
-Portugal	Almada	EUR	
-Portugal	Agualva-Cacem	EUR	
-Portugal	Queluz	EUR	
-Portugal	Barreiro	EUR	
-Portugal	Viseu	EUR	
-Portugal	Rio Tinto	EUR	
-Portugal	Odivelas	EUR	
-Portugal	Leiria	EUR	
-Portugal	Aveiro	EUR	
-Portugal	Portimao	EUR	
-Portugal	Faro	EUR	
-Portugal	Guimaraes	EUR	
-Qatar	Doha	QAR	
-Qatar	Al Rayyan	QAR	
-Qatar	Umm Salal	QAR	
-Qatar	Al Wakrah	QAR	
-Qatar	Al Khor	QAR	
-Qatar	Al Shamal	QAR	
-Qatar	Al Daayen	QAR	
-Qatar	Shahaniya	QAR	
-Qatar	Mesaieed	QAR	
-Qatar	Dukhan	QAR	
-Qatar	Lusail	QAR	
-Qatar	Pearl Qatar	QAR	
-Qatar	West Bay	QAR	
-Qatar	Al Thakhira	QAR	
-Qatar	Al Wukair	QAR	
-Qatar	Rawdat Rashed	QAR	
-Qatar	Al Ghuwariyah	QAR	
-Qatar	Al Jumailiyah	QAR	
-Qatar	Al Karana	QAR	
-Qatar	Abu Samra	QAR	
-Romania	Bucharest	RON	
-Romania	Cluj-Napoca	RON	
-Romania	Timisoara	RON	
-Romania	Iasi	RON	
-Romania	Constanta	RON	
-Romania	Craiova	RON	
-Romania	Brasov	RON	
-Romania	Galati	RON	
-Romania	Ploiesti	RON	
-Romania	Oradea	RON	
-Romania	Braila	RON	
-Romania	Arad	RON	
-Romania	Pitesti	RON	
-Romania	Sibiu	RON	
-Romania	Bacau	RON	
-Romania	Targu Mures	RON	
-Romania	Baia Mare	RON	
-Romania	Buzau	RON	
-Romania	Botosani	RON	
-Romania	Satu Mare	RON	
-Russia	Moscow	RUB	
-Russia	Saint Petersburg	RUB	
-Russia	Novosibirsk	RUB	
-Russia	Yekaterinburg	RUB	
-Russia	Kazan	RUB	
-Russia	Nizhny Novgorod	RUB	
-Russia	Chelyabinsk	RUB	
-Russia	Samara	RUB	
-Russia	Omsk	RUB	
-Russia	Rostov-on-Don	RUB	
-Russia	Ufa	RUB	
-Russia	Krasnoyarsk	RUB	
-Russia	Voronezh	RUB	
-Russia	Perm	RUB	
-Russia	Volgograd	RUB	
-Russia	Krasnodar	RUB	
-Russia	Saratov	RUB	
-Russia	Tyumen	RUB	
-Russia	Tolyatti	RUB	
-Russia	Izhevsk	RUB	
-Rwanda	Kigali	RWF	
-Rwanda	Butare	RWF	
-Rwanda	Gitarama	RWF	
-Rwanda	Ruhengeri	RWF	
-Rwanda	Gisenyi	RWF	
-Rwanda	Byumba	RWF	
-Rwanda	Cyangugu	RWF	
-Rwanda	Kibuye	RWF	
-Rwanda	Rwamagana	RWF	
-Rwanda	Kibungo	RWF	
-Rwanda	Nyanza	RWF	
-Rwanda	Bugarama	RWF	
-Rwanda	Kayonza	RWF	
-Rwanda	Nyagatare	RWF	
-Rwanda	Nyamata	RWF	
-Rwanda	Ruhango	RWF	
-Rwanda	Gikongoro	RWF	
-Rwanda	Busogo	RWF	
-Rwanda	Musanze	RWF	
-Rwanda	Rubavu	RWF	
-Saint Kitts and Nevis	Basseterre	XCD	
-Saint Kitts and Nevis	Charlestown	XCD	
-Saint Kitts and Nevis	Sadlers	XCD	
-Saint Kitts and Nevis	Cayon	XCD	
-Saint Kitts and Nevis	Sandy Point Town	XCD	
-Saint Kitts and Nevis	Old Road Town	XCD	
-Saint Kitts and Nevis	Gingerland	XCD	
-Saint Kitts and Nevis	Newcastle	XCD	
-Saint Kitts and Nevis	Dieppe Bay Town	XCD	
-Saint Kitts and Nevis	Monkey Hill	XCD	
-Saint Kitts and Nevis	Boyds	XCD	
-Saint Kitts and Nevis	Tabernacle	XCD	
-Saint Kitts and Nevis	Saint Paul's	XCD	
-Saint Kitts and Nevis	Middle Island	XCD	
-Saint Kitts and Nevis	Mansion	XCD	
-Saint Kitts and Nevis	Verchilds	XCD	
-Saint Kitts and Nevis	Challengers	XCD	
-Saint Kitts and Nevis	Trinity	XCD	
-Saint Kitts and Nevis	Lodge	XCD	
-Saint Kitts and Nevis	Molineux	XCD	
-Saint Lucia	Castries	XCD	
-Saint Lucia	Gros Islet	XCD	
-Saint Lucia	Vieux Fort	XCD	
-Saint Lucia	Soufriere	XCD	
-Saint Lucia	Dennery	XCD	
-Saint Lucia	Micoud	XCD	
-Saint Lucia	Anse La Raye	XCD	
-Saint Lucia	Canaries	XCD	
-Saint Lucia	Laborie	XCD	
-Saint Lucia	Choiseul	XCD	
-Saint Lucia	Marigot Bay	XCD	
-Saint Lucia	Babonneau	XCD	
-Saint Lucia	Bexon	XCD	
-Saint Lucia	Ciceron	XCD	
-Saint Lucia	Grande Riviere	XCD	
-Saint Lucia	La Clery	XCD	
-Saint Lucia	Marchand	XCD	
-Saint Lucia	Monchy	XCD	
-Saint Lucia	Ti Rocher	XCD	
-Saint Lucia	Augier	XCD	
-Saint Vincent and the Grenadines	Kingstown	XCD	
-Saint Vincent and the Grenadines	Georgetown	XCD	
-Saint Vincent and the Grenadines	Byera Village	XCD	
-Saint Vincent and the Grenadines	Biabou	XCD	
-Saint Vincent and the Grenadines	Chateaubelair	XCD	
-Saint Vincent and the Grenadines	Port Elizabeth	XCD	
-Saint Vincent and the Grenadines	Barrouallie	XCD	
-Saint Vincent and the Grenadines	Layou	XCD	
-Saint Vincent and the Grenadines	Mesopotamia	XCD	
-Saint Vincent and the Grenadines	Calliaqua	XCD	
-Saint Vincent and the Grenadines	Stubbs	XCD	
-Saint Vincent and the Grenadines	Greiggs	XCD	
-Saint Vincent and the Grenadines	Richland Park	XCD	
-Saint Vincent and the Grenadines	Vermont	XCD	
-Saint Vincent and the Grenadines	Questelles	XCD	
-Saint Vincent and the Grenadines	Sion Hill	XCD	
-Saint Vincent and the Grenadines	Arnos Vale	XCD	
-Saint Vincent and the Grenadines	Villa	XCD	
-Saint Vincent and the Grenadines	Campden Park	XCD	
-Saint Vincent and the Grenadines	Rose Bank	XCD	
-Samoa	Apia	WST	
-Samoa	Vaitele	WST	
-Samoa	Faleasiu	WST	
-Samoa	Vailele	WST	
-Samoa	Leauvaa	WST	
-Samoa	Faleula	WST	
-Samoa	Siusega	WST	
-Samoa	Malie	WST	
-Samoa	Fasito'outa	WST	
-Samoa	Vaiusu	WST	
-Samoa	Lauli'i	WST	
-Samoa	Afega	WST	
-Samoa	Nofoali'i	WST	
-Samoa	Solosolo	WST	
-Samoa	Leulumoega	WST	
-Samoa	Satapuala	WST	
-Samoa	Falefa	WST	
-Samoa	Matavai	WST	
-Samoa	Manono Uta	WST	
-Samoa	Tuanai	WST	
-San Marino	San Marino	EUR	
-San Marino	Serravalle	EUR	
-San Marino	Borgo Maggiore	EUR	
-San Marino	Domagnano	EUR	
-San Marino	Fiorentino	EUR	
-San Marino	Acquaviva	EUR	
-San Marino	Faetano	EUR	
-San Marino	Chiesanuova	EUR	
-San Marino	Montegiardino	EUR	
-San Marino	Dogana	EUR	
-San Marino	Cailungo	EUR	
-San Marino	Ventoso	EUR	
-San Marino	Valdragone	EUR	
-San Marino	Falciano	EUR	
-San Marino	Lesignano	EUR	
-San Marino	Gualdicciolo	EUR	
-San Marino	Santa Mustiola	EUR	
-San Marino	Murata	EUR	
-San Marino	Galazzano	EUR	
-San Marino	Molarini	EUR	
-Sao Tome and Principe	Sao Tome	STN	
-Sao Tome and Principe	Trindade	STN	
-Sao Tome and Principe	Santana	STN	
-Sao Tome and Principe	Neves	STN	
-Sao Tome and Principe	Santo Amaro	STN	
-Sao Tome and Principe	Guadalupe	STN	
-Sao Tome and Principe	Sao Joao dos Angolares	STN	
-Sao Tome and Principe	Pantufo	STN	
-Sao Tome and Principe	Madalena	STN	
-Sao Tome and Principe	Santo Antonio	STN	
-Sao Tome and Principe	Santa Catarina	STN	
-Sao Tome and Principe	Porto Alegre	STN	
-Sao Tome and Principe	Ribeira Afonso	STN	
-Sao Tome and Principe	Lemba	STN	
-Sao Tome and Principe	Micolo	STN	
-Sao Tome and Principe	Batepa	STN	
-Sao Tome and Principe	Monte Cafe	STN	
-Sao Tome and Principe	Almas	STN	
-Sao Tome and Principe	Bombom	STN	
-Sao Tome and Principe	Conde	STN	
-Saudi Arabia	Riyadh	SAR	
-Saudi Arabia	Jeddah	SAR	
-Saudi Arabia	Mecca	SAR	
-Saudi Arabia	Medina	SAR	
-Saudi Arabia	Dammam	SAR	
-Saudi Arabia	Taif	SAR	
-Saudi Arabia	Tabuk	SAR	
-Saudi Arabia	Buraydah	SAR	
-Saudi Arabia	Khamis Mushait	SAR	
-Saudi Arabia	Hofuf	SAR	
-Saudi Arabia	Al Jubail	SAR	
-Saudi Arabia	Ha'il	SAR	
-Saudi Arabia	Najran	SAR	
-Saudi Arabia	Yanbu	SAR	
-Saudi Arabia	Abha	SAR	
-Saudi Arabia	Arar	SAR	
-Saudi Arabia	Jizan	SAR	
-Saudi Arabia	Sakakah	SAR	
-Saudi Arabia	Al Bahah	SAR	
-Saudi Arabia	Qatif	SAR	
-Senegal	Dakar	XOF	
-Senegal	Touba	XOF	
-Senegal	Thies	XOF	
-Senegal	Kaolack	XOF	
-Senegal	Mbour	XOF	
-Senegal	Saint-Louis	XOF	
-Senegal	Rufisque	XOF	
-Senegal	Ziguinchor	XOF	
-Senegal	Diourbel	XOF	
-Senegal	Louga	XOF	
-Senegal	Tambacounda	XOF	
-Senegal	Mbacke	XOF	
-Senegal	Kolda	XOF	
-Senegal	Richard-Toll	XOF	
-Senegal	Bargny	XOF	
-Senegal	Tivaouane	XOF	
-Senegal	Joal-Fadiouth	XOF	
-Senegal	Dahra	XOF	
-Senegal	Kaffrine	XOF	
-Senegal	Bignona	XOF	
-Serbia	Belgrade	RSD	
-Serbia	Novi Sad	RSD	
-Serbia	Nis	RSD	
-Serbia	Kragujevac	RSD	
-Serbia	Subotica	RSD	
-Serbia	Zrenjanin	RSD	
-Serbia	Pancevo	RSD	
-Serbia	Cacak	RSD	
-Serbia	Krusevac	RSD	
-Serbia	Kraljevo	RSD	
-Serbia	Novi Pazar	RSD	
-Serbia	Smederevo	RSD	
-Serbia	Leskovac	RSD	
-Serbia	Uzice	RSD	
-Serbia	Valjevo	RSD	
-Serbia	Vranje	RSD	
-Serbia	Sabac	RSD	
-Serbia	Sombor	RSD	
-Serbia	Pozarevac	RSD	
-Serbia	Pirot	RSD	
-Seychelles	Victoria	SCR	
-Seychelles	Anse Etoile	SCR	
-Seychelles	Beau Vallon	SCR	
-Seychelles	Au Cap	SCR	
-Seychelles	Anse Royale	SCR	
-Seychelles	Baie Lazare	SCR	
-Seychelles	Roche Caiman	SCR	
-Seychelles	Cascade	SCR	
-Seychelles	Bel Ombre	SCR	
-Seychelles	Glacis	SCR	
-Seychelles	Grand'Anse	SCR	
-Seychelles	Takamaka	SCR	
-Seychelles	Port Glaud	SCR	
-Seychelles	Anse Boileau	SCR	
-Seychelles	Bel Air	SCR	
-Seychelles	English River	SCR	
-Seychelles	Mont Buxton	SCR	
-Seychelles	Mont Fleuri	SCR	
-Seychelles	Plaisance	SCR	
-Seychelles	Les Mamelles	SCR	
-Sierra Leone	Freetown	SLL	
-Sierra Leone	Bo	SLL	
-Sierra Leone	Kenema	SLL	
-Sierra Leone	Makeni	SLL	
-Sierra Leone	Koidu Town	SLL	
-Sierra Leone	Lunsar	SLL	
-Sierra Leone	Port Loko	SLL	
-Sierra Leone	Waterloo	SLL	
-Sierra Leone	Kabala	SLL	
-Sierra Leone	Segbwema	SLL	
-Sierra Leone	Magburaka	SLL	
-Sierra Leone	Kailahun	SLL	
-Sierra Leone	Bonthe	SLL	
-Sierra Leone	Mattru Jong	SLL	
-Sierra Leone	Pujehun	SLL	
-Sierra Leone	Kambia	SLL	
-Sierra Leone	Moyamba	SLL	
-Sierra Leone	Goderich	SLL	
-Sierra Leone	Pandebu	SLL	
-Sierra Leone	Blama	SLL	
-Singapore	Singapore	SGD	
-Singapore	Jurong West	SGD	
-Singapore	Bedok	SGD	
-Singapore	Woodlands	SGD	
-Singapore	Sengkang	SGD	
-Singapore	Hougang	SGD	
-Singapore	Tampines	SGD	
-Singapore	Yishun	SGD	
-Singapore	Bukit Batok	SGD	
-Singapore	Choa Chu Kang	SGD	
-Singapore	Jurong East	SGD	
-Singapore	Ang Mo Kio	SGD	
-Singapore	Toa Payoh	SGD	
-Singapore	Bukit Panjang	SGD	
-Singapore	Clementi	SGD	
-Singapore	Serangoon	SGD	
-Singapore	Punggol	SGD	
-Singapore	Pasir Ris	SGD	
-Singapore	Queenstown	SGD	
-Singapore	Bishan	SGD	
-Slovakia	Bratislava	EUR	
-Slovakia	Kosice	EUR	
-Slovakia	Presov	EUR	
-Slovakia	Zilina	EUR	
-Slovakia	Nitra	EUR	
-Slovakia	Banska Bystrica	EUR	
-Slovakia	Trnava	EUR	
-Slovakia	Trencin	EUR	
-Slovakia	Martin	EUR	
-Slovakia	Poprad	EUR	
-Slovakia	Prievidza	EUR	
-Slovakia	Zvolen	EUR	
-Slovakia	Povazska Bystrica	EUR	
-Slovakia	Nove Zamky	EUR	
-Slovakia	Michalovce	EUR	
-Slovakia	Spisska Nova Ves	EUR	
-Slovakia	Komarno	EUR	
-Slovakia	Levice	EUR	
-Slovakia	Humenne	EUR	
-Slovakia	Bardejov	EUR	
-Slovenia	Ljubljana	EUR	
-Slovenia	Maribor	EUR	
-Slovenia	Celje	EUR	
-Slovenia	Kranj	EUR	
-Slovenia	Velenje	EUR	
-Slovenia	Koper	EUR	
-Slovenia	Novo Mesto	EUR	
-Slovenia	Ptuj	EUR	
-Slovenia	Trbovlje	EUR	
-Slovenia	Kamnik	EUR	
-Slovenia	Jesenice	EUR	
-Slovenia	Nova Gorica	EUR	
-Slovenia	Domzale	EUR	
-Slovenia	Skofja Loka	EUR	
-Slovenia	Murska Sobota	EUR	
-Slovenia	Izola	EUR	
-Slovenia	Postojna	EUR	
-Slovenia	Logatec	EUR	
-Slovenia	Slovenj Gradec	EUR	
-Slovenia	Vrhnika	EUR	
-Solomon Islands	Honiara	SBD	
-Solomon Islands	Gizo	SBD	
-Solomon Islands	Auki	SBD	
-Solomon Islands	Noro	SBD	
-Solomon Islands	Kirakira	SBD	
-Solomon Islands	Lata	SBD	
-Solomon Islands	Tulagi	SBD	
-Solomon Islands	Buala	SBD	
-Solomon Islands	Taro	SBD	
-Solomon Islands	Munda	SBD	
-Solomon Islands	Yandina	SBD	
-Solomon Islands	Ringgi	SBD	
-Solomon Islands	Seghe	SBD	
-Solomon Islands	Liapari	SBD	
-Solomon Islands	Bunlap	SBD	
-Solomon Islands	Panggoe	SBD	
-Solomon Islands	Viru	SBD	
-Solomon Islands	Batuna	SBD	
-Solomon Islands	Tingoa	SBD	
-Solomon Islands	Namuga	SBD	
-Somalia	Mogadishu	SOS	
-Somalia	Hargeisa	SOS	
-Somalia	Bosaso	SOS	
-Somalia	Galkayo	SOS	
-Somalia	Berbera	SOS	
-Somalia	Kismayo	SOS	
-Somalia	Merca	SOS	
-Somalia	Burao	SOS	
-Somalia	Baidoa	SOS	
-Somalia	Beledweyne	SOS	
-Somalia	Erigavo	SOS	
-Somalia	Las Anod	SOS	
-Somalia	Jowhar	SOS	
-Somalia	Garowe	SOS	
-Somalia	Borama	SOS	
-Somalia	Qardho	SOS	
-Somalia	Afgooye	SOS	
-Somalia	Wanlaweyn	SOS	
-Somalia	Baraawe	SOS	
-Somalia	Gabiley	SOS	
-South Africa	Johannesburg	ZAR	
-South Africa	Cape Town	ZAR	
-South Africa	Durban	ZAR	
-South Africa	Pretoria	ZAR	
-South Africa	Port Elizabeth	ZAR	
-South Africa	Bloemfontein	ZAR	
-South Africa	Polokwane	ZAR	
-South Africa	Nelspruit	ZAR	
-South Africa	Kimberley	ZAR	
-South Africa	East London	ZAR	
-South Africa	Pietermaritzburg	ZAR	
-South Africa	Vereeniging	ZAR	
-South Africa	Welkom	ZAR	
-South Africa	Newcastle	ZAR	
-South Africa	Krugersdorp	ZAR	
-South Africa	Rustenburg	ZAR	
-South Africa	Witbank	ZAR	
-South Africa	Potchefstroom	ZAR	
-South Africa	Paarl	ZAR	
-South Africa	George	ZAR	
-South Korea	Seoul	KRW	
-South Korea	Busan	KRW	
-South Korea	Incheon	KRW	
-South Korea	Daegu	KRW	
-South Korea	Daejeon	KRW	
-South Korea	Gwangju	KRW	
-South Korea	Suwon	KRW	
-South Korea	Ulsan	KRW	
-South Korea	Changwon	KRW	
-South Korea	Goyang	KRW	
-South Korea	Yongin	KRW	
-South Korea	Seongnam	KRW	
-South Korea	Bucheon	KRW	
-South Korea	Cheongju	KRW	
-South Korea	Ansan	KRW	
-South Korea	Jeonju	KRW	
-South Korea	Cheonan	KRW	
-South Korea	Namyangju	KRW	
-South Korea	Hwaseong	KRW	
-South Korea	Anyang	KRW	
-South Sudan	Juba	SSP	
-South Sudan	Wau	SSP	
-South Sudan	Malakal	SSP	
-South Sudan	Yambio	SSP	
-South Sudan	Bor	SSP	
-South Sudan	Torit	SSP	
-South Sudan	Aweil	SSP	
-South Sudan	Bentiu	SSP	
-South Sudan	Kuajok	SSP	
-South Sudan	Rumbek	SSP	
-South Sudan	Yei	SSP	
-South Sudan	Gogrial	SSP	
-South Sudan	Kapoeta	SSP	
-South Sudan	Tonj	SSP	
-South Sudan	Maridi	SSP	
-South Sudan	Renks	SSP	
-South Sudan	Tambura	SSP	
-South Sudan	Warrap	SSP	
-South Sudan	Akobo	SSP	
-South Sudan	Pibor	SSP	
-Spain	Madrid	EUR	
-Spain	Barcelona	EUR	
-Spain	Valencia	EUR	
-Spain	Seville	EUR	
-Spain	Zaragoza	EUR	
-Spain	Malaga	EUR	
-Spain	Murcia	EUR	
-Spain	Palma	EUR	
-Spain	Las Palmas	EUR	
-Spain	Bilbao	EUR	
-Spain	Alicante	EUR	
-Spain	Cordoba	EUR	
-Spain	Valladolid	EUR	
-Spain	Vigo	EUR	
-Spain	Gijon	EUR	
-Spain	L'Hospitalet de Llobregat	EUR	
-Spain	Vitoria-Gasteiz	EUR	
-Spain	A Coruna	EUR	
-Spain	Granada	EUR	
-Spain	Elche	EUR	
-Sri Lanka	Colombo	LKR	
-Sri Lanka	Kandy	LKR	
-Sri Lanka	Galle	LKR	
-Sri Lanka	Jaffna	LKR	
-Sri Lanka	Negombo	LKR	
-Sri Lanka	Anuradhapura	LKR	
-Sri Lanka	Trincomalee	LKR	
-Sri Lanka	Batticaloa	LKR	
-Sri Lanka	Matara	LKR	
-Sri Lanka	Kurunegala	LKR	
-Sri Lanka	Ratnapura	LKR	
-Sri Lanka	Kalutara	LKR	
-Sri Lanka	Badulla	LKR	
-Sri Lanka	Matale	LKR	
-Sri Lanka	Puttalam	LKR	
-Sri Lanka	Kegalle	LKR	
-Sri Lanka	Vavuniya	LKR	
-Sri Lanka	Ampara	LKR	
-Sri Lanka	Kalmunai	LKR	
-Sri Lanka	Dehiwala-Mount Lavinia	LKR	
-Sudan	Khartoum	SDG	
-Sudan	Omdurman	SDG	
-Sudan	Khartoum North	SDG	
-Sudan	Port Sudan	SDG	
-Sudan	Kassala	SDG	
-Sudan	El Obeid	SDG	
-Sudan	Nyala	SDG	
-Sudan	Wad Madani	SDG	
-Sudan	Gedaref	SDG	
-Sudan	Al Fashir	SDG	
-Sudan	Kosti	SDG	
-Sudan	Geneina	SDG	
-Sudan	Ed Daein	SDG	
-Sudan	El Damazin	SDG	
-Sudan	Ad-Damazin	SDG	
-Sudan	Rabak	SDG	
-Sudan	Sennar	SDG	
-Sudan	Atbara	SDG	
-Sudan	Dongola	SDG	
-Sudan	Kadugli	SDG	
-Suriname	Paramaribo	SRD	
-Suriname	Lelydorp	SRD	
-Suriname	Nieuw Nickerie	SRD	
-Suriname	Moengo	SRD	
-Suriname	Meerzorg	SRD	
-Suriname	Nieuw Amsterdam	SRD	
-Suriname	Marienburg	SRD	
-Suriname	Wageningen	SRD	
-Suriname	Albina	SRD	
-Suriname	Groningen	SRD	
-Suriname	Brownsweg	SRD	
-Suriname	Brokopondo	SRD	
-Suriname	Onverwacht	SRD	
-Suriname	Totness	SRD	
-Suriname	Apoera	SRD	
-Suriname	Pikin Slee	SRD	
-Suriname	Cottica	SRD	
-Suriname	Jenny	SRD	
-Suriname	Benzdorp	SRD	
-Suriname	Kwatta	SRD	
-Sweden	Stockholm	SEK	
-Sweden	Gothenburg	SEK	
-Sweden	Malmo	SEK	
-Sweden	Uppsala	SEK	
-Sweden	Vasteras	SEK	
-Sweden	Orebro	SEK	
-Sweden	Linkoping	SEK	
-Sweden	Helsingborg	SEK	
-Sweden	Jonkoping	SEK	
-Sweden	Norrkoping	SEK	
-Sweden	Lund	SEK	
-Sweden	Umea	SEK	
-Sweden	Gavle	SEK	
-Sweden	Boras	SEK	
-Sweden	Sodertalje	SEK	
-Sweden	Eskilstuna	SEK	
-Sweden	Halmstad	SEK	
-Sweden	Vaxjo	SEK	
-Sweden	Karlstad	SEK	
-Sweden	Sundsvall	SEK	
-Switzerland	Zurich	CHF	
-Switzerland	Geneva	CHF	
-Switzerland	Basel	CHF	
-Switzerland	Lausanne	CHF	
-Switzerland	Bern	CHF	
-Switzerland	Winterthur	CHF	
-Switzerland	Lucerne	CHF	
-Switzerland	St. Gallen	CHF	
-Switzerland	Lugano	CHF	
-Switzerland	Biel/Bienne	CHF	
-Switzerland	Thun	CHF	
-Switzerland	Koniz	CHF	
-Switzerland	La Chaux-de-Fonds	CHF	
-Switzerland	Fribourg	CHF	
-Switzerland	Schaffhausen	CHF	
-Switzerland	Vernier	CHF	
-Switzerland	Chur	CHF	
-Switzerland	Uster	CHF	
-Switzerland	Sion	CHF	
-Switzerland	Lancy	CHF	
-Syria	Damascus	SYP	
-Syria	Aleppo	SYP	
-Syria	Homs	SYP	
-Syria	Latakia	SYP	
-Syria	Hama	SYP	
-Syria	Raqqa	SYP	
-Syria	Deir ez-Zor	SYP	
-Syria	Al-Hasakah	SYP	
-Syria	Qamishli	SYP	
-Syria	Tartus	SYP	
-Syria	Idlib	SYP	
-Syria	Douma	SYP	
-Syria	Daraa	SYP	
-Syria	Manbij	SYP	
-Syria	As-Suwayda	SYP	
-Syria	Al-Bab	SYP	
-Syria	Darayya	SYP	
-Syria	Al-Thawrah	SYP	
-Syria	Al-Qutayfah	SYP	
-Syria	Salamiyah	SYP	
-Taiwan	Taipei	TWD	
-Taiwan	Kaohsiung	TWD	
-Taiwan	Taichung	TWD	
-Taiwan	Tainan	TWD	
-Taiwan	Taoyuan	TWD	
-Taiwan	Hsinchu	TWD	
-Taiwan	Keelung	TWD	
-Taiwan	Chiayi	TWD	
-Taiwan	Changhua	TWD	
-Taiwan	Pingtung	TWD	
-Taiwan	Zhubei	TWD	
-Taiwan	Yuanlin	TWD	
-Taiwan	Douliu	TWD	
-Taiwan	Taitung	TWD	
-Taiwan	Hualien	TWD	
-Taiwan	Toufen	TWD	
-Taiwan	Nantou	TWD	
-Taiwan	Yilan	TWD	
-Taiwan	Miaoli	TWD	
-Taiwan	Magong	TWD	
-Tajikistan	Dushanbe	TJS	
-Tajikistan	Khujand	TJS	
-Tajikistan	Bokhtar	TJS	
-Tajikistan	Kulob	TJS	
-Tajikistan	Istaravshan	TJS	
-Tajikistan	Tursunzoda	TJS	
-Tajikistan	Konibodom	TJS	
-Tajikistan	Isfara	TJS	
-Tajikistan	Panjakent	TJS	
-Tajikistan	Khorog	TJS	
-Tajikistan	Yovon	TJS	
-Tajikistan	Vahdat	TJS	
-Tajikistan	Hisor	TJS	
-Tajikistan	Norak	TJS	
-Tajikistan	Danghara	TJS	
-Tajikistan	Farkhor	TJS	
-Tajikistan	Hamadoni	TJS	
-Tajikistan	Matcha	TJS	
-Tajikistan	Spitamen	TJS	
-Tajikistan	Jabbor Rasulov	TJS	
-Tanzania	Dar es Salaam	TZS	
-Tanzania	Mwanza	TZS	
-Tanzania	Arusha	TZS	
-Tanzania	Dodoma	TZS	
-Tanzania	Mbeya	TZS	
-Tanzania	Morogoro	TZS	
-Tanzania	Tanga	TZS	
-Tanzania	Kahama	TZS	
-Tanzania	Tabora	TZS	
-Tanzania	Zanzibar City	TZS	
-Tanzania	Kigoma	TZS	
-Tanzania	Sumbawanga	TZS	
-Tanzania	Kasulu	TZS	
-Tanzania	Songea	TZS	
-Tanzania	Moshi	TZS	
-Tanzania	Musoma	TZS	
-Tanzania	Shinyanga	TZS	
-Tanzania	Iringa	TZS	
-Tanzania	Singida	TZS	
-Tanzania	Njombe	TZS	
-Thailand	Bangkok	THB	
-Thailand	Nonthaburi	THB	
-Thailand	Nakhon Ratchasima	THB	
-Thailand	Chiang Mai	THB	
-Thailand	Hat Yai	THB	
-Thailand	Udon Thani	THB	
-Thailand	Pak Kret	THB	
-Thailand	Khon Kaen	THB	
-Thailand	Chaophraya Surasak	THB	
-Thailand	Ubon Ratchathani	THB	
-Thailand	Nakhon Si Thammarat	THB	
-Thailand	Nakhon Sawan	THB	
-Thailand	Nakhon Pathom	THB	
-Thailand	Phitsanulok	THB	
-Thailand	Pattaya	THB	
-Thailand	Songkhla	THB	
-Thailand	Surat Thani	THB	
-Thailand	Rangsit	THB	
-Thailand	Yala	THB	
-Thailand	Phuket	THB	
-Timor-Leste	Dili	USD	
-Timor-Leste	Baucau	USD	
-Timor-Leste	Maliana	USD	
-Timor-Leste	Suai	USD	
-Timor-Leste	Lospalos	USD	
-Timor-Leste	Same	USD	
-Timor-Leste	Manatuto	USD	
-Timor-Leste	Viqueque	USD	
-Timor-Leste	Aileu	USD	
-Timor-Leste	Ainaro	USD	
-Timor-Leste	Ermera	USD	
-Timor-Leste	Liquica	USD	
-Timor-Leste	Pante Macassar	USD	
-Timor-Leste	Oecusse	USD	
-Timor-Leste	Maubisse	USD	
-Timor-Leste	Gleno	USD	
-Timor-Leste	Bazartete	USD	
-Timor-Leste	Laga	USD	
-Timor-Leste	Metinaro	USD	
-Timor-Leste	Venilale	USD	
-Togo	Lome	XOF	
-Togo	Sokode	XOF	
-Togo	Kara	XOF	
-Togo	Kpalime	XOF	
-Togo	Atakpame	XOF	
-Togo	Bassar	XOF	
-Togo	Tsevie	XOF	
-Togo	Aneho	XOF	
-Togo	Mango	XOF	
-Togo	Dapaong	XOF	
-Togo	Tchamba	XOF	
-Togo	Niamtougou	XOF	
-Togo	Bafilo	XOF	
-Togo	Notse	XOF	
-Togo	Sotouboua	XOF	
-Togo	Vogan	XOF	
-Togo	Badou	XOF	
-Togo	Tabligbo	XOF	
-Togo	KandÃ©	XOF	
-Togo	Amlame	XOF	
-Tonga	Nuku'alofa	TOP	
-Tonga	Neiafu	TOP	
-Tonga	Haveluloto	TOP	
-Tonga	Vaini	TOP	
-Tonga	Tofoa	TOP	
-Tonga	Ha'ateiho	TOP	
-Tonga	Pea	TOP	
-Tonga	Pangai	TOP	
-Tonga	Fua'amotu	TOP	
-Tonga	Houma	TOP	
-Tonga	Nukunuku	TOP	
-Tonga	Leimatu'a	TOP	
-Tonga	Kolonga	TOP	
-Tonga	Ohonua	TOP	
-Tonga	Hihifo	TOP	
-Tonga	Eua	TOP	
-Tonga	Tokomololo	TOP	
-Tonga	Vwini	TOP	
-Tonga	Tatakamotonga	TOP	
-Tonga	Lapaha	TOP	
-Trinidad and Tobago	Port of Spain	TTD	
-Trinidad and Tobago	San Fernando	TTD	
-Trinidad and Tobago	Chaguanas	TTD	
-Trinidad and Tobago	Arima	TTD	
-Trinidad and Tobago	Point Fortin	TTD	
-Trinidad and Tobago	Scarborough	TTD	
-Trinidad and Tobago	Couva	TTD	
-Trinidad and Tobago	Sangre Grande	TTD	
-Trinidad and Tobago	Princes Town	TTD	
-Trinidad and Tobago	Siparia	TTD	
-Trinidad and Tobago	Tunapuna	TTD	
-Trinidad and Tobago	Penal	TTD	
-Trinidad and Tobago	Diego Martin	TTD	
-Trinidad and Tobago	Rio Claro	TTD	
-Trinidad and Tobago	DebÃ©	TTD	
-Trinidad and Tobago	Gasparillo	TTD	
-Trinidad and Tobago	Fyzabad	TTD	
-Trinidad and Tobago	La Brea	TTD	
-Trinidad and Tobago	Arouca	TTD	
-Trinidad and Tobago	Laventille	TTD	
-Tunisia	Tunis	TND	
-Tunisia	Sfax	TND	
-Tunisia	Sousse	TND	
-Tunisia	Ettadhamen	TND	
-Tunisia	Kairouan	TND	
-Tunisia	Gabes	TND	
-Tunisia	Bizerte	TND	
-Tunisia	Aryanah	TND	
-Tunisia	Gafsa	TND	
-Tunisia	El Mourouj	TND	
-Tunisia	Monastir	TND	
-Tunisia	Ben Arous	TND	
-Tunisia	Kasserine	TND	
-Tunisia	Douar Hicher	TND	
-Tunisia	Djerba	TND	
-Tunisia	Hammamet	TND	
-Tunisia	Tataouine	TND	
-Tunisia	Marsa	TND	
-Tunisia	Beja	TND	
-Tunisia	Nabeul	TND	
-Turkey	Istanbul	TRY	
-Turkey	Ankara	TRY	
-Turkey	Izmir	TRY	
-Turkey	Bursa	TRY	
-Turkey	Adana	TRY	
-Turkey	Gaziantep	TRY	
-Turkey	Konya	TRY	
-Turkey	Antalya	TRY	
-Turkey	Kayseri	TRY	
-Turkey	Mersin	TRY	
-Turkey	Eskisehir	TRY	
-Turkey	Diyarbakir	TRY	
-Turkey	Samsun	TRY	
-Turkey	Denizli	TRY	
-Turkey	Sanliurfa	TRY	
-Turkey	Adapazari	TRY	
-Turkey	Malatya	TRY	
-Turkey	Kahramanmaras	TRY	
-Turkey	Erzurum	TRY	
-Turkey	Van	TRY	
-Turkmenistan	Ashgabat	TMT	
-Turkmenistan	Turkmenabat	TMT	
-Turkmenistan	Dasoguz	TMT	
-Turkmenistan	Mary	TMT	
-Turkmenistan	Balkanabat	TMT	
-Turkmenistan	Bayramaly	TMT	
-Turkmenistan	Turkmenbasy	TMT	
-Turkmenistan	Tejen	TMT	
-Turkmenistan	Abadan	TMT	
-Turkmenistan	Yoloten	TMT	
-Turkmenistan	Gowurdak	TMT	
-Turkmenistan	Gazojak	TMT	
-Turkmenistan	Gumdag	TMT	
-Turkmenistan	Bereket	TMT	
-Turkmenistan	Kaka	TMT	
-Turkmenistan	Serdar	TMT	
-Turkmenistan	Seydi	TMT	
-Turkmenistan	Kerki	TMT	
-Turkmenistan	Hazar	TMT	
-Turkmenistan	Murgap	TMT	
-Tuvalu	Funafuti	AUD	
-Tuvalu	Asau	AUD	
-Tuvalu	Lolua	AUD	
-Tuvalu	Savave	AUD	
-Tuvalu	Kulia	AUD	
-Tuvalu	Tumaseu	AUD	
-Tuvalu	Tonga	AUD	
-Tuvalu	Senala	AUD	
-Tuvalu	Tekavatoetoe	AUD	
-Tuvalu	Teava	AUD	
-Tuvalu	Fakai Fou	AUD	
-Tuvalu	Alapi	AUD	
-Tuvalu	Vaiaku	AUD	
-Tuvalu	Lofeagai	AUD	
-Tuvalu	Teone	AUD	
-Tuvalu	Fakaifou	AUD	
-Tuvalu	Motufoua	AUD	
-Tuvalu	Ambo	AUD	
-Tuvalu	Tanrake	AUD	
-Tuvalu	Togah	AUD	
-Uganda	Kampala	UGX	
-Uganda	Nansana	UGX	
-Uganda	Kira	UGX	
-Uganda	Ssabagabo	UGX	
-Uganda	Mbarara	UGX	
-Uganda	Mukono	UGX	
-Uganda	Gulu	UGX	
-Uganda	Lugazi	UGX	
-Uganda	Masaka	UGX	
-Uganda	Kasese	UGX	
-Uganda	Hoima	UGX	
-Uganda	Lira	UGX	
-Uganda	Mityana	UGX	
-Uganda	Mubende	UGX	
-Uganda	Masindi	UGX	
-Uganda	Mbale	UGX	
-Uganda	Jinja	UGX	
-Uganda	Entebbe	UGX	
-Uganda	Kitgum	UGX	
-Uganda	Koboko	UGX	
-Ukraine	Kyiv	UAH	
-Ukraine	Kharkiv	UAH	
-Ukraine	Odessa	UAH	
-Ukraine	Dnipro	UAH	
-Ukraine	Donetsk	UAH	
-Ukraine	Zaporizhzhia	UAH	
-Ukraine	Lviv	UAH	
-Ukraine	Kryvyi Rih	UAH	
-Ukraine	Mykolaiv	UAH	
-Ukraine	Mariupol	UAH	
-Ukraine	Luhansk	UAH	
-Ukraine	Vinnytsia	UAH	
-Ukraine	Makiivka	UAH	
-Ukraine	Simferopol	UAH	
-Ukraine	Sevastopol	UAH	
-Ukraine	Kherson	UAH	
-Ukraine	Poltava	UAH	
-Ukraine	Chernihiv	UAH	
-Ukraine	Cherkasy	UAH	
-Ukraine	Sumy	UAH	
-United Arab Emirates	Dubai	AED	
-United Arab Emirates	Abu Dhabi	AED	
-United Arab Emirates	Sharjah	AED	
-United Arab Emirates	Al Ain	AED	
-United Arab Emirates	Ajman	AED	
-United Arab Emirates	Ras Al Khaimah	AED	
-United Arab Emirates	Fujairah	AED	
-United Arab Emirates	Umm Al Quwain	AED	
-United Arab Emirates	Khor Fakkan	AED	
-United Arab Emirates	Kalba	AED	
-United Arab Emirates	Jebel Ali	AED	
-United Arab Emirates	Dibba Al-Fujairah	AED	
-United Arab Emirates	Madinat Zayed	AED	
-United Arab Emirates	Ruwais	AED	
-United Arab Emirates	Liwa Oasis	AED	
-United Arab Emirates	Dhaid	AED	
-United Arab Emirates	Ghayathi	AED	
-United Arab Emirates	Hatta	AED	
-United Arab Emirates	Ar-Rams	AED	
-United Arab Emirates	Dibba Al-Hisn	AED	
-United Kingdom	London	GBP	
-United Kingdom	Birmingham	GBP	
-United Kingdom	Manchester	GBP	
-United Kingdom	Glasgow	GBP	
-United Kingdom	Leeds	GBP	
-United Kingdom	Liverpool	GBP	
-United Kingdom	Newcastle	GBP	
-United Kingdom	Sheffield	GBP	
-United Kingdom	Bristol	GBP	
-United Kingdom	Belfast	GBP	
-United Kingdom	Edinburgh	GBP	
-United Kingdom	Leicester	GBP	
-United Kingdom	Cardiff	GBP	
-United Kingdom	Coventry	GBP	
-United Kingdom	Bradford	GBP	
-United Kingdom	Nottingham	GBP	
-United Kingdom	Hull	GBP	
-United Kingdom	Stoke-on-Trent	GBP	
-United Kingdom	Wolverhampton	GBP	
-United Kingdom	Plymouth	GBP	
-United States	New York	USD	
-United States	Los Angeles	USD	
-United States	Chicago	USD	
-United States	Houston	USD	
-United States	Phoenix	USD	
-United States	Philadelphia	USD	
-United States	San Antonio	USD	
-United States	San Diego	USD	
-United States	Dallas	USD	
-United States	San Jose	USD	
-United States	Austin	USD	
-United States	Jacksonville	USD	
-United States	Fort Worth	USD	
-United States	Columbus	USD	
-United States	San Francisco	USD	
-United States	Charlotte	USD	
-United States	Indianapolis	USD	
-United States	Seattle	USD	
-United States	Denver	USD	
-United States	Washington	USD	
-Uruguay	Montevideo	UYU	
-Uruguay	Salto	UYU	
-Uruguay	Ciudad de la Costa	UYU	
-Uruguay	Paysandu	UYU	
-Uruguay	Las Piedras	UYU	
-Uruguay	Rivera	UYU	
-Uruguay	Maldonado	UYU	
-Uruguay	Tacuarembo	UYU	
-Uruguay	Melo	UYU	
-Uruguay	Mercedes	UYU	
-Uruguay	Artigas	UYU	
-Uruguay	Minas	UYU	
-Uruguay	San Jose de Mayo	UYU	
-Uruguay	Durazno	UYU	
-Uruguay	Florida	UYU	
-Uruguay	Barros Blancos	UYU	
-Uruguay	Ciudad del Plata	UYU	
-Uruguay	San Carlos	UYU	
-Uruguay	Colonia del Sacramento	UYU	
-Uruguay	Pando	UYU	
-Uzbekistan	Tashkent	UZS	
-Uzbekistan	Samarkand	UZS	
-Uzbekistan	Namangan	UZS	
-Uzbekistan	Andijan	UZS	
-Uzbekistan	Nukus	UZS	
-Uzbekistan	Bukhara	UZS	
-Uzbekistan	Fergana	UZS	
-Uzbekistan	Qarshi	UZS	
-Uzbekistan	Kokand	UZS	
-Uzbekistan	Margilan	UZS	
-Uzbekistan	Angren	UZS	
-Uzbekistan	Chirchiq	UZS	
-Uzbekistan	Urgench	UZS	
-Uzbekistan	Termez	UZS	
-Uzbekistan	Navoi	UZS	
-Uzbekistan	Olmaliq	UZS	
-Uzbekistan	Shahrisabz	UZS	
-Uzbekistan	Bekabad	UZS	
-Uzbekistan	Denau	UZS	
-Uzbekistan	Chust	UZS	
-Vanuatu	Port Vila	VUV	
-Vanuatu	Luganville	VUV	
-Vanuatu	Norsup	VUV	
-Vanuatu	Port-Olry	VUV	
-Vanuatu	Isangel	VUV	
-Vanuatu	Sola	VUV	
-Vanuatu	Lakatoro	VUV	
-Vanuatu	Pango	VUV	
-Vanuatu	Mele	VUV	
-Vanuatu	Erakor	VUV	
-Vanuatu	Eratap	VUV	
-Vanuatu	Endu	VUV	
-Vanuatu	Lenakel	VUV	
-Vanuatu	Abwatuntari	VUV	
-Vanuatu	Craig Cove	VUV	
-Vanuatu	Lamap	VUV	
-Vanuatu	Leviamp	VUV	
-Vanuatu	Hog Harbour	VUV	
-Vanuatu	Fanafo	VUV	
-Vanuatu	Avunatari	VUV	
-Vatican City	Vatican City	EUR	
-Venezuela	Caracas	VES	
-Venezuela	Maracaibo	VES	
-Venezuela	Valencia	VES	
-Venezuela	Barquisimeto	VES	
-Venezuela	Ciudad Guayana	VES	
-Venezuela	Maturin	VES	
-Venezuela	Maracay	VES	
-Venezuela	Barcelona	VES	
-Venezuela	Petare	VES	
-Venezuela	Turmero	VES	
-Venezuela	Ciudad Bolivar	VES	
-Venezuela	Barinas	VES	
-Venezuela	Santa Teresa	VES	
-Venezuela	Cumana	VES	
-Venezuela	San Cristobal	VES	
-Venezuela	Baruta	VES	
-Venezuela	Cabimas	VES	
-Venezuela	Coro	VES	
-Venezuela	Guatire	VES	
-Venezuela	Cua	VES	
-Vietnam	Ho Chi Minh City	VND	
-Vietnam	Hanoi	VND	
-Vietnam	Da Nang	VND	
-Vietnam	Haiphong	VND	
-Vietnam	Bien Hoa	VND	
-Vietnam	Can Tho	VND	
-Vietnam	Thuan An	VND	
-Vietnam	Di An	VND	
-Vietnam	Hue	VND	
-Vietnam	Vung Tau	VND	
-Vietnam	Nha Trang	VND	
-Vietnam	Buon Ma Thuot	VND	
-Vietnam	Vinh	VND	
-Vietnam	Quy Nhon	VND	
-Vietnam	Da Lat	VND	
-Vietnam	Nam Dinh	VND	
-Vietnam	Hai Duong	VND	
-Vietnam	Long Xuyen	VND	
-Vietnam	Thai Nguyen	VND	
-Vietnam	Bac Lieu	VND	
-Yemen	Sanaa	YER	
-Yemen	Aden	YER	
-Yemen	Taiz	YER	
-Yemen	Hodeidah	YER	
-Yemen	Mukalla	YER	
-Yemen	Ibb	YER	
-Yemen	Dhamar	YER	
-Yemen	Amran	YER	
-Yemen	Sayyan	YER	
-Yemen	Zabin	YER	
-Yemen	Sadah	YER	
-Yemen	Bajil	YER	
-Yemen	Hajjah	YER	
-Yemen	Bayt al-Faqih	YER	
-Yemen	Yarim	YER	
-Yemen	Al-Bayda	YER	
-Yemen	Lahij	YER	
-Yemen	Ataq	YER	
-Yemen	Al-Mahwit	YER	
-Yemen	Zinjibar	YER	
-Zambia	Lusaka	ZMW	
-Zambia	Kitwe	ZMW	
-Zambia	Ndola	ZMW	
-Zambia	Kabwe	ZMW	
-Zambia	Chingola	ZMW	
-Zambia	Mufulira	ZMW	
-Zambia	Livingstone	ZMW	
-Zambia	Luanshya	ZMW	
-Zambia	Kasama	ZMW	
-Zambia	Chipata	ZMW	
-Zambia	Chililabombwe	ZMW	
-Zambia	Solwezi	ZMW	
-Zambia	Choma	ZMW	
-Zambia	Mongu	ZMW	
-Zambia	Kafue	ZMW	
-Zambia	Mazabuka	ZMW	
-Zambia	Mansa	ZMW	
-Zambia	Kapiri Mposhi	ZMW	
-Zambia	Monze	ZMW	
-Zambia	Sesheke	ZMW	
-Zimbabwe	Harare	ZWL	
-Zimbabwe	Bulawayo	ZWL	
-Zimbabwe	Chitungwiza	ZWL	
-Zimbabwe	Mutare	ZWL	
-Zimbabwe	Epworth	ZWL	
-Zimbabwe	Gweru	ZWL	
-Zimbabwe	Kwekwe	ZWL	
-Zimbabwe	Kadoma	ZWL	
-Zimbabwe	Masvingo	ZWL	
-Zimbabwe	Chinhoyi	ZWL	
-Zimbabwe	Norton	ZWL	
-Zimbabwe	Marondera	ZWL	
-Zimbabwe	Ruwa	ZWL	
-Zimbabwe	Chegutu	ZWL	
-Zimbabwe	Zvishavane	ZWL	
-Zimbabwe	Bindura	ZWL	
-Zimbabwe	Beitbridge	ZWL	
-Zimbabwe	Redcliff	ZWL	
-Zimbabwe	Victoria Falls	ZWL	
-Zimbabwe	Hwange	ZWL	
+Country,City,Currency_Code,Number
+Afghanistan,Kabul,AFN,1
+Afghanistan,Kandahar,AFN,2
+Afghanistan,Herat,AFN,3
+Afghanistan,Mazar-i-Sharif,AFN,4
+Afghanistan,Jalalabad,AFN,5
+Afghanistan,Kunduz,AFN,6
+Afghanistan,Ghazni,AFN,7
+Afghanistan,Balkh,AFN,8
+Afghanistan,Baghlan,AFN,9
+Afghanistan,Gardez,AFN,10
+Afghanistan,Khost,AFN,11
+Afghanistan,Maymana,AFN,12
+Afghanistan,Taloqan,AFN,13
+Afghanistan,Bamyan,AFN,14
+Afghanistan,Pol-e Khomri,AFN,15
+Afghanistan,Sheberghan,AFN,16
+Afghanistan,Zaranj,AFN,17
+Afghanistan,Lashkar Gah,AFN,18
+Afghanistan,Farah,AFN,19
+Afghanistan,Ghor,AFN,20
+Albania,Tirana,ALL,21
+Albania,Durres,ALL,22
+Albania,Vlore,ALL,23
+Albania,Shkoder,ALL,24
+Albania,Fier,ALL,25
+Albania,Korce,ALL,26
+Albania,Elbasan,ALL,27
+Albania,Berat,ALL,28
+Albania,Lushnje,ALL,29
+Albania,Kavaje,ALL,30
+Albania,Gjirokaster,ALL,31
+Albania,Sarande,ALL,32
+Albania,Kukes,ALL,33
+Albania,Lezhe,ALL,34
+Albania,Patos,ALL,35
+Albania,Peshkopi,ALL,36
+Albania,Burrel,ALL,37
+Albania,Kucove,ALL,38
+Albania,Kruje,ALL,39
+Albania,Gramsh,ALL,40
+Algeria,Algiers,DZD,41
+Algeria,Oran,DZD,42
+Algeria,Constantine,DZD,43
+Algeria,Annaba,DZD,44
+Algeria,Blida,DZD,45
+Algeria,Batna,DZD,46
+Algeria,Djelfa,DZD,47
+Algeria,Setif,DZD,48
+Algeria,Sidi Bel Abbes,DZD,49
+Algeria,Biskra,DZD,50
+Algeria,Tebessa,DZD,51
+Algeria,El Oued,DZD,52
+Algeria,Skikda,DZD,53
+Algeria,Tiaret,DZD,54
+Algeria,Bejaia,DZD,55
+Algeria,Tlemcen,DZD,56
+Algeria,Ouargla,DZD,57
+Algeria,Bechar,DZD,58
+Algeria,Mostaganem,DZD,59
+Algeria,Bordj Bou Arreridj,DZD,60
+Andorra,Andorra la Vella,EUR,61
+Andorra,Escaldes-Engordany,EUR,62
+Andorra,Encamp,EUR,63
+Andorra,Sant Julia de Loria,EUR,64
+Andorra,La Massana,EUR,65
+Andorra,Canillo,EUR,66
+Andorra,Ordino,EUR,67
+Andorra,Pas de la Casa,EUR,68
+Andorra,Arinsal,EUR,69
+Andorra,El Tarter,EUR,70
+Andorra,Soldeu,EUR,71
+Andorra,Grau Roig,EUR,72
+Andorra,Les Bons,EUR,73
+Andorra,Sispony,EUR,74
+Andorra,Anyos,EUR,75
+Andorra,Aldosa,EUR,76
+Andorra,Meritxell,EUR,77
+Andorra,Pal,EUR,78
+Andorra,Ransol,EUR,79
+Andorra,Llorts,EUR,80
+Angola,Luanda,AOA,81
+Angola,Huambo,AOA,82
+Angola,Lobito,AOA,83
+Angola,Lubango,AOA,84
+Angola,Kuito,AOA,85
+Angola,Malanje,AOA,86
+Angola,Benguela,AOA,87
+Angola,Lucapa,AOA,88
+Angola,Menongue,AOA,89
+Angola,Moçamedes,AOA,90
+Angola,Soyo,AOA,91
+Angola,N'dalatando,AOA,92
+Angola,Uige,AOA,93
+Angola,Saurimo,AOA,94
+Angola,Sumbe,AOA,95
+Angola,Caluquembe,AOA,96
+Angola,Gabela,AOA,97
+Angola,Caxito,AOA,98
+Angola,Longonjo,AOA,99
+Angola,Caala,AOA,100
+Antigua and Barbuda,St. John's,XCD,101
+Antigua and Barbuda,All Saints,XCD,102
+Antigua and Barbuda,Liberta,XCD,103
+Antigua and Barbuda,Potters Village,XCD,104
+Antigua and Barbuda,Bolans,XCD,105
+Antigua and Barbuda,Swetes,XCD,106
+Antigua and Barbuda,Seaview Farm,XCD,107
+Antigua and Barbuda,Pigotts,XCD,108
+Antigua and Barbuda,Parham,XCD,109
+Antigua and Barbuda,Codrington,XCD,110
+Antigua and Barbuda,Old Road,XCD,111
+Antigua and Barbuda,Cedar Grove,XCD,112
+Antigua and Barbuda,New Winthorpes,XCD,113
+Antigua and Barbuda,Jennings,XCD,114
+Antigua and Barbuda,Freemans,XCD,115
+Antigua and Barbuda,Carlisle,XCD,116
+Antigua and Barbuda,Freetown,XCD,117
+Antigua and Barbuda,Willikies,XCD,118
+Antigua and Barbuda,Bethesda,XCD,119
+Antigua and Barbuda,Pares,XCD,120
+Argentina,Buenos Aires,ARS,121
+Argentina,Cordoba,ARS,122
+Argentina,Rosario,ARS,123
+Argentina,Mendoza,ARS,
+Argentina,Tucuman,ARS,
+Argentina,La Plata,ARS,
+Argentina,Mar del Plata,ARS,
+Argentina,Salta,ARS,
+Argentina,Santa Fe,ARS,
+Argentina,San Juan,ARS,
+Argentina,Resistencia,ARS,
+Argentina,Santiago del Estero,ARS,
+Argentina,Corrientes,ARS,
+Argentina,Posadas,ARS,
+Argentina,Neuquen,ARS,
+Argentina,Bahia Blanca,ARS,
+Argentina,San Salvador de Jujuy,ARS,
+Argentina,Parana,ARS,
+Argentina,Formosa,ARS,
+Argentina,San Luis,ARS,
+Armenia,Yerevan,AMD,
+Armenia,Gyumri,AMD,
+Armenia,Vanadzor,AMD,
+Armenia,Vagharshapat,AMD,
+Armenia,Abovyan,AMD,
+Armenia,Kapan,AMD,
+Armenia,Hrazdan,AMD,
+Armenia,Armavir,AMD,
+Armenia,Artashat,AMD,
+Armenia,Ijevan,AMD,
+Armenia,Gavar,AMD,
+Armenia,Goris,AMD,
+Armenia,Charentsavan,AMD,
+Armenia,Ararat,AMD,
+Armenia,Masis,AMD,
+Armenia,Ashtarak,AMD,
+Armenia,Sevan,AMD,
+Armenia,Spitak,AMD,
+Armenia,Dilijan,AMD,
+Armenia,Sisian,AMD,
+Australia,Sydney,AUD,
+Australia,Melbourne,AUD,
+Australia,Brisbane,AUD,
+Australia,Perth,AUD,
+Australia,Adelaide,AUD,
+Australia,Gold Coast,AUD,
+Australia,Canberra,AUD,
+Australia,Newcastle,AUD,
+Australia,Wollongong,AUD,
+Australia,Geelong,AUD,
+Australia,Hobart,AUD,
+Australia,Townsville,AUD,
+Australia,Cairns,AUD,
+Australia,Darwin,AUD,
+Australia,Toowoomba,AUD,
+Australia,Ballarat,AUD,
+Australia,Bendigo,AUD,
+Australia,Albury,AUD,
+Australia,Launceston,AUD,
+Australia,Mackay,AUD,
+Austria,Vienna,EUR,
+Austria,Graz,EUR,
+Austria,Linz,EUR,
+Austria,Salzburg,EUR,
+Austria,Innsbruck,EUR,
+Austria,Klagenfurt,EUR,
+Austria,Villach,EUR,
+Austria,Wels,EUR,
+Austria,Sankt Polten,EUR,
+Austria,Dornbirn,EUR,
+Austria,Wiener Neustadt,EUR,
+Austria,Steyr,EUR,
+Austria,Feldkirch,EUR,
+Austria,Bregenz,EUR,
+Austria,Leonding,EUR,
+Austria,Klosterneuburg,EUR,
+Austria,Baden,EUR,
+Austria,Wolfsberg,EUR,
+Austria,Leoben,EUR,
+Austria,Krems,EUR,
+Azerbaijan,Baku,AZN,
+Azerbaijan,Ganja,AZN,
+Azerbaijan,Sumqayit,AZN,
+Azerbaijan,Mingachevir,AZN,
+Azerbaijan,Lankaran,AZN,
+Azerbaijan,Shirvan,AZN,
+Azerbaijan,Nakhchivan,AZN,
+Azerbaijan,Shamkir,AZN,
+Azerbaijan,Shaki,AZN,
+Azerbaijan,Yevlakh,AZN,
+Azerbaijan,Khachmaz,AZN,
+Azerbaijan,Jalilabad,AZN,
+Azerbaijan,Agjabadi,AZN,
+Azerbaijan,Barda,AZN,
+Azerbaijan,Salyan,AZN,
+Azerbaijan,Imishli,AZN,
+Azerbaijan,Masally,AZN,
+Azerbaijan,Agdam,AZN,
+Azerbaijan,Goychay,AZN,
+Azerbaijan,Khirdalan,AZN,
+Bahamas,Nassau,BSD,
+Bahamas,Freeport,BSD,
+Bahamas,West End,BSD,
+Bahamas,Coopers Town,BSD,
+Bahamas,Marsh Harbour,BSD,
+Bahamas,Freetown,BSD,
+Bahamas,High Rock,BSD,
+Bahamas,Andros Town,BSD,
+Bahamas,Clarence Town,BSD,
+Bahamas,Dunmore Town,BSD,
+Bahamas,Rock Sound,BSD,
+Bahamas,Arthur's Town,BSD,
+Bahamas,George Town,BSD,
+Bahamas,Alice Town,BSD,
+Bahamas,Cockburn Town,BSD,
+Bahamas,Matthew Town,BSD,
+Bahamas,Snug Corner,BSD,
+Bahamas,Williams Town,BSD,
+Bahamas,Port Nelson,BSD,
+Bahamas,Colonel Hill,BSD,
+Bahrain,Manama,BHD,
+Bahrain,Riffa,BHD,
+Bahrain,Muharraq,BHD,
+Bahrain,Hamad Town,BHD,
+Bahrain,A'ali,BHD,
+Bahrain,Isa Town,BHD,
+Bahrain,Sitra,BHD,
+Bahrain,Budaiya,BHD,
+Bahrain,Jidhafs,BHD,
+Bahrain,Al-Malikiyah,BHD,
+Bahrain,Adliya,BHD,
+Bahrain,Sanabis,BHD,
+Bahrain,Tubli,BHD,
+Bahrain,Saar,BHD,
+Bahrain,Busaiteen,BHD,
+Bahrain,Hidd,BHD,
+Bahrain,Zallaq,BHD,
+Bahrain,Awali,BHD,
+Bahrain,Juffair,BHD,
+Bahrain,Mahooz,BHD,
+Bangladesh,Dhaka,BDT,
+Bangladesh,Chittagong,BDT,
+Bangladesh,Khulna,BDT,
+Bangladesh,Rajshahi,BDT,
+Bangladesh,Sylhet,BDT,
+Bangladesh,Barisal,BDT,
+Bangladesh,Rangpur,BDT,
+Bangladesh,Comilla,BDT,
+Bangladesh,Narayanganj,BDT,
+Bangladesh,Gazipur,BDT,
+Bangladesh,Mymensingh,BDT,
+Bangladesh,Jessore,BDT,
+Bangladesh,Cox's Bazar,BDT,
+Bangladesh,Bogra,BDT,
+Bangladesh,Dinajpur,BDT,
+Bangladesh,Saidpur,BDT,
+Bangladesh,Tangail,BDT,
+Bangladesh,Jamalpur,BDT,
+Bangladesh,Naogaon,BDT,
+Bangladesh,Narsingdi,BDT,
+Barbados,Bridgetown,BBD,
+Barbados,Speightstown,BBD,
+Barbados,Oistins,BBD,
+Barbados,Bathsheba,BBD,
+Barbados,Holetown,BBD,
+Barbados,The Crane,BBD,
+Barbados,Crab Hill,BBD,
+Barbados,Blackmans,BBD,
+Barbados,Greenland,BBD,
+Barbados,Hillaby,BBD,
+Barbados,Kuramathi,BBD,
+Barbados,Mullins,BBD,
+Barbados,Six Cross Roads,BBD,
+Barbados,Sark,BBD,
+Barbados,St. Lawrence Gap,BBD,
+Barbados,Worthing,BBD,
+Barbados,Hastings,BBD,
+Barbados,Rockley,BBD,
+Barbados,Maxwell,BBD,
+Barbados,Welches,BBD,
+Belarus,Minsk,BYN,
+Belarus,Gomel,BYN,
+Belarus,Mogilev,BYN,
+Belarus,Vitebsk,BYN,
+Belarus,Grodno,BYN,
+Belarus,Brest,BYN,
+Belarus,Bobruisk,BYN,
+Belarus,Baranovichi,BYN,
+Belarus,Borisov,BYN,
+Belarus,Pinsk,BYN,
+Belarus,Orsha,BYN,
+Belarus,Mozyr,BYN,
+Belarus,Soligorsk,BYN,
+Belarus,Novopolotsk,BYN,
+Belarus,Lida,BYN,
+Belarus,Molodechno,BYN,
+Belarus,Polotsk,BYN,
+Belarus,Zhlobin,BYN,
+Belarus,Svetlogorsk,BYN,
+Belarus,Rechitsa,BYN,
+Belgium,Brussels,EUR,
+Belgium,Antwerp,EUR,
+Belgium,Ghent,EUR,
+Belgium,Charleroi,EUR,
+Belgium,Liege,EUR,
+Belgium,Bruges,EUR,
+Belgium,Namur,EUR,
+Belgium,Leuven,EUR,
+Belgium,Mons,EUR,
+Belgium,Aalst,EUR,
+Belgium,Mechelen,EUR,
+Belgium,La Louviere,EUR,
+Belgium,Kortrijk,EUR,
+Belgium,Hasselt,EUR,
+Belgium,Ostend,EUR,
+Belgium,Sint-Niklaas,EUR,
+Belgium,Tournai,EUR,
+Belgium,Genk,EUR,
+Belgium,Seraing,EUR,
+Belgium,Roeselare,EUR,
+Belize,Belize City,BZD,
+Belize,San Ignacio,BZD,
+Belize,Belmopan,BZD,
+Belize,Orange Walk Town,BZD,
+Belize,Corozal Town,BZD,
+Belize,Dangriga,BZD,
+Belize,San Pedro,BZD,
+Belize,Benque Viejo del Carmen,BZD,
+Belize,Punta Gorda,BZD,
+Belize,Trial Farm,BZD,
+Belize,Ladyville,BZD,
+Belize,Hattieville,BZD,
+Belize,San Jose,BZD,
+Belize,Valley of Peace,BZD,
+Belize,Shipyard,BZD,
+Belize,Blue Creek,BZD,
+Belize,Little Belize,BZD,
+Belize,Sarteneja,BZD,
+Belize,Hopkins,BZD,
+Belize,Placencia,BZD,
+Benin,Cotonou,XOF,
+Benin,Porto-Novo,XOF,
+Benin,Parakou,XOF,
+Benin,Djougou,XOF,
+Benin,Bohicon,XOF,
+Benin,Kandi,XOF,
+Benin,Abomey,XOF,
+Benin,Natitingou,XOF,
+Benin,Lokossa,XOF,
+Benin,Ouidah,XOF,
+Benin,Abomey-Calavi,XOF,
+Benin,Malanville,XOF,
+Benin,Sakete,XOF,
+Benin,Pobe,XOF,
+Benin,Ketou,XOF,
+Benin,Savie,XOF,
+Benin,Savalou,XOF,
+Benin,Bembereke,XOF,
+Benin,Bassila,XOF,
+Benin,Banikoara,XOF,
+Bhutan,Thimphu,BTN,
+Bhutan,Phuntsholing,BTN,
+Bhutan,Paro,BTN,
+Bhutan,Gelephu,BTN,
+Bhutan,Samdrup Jongkhar,BTN,
+Bhutan,Wangdue Phodrang,BTN,
+Bhutan,Punakha,BTN,
+Bhutan,Jakar,BTN,
+Bhutan,Trashigang,BTN,
+Bhutan,Mongar,BTN,
+Bhutan,Trongsa,BTN,
+Bhutan,Dagana,BTN,
+Bhutan,Lhuentse,BTN,
+Bhutan,Pemagatshel,BTN,
+Bhutan,Sarpang,BTN,
+Bhutan,Tsirang,BTN,
+Bhutan,Zhemgang,BTN,
+Bhutan,Haa,BTN,
+Bhutan,Gasa,BTN,
+Bhutan,Trashi Yangtse,BTN,
+Bolivia,Santa Cruz de la Sierra,BOB,
+Bolivia,El Alto,BOB,
+Bolivia,La Paz,BOB,
+Bolivia,Cochabamba,BOB,
+Bolivia,Oruro,BOB,
+Bolivia,Sucre,BOB,
+Bolivia,Tarija,BOB,
+Bolivia,Potosi,BOB,
+Bolivia,Sacaba,BOB,
+Bolivia,Montero,BOB,
+Bolivia,Trinidad,BOB,
+Bolivia,Riberalta,BOB,
+Bolivia,Warnes,BOB,
+Bolivia,La Guardia,BOB,
+Bolivia,Viacha,BOB,
+Bolivia,Yacuiba,BOB,
+Bolivia,Colcapirhua,BOB,
+Bolivia,Cobija,BOB,
+Bolivia,Tiquipaya,BOB,
+Bolivia,Guayaramerin,BOB,
+Bosnia and Herzegovina,Sarajevo,BAM,
+Bosnia and Herzegovina,Banja Luka,BAM,
+Bosnia and Herzegovina,Tuzla,BAM,
+Bosnia and Herzegovina,Zenica,BAM,
+Bosnia and Herzegovina,Mostar,BAM,
+Bosnia and Herzegovina,Bijeljina,BAM,
+Bosnia and Herzegovina,Brcko,BAM,
+Bosnia and Herzegovina,Bihac,BAM,
+Bosnia and Herzegovina,Prijedor,BAM,
+Bosnia and Herzegovina,Doboj,BAM,
+Bosnia and Herzegovina,Trebinje,BAM,
+Bosnia and Herzegovina,Sanski Most,BAM,
+Bosnia and Herzegovina,Zivinice,BAM,
+Bosnia and Herzegovina,Bugojno,BAM,
+Bosnia and Herzegovina,Travnik,BAM,
+Bosnia and Herzegovina,Gradacac,BAM,
+Bosnia and Herzegovina,Cazin,BAM,
+Bosnia and Herzegovina,Gracanica,BAM,
+Bosnia and Herzegovina,Derventa,BAM,
+Bosnia and Herzegovina,Zvornik,BAM,
+Botswana,Gaborone,BWP,
+Botswana,Francistown,BWP,
+Botswana,Molepolole,BWP,
+Botswana,Maun,BWP,
+Botswana,Serowe,BWP,
+Botswana,Selibe Phikwe,BWP,
+Botswana,Kanye,BWP,
+Botswana,Mahalapye,BWP,
+Botswana,Mogoditshane,BWP,
+Botswana,Mochudi,BWP,
+Botswana,Lobatse,BWP,
+Botswana,Palapye,BWP,
+Botswana,Ramotswa,BWP,
+Botswana,Moshupa,BWP,
+Botswana,Tonota,BWP,
+Botswana,Tutume,BWP,
+Botswana,Orapa,BWP,
+Botswana,Kasane,BWP,
+Botswana,Nata,BWP,
+Botswana,Ghanzi,BWP,
+Brazil,Sao Paulo,BRL,
+Brazil,Rio de Janeiro,BRL,
+Brazil,Brasilia,BRL,
+Brazil,Salvador,BRL,
+Brazil,Fortaleza,BRL,
+Brazil,Belo Horizonte,BRL,
+Brazil,Manaus,BRL,
+Brazil,Curitiba,BRL,
+Brazil,Recife,BRL,
+Brazil,Goiania,BRL,
+Brazil,Belem,BRL,
+Brazil,Porto Alegre,BRL,
+Brazil,Guarulhos,BRL,
+Brazil,Campinas,BRL,
+Brazil,Sao Luis,BRL,
+Brazil,Sao Goncalo,BRL,
+Brazil,Maceio,BRL,
+Brazil,Duque de Caxias,BRL,
+Brazil,Natal,BRL,
+Brazil,Teresina,BRL,
+Brunei,Bandar Seri Begawan,BND,
+Brunei,Kuala Belait,BND,
+Brunei,Seria,BND,
+Brunei,Tutong,BND,
+Brunei,Bangar,BND,
+Brunei,Kampong Ayer,BND,
+Brunei,Muara,BND,
+Brunei,Jerudong,BND,
+Brunei,Gadong,BND,
+Brunei,Berakas,BND,
+Brunei,Lamunin,BND,
+Brunei,Lumut,BND,
+Brunei,Labi,BND,
+Brunei,Telisai,BND,
+Brunei,Sukang,BND,
+Brunei,Melilas,BND,
+Brunei,Kupang,BND,
+Brunei,Keriam,BND,
+Brunei,Sinaut,BND,
+Brunei,Panchor,BND,
+Bulgaria,Sofia,BGN,
+Bulgaria,Plovdiv,BGN,
+Bulgaria,Varna,BGN,
+Bulgaria,Burgas,BGN,
+Bulgaria,Ruse,BGN,
+Bulgaria,Stara Zagora,BGN,
+Bulgaria,Pleven,BGN,
+Bulgaria,Sliven,BGN,
+Bulgaria,Dobrich,BGN,
+Bulgaria,Shumen,BGN,
+Bulgaria,Pernik,BGN,
+Bulgaria,Haskovo,BGN,
+Bulgaria,Yambol,BGN,
+Bulgaria,Pazardzhik,BGN,
+Bulgaria,Blagoevgrad,BGN,
+Bulgaria,Veliko Tarnovo,BGN,
+Bulgaria,Vratsa,BGN,
+Bulgaria,Gabrovo,BGN,
+Bulgaria,Asenovgrad,BGN,
+Bulgaria,Vidin,BGN,
+Burkina Faso,Ouagadougou,XOF,
+Burkina Faso,Bobo-Dioulasso,XOF,
+Burkina Faso,Koudougou,XOF,
+Burkina Faso,Banfora,XOF,
+Burkina Faso,Ouahigouya,XOF,
+Burkina Faso,Kaya,XOF,
+Burkina Faso,Tenkodogo,XOF,
+Burkina Faso,Fada N'gourma,XOF,
+Burkina Faso,Dedougou,XOF,
+Burkina Faso,Hounde,XOF,
+Burkina Faso,Djibo,XOF,
+Burkina Faso,Koupela,XOF,
+Burkina Faso,Mango,XOF,
+Burkina Faso,Garango,XOF,
+Burkina Faso,Leo,XOF,
+Burkina Faso,Kongoussi,XOF,
+Burkina Faso,Diapaga,XOF,
+Burkina Faso,Zorgho,XOF,
+Burkina Faso,Pouytenga,XOF,
+Burkina Faso,Reo,XOF,
+Burundi,Bujumbura,BIF,
+Burundi,Gitega,BIF,
+Burundi,Muyinga,BIF,
+Burundi,Ngozi,BIF,
+Burundi,Ruyigi,BIF,
+Burundi,Kayanza,BIF,
+Burundi,Bururi,BIF,
+Burundi,Rutana,BIF,
+Burundi,Muramvya,BIF,
+Burundi,Makamba,BIF,
+Burundi,Cankuzo,BIF,
+Burundi,Karuzi,BIF,
+Burundi,Kirundo,BIF,
+Burundi,Mwaro,BIF,
+Burundi,Bubanza,BIF,
+Burundi,Cibitoke,BIF,
+Burundi,Rumonge,BIF,
+Burundi,Isale,BIF,
+Burundi,Kanyosha,BIF,
+Burundi,Mpanda,BIF,
+Cambodia,Phnom Penh,KHR,
+Cambodia,Siem Reap,KHR,
+Cambodia,Battambang,KHR,
+Cambodia,Serei Saophoan,KHR,
+Cambodia,Poipet,KHR,
+Cambodia,Kampong Cham,KHR,
+Cambodia,Sihanoukville,KHR,
+Cambodia,Kampong Speu,KHR,
+Cambodia,Kampot,KHR,
+Cambodia,Kampong Thom,KHR,
+Cambodia,Pursat,KHR,
+Cambodia,Ta Khmau,KHR,
+Cambodia,Prey Veng,KHR,
+Cambodia,Svay Rieng,KHR,
+Cambodia,Stung Treng,KHR,
+Cambodia,Kratie,KHR,
+Cambodia,Banlung,KHR,
+Cambodia,Kep,KHR,
+Cambodia,Pailin,KHR,
+Cambodia,Samraong,KHR,
+Cameroon,Douala,XAF,
+Cameroon,Yaounde,XAF,
+Cameroon,Bamenda,XAF,
+Cameroon,Bafoussam,XAF,
+Cameroon,Garoua,XAF,
+Cameroon,Maroua,XAF,
+Cameroon,Ngaoundere,XAF,
+Cameroon,Kumba,XAF,
+Cameroon,Buea,XAF,
+Cameroon,Nkongsamba,XAF,
+Cameroon,Limbe,XAF,
+Cameroon,Edea,XAF,
+Cameroon,Foumban,XAF,
+Cameroon,Dschang,XAF,
+Cameroon,Bertoua,XAF,
+Cameroon,Loum,XAF,
+Cameroon,Kousseri,XAF,
+Cameroon,Mbalmayo,XAF,
+Cameroon,Bafang,XAF,
+Cameroon,Tiko,XAF,
+Canada,Toronto,CAD,
+Canada,Montreal,CAD,
+Canada,Vancouver,CAD,
+Canada,Calgary,CAD,
+Canada,Edmonton,CAD,
+Canada,Ottawa,CAD,
+Canada,Winnipeg,CAD,
+Canada,Quebec City,CAD,
+Canada,Hamilton,CAD,
+Canada,Kitchener,CAD,
+Canada,London,CAD,
+Canada,Victoria,CAD,
+Canada,Halifax,CAD,
+Canada,Oshawa,CAD,
+Canada,Windsor,CAD,
+Canada,Saskatoon,CAD,
+Canada,Regina,CAD,
+Canada,St. John's,CAD,
+Canada,Kelowna,CAD,
+Canada,Barrie,CAD,
+Cape Verde,Praia,CVE,
+Cape Verde,Mindelo,CVE,
+Cape Verde,Espargos,CVE,
+Cape Verde,Assomada,CVE,
+Cape Verde,Pedra Badejo,CVE,
+Cape Verde,Porto Novo,CVE,
+Cape Verde,Sao Filipe,CVE,
+Cape Verde,Tarrafal,CVE,
+Cape Verde,Santa Maria,CVE,
+Cape Verde,Sal Rei,CVE,
+Cape Verde,Mosteiros,CVE,
+Cape Verde,Vila do Maio,CVE,
+Cape Verde,Ribeira Brava,CVE,
+Cape Verde,Sao Domingos,CVE,
+Cape Verde,Picos,CVE,
+Cape Verde,Ponta do Sol,CVE,
+Cape Verde,Cidade Velha,CVE,
+Cape Verde,Cova Figueira,CVE,
+Cape Verde,Vila Nova Sintra,CVE,
+Cape Verde,Furna,CVE,
+Central African Republic,Bangui,XAF,
+Central African Republic,Bimbo,XAF,
+Central African Republic,Berberati,XAF,
+Central African Republic,Carnot,XAF,
+Central African Republic,Bambari,XAF,
+Central African Republic,Bouar,XAF,
+Central African Republic,Bossangoa,XAF,
+Central African Republic,Bria,XAF,
+Central African Republic,Bangassou,XAF,
+Central African Republic,Nola,XAF,
+Central African Republic,Kaga-Bandoro,XAF,
+Central African Republic,Sibut,XAF,
+Central African Republic,Mbaiki,XAF,
+Central African Republic,Bozoum,XAF,
+Central African Republic,Paoua,XAF,
+Central African Republic,Batangafo,XAF,
+Central African Republic,Ippy,XAF,
+Central African Republic,Zemio,XAF,
+Central African Republic,Obo,XAF,
+Central African Republic,Mobaye,XAF,
+Chad,N'Djamena,XAF,
+Chad,Moundou,XAF,
+Chad,Sarh,XAF,
+Chad,Abeche,XAF,
+Chad,Kelo,XAF,
+Chad,Koumra,XAF,
+Chad,Pala,XAF,
+Chad,Am Timan,XAF,
+Chad,Bongor,XAF,
+Chad,Mongo,XAF,
+Chad,Doba,XAF,
+Chad,Ati,XAF,
+Chad,Lai,XAF,
+Chad,Oum Hadjer,XAF,
+Chad,Bitkine,XAF,
+Chad,Mao,XAF,
+Chad,Massaguet,XAF,
+Chad,Dourbali,XAF,
+Chad,Lere,XAF,
+Chad,Kyabe,XAF,
+Chile,Santiago,CLP,
+Chile,Valparaiso,CLP,
+Chile,Concepcion,CLP,
+Chile,La Serena,CLP,
+Chile,Antofagasta,CLP,
+Chile,Temuco,CLP,
+Chile,Rancagua,CLP,
+Chile,Talca,CLP,
+Chile,Arica,CLP,
+Chile,Chillan,CLP,
+Chile,Iquique,CLP,
+Chile,Puerto Montt,CLP,
+Chile,Copiapo,CLP,
+Chile,Osorno,CLP,
+Chile,Quillota,CLP,
+Chile,Valdivia,CLP,
+Chile,Los Angeles,CLP,
+Chile,Calama,CLP,
+Chile,Punta Arenas,CLP,
+Chile,Curico,CLP,
+China,Shanghai,CNY,
+China,Beijing,CNY,
+China,Guangzhou,CNY,
+China,Shenzhen,CNY,
+China,Chengdu,CNY,
+China,Tianjin,CNY,
+China,Chongqing,CNY,
+China,Wuhan,CNY,
+China,Xi'an,CNY,
+China,Hangzhou,CNY,
+China,Nanjing,CNY,
+China,Shenyang,CNY,
+China,Harbin,CNY,
+China,Jinan,CNY,
+China,Qingdao,CNY,
+China,Dalian,CNY,
+China,Zhengzhou,CNY,
+China,Suzhou,CNY,
+China,Changsha,CNY,
+China,Kunming,CNY,
+Colombia,Bogota,COP,
+Colombia,Medellin,COP,
+Colombia,Cali,COP,
+Colombia,Barranquilla,COP,
+Colombia,Cartagena,COP,
+Colombia,Cucuta,COP,
+Colombia,Bucaramanga,COP,
+Colombia,Pereira,COP,
+Colombia,Santa Marta,COP,
+Colombia,Ibague,COP,
+Colombia,Bello,COP,
+Colombia,Pasto,COP,
+Colombia,Manizales,COP,
+Colombia,Neiva,COP,
+Colombia,Soledad,COP,
+Colombia,Villavicencio,COP,
+Colombia,Armenia,COP,
+Colombia,Soacha,COP,
+Colombia,Valledupar,COP,
+Colombia,Monteria,COP,
+Comoros,Moroni,KMF,
+Comoros,Mutsamudu,KMF,
+Comoros,Fomboni,KMF,
+Comoros,Domoni,KMF,
+Comoros,Tsembehou,KMF,
+Comoros,Ongojou,KMF,
+Comoros,Sima,KMF,
+Comoros,Ouani,KMF,
+Comoros,Mirontsi,KMF,
+Comoros,Mkazi,KMF,
+Comoros,Koni Djodjo,KMF,
+Comoros,Moya,KMF,
+Comoros,Iconi,KMF,
+Comoros,Ouzioini,KMF,
+Comoros,Mbeni,KMF,
+Comoros,Mitsamiouli,KMF,
+Comoros,Barakani,KMF,
+Comoros,Chindini,KMF,
+Comoros,Foumbouni,KMF,
+Comoros,Hahaya,KMF,
+Congo (Democratic Republic),Kinshasa,CDF,
+Congo (Democratic Republic),Lubumbashi,CDF,
+Congo (Democratic Republic),Mbuji-Mayi,CDF,
+Congo (Democratic Republic),Kananga,CDF,
+Congo (Democratic Republic),Kisangani,CDF,
+Congo (Democratic Republic),Bukavu,CDF,
+Congo (Democratic Republic),Tshikapa,CDF,
+Congo (Democratic Republic),Kolwezi,CDF,
+Congo (Democratic Republic),Likasi,CDF,
+Congo (Democratic Republic),Goma,CDF,
+Congo (Democratic Republic),Kikwit,CDF,
+Congo (Democratic Republic),Uvira,CDF,
+Congo (Democratic Republic),Bunia,CDF,
+Congo (Democratic Republic),Mbandaka,CDF,
+Congo (Democratic Republic),Matadi,CDF,
+Congo (Democratic Republic),Kabinda,CDF,
+Congo (Democratic Republic),Butembo,CDF,
+Congo (Democratic Republic),Mwene-Ditu,CDF,
+Congo (Democratic Republic),Isiro,CDF,
+Congo (Democratic Republic),Kindu,CDF,
+Congo (Republic),Brazzaville,XAF,
+Congo (Republic),Pointe-Noire,XAF,
+Congo (Republic),Dolisie,XAF,
+Congo (Republic),Nkayi,XAF,
+Congo (Republic),Impfondo,XAF,
+Congo (Republic),Ouesso,XAF,
+Congo (Republic),Madingou,XAF,
+Congo (Republic),Owando,XAF,
+Congo (Republic),Sibiti,XAF,
+Congo (Republic),Loutete,XAF,
+Congo (Republic),Bouansa,XAF,
+Congo (Republic),Gamboma,XAF,
+Congo (Republic),Mossendjo,XAF,
+Congo (Republic),Kinkala,XAF,
+Congo (Republic),Makoua,XAF,
+Congo (Republic),Djambala,XAF,
+Congo (Republic),Ewo,XAF,
+Congo (Republic),Oyo,XAF,
+Congo (Republic),Sembé,XAF,
+Congo (Republic),Zanaga,XAF,
+Costa Rica,San Jose,CRC,
+Costa Rica,Alajuela,CRC,
+Costa Rica,Cartago,CRC,
+Costa Rica,Heredia,CRC,
+Costa Rica,Liberia,CRC,
+Costa Rica,Puntarenas,CRC,
+Costa Rica,Limon,CRC,
+Costa Rica,San Vicente,CRC,
+Costa Rica,San Isidro de El General,CRC,
+Costa Rica,Curridabat,CRC,
+Costa Rica,San Rafael,CRC,
+Costa Rica,San Pedro,CRC,
+Costa Rica,Paraiso,CRC,
+Costa Rica,San Ramon,CRC,
+Costa Rica,Quesada,CRC,
+Costa Rica,Turrialba,CRC,
+Costa Rica,Guapiles,CRC,
+Costa Rica,Siquirres,CRC,
+Costa Rica,Escazu,CRC,
+Costa Rica,Santa Ana,CRC,
+Croatia,Zagreb,EUR,
+Croatia,Split,EUR,
+Croatia,Rijeka,EUR,
+Croatia,Osijek,EUR,
+Croatia,Zadar,EUR,
+Croatia,Velika Gorica,EUR,
+Croatia,Slavonski Brod,EUR,
+Croatia,Pula,EUR,
+Croatia,Karlovac,EUR,
+Croatia,Sisak,EUR,
+Croatia,Varazdin,EUR,
+Croatia,Sibenik,EUR,
+Croatia,Dubrovnik,EUR,
+Croatia,Bjelovar,EUR,
+Croatia,Kastela,EUR,
+Croatia,Samobor,EUR,
+Croatia,Vinkovci,EUR,
+Croatia,Koprivnica,EUR,
+Croatia,Dakovo,EUR,
+Croatia,Vukovar,EUR,
+Cuba,Havana,CUP,
+Cuba,Santiago de Cuba,CUP,
+Cuba,Camaguey,CUP,
+Cuba,Holguin,CUP,
+Cuba,Santa Clara,CUP,
+Cuba,Guantanamo,CUP,
+Cuba,Bayamo,CUP,
+Cuba,Las Tunas,CUP,
+Cuba,Cienfuegos,CUP,
+Cuba,Pinar del Rio,CUP,
+Cuba,Matanzas,CUP,
+Cuba,Ciego de Avila,CUP,
+Cuba,Sancti Spiritus,CUP,
+Cuba,Manzanillo,CUP,
+Cuba,Cardenas,CUP,
+Cuba,Palma Soriano,CUP,
+Cuba,Moa,CUP,
+Cuba,Moron,CUP,
+Cuba,Florida,CUP,
+Cuba,Contramaestre,CUP,
+Cyprus,Nicosia,EUR,
+Cyprus,Limassol,EUR,
+Cyprus,Larnaca,EUR,
+Cyprus,Famagusta,EUR,
+Cyprus,Paphos,EUR,
+Cyprus,Kyrenia,EUR,
+Cyprus,Protaras,EUR,
+Cyprus,Paralimni,EUR,
+Cyprus,Morphou,EUR,
+Cyprus,Aradippou,EUR,
+Cyprus,Mesa Geitonia,EUR,
+Cyprus,Germasogeia,EUR,
+Cyprus,Lakatamia,EUR,
+Cyprus,Strovolos,EUR,
+Cyprus,Aglantzia,EUR,
+Cyprus,Engomi,EUR,
+Cyprus,Latsia,EUR,
+Cyprus,Dali,EUR,
+Cyprus,Geri,EUR,
+Cyprus,Ypsonas,EUR,
+Czech Republic,Prague,CZK,
+Czech Republic,Brno,CZK,
+Czech Republic,Ostrava,CZK,
+Czech Republic,Plzen,CZK,
+Czech Republic,Liberec,CZK,
+Czech Republic,Olomouc,CZK,
+Czech Republic,Ceske Budejovice,CZK,
+Czech Republic,Hradec Kralove,CZK,
+Czech Republic,Usti nad Labem,CZK,
+Czech Republic,Pardubice,CZK,
+Czech Republic,Zlin,CZK,
+Czech Republic,Havirov,CZK,
+Czech Republic,Kladno,CZK,
+Czech Republic,Most,CZK,
+Czech Republic,Opava,CZK,
+Czech Republic,Frydek-Mistek,CZK,
+Czech Republic,Karvina,CZK,
+Czech Republic,Jihlava,CZK,
+Czech Republic,Teplice,CZK,
+Czech Republic,Decin,CZK,
+Denmark,Copenhagen,DKK,
+Denmark,Aarhus,DKK,
+Denmark,Odense,DKK,
+Denmark,Aalborg,DKK,
+Denmark,Esbjerg,DKK,
+Denmark,Randers,DKK,
+Denmark,Kolding,DKK,
+Denmark,Horsens,DKK,
+Denmark,Vejle,DKK,
+Denmark,Roskilde,DKK,
+Denmark,Herning,DKK,
+Denmark,Hørsholm,DKK,
+Denmark,Helsingør,DKK,
+Denmark,Silkeborg,DKK,
+Denmark,Naestved,DKK,
+Denmark,Fredericia,DKK,
+Denmark,Viborg,DKK,
+Denmark,Køge,DKK,
+Denmark,Holstebro,DKK,
+Denmark,Taastrup,DKK,
+Djibouti,Djibouti City,DJF,
+Djibouti,Ali Sabieh,DJF,
+Djibouti,Tadjoura,DJF,
+Djibouti,Obock,DJF,
+Djibouti,Dikhil,DJF,
+Djibouti,Arta,DJF,
+Djibouti,Holhol,DJF,
+Djibouti,Dorra,DJF,
+Djibouti,Galafi,DJF,
+Djibouti,Loyada,DJF,
+Djibouti,Alaili Dadda,DJF,
+Djibouti,Balho,DJF,
+Djibouti,Chorogo,DJF,
+Djibouti,Daimoli,DJF,
+Djibouti,Daoudaouya,DJF,
+Djibouti,Assamo,DJF,
+Djibouti,Dasbiyo,DJF,
+Djibouti,Gueini,DJF,
+Djibouti,Yoboki,DJF,
+Djibouti,Randa,DJF,
+Dominica,Roseau,XCD,
+Dominica,Portsmouth,XCD,
+Dominica,Marigot,XCD,
+Dominica,Berikua,XCD,
+Dominica,Mahaut,XCD,
+Dominica,Saint Joseph,XCD,
+Dominica,Wesley,XCD,
+Dominica,Salisbury,XCD,
+Dominica,Castle Bruce,XCD,
+Dominica,La Plaine,XCD,
+Dominica,Pointe Michel,XCD,
+Dominica,Woodford Hill,XCD,
+Dominica,Calibishie,XCD,
+Dominica,Soufriere,XCD,
+Dominica,Grand Bay,XCD,
+Dominica,Rosalie,XCD,
+Dominica,Pont Casse,XCD,
+Dominica,Colihaut,XCD,
+Dominica,Vieille Case,XCD,
+Dominica,Scotts Head,XCD,
+Dominican Republic,Santo Domingo,DOP,
+Dominican Republic,Santiago,DOP,
+Dominican Republic,La Romana,DOP,
+Dominican Republic,San Pedro de Macoris,DOP,
+Dominican Republic,Higuey,DOP,
+Dominican Republic,San Francisco de Macoris,DOP,
+Dominican Republic,Puerto Plata,DOP,
+Dominican Republic,La Vega,DOP,
+Dominican Republic,Bonao,DOP,
+Dominican Republic,San Juan de la Maguana,DOP,
+Dominican Republic,Bani,DOP,
+Dominican Republic,Moca,DOP,
+Dominican Republic,Azua,DOP,
+Dominican Republic,Barahona,DOP,
+Dominican Republic,Mao,DOP,
+Dominican Republic,Nagua,DOP,
+Dominican Republic,Cotuí,DOP,
+Dominican Republic,Villa Altagracia,DOP,
+Dominican Republic,Hato Mayor,DOP,
+Dominican Republic,Bajos de Haina,DOP,
+Ecuador,Guayaquil,USD,
+Ecuador,Quito,USD,
+Ecuador,Cuenca,USD,
+Ecuador,Santo Domingo,USD,
+Ecuador,Machala,USD,
+Ecuador,Duran,USD,
+Ecuador,Manta,USD,
+Ecuador,Portoviejo,USD,
+Ecuador,Loja,USD,
+Ecuador,Ambato,USD,
+Ecuador,Esmeraldas,USD,
+Ecuador,Quevedo,USD,
+Ecuador,Riobamba,USD,
+Ecuador,Milagro,USD,
+Ecuador,Ibarra,USD,
+Ecuador,La Libertad,USD,
+Ecuador,Babahoyo,USD,
+Ecuador,Sangolqui,USD,
+Ecuador,Daule,USD,
+Ecuador,Latacunga,USD,
+Egypt,Cairo,EGP,
+Egypt,Alexandria,EGP,
+Egypt,Giza,EGP,
+Egypt,Shubra El Kheima,EGP,
+Egypt,Port Said,EGP,
+Egypt,Suez,EGP,
+Egypt,Luxor,EGP,
+Egypt,Mansoura,EGP,
+Egypt,El Mahalla El Kubra,EGP,
+Egypt,Tanta,EGP,
+Egypt,Asyut,EGP,
+Egypt,Ismailia,EGP,
+Egypt,Faiyum,EGP,
+Egypt,Zagazig,EGP,
+Egypt,Aswan,EGP,
+Egypt,Damietta,EGP,
+Egypt,Damanhur,EGP,
+Egypt,Minya,EGP,
+Egypt,Beni Suef,EGP,
+Egypt,Qena,EGP,
+El Salvador,San Salvador,USD,
+El Salvador,Soyapango,USD,
+El Salvador,Santa Ana,USD,
+El Salvador,San Miguel,USD,
+El Salvador,Mejicanos,USD,
+El Salvador,Santa Tecla,USD,
+El Salvador,Apopa,USD,
+El Salvador,Delgado,USD,
+El Salvador,Sonsonate,USD,
+El Salvador,San Marcos,USD,
+El Salvador,Usulutan,USD,
+El Salvador,Cojutepeque,USD,
+El Salvador,Cuscatancingo,USD,
+El Salvador,Zacatecoluca,USD,
+El Salvador,San Martin,USD,
+El Salvador,Ilopango,USD,
+El Salvador,San Vicente,USD,
+El Salvador,Ahuachapan,USD,
+El Salvador,Antiguo Cuscatlan,USD,
+El Salvador,Chalchuapa,USD,
+Equatorial Guinea,Malabo,XAF,
+Equatorial Guinea,Bata,XAF,
+Equatorial Guinea,Ebebiyin,XAF,
+Equatorial Guinea,Mongomo,XAF,
+Equatorial Guinea,Evinayong,XAF,
+Equatorial Guinea,Luba,XAF,
+Equatorial Guinea,Anisok,XAF,
+Equatorial Guinea,Acurenam,XAF,
+Equatorial Guinea,Niefang,XAF,
+Equatorial Guinea,Mbini,XAF,
+Equatorial Guinea,Micomeseng,XAF,
+Equatorial Guinea,Nsok,XAF,
+Equatorial Guinea,Aconibe,XAF,
+Equatorial Guinea,Bicurga,XAF,
+Equatorial Guinea,Nkimi,XAF,
+Equatorial Guinea,Machinda,XAF,
+Equatorial Guinea,Bitica,XAF,
+Equatorial Guinea,Rio Campo,XAF,
+Equatorial Guinea,Riaba,XAF,
+Equatorial Guinea,Ureka,XAF,
+Eritrea,Asmara,ERN,
+Eritrea,Keren,ERN,
+Eritrea,Massawa,ERN,
+Eritrea,Assab,ERN,
+Eritrea,Mendefera,ERN,
+Eritrea,Barentu,ERN,
+Eritrea,Adi Keyh,ERN,
+Eritrea,Edd,ERN,
+Eritrea,Ghinda,ERN,
+Eritrea,Beylul,ERN,
+Eritrea,Decemhare,ERN,
+Eritrea,Nakfa,ERN,
+Eritrea,Agordat,ERN,
+Eritrea,Segheneyti,ERN,
+Eritrea,Afabet,ERN,
+Eritrea,Tessenei,ERN,
+Eritrea,Adi Quala,ERN,
+Eritrea,Senafe,ERN,
+Eritrea,Musa Ali,ERN,
+Eritrea,Zula,ERN,
+Estonia,Tallinn,EUR,
+Estonia,Tartu,EUR,
+Estonia,Narva,EUR,
+Estonia,Parnu,EUR,
+Estonia,Kohtla-Jarve,EUR,
+Estonia,Viljandi,EUR,
+Estonia,Rakvere,EUR,
+Estonia,Maardu,EUR,
+Estonia,Sillamae,EUR,
+Estonia,Kuressaare,EUR,
+Estonia,Voru,EUR,
+Estonia,Valga,EUR,
+Estonia,Haapsalu,EUR,
+Estonia,Johvi,EUR,
+Estonia,Paide,EUR,
+Estonia,Keila,EUR,
+Estonia,Kivioli,EUR,
+Estonia,Tapa,EUR,
+Estonia,Polva,EUR,
+Estonia,Jarve,EUR,
+Eswatini,Manzini,SZL,
+Eswatini,Mbabane,SZL,
+Eswatini,Big Bend,SZL,
+Eswatini,Malkerns,SZL,
+Eswatini,Nhlangano,SZL,
+Eswatini,Mhlume,SZL,
+Eswatini,Hlatikulu,SZL,
+Eswatini,Siteki,SZL,
+Eswatini,Piggs Peak,SZL,
+Eswatini,Lobamba,SZL,
+Eswatini,Kwaluseni,SZL,
+Eswatini,Simunye,SZL,
+Eswatini,Bhunya,SZL,
+Eswatini,Mondlo,SZL,
+Eswatini,Tabankulu,SZL,
+Eswatini,Tshaneni,SZL,
+Eswatini,Vuvulane,SZL,
+Eswatini,Ngomane,SZL,
+Eswatini,Mpaka,SZL,
+Eswatini,Sidvokodvo,SZL,
+Ethiopia,Addis Ababa,ETB,
+Ethiopia,Dire Dawa,ETB,
+Ethiopia,Mek'ele,ETB,
+Ethiopia,Gondar,ETB,
+Ethiopia,Bahir Dar,ETB,
+Ethiopia,Hawassa,ETB,
+Ethiopia,Jimma,ETB,
+Ethiopia,Jijiga,ETB,
+Ethiopia,Shashamane,ETB,
+Ethiopia,Bishoftu,ETB,
+Ethiopia,Arba Minch,ETB,
+Ethiopia,Hosaena,ETB,
+Ethiopia,Harar,ETB,
+Ethiopia,Dilla,ETB,
+Ethiopia,Nekemte,ETB,
+Ethiopia,Debre Birhan,ETB,
+Ethiopia,Asella,ETB,
+Ethiopia,Debre Markos,ETB,
+Ethiopia,Kombolcha,ETB,
+Ethiopia,Debre Tabor,ETB,
+Fiji,Suva,FJD,
+Fiji,Lautoka,FJD,
+Fiji,Nadi,FJD,
+Fiji,Labasa,FJD,
+Fiji,Ba,FJD,
+Fiji,Lami,FJD,
+Fiji,Sigatoka,FJD,
+Fiji,Savusavu,FJD,
+Fiji,Vatukoula,FJD,
+Fiji,Nausori,FJD,
+Fiji,Levuka,FJD,
+Fiji,Tavua,FJD,
+Fiji,Navua,FJD,
+Fiji,Rakiraki,FJD,
+Fiji,Korovou,FJD,
+Fiji,Nasinu,FJD,
+Fiji,Keiyasi,FJD,
+Fiji,Lomawai,FJD,
+Fiji,Nataruala,FJD,
+Fiji,Tubou,FJD,
+Finland,Helsinki,EUR,
+Finland,Espoo,EUR,
+Finland,Tampere,EUR,
+Finland,Vantaa,EUR,
+Finland,Oulu,EUR,
+Finland,Turku,EUR,
+Finland,Jyvaskyla,EUR,
+Finland,Lahti,EUR,
+Finland,Kuopio,EUR,
+Finland,Pori,EUR,
+Finland,Kouvola,EUR,
+Finland,Joensuu,EUR,
+Finland,Lappeenranta,EUR,
+Finland,Hameenlinna,EUR,
+Finland,Vaasa,EUR,
+Finland,Seinajoki,EUR,
+Finland,Rovaniemi,EUR,
+Finland,Mikkeli,EUR,
+Finland,Kotka,EUR,
+Finland,Salo,EUR,
+France,Paris,EUR,
+France,Marseille,EUR,
+France,Lyon,EUR,
+France,Toulouse,EUR,
+France,Nice,EUR,
+France,Nantes,EUR,
+France,Strasbourg,EUR,
+France,Montpellier,EUR,
+France,Bordeaux,EUR,
+France,Lille,EUR,
+France,Rennes,EUR,
+France,Reims,EUR,
+France,Le Havre,EUR,
+France,Saint-Etienne,EUR,
+France,Toulon,EUR,
+France,Grenoble,EUR,
+France,Dijon,EUR,
+France,Nimes,EUR,
+France,Angers,EUR,
+France,Villeurbanne,EUR,
+Gabon,Libreville,XAF,
+Gabon,Port-Gentil,XAF,
+Gabon,Franceville,XAF,
+Gabon,Oyem,XAF,
+Gabon,Moanda,XAF,
+Gabon,Mouila,XAF,
+Gabon,Lambarene,XAF,
+Gabon,Tchibanga,XAF,
+Gabon,Koulamoutou,XAF,
+Gabon,Makokou,XAF,
+Gabon,Bitam,XAF,
+Gabon,Tsogni,XAF,
+Gabon,Gamba,XAF,
+Gabon,Mounana,XAF,
+Gabon,Ntoum,XAF,
+Gabon,Nkan,XAF,
+Gabon,Lastoursville,XAF,
+Gabon,Okondja,XAF,
+Gabon,Ndende,XAF,
+Gabon,Booue,XAF,
+Gambia,Banjul,GMD,
+Gambia,Serekunda,GMD,
+Gambia,Brikama,GMD,
+Gambia,Bakau,GMD,
+Gambia,Farafenni,GMD,
+Gambia,Lamin,GMD,
+Gambia,Sukuta,GMD,
+Gambia,Basse Santa Su,GMD,
+Gambia,Gunjur,GMD,
+Gambia,Soma,GMD,
+Gambia,Brufut,GMD,
+Gambia,Kerr Seringe Ngaga,GMD,
+Gambia,Wellingara,GMD,
+Gambia,Busumbala,GMD,
+Gambia,Yundum,GMD,
+Gambia,Mandinari,GMD,
+Gambia,Sabi,GMD,
+Gambia,Bansang,GMD,
+Gambia,Gambissara,GMD,
+Gambia,Barra,GMD,
+Georgia,Tbilisi,GEL,
+Georgia,Batumi,GEL,
+Georgia,Kutaisi,GEL,
+Georgia,Rustavi,GEL,
+Georgia,Gori,GEL,
+Georgia,Zugdidi,GEL,
+Georgia,Poti,GEL,
+Georgia,Sokhumi,GEL,
+Georgia,Khashuri,GEL,
+Georgia,Samtredia,GEL,
+Georgia,Senaki,GEL,
+Georgia,Zestafoni,GEL,
+Georgia,Marneuli,GEL,
+Georgia,Telavi,GEL,
+Georgia,Akhaltsikhe,GEL,
+Georgia,Kobuleti,GEL,
+Georgia,Ozurgeti,GEL,
+Georgia,Kaspi,GEL,
+Georgia,Chiatura,GEL,
+Georgia,Tskaltubo,GEL,
+Germany,Berlin,EUR,
+Germany,Hamburg,EUR,
+Germany,Munich,EUR,
+Germany,Cologne,EUR,
+Germany,Frankfurt,EUR,
+Germany,Stuttgart,EUR,
+Germany,Dusseldorf,EUR,
+Germany,Dortmund,EUR,
+Germany,Essen,EUR,
+Germany,Leipzig,EUR,
+Germany,Bremen,EUR,
+Germany,Dresden,EUR,
+Germany,Hanover,EUR,
+Germany,Nuremberg,EUR,
+Germany,Duisburg,EUR,
+Germany,Bochum,EUR,
+Germany,Wuppertal,EUR,
+Germany,Bielefeld,EUR,
+Germany,Bonn,EUR,
+Germany,Munster,EUR,
+Ghana,Accra,GHS,
+Ghana,Kumasi,GHS,
+Ghana,Tamale,GHS,
+Ghana,Takoradi,GHS,
+Ghana,Ashaiman,GHS,
+Ghana,Tema,GHS,
+Ghana,Teshie,GHS,
+Ghana,Cape Coast,GHS,
+Ghana,Sekondi-Takoradi,GHS,
+Ghana,Obuasi,GHS,
+Ghana,Madina,GHS,
+Ghana,Koforidua,GHS,
+Ghana,Wa,GHS,
+Ghana,Techiman,GHS,
+Ghana,Ho,GHS,
+Ghana,Sunyani,GHS,
+Ghana,Nungua,GHS,
+Ghana,Tema New Town,GHS,
+Ghana,Dome,GHS,
+Ghana,Lashibi,GHS,
+Greece,Athens,EUR,
+Greece,Thessaloniki,EUR,
+Greece,Patras,EUR,
+Greece,Heraklion,EUR,
+Greece,Ioannina,EUR,
+Greece,Larissa,EUR,
+Greece,Volos,EUR,
+Greece,Rhodes,EUR,
+Greece,Chania,EUR,
+Greece,Agrinio,EUR,
+Greece,Katerini,EUR,
+Greece,Trikala,EUR,
+Greece,Serres,EUR,
+Greece,Lamia,EUR,
+Greece,Alexandroupoli,EUR,
+Greece,Kozani,EUR,
+Greece,Kavala,EUR,
+Greece,Kalamata,EUR,
+Greece,Veria,EUR,
+Greece,Komotini,EUR,
+Grenada,St. George's,XCD,
+Grenada,Gouyave,XCD,
+Grenada,Grenville,XCD,
+Grenada,Victoria,XCD,
+Grenada,Saint Davids,XCD,
+Grenada,Sauteurs,XCD,
+Grenada,Hillsborough,XCD,
+Grenada,Grand Roy,XCD,
+Grenada,Calivigny,XCD,
+Grenada,Tivoli,XCD,
+Grenada,Belmont,XCD,
+Grenada,Grand Anse,XCD,
+Grenada,Morne Rouge,XCD,
+Grenada,Willis,XCD,
+Grenada,Snug Corner,XCD,
+Grenada,Constantine,XCD,
+Grenada,Vendome,XCD,
+Grenada,Crochu,XCD,
+Grenada,Union,XCD,
+Grenada,Marquis,XCD,
+Guatemala,Guatemala City,GTQ,
+Guatemala,Mixco,GTQ,
+Guatemala,Villa Nueva,GTQ,
+Guatemala,Petapa,GTQ,
+Guatemala,Quetzaltenango,GTQ,
+Guatemala,San Juan Sacatepequez,GTQ,
+Guatemala,Chimaltenango,GTQ,
+Guatemala,Escuintla,GTQ,
+Guatemala,Chinautla,GTQ,
+Guatemala,Chimaltenango,GTQ,
+Guatemala,Amatitlan,GTQ,
+Guatemala,Huehuetenango,GTQ,
+Guatemala,Santa Lucia Cotzumalguapa,GTQ,
+Guatemala,Puerto Barrios,GTQ,
+Guatemala,Coban,GTQ,
+Guatemala,Chichicastenango,GTQ,
+Guatemala,Retalhuleu,GTQ,
+Guatemala,San Pedro Ayampuc,GTQ,
+Guatemala,Totonicapan,GTQ,
+Guatemala,Mazatenango,GTQ,
+Guinea,Conakry,GNF,
+Guinea,Nzerekore,GNF,
+Guinea,Kankan,GNF,
+Guinea,Kindia,GNF,
+Guinea,Siguiri,GNF,
+Guinea,Kissidougou,GNF,
+Guinea,Labe,GNF,
+Guinea,Kamsar,GNF,
+Guinea,Mamou,GNF,
+Guinea,Fria,GNF,
+Guinea,Macenta,GNF,
+Guinea,Coyah,GNF,
+Guinea,Faranah,GNF,
+Guinea,Gueckedou,GNF,
+Guinea,Pita,GNF,
+Guinea,Dabola,GNF,
+Guinea,Dinguiraye,GNF,
+Guinea,Telimele,GNF,
+Guinea,Tougue,GNF,
+Guinea,Yomou,GNF,
+Guinea-Bissau,Bissau,XOF,
+Guinea-Bissau,Bafata,XOF,
+Guinea-Bissau,Gabu,XOF,
+Guinea-Bissau,Bissorã,XOF,
+Guinea-Bissau,Bolama,XOF,
+Guinea-Bissau,Cacheu,XOF,
+Guinea-Bissau,Bubaque,XOF,
+Guinea-Bissau,Catio,XOF,
+Guinea-Bissau,Mansoa,XOF,
+Guinea-Bissau,Buba,XOF,
+Guinea-Bissau,Quebo,XOF,
+Guinea-Bissau,Canchungo,XOF,
+Guinea-Bissau,Farim,XOF,
+Guinea-Bissau,Quinhámel,XOF,
+Guinea-Bissau,Fulacunda,XOF,
+Guinea-Bissau,Bedanda,XOF,
+Guinea-Bissau,Safim,XOF,
+Guinea-Bissau,Prabis,XOF,
+Guinea-Bissau,Bigene,XOF,
+Guinea-Bissau,Sao Domingos,XOF,
+Guyana,Georgetown,GYD,
+Guyana,Linden,GYD,
+Guyana,New Amsterdam,GYD,
+Guyana,Anna Regina,GYD,
+Guyana,Bartica,GYD,
+Guyana,Skeldon,GYD,
+Guyana,Rosignol,GYD,
+Guyana,Mahaica,GYD,
+Guyana,Parika,GYD,
+Guyana,Vreed en Hoop,GYD,
+Guyana,Mabaruma,GYD,
+Guyana,Lethem,GYD,
+Guyana,Fort Wellington,GYD,
+Guyana,Kumaka,GYD,
+Guyana,Ituni,GYD,
+Guyana,Kwakwani,GYD,
+Guyana,Mahdia,GYD,
+Guyana,Matthews Ridge,GYD,
+Guyana,Port Kaituma,GYD,
+Guyana,Charity,GYD,
+Haiti,Port-au-Prince,HTG,
+Haiti,Carrefour,HTG,
+Haiti,Delmas,HTG,
+Haiti,Petion-Ville,HTG,
+Haiti,Gonaives,HTG,
+Haiti,Cap-Haitien,HTG,
+Haiti,Saint-Marc,HTG,
+Haiti,Verrettes,HTG,
+Haiti,Port-de-Paix,HTG,
+Haiti,Jacmel,HTG,
+Haiti,Limbe,HTG,
+Haiti,Jeremie,HTG,
+Haiti,Petite Riviere de l'Artibonite,HTG,
+Haiti,Hinche,HTG,
+Haiti,Petit-Goave,HTG,
+Haiti,Desdunes,HTG,
+Haiti,Dessalines,HTG,
+Haiti,Saint-Michel-de-l'Attalaye,HTG,
+Haiti,Leogane,HTG,
+Haiti,Fort-Liberte,HTG,
+Honduras,Tegucigalpa,HNL,
+Honduras,San Pedro Sula,HNL,
+Honduras,Choloma,HNL,
+Honduras,La Ceiba,HNL,
+Honduras,El Progreso,HNL,
+Honduras,Choluteca,HNL,
+Honduras,Comayagua,HNL,
+Honduras,Puerto Cortes,HNL,
+Honduras,La Lima,HNL,
+Honduras,Danli,HNL,
+Honduras,Siguatepeque,HNL,
+Honduras,Juticalpa,HNL,
+Honduras,Catacamas,HNL,
+Honduras,Villanueva,HNL,
+Honduras,Tocoa,HNL,
+Honduras,Tela,HNL,
+Honduras,Santa Rosa de Copan,HNL,
+Honduras,Olanchito,HNL,
+Honduras,San Lorenzo,HNL,
+Honduras,Cofradia,HNL,
+Hungary,Budapest,HUF,
+Hungary,Debrecen,HUF,
+Hungary,Szeged,HUF,
+Hungary,Miskolc,HUF,
+Hungary,Pecs,HUF,
+Hungary,Gyor,HUF,
+Hungary,Nyiregyhaza,HUF,
+Hungary,Kecskemet,HUF,
+Hungary,Szekesfehervar,HUF,
+Hungary,Szombathely,HUF,
+Hungary,Szolnok,HUF,
+Hungary,Tatabanya,HUF,
+Hungary,Kaposvar,HUF,
+Hungary,Erd,HUF,
+Hungary,Veszprem,HUF,
+Hungary,Bekescsaba,HUF,
+Hungary,Zalaegerszeg,HUF,
+Hungary,Sopron,HUF,
+Hungary,Eger,HUF,
+Hungary,Nagykanizsa,HUF,
+Iceland,Reykjavik,ISK,
+Iceland,Kopavogur,ISK,
+Iceland,Hafnarfjordur,ISK,
+Iceland,Akureyri,ISK,
+Iceland,Reykjanesbaer,ISK,
+Iceland,Gardabaer,ISK,
+Iceland,Mosfellsbaer,ISK,
+Iceland,Arborg,ISK,
+Iceland,Akranes,ISK,
+Iceland,Fjardabyggd,ISK,
+Iceland,Mulathing,ISK,
+Iceland,Seltjarnarnes,ISK,
+Iceland,Vestmannaeyjar,ISK,
+Iceland,Skagafjordur,ISK,
+Iceland,Isafjordur,ISK,
+Iceland,Borgarbyggd,ISK,
+Iceland,Grindavik,ISK,
+Iceland,Nordurthing,ISK,
+Iceland,Hveragerdi,ISK,
+Iceland,Hornafjordur,ISK,
+India,Mumbai,INR,
+India,Delhi,INR,
+India,Bangalore,INR,
+India,Hyderabad,INR,
+India,Ahmedabad,INR,
+India,Chennai,INR,
+India,Kolkata,INR,
+India,Surat,INR,
+India,Pune,INR,
+India,Jaipur,INR,
+India,Lucknow,INR,
+India,Kanpur,INR,
+India,Nagpur,INR,
+India,Indore,INR,
+India,Thane,INR,
+India,Bhopal,INR,
+India,Visakhapatnam,INR,
+India,Pimpri-Chinchwad,INR,
+India,Patna,INR,
+India,Vadodara,INR,
+Indonesia,Jakarta,IDR,
+Indonesia,Surabaya,IDR,
+Indonesia,Bandung,IDR,
+Indonesia,Bekasi,IDR,
+Indonesia,Medan,IDR,
+Indonesia,Tangerang,IDR,
+Indonesia,Depok,IDR,
+Indonesia,Semarang,IDR,
+Indonesia,Palembang,IDR,
+Indonesia,South Tangerang,IDR,
+Indonesia,Makassar,IDR,
+Indonesia,Batam,IDR,
+Indonesia,Pekanbaru,IDR,
+Indonesia,Bogor,IDR,
+Indonesia,Bandar Lampung,IDR,
+Indonesia,Padang,IDR,
+Indonesia,Malang,IDR,
+Indonesia,Denpasar,IDR,
+Indonesia,Samarinda,IDR,
+Indonesia,Tasikmalaya,IDR,
+Iran,Tehran,IRR,
+Iran,Mashhad,IRR,
+Iran,Isfahan,IRR,
+Iran,Karaj,IRR,
+Iran,Shiraz,IRR,
+Iran,Tabriz,IRR,
+Iran,Qom,IRR,
+Iran,Ahvaz,IRR,
+Iran,Kermanshah,IRR,
+Iran,Urmia,IRR,
+Iran,Rasht,IRR,
+Iran,Zahedan,IRR,
+Iran,Hamadan,IRR,
+Iran,Kerman,IRR,
+Iran,Yazd,IRR,
+Iran,Ardabil,IRR,
+Iran,Bandar Abbas,IRR,
+Iran,Arak,IRR,
+Iran,Islamshahr,IRR,
+Iran,Zanjan,IRR,
+Iraq,Baghdad,IQD,
+Iraq,Basra,IQD,
+Iraq,Mosul,IQD,
+Iraq,Erbil,IQD,
+Iraq,Kirkuk,IQD,
+Iraq,Najaf,IQD,
+Iraq,Karbala,IQD,
+Iraq,Nasiriyah,IQD,
+Iraq,Amarah,IQD,
+Iraq,Samarra,IQD,
+Iraq,Diwaniyah,IQD,
+Iraq,Kut,IQD,
+Iraq,Hilla,IQD,
+Iraq,Ramadi,IQD,
+Iraq,Fallujah,IQD,
+Iraq,Baqubah,IQD,
+Iraq,Sulaymaniyah,IQD,
+Iraq,Duhok,IQD,
+Iraq,Zakho,IQD,
+Iraq,Halabja,IQD,
+Ireland,Dublin,EUR,
+Ireland,Cork,EUR,
+Ireland,Limerick,EUR,
+Ireland,Galway,EUR,
+Ireland,Waterford,EUR,
+Ireland,Drogheda,EUR,
+Ireland,Dundalk,EUR,
+Ireland,Swords,EUR,
+Ireland,Bray,EUR,
+Ireland,Navan,EUR,
+Ireland,Kilkenny,EUR,
+Ireland,Ennis,EUR,
+Ireland,Carlow,EUR,
+Ireland,Tralee,EUR,
+Ireland,Newbridge,EUR,
+Ireland,Portlaoise,EUR,
+Ireland,Balbriggan,EUR,
+Ireland,Naas,EUR,
+Ireland,Athlone,EUR,
+Ireland,Mullingar,EUR,
+Israel,Jerusalem,ILS,
+Israel,Tel Aviv,ILS,
+Israel,Haifa,ILS,
+Israel,Rishon LeZion,ILS,
+Israel,Petah Tikva,ILS,
+Israel,Ashdod,ILS,
+Israel,Netanya,ILS,
+Israel,Beersheba,ILS,
+Israel,Holon,ILS,
+Israel,Bnei Brak,ILS,
+Israel,Ramat Gan,ILS,
+Israel,Rehovot,ILS,
+Israel,Ashkelon,ILS,
+Israel,Bat Yam,ILS,
+Israel,Beit Shemesh,ILS,
+Israel,Kfar Saba,ILS,
+Israel,Herzliya,ILS,
+Israel,Hadera,ILS,
+Israel,Modiin-Maccabim-Reut,ILS,
+Israel,Nazareth,ILS,
+Italy,Rome,EUR,
+Italy,Milan,EUR,
+Italy,Naples,EUR,
+Italy,Turin,EUR,
+Italy,Palermo,EUR,
+Italy,Genoa,EUR,
+Italy,Bologna,EUR,
+Italy,Florence,EUR,
+Italy,Bari,EUR,
+Italy,Catania,EUR,
+Italy,Venice,EUR,
+Italy,Verona,EUR,
+Italy,Messina,EUR,
+Italy,Padua,EUR,
+Italy,Trieste,EUR,
+Italy,Taranto,EUR,
+Italy,Brescia,EUR,
+Italy,Parma,EUR,
+Italy,Prato,EUR,
+Italy,Modena,EUR,
+Jamaica,Kingston,JMD,
+Jamaica,Portmore,JMD,
+Jamaica,Spanish Town,JMD,
+Jamaica,Montego Bay,JMD,
+Jamaica,May Pen,JMD,
+Jamaica,Mandeville,JMD,
+Jamaica,Old Harbour,JMD,
+Jamaica,Savanna-la-Mar,JMD,
+Jamaica,Ocho Rios,JMD,
+Jamaica,Linstead,JMD,
+Jamaica,Port Antonio,JMD,
+Jamaica,Saint Ann's Bay,JMD,
+Jamaica,Morant Bay,JMD,
+Jamaica,Falmouth,JMD,
+Jamaica,Santa Cruz,JMD,
+Jamaica,Brown's Town,JMD,
+Jamaica,Black River,JMD,
+Jamaica,Albert Town,JMD,
+Jamaica,Bamboo,JMD,
+Jamaica,Anchovy,JMD,
+Japan,Tokyo,JPY,
+Japan,Yokohama,JPY,
+Japan,Osaka,JPY,
+Japan,Nagoya,JPY,
+Japan,Sapporo,JPY,
+Japan,Kobe,JPY,
+Japan,Fukuoka,JPY,
+Japan,Kyoto,JPY,
+Japan,Kawasaki,JPY,
+Japan,Saitama,JPY,
+Japan,Hiroshima,JPY,
+Japan,Sendai,JPY,
+Japan,Chiba,JPY,
+Japan,Kitakyushu,JPY,
+Japan,Sakai,JPY,
+Japan,Niigata,JPY,
+Japan,Hamamatsu,JPY,
+Japan,Kumamoto,JPY,
+Japan,Sagamihara,JPY,
+Japan,Shizuoka,JPY,
+Jordan,Amman,JOD,
+Jordan,Zarqa,JOD,
+Jordan,Irbid,JOD,
+Jordan,Russeifa,JOD,
+Jordan,Sahab,JOD,
+Jordan,Ramtha,JOD,
+Jordan,Aqaba,JOD,
+Jordan,Mafraq,JOD,
+Jordan,Madaba,JOD,
+Jordan,As-Salt,JOD,
+Jordan,Al-Jizah,JOD,
+Jordan,Ain Al-Basha,JOD,
+Jordan,Aydoun,JOD,
+Jordan,Ad-Dhlail,JOD,
+Jordan,Jerash,JOD,
+Jordan,As-Sarih,JOD,
+Jordan,Al-Hashimiyah,JOD,
+Jordan,Ma'an,JOD,
+Jordan,Bayt Ras,JOD,
+Jordan,Al Husn,JOD,
+Kazakhstan,Almaty,KZT,
+Kazakhstan,Astana,KZT,
+Kazakhstan,Shymkent,KZT,
+Kazakhstan,Karaganda,KZT,
+Kazakhstan,Aktobe,KZT,
+Kazakhstan,Taraz,KZT,
+Kazakhstan,Pavlodar,KZT,
+Kazakhstan,Ust-Kamenogorsk,KZT,
+Kazakhstan,Semey,KZT,
+Kazakhstan,Atyrau,KZT,
+Kazakhstan,Kostanay,KZT,
+Kazakhstan,Kyzylorda,KZT,
+Kazakhstan,Uralsk,KZT,
+Kazakhstan,Petropavl,KZT,
+Kazakhstan,Turkistan,KZT,
+Kazakhstan,Kokshetau,KZT,
+Kazakhstan,Temirtau,KZT,
+Kazakhstan,Taldykorgan,KZT,
+Kazakhstan,Ekibastuz,KZT,
+Kazakhstan,Rudny,KZT,
+Kenya,Nairobi,KES,
+Kenya,Mombasa,KES,
+Kenya,Kisumu,KES,
+Kenya,Nakuru,KES,
+Kenya,Eldoret,KES,
+Kenya,Kehancha,KES,
+Kenya,Ruiru,KES,
+Kenya,Kikuyu,KES,
+Kenya,Kangundo-Tala,KES,
+Kenya,Malindi,KES,
+Kenya,Naivasha,KES,
+Kenya,Kitui,KES,
+Kenya,Machakos,KES,
+Kenya,Thika,KES,
+Kenya,Athi River,KES,
+Kenya,Karuri,KES,
+Kenya,Nyeri,KES,
+Kenya,Kilifi,KES,
+Kenya,Garissa,KES,
+Kenya,Vihiga,KES,
+Kiribati,South Tarawa,AUD,
+Kiribati,Betio,AUD,
+Kiribati,Bikenibeu,AUD,
+Kiribati,Teaoraereke,AUD,
+Kiribati,Bairiki,AUD,
+Kiribati,Eita,AUD,
+Kiribati,Bonriki,AUD,
+Kiribati,Temwaiku,AUD,
+Kiribati,Ambo,AUD,
+Kiribati,Banraeaba,AUD,
+Kiribati,Abarao,AUD,
+Kiribati,Nanikai,AUD,
+Kiribati,Taborio,AUD,
+Kiribati,Rungata,AUD,
+Kiribati,Makarite,AUD,
+Kiribati,Bungitaki,AUD,
+Kiribati,Tabwakea,AUD,
+Kiribati,London,AUD,
+Kiribati,Banana,AUD,
+Kiribati,Tabiang,AUD,
+Kuwait,Kuwait City,KWD,
+Kuwait,Al Ahmadi,KWD,
+Kuwait,Hawalli,KWD,
+Kuwait,Al Farwaniyah,KWD,
+Kuwait,Al Jahra,KWD,
+Kuwait,Mubarak Al-Kabeer,KWD,
+Kuwait,Salmiya,KWD,
+Kuwait,Sabah Al-Salem,KWD,
+Kuwait,Jleeb Al-Shuyoukh,KWD,
+Kuwait,Salwa,KWD,
+Kuwait,Jabriya,KWD,
+Kuwait,Rumaithiya,KWD,
+Kuwait,Fahaheel,KWD,
+Kuwait,Mangaf,KWD,
+Kuwait,Mahboula,KWD,
+Kuwait,Khaitan,KWD,
+Kuwait,Ardiya,KWD,
+Kuwait,Bayan,KWD,
+Kuwait,Qurtuba,KWD,
+Kuwait,Yarmouk,KWD,
+Kyrgyzstan,Bishkek,KGS,
+Kyrgyzstan,Osh,KGS,
+Kyrgyzstan,Jalal-Abad,KGS,
+Kyrgyzstan,Karakol,KGS,
+Kyrgyzstan,Tokmok,KGS,
+Kyrgyzstan,Uzgen,KGS,
+Kyrgyzstan,Balykchy,KGS,
+Kyrgyzstan,Kara-Balta,KGS,
+Kyrgyzstan,Naryn,KGS,
+Kyrgyzstan,Talas,KGS,
+Kyrgyzstan,Kyzyl-Kiya,KGS,
+Kyrgyzstan,Bazarkorgon,KGS,
+Kyrgyzstan,Tash-Kumyr,KGS,
+Kyrgyzstan,Isfana,KGS,
+Kyrgyzstan,Kant,KGS,
+Kyrgyzstan,Kara-Suu,KGS,
+Kyrgyzstan,Toktogul,KGS,
+Kyrgyzstan,Kemin,KGS,
+Kyrgyzstan,Shopokov,KGS,
+Kyrgyzstan,Kajisay,KGS,
+Laos,Vientiane,LAK,
+Laos,Pakse,LAK,
+Laos,Savannakhet,LAK,
+Laos,Luang Prabang,LAK,
+Laos,Xam Neua,LAK,
+Laos,Phonsavan,LAK,
+Laos,Thakhek,LAK,
+Laos,Muang Xay,LAK,
+Laos,Vang Vieng,LAK,
+Laos,Pakxan,LAK,
+Laos,Attapeu,LAK,
+Laos,Huay Xai,LAK,
+Laos,Luang Namtha,LAK,
+Laos,Sekong,LAK,
+Laos,Salavan,LAK,
+Laos,Phonhong,LAK,
+Laos,Samakkhiphex,LAK,
+Laos,Kaysone Phomvihane,LAK,
+Laos,Sayabouly,LAK,
+Laos,Viengxay,LAK,
+Latvia,Riga,EUR,
+Latvia,Daugavpils,EUR,
+Latvia,Liepaja,EUR,
+Latvia,Jelgava,EUR,
+Latvia,Jurmala,EUR,
+Latvia,Ventspils,EUR,
+Latvia,Rezekne,EUR,
+Latvia,Ogre,EUR,
+Latvia,Valmiera,EUR,
+Latvia,Jekabpils,EUR,
+Latvia,Salaspils,EUR,
+Latvia,Tukums,EUR,
+Latvia,Cesis,EUR,
+Latvia,Sigulda,EUR,
+Latvia,Olaine,EUR,
+Latvia,Kuldiga,EUR,
+Latvia,Saldus,EUR,
+Latvia,Talsi,EUR,
+Latvia,Dobele,EUR,
+Latvia,Bauska,EUR,
+Lebanon,Beirut,LBP,
+Lebanon,Tripoli,LBP,
+Lebanon,Sidon,LBP,
+Lebanon,Tyre,LBP,
+Lebanon,Nabatieh,LBP,
+Lebanon,Jounieh,LBP,
+Lebanon,Zahle,LBP,
+Lebanon,Baalbek,LBP,
+Lebanon,Batroun,LBP,
+Lebanon,Byblos,LBP,
+Lebanon,Aley,LBP,
+Lebanon,Bsharri,LBP,
+Lebanon,Zgharta,LBP,
+Lebanon,Hermel,LBP,
+Lebanon,Chekka,LBP,
+Lebanon,Enfeh,LBP,
+Lebanon,Halba,LBP,
+Lebanon,Jbeil,LBP,
+Lebanon,Rayak,LBP,
+Lebanon,Qab Elias,LBP,
+Lesotho,Maseru,LSL,
+Lesotho,Teyateyaneng,LSL,
+Lesotho,Mafeteng,LSL,
+Lesotho,Hlotse,LSL,
+Lesotho,Mohale's Hoek,LSL,
+Lesotho,Maputsoe,LSL,
+Lesotho,Qacha's Nek,LSL,
+Lesotho,Quthing,LSL,
+Lesotho,Peka,LSL,
+Lesotho,Butha-Buthe,LSL,
+Lesotho,Mokhotlong,LSL,
+Lesotho,Thaba-Tseka,LSL,
+Lesotho,Roma,LSL,
+Lesotho,Morija,LSL,
+Lesotho,Mazinod,LSL,
+Lesotho,Matsieng,LSL,
+Lesotho,Makhakhe,LSL,
+Lesotho,Tsa-Kholo,LSL,
+Lesotho,Ribaneng,LSL,
+Lesotho,Semonkong,LSL,
+Liberia,Monrovia,LRD,
+Liberia,Gbarnga,LRD,
+Liberia,Buchanan,LRD,
+Liberia,Ganta,LRD,
+Liberia,Kakata,LRD,
+Liberia,Zwedru,LRD,
+Liberia,Harbel,LRD,
+Liberia,Pleebo,LRD,
+Liberia,Voinjama,LRD,
+Liberia,Harper,LRD,
+Liberia,Greenville,LRD,
+Liberia,Tubmanburg,LRD,
+Liberia,Sanniquellie,LRD,
+Liberia,Bensonville,LRD,
+Liberia,Robertsport,LRD,
+Liberia,Zorzor,LRD,
+Liberia,Karnplay,LRD,
+Liberia,River Cess,LRD,
+Liberia,Bopolu,LRD,
+Liberia,Fish Town,LRD,
+Libya,Tripoli,LYD,
+Libya,Benghazi,LYD,
+Libya,Misrata,LYD,
+Libya,Bayda,LYD,
+Libya,Zawiya,LYD,
+Libya,Zliten,LYD,
+Libya,Tobruk,LYD,
+Libya,Ajdabiya,LYD,
+Libya,Derna,LYD,
+Libya,Sabha,LYD,
+Libya,Khoms,LYD,
+Libya,Sirte,LYD,
+Libya,Sabratha,LYD,
+Libya,Zuwara,LYD,
+Libya,Kufra,LYD,
+Libya,Marj,LYD,
+Libya,Tarhuna,LYD,
+Libya,Gharyan,LYD,
+Libya,Bani Walid,LYD,
+Libya,Murzuq,LYD,
+Liechtenstein,Vaduz,CHF,
+Liechtenstein,Schaan,CHF,
+Liechtenstein,Triesen,CHF,
+Liechtenstein,Balzers,CHF,
+Liechtenstein,Eschen,CHF,
+Liechtenstein,Mauren,CHF,
+Liechtenstein,Triesenberg,CHF,
+Liechtenstein,Ruggell,CHF,
+Liechtenstein,Gamprin,CHF,
+Liechtenstein,Planken,CHF,
+Liechtenstein,Schellenberg,CHF,
+Liechtenstein,Nendeln,CHF,
+Liechtenstein,Bendern,CHF,
+Liechtenstein,Steg,CHF,
+Liechtenstein,Malbun,CHF,
+Liechtenstein,Masescha,CHF,
+Liechtenstein,Silum,CHF,
+Liechtenstein,Rotenboden,CHF,
+Liechtenstein,Hinter-Schellenberg,CHF,
+Liechtenstein,Vorder-Schellenberg,CHF,
+Lithuania,Vilnius,EUR,
+Lithuania,Kaunas,EUR,
+Lithuania,Klaipeda,EUR,
+Lithuania,Siauliai,EUR,
+Lithuania,Panevezys,EUR,
+Lithuania,Alytus,EUR,
+Lithuania,Marijampole,EUR,
+Lithuania,Mazeikiai,EUR,
+Lithuania,Jonava,EUR,
+Lithuania,Utena,EUR,
+Lithuania,Kedainiai,EUR,
+Lithuania,Taurage,EUR,
+Lithuania,Telsiai,EUR,
+Lithuania,Ukmerge,EUR,
+Lithuania,Visaginas,EUR,
+Lithuania,Plunge,EUR,
+Lithuania,Kretinga,EUR,
+Lithuania,Silute,EUR,
+Lithuania,Radviliskis,EUR,
+Lithuania,Palanga,EUR,
+Luxembourg,Luxembourg City,EUR,
+Luxembourg,Esch-sur-Alzette,EUR,
+Luxembourg,Differdange,EUR,
+Luxembourg,Dudelange,EUR,
+Luxembourg,Ettelbruck,EUR,
+Luxembourg,Diekirch,EUR,
+Luxembourg,Wiltz,EUR,
+Luxembourg,Echternach,EUR,
+Luxembourg,Rumelange,EUR,
+Luxembourg,Grevenmacher,EUR,
+Luxembourg,Remich,EUR,
+Luxembourg,Vianden,EUR,
+Luxembourg,Steinfort,EUR,
+Luxembourg,Mondorf-les-Bains,EUR,
+Luxembourg,Petange,EUR,
+Luxembourg,Sanem,EUR,
+Luxembourg,Hesperange,EUR,
+Luxembourg,Bettembourg,EUR,
+Luxembourg,Schifflange,EUR,
+Luxembourg,Mamer,EUR,
+Madagascar,Antananarivo,MGA,
+Madagascar,Toamasina,MGA,
+Madagascar,Antsirabe,MGA,
+Madagascar,Fianarantsoa,MGA,
+Madagascar,Mahajanga,MGA,
+Madagascar,Toliara,MGA,
+Madagascar,Antsiranana,MGA,
+Madagascar,Antanifotsy,MGA,
+Madagascar,Ambovombe,MGA,
+Madagascar,Ambilobe,MGA,
+Madagascar,Andapa,MGA,
+Madagascar,Farafangana,MGA,
+Madagascar,Nosy Varika,MGA,
+Madagascar,Vavatenina,MGA,
+Madagascar,Morondava,MGA,
+Madagascar,Ambatondrazaka,MGA,
+Madagascar,Mananara Nord,MGA,
+Madagascar,Soanierana Ivongo,MGA,
+Madagascar,Mahanoro,MGA,
+Madagascar,Soavinandriana,MGA,
+Malawi,Lilongwe,MWK,
+Malawi,Blantyre,MWK,
+Malawi,Mzuzu,MWK,
+Malawi,Zomba,MWK,
+Malawi,Kasungu,MWK,
+Malawi,Mangochi,MWK,
+Malawi,Karonga,MWK,
+Malawi,Salima,MWK,
+Malawi,Nkhotakota,MWK,
+Malawi,Liwonde,MWK,
+Malawi,Nsanje,MWK,
+Malawi,Rumphi,MWK,
+Malawi,Mzimba,MWK,
+Malawi,Balaka,MWK,
+Malawi,Dedza,MWK,
+Malawi,Luchenza,MWK,
+Malawi,Mchinji,MWK,
+Malawi,Chitipa,MWK,
+Malawi,Mulatje,MWK,
+Malawi,Ntcheu,MWK,
+Malaysia,Kuala Lumpur,MYR,
+Malaysia,George Town,MYR,
+Malaysia,Ipoh,MYR,
+Malaysia,Shah Alam,MYR,
+Malaysia,Petaling Jaya,MYR,
+Malaysia,Johor Bahru,MYR,
+Malaysia,Melaka,MYR,
+Malaysia,Kota Kinabalu,MYR,
+Malaysia,Kuantan,MYR,
+Malaysia,Alor Setar,MYR,
+Malaysia,Kuala Terengganu,MYR,
+Malaysia,Kuching,MYR,
+Malaysia,Seremban,MYR,
+Malaysia,Sandakan,MYR,
+Malaysia,Miri,MYR,
+Malaysia,Taiping,MYR,
+Malaysia,Klang,MYR,
+Malaysia,Subang Jaya,MYR,
+Malaysia,Kajang,MYR,
+Malaysia,Selayang,MYR,
+Maldives,Male,MVR,
+Maldives,Addu City,MVR,
+Maldives,Fuvahmulah,MVR,
+Maldives,Kulhudhuffushi,MVR,
+Maldives,Thinadhoo,MVR,
+Maldives,Naifaru,MVR,
+Maldives,Dhuvaafaru,MVR,
+Maldives,Mahibadhoo,MVR,
+Maldives,Eydhafushi,MVR,
+Maldives,Fonadhoo,MVR,
+Maldives,Gan,MVR,
+Maldives,Hithadhoo,MVR,
+Maldives,Hulhumale,MVR,
+Maldives,Villingili,MVR,
+Maldives,Maafushi,MVR,
+Maldives,Rasdhoo,MVR,
+Maldives,Ukulhas,MVR,
+Maldives,Thoddoo,MVR,
+Maldives,Guraidhoo,MVR,
+Maldives,Himmafushi,MVR,
+Mali,Bamako,XOF,
+Mali,Sikasso,XOF,
+Mali,Kalabancoro,XOF,
+Mali,Koutiala,XOF,
+Mali,Segou,XOF,
+Mali,Kayes,XOF,
+Mali,Mopti,XOF,
+Mali,Niono,XOF,
+Mali,Gao,XOF,
+Mali,San,XOF,
+Mali,Kati,XOF,
+Mali,Timbuktu,XOF,
+Mali,Koro,XOF,
+Mali,Bla,XOF,
+Mali,Bougouni,XOF,
+Mali,Mandé,XOF,
+Mali,Baguinéda-Camp,XOF,
+Mali,Kolokani,XOF,
+Mali,Pelengana,XOF,
+Mali,Kita,XOF,
+Malta,Valletta,EUR,
+Malta,Birkirkara,EUR,
+Malta,Mosta,EUR,
+Malta,Qormi,EUR,
+Malta,Zabbar,EUR,
+Malta,San Gwann,EUR,
+Malta,Sliema,EUR,
+Malta,Rabat,EUR,
+Malta,Zejtun,EUR,
+Malta,Naxxar,EUR,
+Malta,Fgura,EUR,
+Malta,St. Paul's Bay,EUR,
+Malta,Mellieha,EUR,
+Malta,Zurrieq,EUR,
+Malta,Msida,EUR,
+Malta,Tarxien,EUR,
+Malta,Gzira,EUR,
+Malta,Marsaskala,EUR,
+Malta,Paola,EUR,
+Malta,Santa Venera,EUR,
+Marshall Islands,Majuro,USD,
+Marshall Islands,Ebeye,USD,
+Marshall Islands,Arrak,USD,
+Marshall Islands,Laura,USD,
+Marshall Islands,Ajeltake,USD,
+Marshall Islands,Woja,USD,
+Marshall Islands,Delap,USD,
+Marshall Islands,Uliga,USD,
+Marshall Islands,Rairok,USD,
+Marshall Islands,Djarrit,USD,
+Marshall Islands,Enubirr,USD,
+Marshall Islands,Jabor,USD,
+Marshall Islands,Wotje,USD,
+Marshall Islands,Kili,USD,
+Marshall Islands,Namdrik,USD,
+Marshall Islands,Ebon,USD,
+Marshall Islands,Mili,USD,
+Marshall Islands,Likiep,USD,
+Marshall Islands,Mejit,USD,
+Marshall Islands,Ailuk,USD,
+Mauritania,Nouakchott,MRU,
+Mauritania,Nouadhibou,MRU,
+Mauritania,Kiffa,MRU,
+Mauritania,Rosso,MRU,
+Mauritania,Kaedi,MRU,
+Mauritania,Zouerat,MRU,
+Mauritania,Atar,MRU,
+Mauritania,Boutilimit,MRU,
+Mauritania,Selibaby,MRU,
+Mauritania,Nema,MRU,
+Mauritania,Aleg,MRU,
+Mauritania,Tidjikja,MRU,
+Mauritania,Aioun,MRU,
+Mauritania,Magta Lahjar,MRU,
+Mauritania,Guerou,MRU,
+Mauritania,Tintane,MRU,
+Mauritania,Timbedra,MRU,
+Mauritania,Akjoujt,MRU,
+Mauritania,Amourj,MRU,
+Mauritania,Seolibabi,MRU,
+Mauritius,Port Louis,MUR,
+Mauritius,Vacoas-Phoenix,MUR,
+Mauritius,Beau Bassin-Rose Hill,MUR,
+Mauritius,Curepipe,MUR,
+Mauritius,Quatre Bornes,MUR,
+Mauritius,Triolet,MUR,
+Mauritius,Goodlands,MUR,
+Mauritius,Centre de Flacq,MUR,
+Mauritius,Bel Air Riviere Seche,MUR,
+Mauritius,Mahebourg,MUR,
+Mauritius,Saint Pierre,MUR,
+Mauritius,Le Hochet,MUR,
+Mauritius,Baie du Tombeau,MUR,
+Mauritius,Bambous,MUR,
+Mauritius,Rose Belle,MUR,
+Mauritius,Chemin Grenier,MUR,
+Mauritius,Riviere du Rempart,MUR,
+Mauritius,Grand Baie,MUR,
+Mauritius,Plaine Magnien,MUR,
+Mauritius,Pailles,MUR,
+Mexico,Mexico City,MXN,
+Mexico,Guadalajara,MXN,
+Mexico,Monterrey,MXN,
+Mexico,Puebla,MXN,
+Mexico,Toluca,MXN,
+Mexico,Tijuana,MXN,
+Mexico,Leon,MXN,
+Mexico,Ciudad Juarez,MXN,
+Mexico,Torreon,MXN,
+Mexico,Queretaro,MXN,
+Mexico,San Luis Potosi,MXN,
+Mexico,Merida,MXN,
+Mexico,Mexicali,MXN,
+Mexico,Aguascalientes,MXN,
+Mexico,Cuernavaca,MXN,
+Mexico,Acapulco,MXN,
+Mexico,Tampico,MXN,
+Mexico,Chihuahua,MXN,
+Mexico,Saltillo,MXN,
+Mexico,Morelia,MXN,
+Micronesia,Palikir,USD,
+Micronesia,Weno,USD,
+Micronesia,Colonia,USD,
+Micronesia,Tofol,USD,
+Micronesia,Lelu,USD,
+Micronesia,Kolonia,USD,
+Micronesia,Tol,USD,
+Micronesia,Madolenihmw,USD,
+Micronesia,Nett,USD,
+Micronesia,Kitti,USD,
+Micronesia,U,USD,
+Micronesia,Sokehs,USD,
+Micronesia,Fefan,USD,
+Micronesia,Uman,USD,
+Micronesia,Tonowas,USD,
+Micronesia,Moch,USD,
+Micronesia,Satowan,USD,
+Micronesia,Ta,USD,
+Micronesia,Kutu,USD,
+Micronesia,Ettal,USD,
+Moldova,Chisinau,MDL,
+Moldova,Balti,MDL,
+Moldova,Tiraspol,MDL,
+Moldova,Bender,MDL,
+Moldova,Ribnita,MDL,
+Moldova,Cahul,MDL,
+Moldova,Ungheni,MDL,
+Moldova,Soroca,MDL,
+Moldova,Orhei,MDL,
+Moldova,Comrat,MDL,
+Moldova,Dubasari,MDL,
+Moldova,Struseni,MDL,
+Moldova,Ceadir-Lunga,MDL,
+Moldova,Drochia,MDL,
+Moldova,Causeni,MDL,
+Moldova,Edinet,MDL,
+Moldova,Falesti,MDL,
+Moldova,Hincesti,MDL,
+Moldova,Slobozia,MDL,
+Moldova,Vulcanesti,MDL,
+Monaco,Monaco,EUR,
+Monaco,Monte Carlo,EUR,
+Monaco,La Condamine,EUR,
+Monaco,Fontvieille,EUR,
+Monaco,Moneghetti,EUR,
+Monaco,Larvotto,EUR,
+Monaco,Saint Roman,EUR,
+Monaco,Saint Michel,EUR,
+Monaco,La Colle,EUR,
+Monaco,Les Revoires,EUR,
+Monaco,Le Portier,EUR,
+Monaco,Monaco-Ville,EUR,
+Monaco,Spelugues,EUR,
+Monaco,Vallon de la Noix,EUR,
+Monaco,Saint Devote,EUR,
+Monaco,La Rousse,EUR,
+Monaco,Tenao,EUR,
+Monaco,Les Salines,EUR,
+Monaco,Jardin Exotique,EUR,
+Monaco,Plages,EUR,
+Mongolia,Ulaanbaatar,MNT,
+Mongolia,Erdenet,MNT,
+Mongolia,Darkhan,MNT,
+Mongolia,Choibalsan,MNT,
+Mongolia,Moron,MNT,
+Mongolia,Nalaikh,MNT,
+Mongolia,Khovd,MNT,
+Mongolia,Olgii,MNT,
+Mongolia,Bayankhongor,MNT,
+Mongolia,Arvaikheer,MNT,
+Mongolia,Ulaangom,MNT,
+Mongolia,Sainshand,MNT,
+Mongolia,Baruun-Urt,MNT,
+Mongolia,Sukhbaatar,MNT,
+Mongolia,Altai,MNT,
+Mongolia,Zuunmod,MNT,
+Mongolia,Zamiin-Uud,MNT,
+Mongolia,Bulgan,MNT,
+Mongolia,Mandalgovi,MNT,
+Mongolia,Dalanzadgad,MNT,
+Montenegro,Podgorica,EUR,
+Montenegro,Niksic,EUR,
+Montenegro,Pljevlja,EUR,
+Montenegro,Bijelo Polje,EUR,
+Montenegro,Cetinje,EUR,
+Montenegro,Bar,EUR,
+Montenegro,Herceg Novi,EUR,
+Montenegro,Berane,EUR,
+Montenegro,Budva,EUR,
+Montenegro,Ulcinj,EUR,
+Montenegro,Tivat,EUR,
+Montenegro,Rozaje,EUR,
+Montenegro,Kotor,EUR,
+Montenegro,Danilovgrad,EUR,
+Montenegro,Mojkovac,EUR,
+Montenegro,Plav,EUR,
+Montenegro,Kolasin,EUR,
+Montenegro,Zabljak,EUR,
+Montenegro,Pluzine,EUR,
+Montenegro,Andrijevica,EUR,
+Morocco,Casablanca,MAD,
+Morocco,Rabat,MAD,
+Morocco,Fes,MAD,
+Morocco,Marrakesh,MAD,
+Morocco,Tangier,MAD,
+Morocco,Agadir,MAD,
+Morocco,Meknes,MAD,
+Morocco,Oujda,MAD,
+Morocco,Kenitra,MAD,
+Morocco,Tetouan,MAD,
+Morocco,Safi,MAD,
+Morocco,Temara,MAD,
+Morocco,Inezgane,MAD,
+Morocco,Mohammedia,MAD,
+Morocco,Laayoune,MAD,
+Morocco,Khouribga,MAD,
+Morocco,Beni Mellal,MAD,
+Morocco,Jdida,MAD,
+Morocco,Taza,MAD,
+Morocco,Nador,MAD,
+Mozambique,Maputo,MZN,
+Mozambique,Matola,MZN,
+Mozambique,Beira,MZN,
+Mozambique,Nampula,MZN,
+Mozambique,Chimoio,MZN,
+Mozambique,Nacala,MZN,
+Mozambique,Quelimane,MZN,
+Mozambique,Tete,MZN,
+Mozambique,Xai-Xai,MZN,
+Mozambique,Maxixe,MZN,
+Mozambique,Lichinga,MZN,
+Mozambique,Pemba,MZN,
+Mozambique,Dondo,MZN,
+Mozambique,Antonio Enes,MZN,
+Mozambique,Inhambane,MZN,
+Mozambique,Cuamba,MZN,
+Mozambique,Montepuez,MZN,
+Mozambique,Chokwe,MZN,
+Mozambique,Chibuto,MZN,
+Mozambique,Ilha de Mocambique,MZN,
+Myanmar,Yangon,MMK,
+Myanmar,Mandalay,MMK,
+Myanmar,Naypyidaw,MMK,
+Myanmar,Mawlamyine,MMK,
+Myanmar,Bago,MMK,
+Myanmar,Pathein,MMK,
+Myanmar,Monywa,MMK,
+Myanmar,Sittwe,MMK,
+Myanmar,Meiktila,MMK,
+Myanmar,Taunggyi,MMK,
+Myanmar,Myeik,MMK,
+Myanmar,Pyay,MMK,
+Myanmar,Dawei,MMK,
+Myanmar,Lashio,MMK,
+Myanmar,Pakokku,MMK,
+Myanmar,Magway,MMK,
+Myanmar,Henzada,MMK,
+Myanmar,Myingyan,MMK,
+Myanmar,Hakha,MMK,
+Myanmar,Loikaw,MMK,
+Namibia,Windhoek,NAD,
+Namibia,Walvis Bay,NAD,
+Namibia,Swakopmund,NAD,
+Namibia,Henties Bay,NAD,
+Namibia,Omaruru,NAD,
+Namibia,Otjiwarongo,NAD,
+Namibia,Okahandja,NAD,
+Namibia,Grootfontein,NAD,
+Namibia,Mariental,NAD,
+Namibia,Outjo,NAD,
+Namibia,Gobabis,NAD,
+Namibia,Tsumeb,NAD,
+Namibia,Keetmanshoop,NAD,
+Namibia,Luderitz,NAD,
+Namibia,Karasburg,NAD,
+Namibia,Rundu,NAD,
+Namibia,Katima Mulilo,NAD,
+Namibia,Rehoboth,NAD,
+Namibia,Arandis,NAD,
+Namibia,Oranjemund,NAD,
+Nauru,Yaren,AUD,
+Nauru,Boe,AUD,
+Nauru,Aiwo,AUD,
+Nauru,Anabar,AUD,
+Nauru,Anetan,AUD,
+Nauru,Anibare,AUD,
+Nauru,Baiti,AUD,
+Nauru,Buada,AUD,
+Nauru,Denigomodu,AUD,
+Nauru,Ewa,AUD,
+Nauru,Ijuw,AUD,
+Nauru,Meneng,AUD,
+Nauru,Nibok,AUD,
+Nauru,Uaboe,AUD,
+Nauru,Yangor,AUD,
+Nauru,Arubo,AUD,
+Nauru,Arenibek,AUD,
+Nauru,Arijejen,AUD,
+Nauru,Ibwenape,AUD,
+Nauru,Orro,AUD,
+Nepal,Kathmandu,NPR,
+Nepal,Pokhara,NPR,
+Nepal,Lalitpur,NPR,
+Nepal,Biratnagar,NPR,
+Nepal,Bharatpur,NPR,
+Nepal,Birgunj,NPR,
+Nepal,Butwal,NPR,
+Nepal,Dharan,NPR,
+Nepal,Bhimdatta,NPR,
+Nepal,Dhangadhi,NPR,
+Nepal,Janakpur,NPR,
+Nepal,Hetauda,NPR,
+Nepal,Madhyapur Thimi,NPR,
+Nepal,Nepalgunj,NPR,
+Nepal,Itahari,NPR,
+Nepal,Triyuga,NPR,
+Nepal,Siddharthanagar,NPR,
+Nepal,Ghorahi,NPR,
+Nepal,Tulsipur,NPR,
+Nepal,Kirtipur,NPR,
+Netherlands,Amsterdam,EUR,
+Netherlands,Rotterdam,EUR,
+Netherlands,The Hague,EUR,
+Netherlands,Utrecht,EUR,
+Netherlands,Eindhoven,EUR,
+Netherlands,Tilburg,EUR,
+Netherlands,Groningen,EUR,
+Netherlands,Almere,EUR,
+Netherlands,Breda,EUR,
+Netherlands,Nijmegen,EUR,
+Netherlands,Apeldoorn,EUR,
+Netherlands,Haarlem,EUR,
+Netherlands,Enschede,EUR,
+Netherlands,Arnhem,EUR,
+Netherlands,Amersfoort,EUR,
+Netherlands,Zaanstad,EUR,
+Netherlands,Den Bosch,EUR,
+Netherlands,Haarlemmermeer,EUR,
+Netherlands,Zwolle,EUR,
+Netherlands,Zoetermeer,EUR,
+New Zealand,Auckland,NZD,
+New Zealand,Wellington,NZD,
+New Zealand,Christchurch,NZD,
+New Zealand,Hamilton,NZD,
+New Zealand,Tauranga,NZD,
+New Zealand,Napier-Hastings,NZD,
+New Zealand,Dunedin,NZD,
+New Zealand,Palmerston North,NZD,
+New Zealand,Nelson,NZD,
+New Zealand,Rotorua,NZD,
+New Zealand,Whangarei,NZD,
+New Zealand,New Plymouth,NZD,
+New Zealand,Invercargill,NZD,
+New Zealand,Whanganui,NZD,
+New Zealand,Gisborne,NZD,
+New Zealand,Blenheim,NZD,
+New Zealand,Timaru,NZD,
+New Zealand,Taupo,NZD,
+New Zealand,Masterton,NZD,
+New Zealand,Levin,NZD,
+Nicaragua,Managua,NIO,
+Nicaragua,Leon,NIO,
+Nicaragua,Masaya,NIO,
+Nicaragua,Matagalpa,NIO,
+Nicaragua,Chinandega,NIO,
+Nicaragua,Granada,NIO,
+Nicaragua,Esteli,NIO,
+Nicaragua,Tipitapa,NIO,
+Nicaragua,Bluefields,NIO,
+Nicaragua,Juigalpa,NIO,
+Nicaragua,Jinotega,NIO,
+Nicaragua,Puerto Cabezas,NIO,
+Nicaragua,El Viejo,NIO,
+Nicaragua,Nueva Guinea,NIO,
+Nicaragua,San Carlos,NIO,
+Nicaragua,Rivas,NIO,
+Nicaragua,Nandaime,NIO,
+Nicaragua,Masatepe,NIO,
+Nicaragua,Sebaco,NIO,
+Nicaragua,Boaco,NIO,
+Niger,Niamey,XOF,
+Niger,Zinder,XOF,
+Niger,Maradi,XOF,
+Niger,Tahoua,XOF,
+Niger,Agadez,XOF,
+Niger,Arlit,XOF,
+Niger,Dosso,XOF,
+Niger,Birni-N'Konni,XOF,
+Niger,Tessaoua,XOF,
+Niger,Gaya,XOF,
+Niger,Dogondoutchi,XOF,
+Niger,Diffa,XOF,
+Niger,Ayorou,XOF,
+Niger,Madaoua,XOF,
+Niger,Mayahi,XOF,
+Niger,Tera,XOF,
+Niger,Mirriah,XOF,
+Niger,Magaria,XOF,
+Niger,Dakoro,XOF,
+Niger,Tibiri,XOF,
+Nigeria,Lagos,NGN,
+Nigeria,Kano,NGN,
+Nigeria,Ibadan,NGN,
+Nigeria,Kaduna,NGN,
+Nigeria,Port Harcourt,NGN,
+Nigeria,Benin City,NGN,
+Nigeria,Maiduguri,NGN,
+Nigeria,Zaria,NGN,
+Nigeria,Aba,NGN,
+Nigeria,Jos,NGN,
+Nigeria,Ilorin,NGN,
+Nigeria,Oyo,NGN,
+Nigeria,Enugu,NGN,
+Nigeria,Abeokuta,NGN,
+Nigeria,Abuja,NGN,
+Nigeria,Sokoto,NGN,
+Nigeria,Onitsha,NGN,
+Nigeria,Warri,NGN,
+Nigeria,Ebute Ikorodu,NGN,
+Nigeria,Okene,NGN,
+North Macedonia,Skopje,MKD,
+North Macedonia,Bitola,MKD,
+North Macedonia,Kumanovo,MKD,
+North Macedonia,Prilep,MKD,
+North Macedonia,Tetovo,MKD,
+North Macedonia,Veles,MKD,
+North Macedonia,Stip,MKD,
+North Macedonia,Ohrid,MKD,
+North Macedonia,Gostivar,MKD,
+North Macedonia,Strumica,MKD,
+North Macedonia,Kavadarci,MKD,
+North Macedonia,Kocani,MKD,
+North Macedonia,Kicevo,MKD,
+North Macedonia,Struga,MKD,
+North Macedonia,Radovis,MKD,
+North Macedonia,Gevgelija,MKD,
+North Macedonia,Debar,MKD,
+North Macedonia,Kriva Palanka,MKD,
+North Macedonia,Sveti Nikole,MKD,
+North Macedonia,Negotino,MKD,
+Norway,Oslo,NOK,
+Norway,Bergen,NOK,
+Norway,Trondheim,NOK,
+Norway,Stavanger,NOK,
+Norway,Drammen,NOK,
+Norway,Fredrikstad,NOK,
+Norway,Kristiansand,NOK,
+Norway,Sandnes,NOK,
+Norway,Tromso,NOK,
+Norway,Sarpsborg,NOK,
+Norway,Skien,NOK,
+Norway,Alesund,NOK,
+Norway,Sandefjord,NOK,
+Norway,Haugesund,NOK,
+Norway,Tonsberg,NOK,
+Norway,Moss,NOK,
+Norway,Porsgrunn,NOK,
+Norway,Bodo,NOK,
+Norway,Arendal,NOK,
+Norway,Hamar,NOK,
+Oman,Muscat,OMR,
+Oman,Seeb,OMR,
+Oman,Salalah,OMR,
+Oman,Bawshar,OMR,
+Oman,Sohar,OMR,
+Oman,Suwayq,OMR,
+Oman,Ibri,OMR,
+Oman,Saham,OMR,
+Oman,Barka,OMR,
+Oman,Rustaq,OMR,
+Oman,Nizwa,OMR,
+Oman,Buraimi,OMR,
+Oman,Sur,OMR,
+Oman,Mussanah,OMR,
+Oman,Bahla,OMR,
+Oman,Al Khaburah,OMR,
+Oman,Shinas,OMR,
+Oman,Samail,OMR,
+Oman,Amrat,OMR,
+Oman,Qurayyat,OMR,
+Pakistan,Karachi,PKR,
+Pakistan,Lahore,PKR,
+Pakistan,Faisalabad,PKR,
+Pakistan,Rawalpindi,PKR,
+Pakistan,Gujranwala,PKR,
+Pakistan,Peshawar,PKR,
+Pakistan,Multan,PKR,
+Pakistan,Hyderabad,PKR,
+Pakistan,Islamabad,PKR,
+Pakistan,Quetta,PKR,
+Pakistan,Bahawalpur,PKR,
+Pakistan,Sargodha,PKR,
+Pakistan,Sialkot,PKR,
+Pakistan,Sukkur,PKR,
+Pakistan,Larkana,PKR,
+Pakistan,Sheikhupura,PKR,
+Pakistan,Rahim Yar Khan,PKR,
+Pakistan,Jhang,PKR,
+Pakistan,Dera Ghazi Khan,PKR,
+Pakistan,Gujrat,PKR,
+Palau,Ngerulmud,USD,
+Palau,Koror,USD,
+Palau,Airai,USD,
+Palau,Kloulklubed,USD,
+Palau,Meyuns,USD,
+Palau,Ngerkeai,USD,
+Palau,Ngermid,USD,
+Palau,Ngerbeched,USD,
+Palau,Ngerbodel,USD,
+Palau,Iyebukel,USD,
+Palau,Idid,USD,
+Palau,Meketii,USD,
+Palau,Ikelau,USD,
+Palau,Medalaii,USD,
+Palau,Dngeronger,USD,
+Palau,Ngerkesoaol,USD,
+Palau,Ngaremlengui,USD,
+Palau,Melekeok,USD,
+Palau,Ngaraard,USD,
+Palau,Kayangel,USD,
+Panama,Panama City,USD,
+Panama,San Miguelito,USD,
+Panama,Tocumen,USD,
+Panama,David,USD,
+Panama,Las Cumbres,USD,
+Panama,Colon,USD,
+Panama,La Chorrera,USD,
+Panama,Pacora,USD,
+Panama,Santiago de Veraguas,USD,
+Panama,Chitre,USD,
+Panama,Arraijan,USD,
+Panama,Penonome,USD,
+Panama,Vista Alegre,USD,
+Panama,Chilibre,USD,
+Panama,Cativa,USD,
+Panama,Nuevo Arraijan,USD,
+Panama,Changuinola,USD,
+Panama,Alcalde Diaz,USD,
+Panama,Anton,USD,
+Panama,Puerto Armuelles,USD,
+Papua New Guinea,Port Moresby,PGK,
+Papua New Guinea,Lae,PGK,
+Papua New Guinea,Arawa,PGK,
+Papua New Guinea,Mount Hagen,PGK,
+Papua New Guinea,Popondetta,PGK,
+Papua New Guinea,Madang,PGK,
+Papua New Guinea,Kokopo,PGK,
+Papua New Guinea,Mendi,PGK,
+Papua New Guinea,Kimbe,PGK,
+Papua New Guinea,Goroka,PGK,
+Papua New Guinea,Wewak,PGK,
+Papua New Guinea,Bulolo,PGK,
+Papua New Guinea,Daru,PGK,
+Papua New Guinea,Kavieng,PGK,
+Papua New Guinea,Alotau,PGK,
+Papua New Guinea,Vanimo,PGK,
+Papua New Guinea,Kundiawa,PGK,
+Papua New Guinea,Lorengau,PGK,
+Papua New Guinea,Kerema,PGK,
+Papua New Guinea,Ialibu,PGK,
+Paraguay,Asuncion,PYG,
+Paraguay,Ciudad del Este,PYG,
+Paraguay,Luque,PYG,
+Paraguay,San Lorenzo,PYG,
+Paraguay,Capiata,PYG,
+Paraguay,Lambare,PYG,
+Paraguay,Fernando de la Mora,PYG,
+Paraguay,Limpio,PYG,
+Paraguay,Nemby,PYG,
+Paraguay,Encarnacion,PYG,
+Paraguay,Mariano Roque Alonso,PYG,
+Paraguay,Itaugua,PYG,
+Paraguay,Pedro Juan Caballero,PYG,
+Paraguay,Villa Elisa,PYG,
+Paraguay,San Antonio,PYG,
+Paraguay,Hernandarias,PYG,
+Paraguay,Presidente Franco,PYG,
+Paraguay,Caaguazu,PYG,
+Paraguay,Coronel Oviedo,PYG,
+Paraguay,Concepcion,PYG,
+Peru,Lima,PEN,
+Peru,Arequipa,PEN,
+Peru,Trujillo,PEN,
+Peru,Chiclayo,PEN,
+Peru,Piura,PEN,
+Peru,Iquitos,PEN,
+Peru,Cusco,PEN,
+Peru,Chimbote,PEN,
+Peru,Huancayo,PEN,
+Peru,Tacna,PEN,
+Peru,Ica,PEN,
+Peru,Juliaca,PEN,
+Peru,Pucallpa,PEN,
+Peru,Sullana,PEN,
+Peru,Cajamarca,PEN,
+Peru,Chincha Alta,PEN,
+Peru,Ayacucho,PEN,
+Peru,Huanuco,PEN,
+Peru,Puno,PEN,
+Peru,Tarapoto,PEN,
+Philippines,Manila,PHP,
+Philippines,Quezon City,PHP,
+Philippines,Davao City,PHP,
+Philippines,Caloocan,PHP,
+Philippines,Cebu City,PHP,
+Philippines,Zamboanga City,PHP,
+Philippines,Taguig,PHP,
+Philippines,Antipolo,PHP,
+Philippines,Pasig,PHP,
+Philippines,Cagayan de Oro,PHP,
+Philippines,Paranaque,PHP,
+Philippines,Dasmarinas,PHP,
+Philippines,Valenzuela,PHP,
+Philippines,Bacoor,PHP,
+Philippines,General Santos,PHP,
+Philippines,Las Pinas,PHP,
+Philippines,Makati,PHP,
+Philippines,San Jose del Monte,PHP,
+Philippines,Bacolod,PHP,
+Philippines,Muntinlupa,PHP,
+Poland,Warsaw,PLN,
+Poland,Krakow,PLN,
+Poland,Lodz,PLN,
+Poland,Wroclaw,PLN,
+Poland,Poznan,PLN,
+Poland,Gdansk,PLN,
+Poland,Szczecin,PLN,
+Poland,Bydgoszcz,PLN,
+Poland,Lublin,PLN,
+Poland,Katowice,PLN,
+Poland,Bialystok,PLN,
+Poland,Gdynia,PLN,
+Poland,Czestochowa,PLN,
+Poland,Radom,PLN,
+Poland,Sosnowiec,PLN,
+Poland,Torun,PLN,
+Poland,Kielce,PLN,
+Poland,Rzeszow,PLN,
+Poland,Gliwice,PLN,
+Poland,Zabrze,PLN,
+Portugal,Lisbon,EUR,
+Portugal,Porto,EUR,
+Portugal,Vila Nova de Gaia,EUR,
+Portugal,Amadora,EUR,
+Portugal,Braga,EUR,
+Portugal,Funchal,EUR,
+Portugal,Coimbra,EUR,
+Portugal,Setubal,EUR,
+Portugal,Almada,EUR,
+Portugal,Agualva-Cacem,EUR,
+Portugal,Queluz,EUR,
+Portugal,Barreiro,EUR,
+Portugal,Viseu,EUR,
+Portugal,Rio Tinto,EUR,
+Portugal,Odivelas,EUR,
+Portugal,Leiria,EUR,
+Portugal,Aveiro,EUR,
+Portugal,Portimao,EUR,
+Portugal,Faro,EUR,
+Portugal,Guimaraes,EUR,
+Qatar,Doha,QAR,
+Qatar,Al Rayyan,QAR,
+Qatar,Umm Salal,QAR,
+Qatar,Al Wakrah,QAR,
+Qatar,Al Khor,QAR,
+Qatar,Al Shamal,QAR,
+Qatar,Al Daayen,QAR,
+Qatar,Shahaniya,QAR,
+Qatar,Mesaieed,QAR,
+Qatar,Dukhan,QAR,
+Qatar,Lusail,QAR,
+Qatar,Pearl Qatar,QAR,
+Qatar,West Bay,QAR,
+Qatar,Al Thakhira,QAR,
+Qatar,Al Wukair,QAR,
+Qatar,Rawdat Rashed,QAR,
+Qatar,Al Ghuwariyah,QAR,
+Qatar,Al Jumailiyah,QAR,
+Qatar,Al Karana,QAR,
+Qatar,Abu Samra,QAR,
+Romania,Bucharest,RON,
+Romania,Cluj-Napoca,RON,
+Romania,Timisoara,RON,
+Romania,Iasi,RON,
+Romania,Constanta,RON,
+Romania,Craiova,RON,
+Romania,Brasov,RON,
+Romania,Galati,RON,
+Romania,Ploiesti,RON,
+Romania,Oradea,RON,
+Romania,Braila,RON,
+Romania,Arad,RON,
+Romania,Pitesti,RON,
+Romania,Sibiu,RON,
+Romania,Bacau,RON,
+Romania,Targu Mures,RON,
+Romania,Baia Mare,RON,
+Romania,Buzau,RON,
+Romania,Botosani,RON,
+Romania,Satu Mare,RON,
+Russia,Moscow,RUB,
+Russia,Saint Petersburg,RUB,
+Russia,Novosibirsk,RUB,
+Russia,Yekaterinburg,RUB,
+Russia,Kazan,RUB,
+Russia,Nizhny Novgorod,RUB,
+Russia,Chelyabinsk,RUB,
+Russia,Samara,RUB,
+Russia,Omsk,RUB,
+Russia,Rostov-on-Don,RUB,
+Russia,Ufa,RUB,
+Russia,Krasnoyarsk,RUB,
+Russia,Voronezh,RUB,
+Russia,Perm,RUB,
+Russia,Volgograd,RUB,
+Russia,Krasnodar,RUB,
+Russia,Saratov,RUB,
+Russia,Tyumen,RUB,
+Russia,Tolyatti,RUB,
+Russia,Izhevsk,RUB,
+Rwanda,Kigali,RWF,
+Rwanda,Butare,RWF,
+Rwanda,Gitarama,RWF,
+Rwanda,Ruhengeri,RWF,
+Rwanda,Gisenyi,RWF,
+Rwanda,Byumba,RWF,
+Rwanda,Cyangugu,RWF,
+Rwanda,Kibuye,RWF,
+Rwanda,Rwamagana,RWF,
+Rwanda,Kibungo,RWF,
+Rwanda,Nyanza,RWF,
+Rwanda,Bugarama,RWF,
+Rwanda,Kayonza,RWF,
+Rwanda,Nyagatare,RWF,
+Rwanda,Nyamata,RWF,
+Rwanda,Ruhango,RWF,
+Rwanda,Gikongoro,RWF,
+Rwanda,Busogo,RWF,
+Rwanda,Musanze,RWF,
+Rwanda,Rubavu,RWF,
+Saint Kitts and Nevis,Basseterre,XCD,
+Saint Kitts and Nevis,Charlestown,XCD,
+Saint Kitts and Nevis,Sadlers,XCD,
+Saint Kitts and Nevis,Cayon,XCD,
+Saint Kitts and Nevis,Sandy Point Town,XCD,
+Saint Kitts and Nevis,Old Road Town,XCD,
+Saint Kitts and Nevis,Gingerland,XCD,
+Saint Kitts and Nevis,Newcastle,XCD,
+Saint Kitts and Nevis,Dieppe Bay Town,XCD,
+Saint Kitts and Nevis,Monkey Hill,XCD,
+Saint Kitts and Nevis,Boyds,XCD,
+Saint Kitts and Nevis,Tabernacle,XCD,
+Saint Kitts and Nevis,Saint Paul's,XCD,
+Saint Kitts and Nevis,Middle Island,XCD,
+Saint Kitts and Nevis,Mansion,XCD,
+Saint Kitts and Nevis,Verchilds,XCD,
+Saint Kitts and Nevis,Challengers,XCD,
+Saint Kitts and Nevis,Trinity,XCD,
+Saint Kitts and Nevis,Lodge,XCD,
+Saint Kitts and Nevis,Molineux,XCD,
+Saint Lucia,Castries,XCD,
+Saint Lucia,Gros Islet,XCD,
+Saint Lucia,Vieux Fort,XCD,
+Saint Lucia,Soufriere,XCD,
+Saint Lucia,Dennery,XCD,
+Saint Lucia,Micoud,XCD,
+Saint Lucia,Anse La Raye,XCD,
+Saint Lucia,Canaries,XCD,
+Saint Lucia,Laborie,XCD,
+Saint Lucia,Choiseul,XCD,
+Saint Lucia,Marigot Bay,XCD,
+Saint Lucia,Babonneau,XCD,
+Saint Lucia,Bexon,XCD,
+Saint Lucia,Ciceron,XCD,
+Saint Lucia,Grande Riviere,XCD,
+Saint Lucia,La Clery,XCD,
+Saint Lucia,Marchand,XCD,
+Saint Lucia,Monchy,XCD,
+Saint Lucia,Ti Rocher,XCD,
+Saint Lucia,Augier,XCD,
+Saint Vincent and the Grenadines,Kingstown,XCD,
+Saint Vincent and the Grenadines,Georgetown,XCD,
+Saint Vincent and the Grenadines,Byera Village,XCD,
+Saint Vincent and the Grenadines,Biabou,XCD,
+Saint Vincent and the Grenadines,Chateaubelair,XCD,
+Saint Vincent and the Grenadines,Port Elizabeth,XCD,
+Saint Vincent and the Grenadines,Barrouallie,XCD,
+Saint Vincent and the Grenadines,Layou,XCD,
+Saint Vincent and the Grenadines,Mesopotamia,XCD,
+Saint Vincent and the Grenadines,Calliaqua,XCD,
+Saint Vincent and the Grenadines,Stubbs,XCD,
+Saint Vincent and the Grenadines,Greiggs,XCD,
+Saint Vincent and the Grenadines,Richland Park,XCD,
+Saint Vincent and the Grenadines,Vermont,XCD,
+Saint Vincent and the Grenadines,Questelles,XCD,
+Saint Vincent and the Grenadines,Sion Hill,XCD,
+Saint Vincent and the Grenadines,Arnos Vale,XCD,
+Saint Vincent and the Grenadines,Villa,XCD,
+Saint Vincent and the Grenadines,Campden Park,XCD,
+Saint Vincent and the Grenadines,Rose Bank,XCD,
+Samoa,Apia,WST,
+Samoa,Vaitele,WST,
+Samoa,Faleasiu,WST,
+Samoa,Vailele,WST,
+Samoa,Leauvaa,WST,
+Samoa,Faleula,WST,
+Samoa,Siusega,WST,
+Samoa,Malie,WST,
+Samoa,Fasito'outa,WST,
+Samoa,Vaiusu,WST,
+Samoa,Lauli'i,WST,
+Samoa,Afega,WST,
+Samoa,Nofoali'i,WST,
+Samoa,Solosolo,WST,
+Samoa,Leulumoega,WST,
+Samoa,Satapuala,WST,
+Samoa,Falefa,WST,
+Samoa,Matavai,WST,
+Samoa,Manono Uta,WST,
+Samoa,Tuanai,WST,
+San Marino,San Marino,EUR,
+San Marino,Serravalle,EUR,
+San Marino,Borgo Maggiore,EUR,
+San Marino,Domagnano,EUR,
+San Marino,Fiorentino,EUR,
+San Marino,Acquaviva,EUR,
+San Marino,Faetano,EUR,
+San Marino,Chiesanuova,EUR,
+San Marino,Montegiardino,EUR,
+San Marino,Dogana,EUR,
+San Marino,Cailungo,EUR,
+San Marino,Ventoso,EUR,
+San Marino,Valdragone,EUR,
+San Marino,Falciano,EUR,
+San Marino,Lesignano,EUR,
+San Marino,Gualdicciolo,EUR,
+San Marino,Santa Mustiola,EUR,
+San Marino,Murata,EUR,
+San Marino,Galazzano,EUR,
+San Marino,Molarini,EUR,
+Sao Tome and Principe,Sao Tome,STN,
+Sao Tome and Principe,Trindade,STN,
+Sao Tome and Principe,Santana,STN,
+Sao Tome and Principe,Neves,STN,
+Sao Tome and Principe,Santo Amaro,STN,
+Sao Tome and Principe,Guadalupe,STN,
+Sao Tome and Principe,Sao Joao dos Angolares,STN,
+Sao Tome and Principe,Pantufo,STN,
+Sao Tome and Principe,Madalena,STN,
+Sao Tome and Principe,Santo Antonio,STN,
+Sao Tome and Principe,Santa Catarina,STN,
+Sao Tome and Principe,Porto Alegre,STN,
+Sao Tome and Principe,Ribeira Afonso,STN,
+Sao Tome and Principe,Lemba,STN,
+Sao Tome and Principe,Micolo,STN,
+Sao Tome and Principe,Batepa,STN,
+Sao Tome and Principe,Monte Cafe,STN,
+Sao Tome and Principe,Almas,STN,
+Sao Tome and Principe,Bombom,STN,
+Sao Tome and Principe,Conde,STN,
+Saudi Arabia,Riyadh,SAR,
+Saudi Arabia,Jeddah,SAR,
+Saudi Arabia,Mecca,SAR,
+Saudi Arabia,Medina,SAR,
+Saudi Arabia,Dammam,SAR,
+Saudi Arabia,Taif,SAR,
+Saudi Arabia,Tabuk,SAR,
+Saudi Arabia,Buraydah,SAR,
+Saudi Arabia,Khamis Mushait,SAR,
+Saudi Arabia,Hofuf,SAR,
+Saudi Arabia,Al Jubail,SAR,
+Saudi Arabia,Ha'il,SAR,
+Saudi Arabia,Najran,SAR,
+Saudi Arabia,Yanbu,SAR,
+Saudi Arabia,Abha,SAR,
+Saudi Arabia,Arar,SAR,
+Saudi Arabia,Jizan,SAR,
+Saudi Arabia,Sakakah,SAR,
+Saudi Arabia,Al Bahah,SAR,
+Saudi Arabia,Qatif,SAR,
+Senegal,Dakar,XOF,
+Senegal,Touba,XOF,
+Senegal,Thies,XOF,
+Senegal,Kaolack,XOF,
+Senegal,Mbour,XOF,
+Senegal,Saint-Louis,XOF,
+Senegal,Rufisque,XOF,
+Senegal,Ziguinchor,XOF,
+Senegal,Diourbel,XOF,
+Senegal,Louga,XOF,
+Senegal,Tambacounda,XOF,
+Senegal,Mbacke,XOF,
+Senegal,Kolda,XOF,
+Senegal,Richard-Toll,XOF,
+Senegal,Bargny,XOF,
+Senegal,Tivaouane,XOF,
+Senegal,Joal-Fadiouth,XOF,
+Senegal,Dahra,XOF,
+Senegal,Kaffrine,XOF,
+Senegal,Bignona,XOF,
+Serbia,Belgrade,RSD,
+Serbia,Novi Sad,RSD,
+Serbia,Nis,RSD,
+Serbia,Kragujevac,RSD,
+Serbia,Subotica,RSD,
+Serbia,Zrenjanin,RSD,
+Serbia,Pancevo,RSD,
+Serbia,Cacak,RSD,
+Serbia,Krusevac,RSD,
+Serbia,Kraljevo,RSD,
+Serbia,Novi Pazar,RSD,
+Serbia,Smederevo,RSD,
+Serbia,Leskovac,RSD,
+Serbia,Uzice,RSD,
+Serbia,Valjevo,RSD,
+Serbia,Vranje,RSD,
+Serbia,Sabac,RSD,
+Serbia,Sombor,RSD,
+Serbia,Pozarevac,RSD,
+Serbia,Pirot,RSD,
+Seychelles,Victoria,SCR,
+Seychelles,Anse Etoile,SCR,
+Seychelles,Beau Vallon,SCR,
+Seychelles,Au Cap,SCR,
+Seychelles,Anse Royale,SCR,
+Seychelles,Baie Lazare,SCR,
+Seychelles,Roche Caiman,SCR,
+Seychelles,Cascade,SCR,
+Seychelles,Bel Ombre,SCR,
+Seychelles,Glacis,SCR,
+Seychelles,Grand'Anse,SCR,
+Seychelles,Takamaka,SCR,
+Seychelles,Port Glaud,SCR,
+Seychelles,Anse Boileau,SCR,
+Seychelles,Bel Air,SCR,
+Seychelles,English River,SCR,
+Seychelles,Mont Buxton,SCR,
+Seychelles,Mont Fleuri,SCR,
+Seychelles,Plaisance,SCR,
+Seychelles,Les Mamelles,SCR,
+Sierra Leone,Freetown,SLL,
+Sierra Leone,Bo,SLL,
+Sierra Leone,Kenema,SLL,
+Sierra Leone,Makeni,SLL,
+Sierra Leone,Koidu Town,SLL,
+Sierra Leone,Lunsar,SLL,
+Sierra Leone,Port Loko,SLL,
+Sierra Leone,Waterloo,SLL,
+Sierra Leone,Kabala,SLL,
+Sierra Leone,Segbwema,SLL,
+Sierra Leone,Magburaka,SLL,
+Sierra Leone,Kailahun,SLL,
+Sierra Leone,Bonthe,SLL,
+Sierra Leone,Mattru Jong,SLL,
+Sierra Leone,Pujehun,SLL,
+Sierra Leone,Kambia,SLL,
+Sierra Leone,Moyamba,SLL,
+Sierra Leone,Goderich,SLL,
+Sierra Leone,Pandebu,SLL,
+Sierra Leone,Blama,SLL,
+Singapore,Singapore,SGD,
+Singapore,Jurong West,SGD,
+Singapore,Bedok,SGD,
+Singapore,Woodlands,SGD,
+Singapore,Sengkang,SGD,
+Singapore,Hougang,SGD,
+Singapore,Tampines,SGD,
+Singapore,Yishun,SGD,
+Singapore,Bukit Batok,SGD,
+Singapore,Choa Chu Kang,SGD,
+Singapore,Jurong East,SGD,
+Singapore,Ang Mo Kio,SGD,
+Singapore,Toa Payoh,SGD,
+Singapore,Bukit Panjang,SGD,
+Singapore,Clementi,SGD,
+Singapore,Serangoon,SGD,
+Singapore,Punggol,SGD,
+Singapore,Pasir Ris,SGD,
+Singapore,Queenstown,SGD,
+Singapore,Bishan,SGD,
+Slovakia,Bratislava,EUR,
+Slovakia,Kosice,EUR,
+Slovakia,Presov,EUR,
+Slovakia,Zilina,EUR,
+Slovakia,Nitra,EUR,
+Slovakia,Banska Bystrica,EUR,
+Slovakia,Trnava,EUR,
+Slovakia,Trencin,EUR,
+Slovakia,Martin,EUR,
+Slovakia,Poprad,EUR,
+Slovakia,Prievidza,EUR,
+Slovakia,Zvolen,EUR,
+Slovakia,Povazska Bystrica,EUR,
+Slovakia,Nove Zamky,EUR,
+Slovakia,Michalovce,EUR,
+Slovakia,Spisska Nova Ves,EUR,
+Slovakia,Komarno,EUR,
+Slovakia,Levice,EUR,
+Slovakia,Humenne,EUR,
+Slovakia,Bardejov,EUR,
+Slovenia,Ljubljana,EUR,
+Slovenia,Maribor,EUR,
+Slovenia,Celje,EUR,
+Slovenia,Kranj,EUR,
+Slovenia,Velenje,EUR,
+Slovenia,Koper,EUR,
+Slovenia,Novo Mesto,EUR,
+Slovenia,Ptuj,EUR,
+Slovenia,Trbovlje,EUR,
+Slovenia,Kamnik,EUR,
+Slovenia,Jesenice,EUR,
+Slovenia,Nova Gorica,EUR,
+Slovenia,Domzale,EUR,
+Slovenia,Skofja Loka,EUR,
+Slovenia,Murska Sobota,EUR,
+Slovenia,Izola,EUR,
+Slovenia,Postojna,EUR,
+Slovenia,Logatec,EUR,
+Slovenia,Slovenj Gradec,EUR,
+Slovenia,Vrhnika,EUR,
+Solomon Islands,Honiara,SBD,
+Solomon Islands,Gizo,SBD,
+Solomon Islands,Auki,SBD,
+Solomon Islands,Noro,SBD,
+Solomon Islands,Kirakira,SBD,
+Solomon Islands,Lata,SBD,
+Solomon Islands,Tulagi,SBD,
+Solomon Islands,Buala,SBD,
+Solomon Islands,Taro,SBD,
+Solomon Islands,Munda,SBD,
+Solomon Islands,Yandina,SBD,
+Solomon Islands,Ringgi,SBD,
+Solomon Islands,Seghe,SBD,
+Solomon Islands,Liapari,SBD,
+Solomon Islands,Bunlap,SBD,
+Solomon Islands,Panggoe,SBD,
+Solomon Islands,Viru,SBD,
+Solomon Islands,Batuna,SBD,
+Solomon Islands,Tingoa,SBD,
+Solomon Islands,Namuga,SBD,
+Somalia,Mogadishu,SOS,
+Somalia,Hargeisa,SOS,
+Somalia,Bosaso,SOS,
+Somalia,Galkayo,SOS,
+Somalia,Berbera,SOS,
+Somalia,Kismayo,SOS,
+Somalia,Merca,SOS,
+Somalia,Burao,SOS,
+Somalia,Baidoa,SOS,
+Somalia,Beledweyne,SOS,
+Somalia,Erigavo,SOS,
+Somalia,Las Anod,SOS,
+Somalia,Jowhar,SOS,
+Somalia,Garowe,SOS,
+Somalia,Borama,SOS,
+Somalia,Qardho,SOS,
+Somalia,Afgooye,SOS,
+Somalia,Wanlaweyn,SOS,
+Somalia,Baraawe,SOS,
+Somalia,Gabiley,SOS,
+South Africa,Johannesburg,ZAR,
+South Africa,Cape Town,ZAR,
+South Africa,Durban,ZAR,
+South Africa,Pretoria,ZAR,
+South Africa,Port Elizabeth,ZAR,
+South Africa,Bloemfontein,ZAR,
+South Africa,Polokwane,ZAR,
+South Africa,Nelspruit,ZAR,
+South Africa,Kimberley,ZAR,
+South Africa,East London,ZAR,
+South Africa,Pietermaritzburg,ZAR,
+South Africa,Vereeniging,ZAR,
+South Africa,Welkom,ZAR,
+South Africa,Newcastle,ZAR,
+South Africa,Krugersdorp,ZAR,
+South Africa,Rustenburg,ZAR,
+South Africa,Witbank,ZAR,
+South Africa,Potchefstroom,ZAR,
+South Africa,Paarl,ZAR,
+South Africa,George,ZAR,
+South Korea,Seoul,KRW,
+South Korea,Busan,KRW,
+South Korea,Incheon,KRW,
+South Korea,Daegu,KRW,
+South Korea,Daejeon,KRW,
+South Korea,Gwangju,KRW,
+South Korea,Suwon,KRW,
+South Korea,Ulsan,KRW,
+South Korea,Changwon,KRW,
+South Korea,Goyang,KRW,
+South Korea,Yongin,KRW,
+South Korea,Seongnam,KRW,
+South Korea,Bucheon,KRW,
+South Korea,Cheongju,KRW,
+South Korea,Ansan,KRW,
+South Korea,Jeonju,KRW,
+South Korea,Cheonan,KRW,
+South Korea,Namyangju,KRW,
+South Korea,Hwaseong,KRW,
+South Korea,Anyang,KRW,
+South Sudan,Juba,SSP,
+South Sudan,Wau,SSP,
+South Sudan,Malakal,SSP,
+South Sudan,Yambio,SSP,
+South Sudan,Bor,SSP,
+South Sudan,Torit,SSP,
+South Sudan,Aweil,SSP,
+South Sudan,Bentiu,SSP,
+South Sudan,Kuajok,SSP,
+South Sudan,Rumbek,SSP,
+South Sudan,Yei,SSP,
+South Sudan,Gogrial,SSP,
+South Sudan,Kapoeta,SSP,
+South Sudan,Tonj,SSP,
+South Sudan,Maridi,SSP,
+South Sudan,Renks,SSP,
+South Sudan,Tambura,SSP,
+South Sudan,Warrap,SSP,
+South Sudan,Akobo,SSP,
+South Sudan,Pibor,SSP,
+Spain,Madrid,EUR,
+Spain,Barcelona,EUR,
+Spain,Valencia,EUR,
+Spain,Seville,EUR,
+Spain,Zaragoza,EUR,
+Spain,Malaga,EUR,
+Spain,Murcia,EUR,
+Spain,Palma,EUR,
+Spain,Las Palmas,EUR,
+Spain,Bilbao,EUR,
+Spain,Alicante,EUR,
+Spain,Cordoba,EUR,
+Spain,Valladolid,EUR,
+Spain,Vigo,EUR,
+Spain,Gijon,EUR,
+Spain,L'Hospitalet de Llobregat,EUR,
+Spain,Vitoria-Gasteiz,EUR,
+Spain,A Coruna,EUR,
+Spain,Granada,EUR,
+Spain,Elche,EUR,
+Sri Lanka,Colombo,LKR,
+Sri Lanka,Kandy,LKR,
+Sri Lanka,Galle,LKR,
+Sri Lanka,Jaffna,LKR,
+Sri Lanka,Negombo,LKR,
+Sri Lanka,Anuradhapura,LKR,
+Sri Lanka,Trincomalee,LKR,
+Sri Lanka,Batticaloa,LKR,
+Sri Lanka,Matara,LKR,
+Sri Lanka,Kurunegala,LKR,
+Sri Lanka,Ratnapura,LKR,
+Sri Lanka,Kalutara,LKR,
+Sri Lanka,Badulla,LKR,
+Sri Lanka,Matale,LKR,
+Sri Lanka,Puttalam,LKR,
+Sri Lanka,Kegalle,LKR,
+Sri Lanka,Vavuniya,LKR,
+Sri Lanka,Ampara,LKR,
+Sri Lanka,Kalmunai,LKR,
+Sri Lanka,Dehiwala-Mount Lavinia,LKR,
+Sudan,Khartoum,SDG,
+Sudan,Omdurman,SDG,
+Sudan,Khartoum North,SDG,
+Sudan,Port Sudan,SDG,
+Sudan,Kassala,SDG,
+Sudan,El Obeid,SDG,
+Sudan,Nyala,SDG,
+Sudan,Wad Madani,SDG,
+Sudan,Gedaref,SDG,
+Sudan,Al Fashir,SDG,
+Sudan,Kosti,SDG,
+Sudan,Geneina,SDG,
+Sudan,Ed Daein,SDG,
+Sudan,El Damazin,SDG,
+Sudan,Ad-Damazin,SDG,
+Sudan,Rabak,SDG,
+Sudan,Sennar,SDG,
+Sudan,Atbara,SDG,
+Sudan,Dongola,SDG,
+Sudan,Kadugli,SDG,
+Suriname,Paramaribo,SRD,
+Suriname,Lelydorp,SRD,
+Suriname,Nieuw Nickerie,SRD,
+Suriname,Moengo,SRD,
+Suriname,Meerzorg,SRD,
+Suriname,Nieuw Amsterdam,SRD,
+Suriname,Marienburg,SRD,
+Suriname,Wageningen,SRD,
+Suriname,Albina,SRD,
+Suriname,Groningen,SRD,
+Suriname,Brownsweg,SRD,
+Suriname,Brokopondo,SRD,
+Suriname,Onverwacht,SRD,
+Suriname,Totness,SRD,
+Suriname,Apoera,SRD,
+Suriname,Pikin Slee,SRD,
+Suriname,Cottica,SRD,
+Suriname,Jenny,SRD,
+Suriname,Benzdorp,SRD,
+Suriname,Kwatta,SRD,
+Sweden,Stockholm,SEK,
+Sweden,Gothenburg,SEK,
+Sweden,Malmo,SEK,
+Sweden,Uppsala,SEK,
+Sweden,Vasteras,SEK,
+Sweden,Orebro,SEK,
+Sweden,Linkoping,SEK,
+Sweden,Helsingborg,SEK,
+Sweden,Jonkoping,SEK,
+Sweden,Norrkoping,SEK,
+Sweden,Lund,SEK,
+Sweden,Umea,SEK,
+Sweden,Gavle,SEK,
+Sweden,Boras,SEK,
+Sweden,Sodertalje,SEK,
+Sweden,Eskilstuna,SEK,
+Sweden,Halmstad,SEK,
+Sweden,Vaxjo,SEK,
+Sweden,Karlstad,SEK,
+Sweden,Sundsvall,SEK,
+Switzerland,Zurich,CHF,
+Switzerland,Geneva,CHF,
+Switzerland,Basel,CHF,
+Switzerland,Lausanne,CHF,
+Switzerland,Bern,CHF,
+Switzerland,Winterthur,CHF,
+Switzerland,Lucerne,CHF,
+Switzerland,St. Gallen,CHF,
+Switzerland,Lugano,CHF,
+Switzerland,Biel/Bienne,CHF,
+Switzerland,Thun,CHF,
+Switzerland,Koniz,CHF,
+Switzerland,La Chaux-de-Fonds,CHF,
+Switzerland,Fribourg,CHF,
+Switzerland,Schaffhausen,CHF,
+Switzerland,Vernier,CHF,
+Switzerland,Chur,CHF,
+Switzerland,Uster,CHF,
+Switzerland,Sion,CHF,
+Switzerland,Lancy,CHF,
+Syria,Damascus,SYP,
+Syria,Aleppo,SYP,
+Syria,Homs,SYP,
+Syria,Latakia,SYP,
+Syria,Hama,SYP,
+Syria,Raqqa,SYP,
+Syria,Deir ez-Zor,SYP,
+Syria,Al-Hasakah,SYP,
+Syria,Qamishli,SYP,
+Syria,Tartus,SYP,
+Syria,Idlib,SYP,
+Syria,Douma,SYP,
+Syria,Daraa,SYP,
+Syria,Manbij,SYP,
+Syria,As-Suwayda,SYP,
+Syria,Al-Bab,SYP,
+Syria,Darayya,SYP,
+Syria,Al-Thawrah,SYP,
+Syria,Al-Qutayfah,SYP,
+Syria,Salamiyah,SYP,
+Taiwan,Taipei,TWD,
+Taiwan,Kaohsiung,TWD,
+Taiwan,Taichung,TWD,
+Taiwan,Tainan,TWD,
+Taiwan,Taoyuan,TWD,
+Taiwan,Hsinchu,TWD,
+Taiwan,Keelung,TWD,
+Taiwan,Chiayi,TWD,
+Taiwan,Changhua,TWD,
+Taiwan,Pingtung,TWD,
+Taiwan,Zhubei,TWD,
+Taiwan,Yuanlin,TWD,
+Taiwan,Douliu,TWD,
+Taiwan,Taitung,TWD,
+Taiwan,Hualien,TWD,
+Taiwan,Toufen,TWD,
+Taiwan,Nantou,TWD,
+Taiwan,Yilan,TWD,
+Taiwan,Miaoli,TWD,
+Taiwan,Magong,TWD,
+Tajikistan,Dushanbe,TJS,
+Tajikistan,Khujand,TJS,
+Tajikistan,Bokhtar,TJS,
+Tajikistan,Kulob,TJS,
+Tajikistan,Istaravshan,TJS,
+Tajikistan,Tursunzoda,TJS,
+Tajikistan,Konibodom,TJS,
+Tajikistan,Isfara,TJS,
+Tajikistan,Panjakent,TJS,
+Tajikistan,Khorog,TJS,
+Tajikistan,Yovon,TJS,
+Tajikistan,Vahdat,TJS,
+Tajikistan,Hisor,TJS,
+Tajikistan,Norak,TJS,
+Tajikistan,Danghara,TJS,
+Tajikistan,Farkhor,TJS,
+Tajikistan,Hamadoni,TJS,
+Tajikistan,Matcha,TJS,
+Tajikistan,Spitamen,TJS,
+Tajikistan,Jabbor Rasulov,TJS,
+Tanzania,Dar es Salaam,TZS,
+Tanzania,Mwanza,TZS,
+Tanzania,Arusha,TZS,
+Tanzania,Dodoma,TZS,
+Tanzania,Mbeya,TZS,
+Tanzania,Morogoro,TZS,
+Tanzania,Tanga,TZS,
+Tanzania,Kahama,TZS,
+Tanzania,Tabora,TZS,
+Tanzania,Zanzibar City,TZS,
+Tanzania,Kigoma,TZS,
+Tanzania,Sumbawanga,TZS,
+Tanzania,Kasulu,TZS,
+Tanzania,Songea,TZS,
+Tanzania,Moshi,TZS,
+Tanzania,Musoma,TZS,
+Tanzania,Shinyanga,TZS,
+Tanzania,Iringa,TZS,
+Tanzania,Singida,TZS,
+Tanzania,Njombe,TZS,
+Thailand,Bangkok,THB,
+Thailand,Nonthaburi,THB,
+Thailand,Nakhon Ratchasima,THB,
+Thailand,Chiang Mai,THB,
+Thailand,Hat Yai,THB,
+Thailand,Udon Thani,THB,
+Thailand,Pak Kret,THB,
+Thailand,Khon Kaen,THB,
+Thailand,Chaophraya Surasak,THB,
+Thailand,Ubon Ratchathani,THB,
+Thailand,Nakhon Si Thammarat,THB,
+Thailand,Nakhon Sawan,THB,
+Thailand,Nakhon Pathom,THB,
+Thailand,Phitsanulok,THB,
+Thailand,Pattaya,THB,
+Thailand,Songkhla,THB,
+Thailand,Surat Thani,THB,
+Thailand,Rangsit,THB,
+Thailand,Yala,THB,
+Thailand,Phuket,THB,
+Timor-Leste,Dili,USD,
+Timor-Leste,Baucau,USD,
+Timor-Leste,Maliana,USD,
+Timor-Leste,Suai,USD,
+Timor-Leste,Lospalos,USD,
+Timor-Leste,Same,USD,
+Timor-Leste,Manatuto,USD,
+Timor-Leste,Viqueque,USD,
+Timor-Leste,Aileu,USD,
+Timor-Leste,Ainaro,USD,
+Timor-Leste,Ermera,USD,
+Timor-Leste,Liquica,USD,
+Timor-Leste,Pante Macassar,USD,
+Timor-Leste,Oecusse,USD,
+Timor-Leste,Maubisse,USD,
+Timor-Leste,Gleno,USD,
+Timor-Leste,Bazartete,USD,
+Timor-Leste,Laga,USD,
+Timor-Leste,Metinaro,USD,
+Timor-Leste,Venilale,USD,
+Togo,Lome,XOF,
+Togo,Sokode,XOF,
+Togo,Kara,XOF,
+Togo,Kpalime,XOF,
+Togo,Atakpame,XOF,
+Togo,Bassar,XOF,
+Togo,Tsevie,XOF,
+Togo,Aneho,XOF,
+Togo,Mango,XOF,
+Togo,Dapaong,XOF,
+Togo,Tchamba,XOF,
+Togo,Niamtougou,XOF,
+Togo,Bafilo,XOF,
+Togo,Notse,XOF,
+Togo,Sotouboua,XOF,
+Togo,Vogan,XOF,
+Togo,Badou,XOF,
+Togo,Tabligbo,XOF,
+Togo,Kandé,XOF,
+Togo,Amlame,XOF,
+Tonga,Nuku'alofa,TOP,
+Tonga,Neiafu,TOP,
+Tonga,Haveluloto,TOP,
+Tonga,Vaini,TOP,
+Tonga,Tofoa,TOP,
+Tonga,Ha'ateiho,TOP,
+Tonga,Pea,TOP,
+Tonga,Pangai,TOP,
+Tonga,Fua'amotu,TOP,
+Tonga,Houma,TOP,
+Tonga,Nukunuku,TOP,
+Tonga,Leimatu'a,TOP,
+Tonga,Kolonga,TOP,
+Tonga,Ohonua,TOP,
+Tonga,Hihifo,TOP,
+Tonga,Eua,TOP,
+Tonga,Tokomololo,TOP,
+Tonga,Vwini,TOP,
+Tonga,Tatakamotonga,TOP,
+Tonga,Lapaha,TOP,
+Trinidad and Tobago,Port of Spain,TTD,
+Trinidad and Tobago,San Fernando,TTD,
+Trinidad and Tobago,Chaguanas,TTD,
+Trinidad and Tobago,Arima,TTD,
+Trinidad and Tobago,Point Fortin,TTD,
+Trinidad and Tobago,Scarborough,TTD,
+Trinidad and Tobago,Couva,TTD,
+Trinidad and Tobago,Sangre Grande,TTD,
+Trinidad and Tobago,Princes Town,TTD,
+Trinidad and Tobago,Siparia,TTD,
+Trinidad and Tobago,Tunapuna,TTD,
+Trinidad and Tobago,Penal,TTD,
+Trinidad and Tobago,Diego Martin,TTD,
+Trinidad and Tobago,Rio Claro,TTD,
+Trinidad and Tobago,Debé,TTD,
+Trinidad and Tobago,Gasparillo,TTD,
+Trinidad and Tobago,Fyzabad,TTD,
+Trinidad and Tobago,La Brea,TTD,
+Trinidad and Tobago,Arouca,TTD,
+Trinidad and Tobago,Laventille,TTD,
+Tunisia,Tunis,TND,
+Tunisia,Sfax,TND,
+Tunisia,Sousse,TND,
+Tunisia,Ettadhamen,TND,
+Tunisia,Kairouan,TND,
+Tunisia,Gabes,TND,
+Tunisia,Bizerte,TND,
+Tunisia,Aryanah,TND,
+Tunisia,Gafsa,TND,
+Tunisia,El Mourouj,TND,
+Tunisia,Monastir,TND,
+Tunisia,Ben Arous,TND,
+Tunisia,Kasserine,TND,
+Tunisia,Douar Hicher,TND,
+Tunisia,Djerba,TND,
+Tunisia,Hammamet,TND,
+Tunisia,Tataouine,TND,
+Tunisia,Marsa,TND,
+Tunisia,Beja,TND,
+Tunisia,Nabeul,TND,
+Turkey,Istanbul,TRY,
+Turkey,Ankara,TRY,
+Turkey,Izmir,TRY,
+Turkey,Bursa,TRY,
+Turkey,Adana,TRY,
+Turkey,Gaziantep,TRY,
+Turkey,Konya,TRY,
+Turkey,Antalya,TRY,
+Turkey,Kayseri,TRY,
+Turkey,Mersin,TRY,
+Turkey,Eskisehir,TRY,
+Turkey,Diyarbakir,TRY,
+Turkey,Samsun,TRY,
+Turkey,Denizli,TRY,
+Turkey,Sanliurfa,TRY,
+Turkey,Adapazari,TRY,
+Turkey,Malatya,TRY,
+Turkey,Kahramanmaras,TRY,
+Turkey,Erzurum,TRY,
+Turkey,Van,TRY,
+Turkmenistan,Ashgabat,TMT,
+Turkmenistan,Turkmenabat,TMT,
+Turkmenistan,Dasoguz,TMT,
+Turkmenistan,Mary,TMT,
+Turkmenistan,Balkanabat,TMT,
+Turkmenistan,Bayramaly,TMT,
+Turkmenistan,Turkmenbasy,TMT,
+Turkmenistan,Tejen,TMT,
+Turkmenistan,Abadan,TMT,
+Turkmenistan,Yoloten,TMT,
+Turkmenistan,Gowurdak,TMT,
+Turkmenistan,Gazojak,TMT,
+Turkmenistan,Gumdag,TMT,
+Turkmenistan,Bereket,TMT,
+Turkmenistan,Kaka,TMT,
+Turkmenistan,Serdar,TMT,
+Turkmenistan,Seydi,TMT,
+Turkmenistan,Kerki,TMT,
+Turkmenistan,Hazar,TMT,
+Turkmenistan,Murgap,TMT,
+Tuvalu,Funafuti,AUD,
+Tuvalu,Asau,AUD,
+Tuvalu,Lolua,AUD,
+Tuvalu,Savave,AUD,
+Tuvalu,Kulia,AUD,
+Tuvalu,Tumaseu,AUD,
+Tuvalu,Tonga,AUD,
+Tuvalu,Senala,AUD,
+Tuvalu,Tekavatoetoe,AUD,
+Tuvalu,Teava,AUD,
+Tuvalu,Fakai Fou,AUD,
+Tuvalu,Alapi,AUD,
+Tuvalu,Vaiaku,AUD,
+Tuvalu,Lofeagai,AUD,
+Tuvalu,Teone,AUD,
+Tuvalu,Fakaifou,AUD,
+Tuvalu,Motufoua,AUD,
+Tuvalu,Ambo,AUD,
+Tuvalu,Tanrake,AUD,
+Tuvalu,Togah,AUD,
+Uganda,Kampala,UGX,
+Uganda,Nansana,UGX,
+Uganda,Kira,UGX,
+Uganda,Ssabagabo,UGX,
+Uganda,Mbarara,UGX,
+Uganda,Mukono,UGX,
+Uganda,Gulu,UGX,
+Uganda,Lugazi,UGX,
+Uganda,Masaka,UGX,
+Uganda,Kasese,UGX,
+Uganda,Hoima,UGX,
+Uganda,Lira,UGX,
+Uganda,Mityana,UGX,
+Uganda,Mubende,UGX,
+Uganda,Masindi,UGX,
+Uganda,Mbale,UGX,
+Uganda,Jinja,UGX,
+Uganda,Entebbe,UGX,
+Uganda,Kitgum,UGX,
+Uganda,Koboko,UGX,
+Ukraine,Kyiv,UAH,
+Ukraine,Kharkiv,UAH,
+Ukraine,Odessa,UAH,
+Ukraine,Dnipro,UAH,
+Ukraine,Donetsk,UAH,
+Ukraine,Zaporizhzhia,UAH,
+Ukraine,Lviv,UAH,
+Ukraine,Kryvyi Rih,UAH,
+Ukraine,Mykolaiv,UAH,
+Ukraine,Mariupol,UAH,
+Ukraine,Luhansk,UAH,
+Ukraine,Vinnytsia,UAH,
+Ukraine,Makiivka,UAH,
+Ukraine,Simferopol,UAH,
+Ukraine,Sevastopol,UAH,
+Ukraine,Kherson,UAH,
+Ukraine,Poltava,UAH,
+Ukraine,Chernihiv,UAH,
+Ukraine,Cherkasy,UAH,
+Ukraine,Sumy,UAH,
+United Arab Emirates,Dubai,AED,
+United Arab Emirates,Abu Dhabi,AED,
+United Arab Emirates,Sharjah,AED,
+United Arab Emirates,Al Ain,AED,
+United Arab Emirates,Ajman,AED,
+United Arab Emirates,Ras Al Khaimah,AED,
+United Arab Emirates,Fujairah,AED,
+United Arab Emirates,Umm Al Quwain,AED,
+United Arab Emirates,Khor Fakkan,AED,
+United Arab Emirates,Kalba,AED,
+United Arab Emirates,Jebel Ali,AED,
+United Arab Emirates,Dibba Al-Fujairah,AED,
+United Arab Emirates,Madinat Zayed,AED,
+United Arab Emirates,Ruwais,AED,
+United Arab Emirates,Liwa Oasis,AED,
+United Arab Emirates,Dhaid,AED,
+United Arab Emirates,Ghayathi,AED,
+United Arab Emirates,Hatta,AED,
+United Arab Emirates,Ar-Rams,AED,
+United Arab Emirates,Dibba Al-Hisn,AED,
+United Kingdom,London,GBP,
+United Kingdom,Birmingham,GBP,
+United Kingdom,Manchester,GBP,
+United Kingdom,Glasgow,GBP,
+United Kingdom,Leeds,GBP,
+United Kingdom,Liverpool,GBP,
+United Kingdom,Newcastle,GBP,
+United Kingdom,Sheffield,GBP,
+United Kingdom,Bristol,GBP,
+United Kingdom,Belfast,GBP,
+United Kingdom,Edinburgh,GBP,
+United Kingdom,Leicester,GBP,
+United Kingdom,Cardiff,GBP,
+United Kingdom,Coventry,GBP,
+United Kingdom,Bradford,GBP,
+United Kingdom,Nottingham,GBP,
+United Kingdom,Hull,GBP,
+United Kingdom,Stoke-on-Trent,GBP,
+United Kingdom,Wolverhampton,GBP,
+United Kingdom,Plymouth,GBP,
+United States,New York,USD,
+United States,Los Angeles,USD,
+United States,Chicago,USD,
+United States,Houston,USD,
+United States,Phoenix,USD,
+United States,Philadelphia,USD,
+United States,San Antonio,USD,
+United States,San Diego,USD,
+United States,Dallas,USD,
+United States,San Jose,USD,
+United States,Austin,USD,
+United States,Jacksonville,USD,
+United States,Fort Worth,USD,
+United States,Columbus,USD,
+United States,San Francisco,USD,
+United States,Charlotte,USD,
+United States,Indianapolis,USD,
+United States,Seattle,USD,
+United States,Denver,USD,
+United States,Washington,USD,
+Uruguay,Montevideo,UYU,
+Uruguay,Salto,UYU,
+Uruguay,Ciudad de la Costa,UYU,
+Uruguay,Paysandu,UYU,
+Uruguay,Las Piedras,UYU,
+Uruguay,Rivera,UYU,
+Uruguay,Maldonado,UYU,
+Uruguay,Tacuarembo,UYU,
+Uruguay,Melo,UYU,
+Uruguay,Mercedes,UYU,
+Uruguay,Artigas,UYU,
+Uruguay,Minas,UYU,
+Uruguay,San Jose de Mayo,UYU,
+Uruguay,Durazno,UYU,
+Uruguay,Florida,UYU,
+Uruguay,Barros Blancos,UYU,
+Uruguay,Ciudad del Plata,UYU,
+Uruguay,San Carlos,UYU,
+Uruguay,Colonia del Sacramento,UYU,
+Uruguay,Pando,UYU,
+Uzbekistan,Tashkent,UZS,
+Uzbekistan,Samarkand,UZS,
+Uzbekistan,Namangan,UZS,
+Uzbekistan,Andijan,UZS,
+Uzbekistan,Nukus,UZS,
+Uzbekistan,Bukhara,UZS,
+Uzbekistan,Fergana,UZS,
+Uzbekistan,Qarshi,UZS,
+Uzbekistan,Kokand,UZS,
+Uzbekistan,Margilan,UZS,
+Uzbekistan,Angren,UZS,
+Uzbekistan,Chirchiq,UZS,
+Uzbekistan,Urgench,UZS,
+Uzbekistan,Termez,UZS,
+Uzbekistan,Navoi,UZS,
+Uzbekistan,Olmaliq,UZS,
+Uzbekistan,Shahrisabz,UZS,
+Uzbekistan,Bekabad,UZS,
+Uzbekistan,Denau,UZS,
+Uzbekistan,Chust,UZS,
+Vanuatu,Port Vila,VUV,
+Vanuatu,Luganville,VUV,
+Vanuatu,Norsup,VUV,
+Vanuatu,Port-Olry,VUV,
+Vanuatu,Isangel,VUV,
+Vanuatu,Sola,VUV,
+Vanuatu,Lakatoro,VUV,
+Vanuatu,Pango,VUV,
+Vanuatu,Mele,VUV,
+Vanuatu,Erakor,VUV,
+Vanuatu,Eratap,VUV,
+Vanuatu,Endu,VUV,
+Vanuatu,Lenakel,VUV,
+Vanuatu,Abwatuntari,VUV,
+Vanuatu,Craig Cove,VUV,
+Vanuatu,Lamap,VUV,
+Vanuatu,Leviamp,VUV,
+Vanuatu,Hog Harbour,VUV,
+Vanuatu,Fanafo,VUV,
+Vanuatu,Avunatari,VUV,
+Vatican City,Vatican City,EUR,
+Venezuela,Caracas,VES,
+Venezuela,Maracaibo,VES,
+Venezuela,Valencia,VES,
+Venezuela,Barquisimeto,VES,
+Venezuela,Ciudad Guayana,VES,
+Venezuela,Maturin,VES,
+Venezuela,Maracay,VES,
+Venezuela,Barcelona,VES,
+Venezuela,Petare,VES,
+Venezuela,Turmero,VES,
+Venezuela,Ciudad Bolivar,VES,
+Venezuela,Barinas,VES,
+Venezuela,Santa Teresa,VES,
+Venezuela,Cumana,VES,
+Venezuela,San Cristobal,VES,
+Venezuela,Baruta,VES,
+Venezuela,Cabimas,VES,
+Venezuela,Coro,VES,
+Venezuela,Guatire,VES,
+Venezuela,Cua,VES,
+Vietnam,Ho Chi Minh City,VND,
+Vietnam,Hanoi,VND,
+Vietnam,Da Nang,VND,
+Vietnam,Haiphong,VND,
+Vietnam,Bien Hoa,VND,
+Vietnam,Can Tho,VND,
+Vietnam,Thuan An,VND,
+Vietnam,Di An,VND,
+Vietnam,Hue,VND,
+Vietnam,Vung Tau,VND,
+Vietnam,Nha Trang,VND,
+Vietnam,Buon Ma Thuot,VND,
+Vietnam,Vinh,VND,
+Vietnam,Quy Nhon,VND,
+Vietnam,Da Lat,VND,
+Vietnam,Nam Dinh,VND,
+Vietnam,Hai Duong,VND,
+Vietnam,Long Xuyen,VND,
+Vietnam,Thai Nguyen,VND,
+Vietnam,Bac Lieu,VND,
+Yemen,Sanaa,YER,
+Yemen,Aden,YER,
+Yemen,Taiz,YER,
+Yemen,Hodeidah,YER,
+Yemen,Mukalla,YER,
+Yemen,Ibb,YER,
+Yemen,Dhamar,YER,
+Yemen,Amran,YER,
+Yemen,Sayyan,YER,
+Yemen,Zabin,YER,
+Yemen,Sadah,YER,
+Yemen,Bajil,YER,
+Yemen,Hajjah,YER,
+Yemen,Bayt al-Faqih,YER,
+Yemen,Yarim,YER,
+Yemen,Al-Bayda,YER,
+Yemen,Lahij,YER,
+Yemen,Ataq,YER,
+Yemen,Al-Mahwit,YER,
+Yemen,Zinjibar,YER,
+Zambia,Lusaka,ZMW,
+Zambia,Kitwe,ZMW,
+Zambia,Ndola,ZMW,
+Zambia,Kabwe,ZMW,
+Zambia,Chingola,ZMW,
+Zambia,Mufulira,ZMW,
+Zambia,Livingstone,ZMW,
+Zambia,Luanshya,ZMW,
+Zambia,Kasama,ZMW,
+Zambia,Chipata,ZMW,
+Zambia,Chililabombwe,ZMW,
+Zambia,Solwezi,ZMW,
+Zambia,Choma,ZMW,
+Zambia,Mongu,ZMW,
+Zambia,Kafue,ZMW,
+Zambia,Mazabuka,ZMW,
+Zambia,Mansa,ZMW,
+Zambia,Kapiri Mposhi,ZMW,
+Zambia,Monze,ZMW,
+Zambia,Sesheke,ZMW,
+Zimbabwe,Harare,ZWL,
+Zimbabwe,Bulawayo,ZWL,
+Zimbabwe,Chitungwiza,ZWL,
+Zimbabwe,Mutare,ZWL,
+Zimbabwe,Epworth,ZWL,
+Zimbabwe,Gweru,ZWL,
+Zimbabwe,Kwekwe,ZWL,
+Zimbabwe,Kadoma,ZWL,
+Zimbabwe,Masvingo,ZWL,
+Zimbabwe,Chinhoyi,ZWL,
+Zimbabwe,Norton,ZWL,
+Zimbabwe,Marondera,ZWL,
+Zimbabwe,Ruwa,ZWL,
+Zimbabwe,Chegutu,ZWL,
+Zimbabwe,Zvishavane,ZWL,
+Zimbabwe,Bindura,ZWL,
+Zimbabwe,Beitbridge,ZWL,
+Zimbabwe,Redcliff,ZWL,
+Zimbabwe,Victoria Falls,ZWL,
+Zimbabwe,Hwange,ZWL,
