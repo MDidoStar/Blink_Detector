@@ -29,7 +29,7 @@ model = genai.GenerativeModel("gemini-2.5-flash")
 def load_data():
     try:
         # Use raw string to avoid backslash escaping on Windows
-        df = pd.read_csv(r"E:\Coding Mohamed\science fair\countries.csv")
+        df = pd.read_csv(r"countries.csv")
 
         expected = {"Country", "City", "Currency_Code", "Number"}
         missing = expected - set(df.columns)
@@ -45,7 +45,7 @@ def load_data():
         return df
 
     except FileNotFoundError:
-        st.error(r"Error: 'E:\Coding Mohamed\science fair\countries.csv' file not found. Please check the path.")
+        st.error(r"Error: 'countries.csv' file not found. Please check the path.")
         return pd.DataFrame(columns=["Country", "City", "Currency_Code", "Number"])
 
     except Exception as e:
