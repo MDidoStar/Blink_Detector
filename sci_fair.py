@@ -15,7 +15,7 @@ from reportlab.lib import colors
 # ----------------------------
 # Gemini setup
 # ----------------------------
-genai.configure(api_key="AIzaSyAKwnlK_HmJG1nOuadrjW68kF8adrvqu8I")
+genai.configure(api_key="AIzaSyAZ6qZBeooMTTfeE3EB1c_MaRhVChZXR8Q")
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 # ----------------------------
@@ -397,3 +397,4 @@ Patient context:
                 file_name="eye_health_recommendations.pdf",
                 mime="application/pdf"
             )
+
