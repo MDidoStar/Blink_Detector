@@ -22,6 +22,9 @@ model = genai.GenerativeModel("gemini-2.5-flash")
 # Page Config with Logo
 # ----------------------------
 st.set_page_config(
+    LOGO_WIDTH_PX = 400      # Change this number for web display size
+    LOGO_PDF_WIDTH = 200     # Change this for PDF logo width  
+    LOGO_PDF_HEIGHT = 100    # Change this for PDF logo height
     page_title="Blink - Eye Health Check",
     page_icon="👁️",
     layout="wide"
@@ -426,3 +429,4 @@ Patient context:
                 file_name="eye_health_recommendations.pdf",
                 mime="application/pdf"
             )
+
