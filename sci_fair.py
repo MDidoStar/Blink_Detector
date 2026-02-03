@@ -4,13 +4,13 @@ import base64
 import streamlit as st
 import google.generativeai as genai
 import pandas as pd
-
 from reportlab.platypus import (
     SimpleDocTemplate, Spacer, Table, TableStyle, Paragraph, Image as RLImage
 )
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.pagesizes import letter
 from reportlab.lib import colors
+from PIL import Image
 
 # ----------------------------
 # Gemini setup
@@ -19,49 +19,65 @@ genai.configure(api_key="AIzaSyD-UBEMP78gtwa1DVBj2zeaFZaPfRCiZAE")
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 # ----------------------------
+# Page Config with Logo
+# ----------------------------
+st.set_page_config(
+    page_title="Blink - Eye Health Check",
+    page_icon="👁️",
+    layout="wide"
+)
+
+# ----------------------------
+# Display Logo at Top
+# ----------------------------
+def display_logo():
+    """Display the Blink logo at the top of the app"""
+    try:
+        logo = Image.open("/mnt/user-data/uploads/1770146718890_image.png")
+        col1, col2, col3 = st.columns([1, 2, 1])
+        with col2:
+            st.image(logo, use_column_width=True)
+    except Exception as e:
+        st.warning(f"Logo not found: {e}")
+
+# Display logo
+display_logo()
+
+# ----------------------------
 # Data load
 # ----------------------------
 @st.cache_data
 def load_data():
     try:
         df = pd.read_csv(r"countries.csv")
-
         expected = {"Country", "City", "Currency_Code", "Number"}
         missing = expected - set(df.columns)
         if missing:
             st.error(f"countries.csv is missing columns: {missing}")
             return pd.DataFrame(columns=["Country", "City", "Currency_Code", "Number"])
-
         df["Country"] = df["Country"].astype(str)
         df["City"] = df["City"].astype(str)
         df["Currency_Code"] = df["Currency_Code"].astype(str)
         df["Number"] = pd.to_numeric(df["Number"], errors="coerce")
-
         return df
-
     except FileNotFoundError:
         st.error(r"Error: 'countries.csv' file not found. Please check the path.")
         return pd.DataFrame(columns=["Country", "City", "Currency_Code", "Number"])
-
     except Exception as e:
         st.error(f"Failed to load countries.csv: {e}")
         return pd.DataFrame(columns=["Country", "City", "Currency_Code", "Number"])
 
-
 df = load_data()
-
 
 def get_countries():
     if not df.empty:
         return sorted(df["Country"].dropna().unique().tolist())
     return []
 
-
 def get_cities(country: str):
     if not df.empty and country:
         return sorted(df[df["Country"] == country]["City"].dropna().unique().tolist())
     return []
-
 
 def get_numbers_from_file():
     if df.empty or "Number" not in df.columns:
@@ -70,11 +86,10 @@ def get_numbers_from_file():
     nums = sorted({int(x) for x in nums})
     return nums
 
-
 # ----------------------------
-# PDF generation
+# PDF generation with logo
 # ----------------------------
-def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | None = None):
+def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | None = None, logo_path: str | None = None):
     buffer = io.BytesIO()
     doc = SimpleDocTemplate(
         buffer,
@@ -84,7 +99,6 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
         topMargin=72,
         bottomMargin=18
     )
-
     styles = getSampleStyleSheet()
     story = []
 
@@ -104,6 +118,16 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
         leading=14
     )
 
+    # Add logo to PDF if available
+    if logo_path:
+        try:
+            logo_img = RLImage(logo_path)
+            logo_img._restrictSize(200, 100)
+            story.append(logo_img)
+            story.append(Spacer(1, 10))
+        except Exception as e:
+            print(f"Could not add logo to PDF: {e}")
+
     story.append(Paragraph("Eye Photo + Gemini Notes", title_style))
     story.append(Spacer(1, 10))
 
@@ -118,7 +142,6 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
     i = 0
     while i < len(lines):
         stripped = lines[i].strip()
-
         if not stripped:
             story.append(Spacer(1, 8))
             i += 1
@@ -128,11 +151,9 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
             table_data = []
             while i < len(lines) and "|" in lines[i].strip():
                 row = lines[i].strip()
-
                 if re.match(r"^[\|\s\-:]+$", row):
                     i += 1
                     continue
-
                 cells = [cell.strip() for cell in row.split("|") if cell.strip() != ""]
                 if cells:
                     table_data.append(cells)
@@ -164,7 +185,6 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
     buffer.seek(0)
     return buffer.getvalue()
 
-
 # ----------------------------
 # Webcam Component with Hidden File Upload
 # ----------------------------
@@ -172,126 +192,117 @@ def webcam_with_hidden_upload():
     """
     Captures frames and creates a Blob, then programmatically uploads via hidden file input
     """
-    
     html_code = """
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    </head>
-    <body>
-        <div style="text-align: center;">
-            <video id="video" width="640" height="480" autoplay style="border: 2px solid #3498db; border-radius: 8px;"></video>
-            <br><br>
-            <button id="startBtn" style="padding: 10px 20px; font-size: 16px; background-color: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer; margin: 5px;">
-                Start Camera
-            </button>
-            <button id="captureBtn" style="padding: 10px 20px; font-size: 16px; background-color: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer; margin: 5px;" disabled>
-                Capture & Upload 120 Frames
-            </button>
-            <canvas id="canvas" style="display: none;"></canvas>
-            <p id="status" style="margin-top: 10px; font-size: 14px; color: #555;"></p>
-            <p id="progress" style="margin-top: 5px; font-size: 14px; font-weight: bold; color: #3498db;"></p>
-        </div>
+    <div style="border: 2px solid #3498db; padding: 20px; border-radius: 10px; background-color: #f9f9f9;">
+        <video id="video" width="640" height="480" autoplay style="border: 2px solid #333; border-radius: 8px;"></video><br>
+        <button id="startBtn" style="
+            margin-top: 15px; 
+            padding: 12px 24px; 
+            font-size: 16px; 
+            background-color: #3498db; 
+            color: white; 
+            border: none; 
+            border-radius: 6px; 
+            cursor: pointer;
+            font-weight: bold;
+        ">
+            📸 Start Camera
+        </button>
+        <button id="captureBtn" style="
+            margin-top: 15px; 
+            padding: 12px 24px; 
+            font-size: 16px; 
+            background-color: #2ecc71; 
+            color: white; 
+            border: none; 
+            border-radius: 6px; 
+            cursor: pointer;
+            display: none;
+            font-weight: bold;
+        ">
+            📷 Capture & Upload 120 Frames
+        </button>
+        <div id="status" style="margin-top: 15px; font-size: 16px; color: #555;"></div>
+        <canvas id="canvas" style="display:none;"></canvas>
+    </div>
 
-        <script>
-            const video = document.getElementById('video');
-            const canvas = document.getElementById('canvas');
-            const startBtn = document.getElementById('startBtn');
-            const captureBtn = document.getElementById('captureBtn');
-            const status = document.getElementById('status');
-            const progress = document.getElementById('progress');
-            const ctx = canvas.getContext('2d');
+    <script>
+        const video = document.getElementById('video');
+        const startBtn = document.getElementById('startBtn');
+        const captureBtn = document.getElementById('captureBtn');
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const status = document.getElementById('status');
+
+        startBtn.onclick = async () => {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                video.srcObject = stream;
+                startBtn.style.display = 'none';
+                captureBtn.style.display = 'inline-block';
+                status.textContent = '✅ Camera ready! Click "Capture & Upload 120 Frames" when ready.';
+                status.style.color = 'green';
+            } catch (err) {
+                status.textContent = '❌ Camera access denied: ' + err.message;
+                status.style.color = 'red';
+            }
+        };
+
+        captureBtn.onclick = async () => {
+            captureBtn.disabled = true;
+            captureBtn.style.backgroundColor = '#95a5a6';
+            status.textContent = '⏳ Capturing frames...';
+            status.style.color = 'orange';
+
+            const frames = [];
+            const totalFrames = 120;
+            const interval = 100; // ms between frames
+
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+
+            for (let i = 0; i < totalFrames; i++) {
+                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg'));
+                frames.push(blob);
+                status.textContent = `📸 Captured ${i + 1}/${totalFrames} frames...`;
+                await new Promise(resolve => setTimeout(resolve, interval));
+            }
+
+            status.textContent = '🔄 Creating ZIP file...';
             
-            let stream = null;
-
-            startBtn.onclick = async () => {
-                try {
-                    status.textContent = 'Requesting camera access...';
-                    stream = await navigator.mediaDevices.getUserMedia({ 
-                        video: { width: 640, height: 480 } 
-                    });
-                    video.srcObject = stream;
-                    status.textContent = '✅ Camera active! Ready to capture.';
-                    captureBtn.disabled = false;
-                    startBtn.disabled = true;
-                } catch (err) {
-                    status.textContent = '❌ Error: ' + err.message;
-                    console.error('Camera error:', err);
-                }
-            };
-
-            captureBtn.onclick = async () => {
-                if (!stream) {
-                    status.textContent = 'Please start the camera first!';
-                    return;
-                }
-
-                captureBtn.disabled = true;
-                status.textContent = '📸 Capturing frames... Look at camera and blink normally.';
-                
-                canvas.width = video.videoWidth;
-                canvas.height = video.videoHeight;
-
-                const capturedFrames = [];
-                
-                // Capture 120 frames
-                for (let i = 0; i < 120; i++) {
-                    ctx.drawImage(video, 0, 0);
-                    
-                    // Convert to blob
-                    const blob = await new Promise(resolve => {
-                        canvas.toBlob(resolve, 'image/jpeg', 0.85);
-                    });
-                    
-                    capturedFrames.push(blob);
-                    progress.textContent = `Captured ${i + 1}/120 frames`;
-                    await new Promise(resolve => setTimeout(resolve, 30));
-                }
-
-                status.textContent = '📦 Creating ZIP file...';
-                progress.textContent = '';
-                
-                // Create ZIP
+            // Create ZIP using JSZip from CDN
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
+            script.onload = async () => {
                 const zip = new JSZip();
-                for (let i = 0; i < capturedFrames.length; i++) {
-                    zip.file(`frame_${String(i).padStart(3, '0')}.jpg`, capturedFrames[i]);
-                }
-                
+                frames.forEach((blob, idx) => {
+                    zip.file(`frame_${String(idx).padStart(3, '0')}.jpg`, blob);
+                });
+
                 const zipBlob = await zip.generateAsync({type: 'blob'});
                 
-                status.textContent = '📤 Uploading to Streamlit...';
+                // Create file and trigger upload
+                const file = new File([zipBlob], 'captured_frames.zip', {type: 'application/zip'});
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(file);
                 
-                // Find Streamlit's file uploader in parent document
-                const fileUploader = window.parent.document.querySelector('input[type="file"][accept=".zip"]');
-                
-                if (fileUploader) {
-                    // Create a File object from the blob
-                    const file = new File([zipBlob], 'captured_frames.zip', { type: 'application/zip' });
-                    
-                    // Create DataTransfer to set files
-                    const dataTransfer = new DataTransfer();
-                    dataTransfer.items.add(file);
-                    fileUploader.files = dataTransfer.files;
-                    
-                    // Trigger change event
-                    fileUploader.dispatchEvent(new Event('change', { bubbles: true }));
-                    
-                    status.textContent = '✅ Frames uploaded successfully!';
-                    progress.textContent = 'You can now analyze the frames below.';
+                const fileInput = window.parent.document.querySelector('input[type="file"][data-testid="stFileUploadDropzone"]');
+                if (fileInput) {
+                    fileInput.files = dataTransfer.files;
+                    fileInput.dispatchEvent(new Event('change', {bubbles: true}));
+                    status.textContent = '✅ Upload complete! Scroll down to see results.';
+                    status.style.color = 'green';
                 } else {
-                    status.textContent = '❌ Could not find file uploader. Please refresh and try again.';
+                    status.textContent = '❌ Could not find upload element. Please refresh the page.';
+                    status.style.color = 'red';
                 }
-                
-                captureBtn.disabled = false;
             };
-        </script>
-    </body>
-    </html>
+            document.head.appendChild(script);
+        };
+    </script>
     """
-    
     st.components.v1.html(html_code, height=680)
-
 
 # ----------------------------
 # Main App
@@ -316,7 +327,6 @@ if uploaded_zip is not None:
     try:
         with zipfile.ZipFile(uploaded_zip, 'r') as zip_ref:
             frame_files = sorted([f for f in zip_ref.namelist() if f.endswith('.jpg')])
-            
             if len(frame_files) < 1:
                 st.error("No JPG files found in the ZIP!")
             else:
@@ -330,17 +340,17 @@ if uploaded_zip is not None:
                 
                 # Show first frame
                 st.image(frames_bytes[0], caption=f"First frame (total: {len(frames_bytes)} frames)", use_column_width=True)
-    
     except Exception as e:
         st.error(f"Error reading ZIP file: {e}")
 
 st.write("---")
-
 st.subheader("Step 2: Where are you from?")
+
 patient_country = st.selectbox("Country:", get_countries(), key="h_country")
 patient_city = st.selectbox("City:", get_cities(patient_country), key="h_city")
 
 st.subheader("Step 3: Your Age")
+
 numbers = get_numbers_from_file()
 if not numbers:
     st.error("No numbers found in the 'Number' column in countries.csv.")
@@ -363,6 +373,7 @@ if st.button("Step 4: 📊 Analyze Frames with AI", key="analyze_btn"):
 
         prompt = f"""
 You are given {len(frames)} sequential eye images (frames) from a webcam.
+
 Task: Check for possible blinking problems or abnormal blinking patterns.
 - You cannot diagnose.
 - Give careful observations and safe advice only.
@@ -386,8 +397,9 @@ Patient context:
         st.subheader("Analysis Results:")
         st.write(response.text)
 
-        # Generate PDF
-        pdf_content = generate_pdf_from_text_and_image(response.text, frames[0])
+        # Generate PDF with logo
+        logo_path = "/mnt/user-data/uploads/1770146718890_image.png"
+        pdf_content = generate_pdf_from_text_and_image(response.text, frames[0], logo_path)
 
         if pdf_content:
             st.subheader("Step 5: Download your Report")
@@ -397,6 +409,3 @@ Patient context:
                 file_name="eye_health_recommendations.pdf",
                 mime="application/pdf"
             )
-
-
-
