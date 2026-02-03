@@ -326,114 +326,118 @@ def webcam_with_hidden_upload():
 # ----------------------------
 # Main App
 # ----------------------------
-st.title("Check your Eye Health & Safety")
+# Create centered layout
+col1, col2, col3 = st.columns([1, 3, 1])
 
-st.subheader("Step 1: Capture 120 frames")
-
-# Initialize session state
-if 'captured_frames' not in st.session_state:
-    st.session_state.captured_frames = None
-
-# Render webcam component
-webcam_with_hidden_upload()
-
-# Hidden file uploader (will be auto-filled by JavaScript)
-uploaded_zip = st.file_uploader("", type=['zip'], key="auto_upload", label_visibility="collapsed")
-
-# Process uploaded ZIP
-if uploaded_zip is not None:
-    import zipfile
-    try:
-        with zipfile.ZipFile(uploaded_zip, 'r') as zip_ref:
-            frame_files = sorted([f for f in zip_ref.namelist() if f.endswith('.jpg')])
-            if len(frame_files) < 1:
-                st.error("No JPG files found in the ZIP!")
-            else:
-                frames_bytes = []
-                for frame_file in frame_files:
-                    with zip_ref.open(frame_file) as f:
-                        frames_bytes.append(f.read())
-                
-                st.session_state.captured_frames = frames_bytes
-                st.success(f"✅ Loaded {len(frames_bytes)} frames!")
-                
-                # Show first frame
-                st.image(frames_bytes[0], caption=f"First frame (total: {len(frames_bytes)} frames)", use_column_width=True)
-    except Exception as e:
-        st.error(f"Error reading ZIP file: {e}")
-
-st.write("---")
-st.subheader("Step 2: Where are you from?")
-
-patient_country = st.selectbox("Country:", get_countries(), key="h_country")
-patient_city = st.selectbox("City:", get_cities(patient_country), key="h_city")
-
-st.subheader("Step 3: Your Age")
-
-numbers = get_numbers_from_file()
-if not numbers:
-    st.error("No numbers found in the 'Number' column in countries.csv.")
-    st.stop()
-
-age_num = st.selectbox("Age", numbers, key="an")
-
-st.write("---")
-
-if st.button("Step 4: 📊 Analyze Frames with AI", key="analyze_btn"):
-    if st.session_state.captured_frames is None or len(st.session_state.captured_frames) == 0:
-        st.error("⚠️ Please capture frames first using the button above!")
-    else:
-        frames = st.session_state.captured_frames
-        
+with col2:
+    st.title("Check your Eye Health & Safety")
+    
+    st.subheader("Step 1: Capture 120 frames")
+    
+    # Initialize session state
+    if 'captured_frames' not in st.session_state:
+        st.session_state.captured_frames = None
+    
+    # Render webcam component
+    webcam_with_hidden_upload()
+    
+    # Hidden file uploader (will be auto-filled by JavaScript)
+    uploaded_zip = st.file_uploader("", type=['zip'], key="auto_upload", label_visibility="collapsed")
+    
+    # Process uploaded ZIP
+    if uploaded_zip is not None:
+        import zipfile
         try:
-            st.image(frames[0], caption="Analyzing this frame and others...", use_column_width=True)
+            with zipfile.ZipFile(uploaded_zip, 'r') as zip_ref:
+                frame_files = sorted([f for f in zip_ref.namelist() if f.endswith('.jpg')])
+                if len(frame_files) < 1:
+                    st.error("No JPG files found in the ZIP!")
+                else:
+                    frames_bytes = []
+                    for frame_file in frame_files:
+                        with zip_ref.open(frame_file) as f:
+                            frames_bytes.append(f.read())
+                    
+                    st.session_state.captured_frames = frames_bytes
+                    st.success(f"✅ Loaded {len(frames_bytes)} frames!")
+                    
+                    # Show first frame
+                    st.image(frames_bytes[0], caption=f"First frame (total: {len(frames_bytes)} frames)", use_column_width=True)
         except Exception as e:
-            st.warning(f"Could not display preview image: {e}")
-
-        prompt = f"""
-You are given {len(frames)} sequential eye images (frames) from a webcam.
-
-Task: Check for possible blinking problems or abnormal blinking patterns.
-- You cannot diagnose.
-- Give careful observations and safe advice only.
-- Keep it short and focused.
-- List urgent red flags that require an eye doctor.
-
-Patient context:
-- Country: {patient_country}
-- City: {patient_city}
-- Age: {age_num}
-"""
-
-        # Prepare content for Gemini
-        contents = [prompt]
-        for frame_bytes in frames:
-            contents.append({"mime_type": "image/jpeg", "data": frame_bytes})
-
-        with st.spinner(f"Analyzing {len(frames)} frames with Gemini AI..."):
-            response = model.generate_content(contents)
-
-        st.subheader("Analysis Results:")
-        st.write(response.text)
-
-        # Generate PDF with logo
-        logo_path = None
-        # Try to find logo in multiple locations
-        for path in ["/mnt/user-data/uploads/1770146718890_image.png", "blink_logo.png", "/home/claude/blink_logo.png"]:
+            st.error(f"Error reading ZIP file: {e}")
+    
+    st.write("---")
+    st.subheader("Step 2: Where are you from?")
+    
+    patient_country = st.selectbox("Country:", get_countries(), key="h_country")
+    patient_city = st.selectbox("City:", get_cities(patient_country), key="h_city")
+    
+    st.subheader("Step 3: Your Age")
+    
+    numbers = get_numbers_from_file()
+    if not numbers:
+        st.error("No numbers found in the 'Number' column in countries.csv.")
+        st.stop()
+    
+    age_num = st.selectbox("Age", numbers, key="an")
+    
+    st.write("---")
+    
+    if st.button("Step 4: 📊 Analyze Frames with AI", key="analyze_btn"):
+        if st.session_state.captured_frames is None or len(st.session_state.captured_frames) == 0:
+            st.error("⚠️ Please capture frames first using the button above!")
+        else:
+            frames = st.session_state.captured_frames
+            
             try:
-                with open(path, 'rb'):
-                    logo_path = path
-                    break
-            except:
-                continue
-        
-        pdf_content = generate_pdf_from_text_and_image(response.text, frames[0], logo_path)
-
-        if pdf_content:
-            st.subheader("Step 5: Download your Report")
-            st.download_button(
-                label="Download PDF Report ⬇️",
-                data=pdf_content,
-                file_name="eye_health_recommendations.pdf",
-                mime="application/pdf"
-            )
+                st.image(frames[0], caption="Analyzing this frame and others...", use_column_width=True)
+            except Exception as e:
+                st.warning(f"Could not display preview image: {e}")
+    
+            prompt = f"""
+    You are given {len(frames)} sequential eye images (frames) from a webcam.
+    
+    Task: Check for possible blinking problems or abnormal blinking patterns.
+    - You cannot diagnose.
+    - Give careful observations and safe advice only.
+    - Keep it short and focused.
+    - List urgent red flags that require an eye doctor.
+    
+    Patient context:
+    - Country: {patient_country}
+    - City: {patient_city}
+    - Age: {age_num}
+    """
+    
+            # Prepare content for Gemini
+            contents = [prompt]
+            for frame_bytes in frames:
+                contents.append({"mime_type": "image/jpeg", "data": frame_bytes})
+    
+            with st.spinner(f"Analyzing {len(frames)} frames with Gemini AI..."):
+                response = model.generate_content(contents)
+    
+            st.subheader("Analysis Results:")
+            st.write(response.text)
+    
+            # Generate PDF with logo
+            logo_path = None
+            # Try to find logo in multiple locations
+            for path in ["/mnt/user-data/uploads/1770146718890_image.png", "blink_logo.png", "/home/claude/blink_logo.png"]:
+                try:
+                    with open(path, 'rb'):
+                        logo_path = path
+                        break
+                except:
+                    continue
+            
+            pdf_content = generate_pdf_from_text_and_image(response.text, frames[0], logo_path)
+    
+            if pdf_content:
+                st.subheader("Step 5: Download your Report")
+                st.download_button(
+                    label="Download PDF Report ⬇️",
+                    data=pdf_content,
+                    file_name="eye_health_recommendations.pdf",
+                    mime="application/pdf"
+                )
