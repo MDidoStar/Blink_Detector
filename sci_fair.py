@@ -212,8 +212,8 @@ def webcam_with_hidden_upload():
     Captures frames and creates a Blob, then programmatically uploads via hidden file input
     """
     html_code = """
-    <div style="border: 2px solid #3498db; padding: 20px; border-radius: 10px; background-color: #f9f9f9;">
-        <video id="video" width="640" height="480" autoplay style="border: 2px solid #333; border-radius: 8px;"></video><br>
+    <div style="border: 2px solid #3498db; padding: 20px; border-radius: 10px; background-color: #f9f9f9; text-align: center;">
+        <video id="video" width="640" height="480" autoplay style="border: 2px solid #333; border-radius: 8px; display: inline-block;"></video><br>
         <button id="startBtn" style="
             margin-top: 15px; 
             padding: 12px 24px; 
