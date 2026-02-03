@@ -33,12 +33,20 @@ st.set_page_config(
 def display_logo():
     """Display the Blink logo at the top of the app"""
     try:
+        # Try to open from uploads directory
         logo = Image.open("/mnt/user-data/uploads/1770146718890_image.png")
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
             st.image(logo, use_column_width=True)
     except Exception as e:
-        st.warning(f"Logo not found: {e}")
+        # If that fails, try from current directory
+        try:
+            logo = Image.open("blink_logo.png")
+            col1, col2, col3 = st.columns([1, 2, 1])
+            with col2:
+                st.image(logo, use_column_width=True)
+        except:
+            st.info("💡 Tip: Place 'blink_logo.png' in the same directory as this script to display the logo.")
 
 # Display logo
 display_logo()
@@ -398,7 +406,16 @@ Patient context:
         st.write(response.text)
 
         # Generate PDF with logo
-        logo_path = "/mnt/user-data/uploads/1770146718890_image.png"
+        logo_path = None
+        # Try to find logo in multiple locations
+        for path in ["/mnt/user-data/uploads/1770146718890_image.png", "blink_logo.png", "/home/claude/blink_logo.png"]:
+            try:
+                with open(path, 'rb'):
+                    logo_path = path
+                    break
+            except:
+                continue
+        
         pdf_content = generate_pdf_from_text_and_image(response.text, frames[0], logo_path)
 
         if pdf_content:
