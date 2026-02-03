@@ -19,12 +19,16 @@ genai.configure(api_key="AIzaSyD-UBEMP78gtwa1DVBj2zeaFZaPfRCiZAE")
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 # ----------------------------
+# CONFIGURATION - Adjust these settings
+# ----------------------------
+LOGO_WIDTH_PX = 250  # Logo width in pixels for web display (try 200, 300, 400, 600, etc.)
+LOGO_PDF_WIDTH = 150  # Logo width in PDF reports (try 100, 150, 200, 300, etc.)
+LOGO_PDF_HEIGHT = 75  # Logo height in PDF reports (try 50, 100, 150, etc.)
+
+# ----------------------------
 # Page Config with Logo
 # ----------------------------
 st.set_page_config(
-    LOGO_WIDTH_PX = 400      # Change this number for web display size
-    LOGO_PDF_WIDTH = 200     # Change this for PDF logo width  
-    LOGO_PDF_HEIGHT = 100    # Change this for PDF logo height
     page_title="Blink - Eye Health Check",
     page_icon="👁️",
     layout="wide"
@@ -33,21 +37,25 @@ st.set_page_config(
 # ----------------------------
 # Display Logo at Top
 # ----------------------------
-def display_logo():
-    """Display the Blink logo at the top of the app"""
+def display_logo(width_px=LOGO_WIDTH_PX):
+    """Display the Blink logo at the top of the app
+    
+    Args:
+        width_px: Width of the logo in pixels (default from LOGO_WIDTH_PX config)
+    """
     try:
         # Try to open from uploads directory
         logo = Image.open("/mnt/user-data/uploads/1770146718890_image.png")
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
-            st.image(logo, use_column_width=True)
+            st.image(logo, width=width_px)
     except Exception as e:
         # If that fails, try from current directory
         try:
             logo = Image.open("blink_logo.png")
             col1, col2, col3 = st.columns([1, 2, 1])
             with col2:
-                st.image(logo, use_column_width=True)
+                st.image(logo, width=width_px)
         except:
             st.info("💡 Tip: Place 'blink_logo.png' in the same directory as this script to display the logo.")
 
@@ -133,7 +141,7 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
     if logo_path:
         try:
             logo_img = RLImage(logo_path)
-            logo_img._restrictSize(200, 100)
+            logo_img._restrictSize(LOGO_PDF_WIDTH, LOGO_PDF_HEIGHT)
             story.append(logo_img)
             story.append(Spacer(1, 10))
         except Exception as e:
@@ -429,4 +437,3 @@ Patient context:
                 file_name="eye_health_recommendations.pdf",
                 mime="application/pdf"
             )
-
