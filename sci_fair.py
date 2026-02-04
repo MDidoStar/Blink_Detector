@@ -307,7 +307,6 @@ st.image(
     use_column_width=False,
     width=180
 )
-st.title("Check your Eye Health & Safety")
 
 st.subheader("Step 1: Capture 120 frames")
 
@@ -408,6 +407,7 @@ Patient context:
                 file_name="eye_health_recommendations.pdf",
                 mime="application/pdf"
             )
+
 
 
 
