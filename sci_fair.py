@@ -205,15 +205,19 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
     return buffer.getvalue()
 
 # ----------------------------
-# Webcam Component with Hidden File Upload
+# Browser-Compatible Webcam Component
 # ----------------------------
-def webcam_with_hidden_upload():
+def webcam_capture_component():
     """
-    Captures frames and creates a Blob, then programmatically uploads via hidden file input
+    Cross-browser compatible webcam capture that downloads frames as ZIP
+    Works on Chrome, Firefox, Safari, and Edge
     """
     html_code = """
+    <!-- Load JSZip from CDN first -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    
     <div style="border: 2px solid #3498db; padding: 20px; border-radius: 10px; background-color: #f9f9f9; text-align: center;">
-        <video id="video" width="640" height="480" autoplay style="border: 2px solid #333; border-radius: 8px; display: inline-block;"></video><br>
+        <video id="video" width="640" height="480" autoplay playsinline style="border: 2px solid #333; border-radius: 8px; display: inline-block;"></video><br>
         <button id="startBtn" style="
             margin-top: 15px; 
             padding: 12px 24px; 
@@ -239,86 +243,180 @@ def webcam_with_hidden_upload():
             display: none;
             font-weight: bold;
         ">
-            📷 Capture & Upload 120 Frames
+            📷 Capture & Download 120 Frames
         </button>
-        <div id="status" style="margin-top: 15px; font-size: 16px; color: #555;"></div>
+        <div id="status" style="margin-top: 15px; font-size: 16px; color: #555; font-weight: 500;">
+            Click "Start Camera" to begin
+        </div>
         <canvas id="canvas" style="display:none;"></canvas>
     </div>
 
     <script>
-        const video = document.getElementById('video');
-        const startBtn = document.getElementById('startBtn');
-        const captureBtn = document.getElementById('captureBtn');
-        const canvas = document.getElementById('canvas');
-        const ctx = canvas.getContext('2d');
-        const status = document.getElementById('status');
+        (function() {
+            const video = document.getElementById('video');
+            const startBtn = document.getElementById('startBtn');
+            const captureBtn = document.getElementById('captureBtn');
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            const status = document.getElementById('status');
+            let stream = null;
 
-        startBtn.onclick = async () => {
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-                video.srcObject = stream;
-                startBtn.style.display = 'none';
-                captureBtn.style.display = 'inline-block';
-                status.textContent = '✅ Camera ready! Click "Capture & Upload 120 Frames" when ready.';
-                status.style.color = 'green';
-            } catch (err) {
-                status.textContent = '❌ Camera access denied: ' + err.message;
-                status.style.color = 'red';
-            }
-        };
+            // Cross-browser getUserMedia
+            const getUserMedia = navigator.mediaDevices?.getUserMedia || 
+                                 navigator.webkitGetUserMedia || 
+                                 navigator.mozGetUserMedia || 
+                                 navigator.msGetUserMedia;
 
-        captureBtn.onclick = async () => {
-            captureBtn.disabled = true;
-            captureBtn.style.backgroundColor = '#95a5a6';
-            status.textContent = '⏳ Capturing frames...';
-            status.style.color = 'orange';
+            startBtn.onclick = async () => {
+                try {
+                    // Request camera with cross-browser support
+                    const constraints = {
+                        video: {
+                            width: { ideal: 1280 },
+                            height: { ideal: 720 },
+                            facingMode: 'user'
+                        }
+                    };
 
-            const frames = [];
-            const totalFrames = 120;
-            const interval = 100; // ms between frames
+                    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                        stream = await navigator.mediaDevices.getUserMedia(constraints);
+                    } else if (getUserMedia) {
+                        stream = await new Promise((resolve, reject) => {
+                            getUserMedia.call(navigator, constraints, resolve, reject);
+                        });
+                    } else {
+                        throw new Error('Camera API not supported in this browser');
+                    }
 
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
+                    video.srcObject = stream;
+                    
+                    // Wait for video to be ready
+                    await new Promise(resolve => {
+                        video.onloadedmetadata = () => {
+                            video.play();
+                            resolve();
+                        };
+                    });
 
-            for (let i = 0; i < totalFrames; i++) {
-                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-                const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg'));
-                frames.push(blob);
-                status.textContent = `📸 Captured ${i + 1}/${totalFrames} frames...`;
-                await new Promise(resolve => setTimeout(resolve, interval));
-            }
-
-            status.textContent = '🔄 Creating ZIP file...';
-            
-            // Create ZIP using JSZip from CDN
-            const script = document.createElement('script');
-            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
-            script.onload = async () => {
-                const zip = new JSZip();
-                frames.forEach((blob, idx) => {
-                    zip.file(`frame_${String(idx).padStart(3, '0')}.jpg`, blob);
-                });
-
-                const zipBlob = await zip.generateAsync({type: 'blob'});
-                
-                // Create file and trigger upload
-                const file = new File([zipBlob], 'captured_frames.zip', {type: 'application/zip'});
-                const dataTransfer = new DataTransfer();
-                dataTransfer.items.add(file);
-                
-                const fileInput = window.parent.document.querySelector('input[type="file"][data-testid="stFileUploadDropzone"]');
-                if (fileInput) {
-                    fileInput.files = dataTransfer.files;
-                    fileInput.dispatchEvent(new Event('change', {bubbles: true}));
-                    status.textContent = '✅ Upload complete! Scroll down to see results.';
-                    status.style.color = 'green';
-                } else {
-                    status.textContent = '❌ Could not find upload element. Please refresh the page.';
-                    status.style.color = 'red';
+                    startBtn.style.display = 'none';
+                    captureBtn.style.display = 'inline-block';
+                    status.textContent = '✅ Camera ready! Click "Capture & Download 120 Frames" when ready.';
+                    status.style.color = '#27ae60';
+                } catch (err) {
+                    console.error('Camera error:', err);
+                    status.textContent = '❌ Camera access denied or not available: ' + err.message;
+                    status.style.color = '#e74c3c';
                 }
             };
-            document.head.appendChild(script);
-        };
+
+            captureBtn.onclick = async () => {
+                captureBtn.disabled = true;
+                captureBtn.style.backgroundColor = '#95a5a6';
+                captureBtn.style.cursor = 'not-allowed';
+                status.textContent = '⏳ Preparing capture...';
+                status.style.color = '#f39c12';
+
+                try {
+                    const frames = [];
+                    const totalFrames = 120;
+                    const interval = 100; // ms between frames
+
+                    canvas.width = video.videoWidth || 640;
+                    canvas.height = video.videoHeight || 480;
+
+                    // Capture frames
+                    for (let i = 0; i < totalFrames; i++) {
+                        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                        
+                        // Convert to blob with cross-browser support
+                        const blob = await new Promise(resolve => {
+                            if (canvas.toBlob) {
+                                canvas.toBlob(resolve, 'image/jpeg', 0.85);
+                            } else if (canvas.msToBlob) {
+                                // IE/Edge legacy support
+                                resolve(canvas.msToBlob());
+                            } else {
+                                // Fallback using data URL
+                                const dataURL = canvas.toDataURL('image/jpeg', 0.85);
+                                const byteString = atob(dataURL.split(',')[1]);
+                                const ab = new ArrayBuffer(byteString.length);
+                                const ia = new Uint8Array(ab);
+                                for (let j = 0; j < byteString.length; j++) {
+                                    ia[j] = byteString.charCodeAt(j);
+                                }
+                                resolve(new Blob([ab], { type: 'image/jpeg' }));
+                            }
+                        });
+                        
+                        frames.push(blob);
+                        status.textContent = `📸 Captured ${i + 1}/${totalFrames} frames...`;
+                        
+                        // Small delay between captures
+                        await new Promise(resolve => setTimeout(resolve, interval));
+                    }
+
+                    status.textContent = '🔄 Creating ZIP file...';
+                    status.style.color = '#3498db';
+
+                    // Check if JSZip is loaded
+                    if (typeof JSZip === 'undefined') {
+                        throw new Error('JSZip library not loaded. Please refresh the page.');
+                    }
+
+                    // Create ZIP file
+                    const zip = new JSZip();
+                    frames.forEach((blob, idx) => {
+                        const frameNum = String(idx).padStart(3, '0');
+                        zip.file(`frame_${frameNum}.jpg`, blob);
+                    });
+
+                    // Generate ZIP
+                    const zipBlob = await zip.generateAsync({
+                        type: 'blob',
+                        compression: 'DEFLATE',
+                        compressionOptions: { level: 6 }
+                    });
+
+                    // Create download link (works in all browsers)
+                    const url = URL.createObjectURL(zipBlob);
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = url;
+                    a.download = 'captured_frames.zip';
+                    document.body.appendChild(a);
+                    a.click();
+                    
+                    // Cleanup
+                    setTimeout(() => {
+                        document.body.removeChild(a);
+                        URL.revokeObjectURL(url);
+                    }, 100);
+
+                    status.textContent = '✅ Download complete! Please upload the ZIP file below.';
+                    status.style.color = '#27ae60';
+
+                    // Re-enable button
+                    captureBtn.disabled = false;
+                    captureBtn.style.backgroundColor = '#2ecc71';
+                    captureBtn.style.cursor = 'pointer';
+
+                } catch (err) {
+                    console.error('Capture error:', err);
+                    status.textContent = '❌ Error: ' + err.message;
+                    status.style.color = '#e74c3c';
+                    captureBtn.disabled = false;
+                    captureBtn.style.backgroundColor = '#2ecc71';
+                    captureBtn.style.cursor = 'pointer';
+                }
+            };
+
+            // Cleanup on page unload
+            window.addEventListener('beforeunload', () => {
+                if (stream) {
+                    stream.getTracks().forEach(track => track.stop());
+                }
+            });
+        })();
     </script>
     """
     st.components.v1.html(html_code, height=680)
@@ -339,10 +437,12 @@ with col2:
         st.session_state.captured_frames = None
     
     # Render webcam component
-    webcam_with_hidden_upload()
+    webcam_capture_component()
     
-    # Hidden file uploader (will be auto-filled by JavaScript)
-    uploaded_zip = st.file_uploader("", type=['zip'], key="auto_upload", label_visibility="collapsed")
+    st.info("📥 After capturing, a ZIP file will download automatically. Upload it below:")
+    
+    # Manual file uploader
+    uploaded_zip = st.file_uploader("Upload the captured frames ZIP file", type=['zip'], key="manual_upload")
     
     # Process uploaded ZIP
     if uploaded_zip is not None:
@@ -385,7 +485,7 @@ with col2:
     
     if st.button("Step 4: 📊 Analyze Frames with AI", key="analyze_btn"):
         if st.session_state.captured_frames is None or len(st.session_state.captured_frames) == 0:
-            st.error("⚠️ Please capture frames first using the button above!")
+            st.error("⚠️ Please capture and upload frames first!")
         else:
             frames = st.session_state.captured_frames
             
@@ -395,19 +495,19 @@ with col2:
                 st.warning(f"Could not display preview image: {e}")
     
             prompt = f"""
-    You are given {len(frames)} sequential eye images (frames) from a webcam.
-    
-    Task: Check for possible blinking problems or abnormal blinking patterns.
-    - You cannot diagnose.
-    - Give careful observations and safe advice only.
-    - Keep it short and focused.
-    - List urgent red flags that require an eye doctor.
-    
-    Patient context:
-    - Country: {patient_country}
-    - City: {patient_city}
-    - Age: {age_num}
-    """
+You are given {len(frames)} sequential eye images (frames) from a webcam.
+
+Task: Check for possible blinking problems or abnormal blinking patterns.
+- You cannot diagnose.
+- Give careful observations and safe advice only.
+- Keep it short and focused.
+- List urgent red flags that require an eye doctor.
+
+Patient context:
+- Country: {patient_country}
+- City: {patient_city}
+- Age: {age_num}
+"""
     
             # Prepare content for Gemini
             contents = [prompt]
