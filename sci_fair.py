@@ -15,7 +15,7 @@ from PIL import Image
 # ----------------------------
 # Gemini setup
 # ----------------------------
-genai.configure(api_key="AIzaSyD-UBEMP78gtwa1DVBj2zeaFZaPfRCiZAE")
+genai.configure(api_key="AIzaSyD_13Y30NRcVRGNO9m4vTkhyvxusTY1qK8")
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 # ----------------------------
@@ -486,3 +486,4 @@ Patient context:
                 except Exception as e:
                     st.error(f"Error during AI analysis: {e}")
                     st.error("This might be due to API limits or connectivity issues. Please try again.")
+
