@@ -4,6 +4,7 @@ import base64
 import streamlit as st
 import google.generativeai as genai
 import pandas as pd
+import streamlit.components.v1 as components
 from reportlab.platypus import (
     SimpleDocTemplate, Spacer, Table, TableStyle, Paragraph, Image as RLImage
 )
@@ -19,445 +20,150 @@ genai.configure(api_key="AIzaSyD-UBEMP78gtwa1DVBj2zeaFZaPfRCiZAE")
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 # ----------------------------
-# CONFIGURATION - Adjust these settings
+# CONFIGURATION
 # ----------------------------
-LOGO_WIDTH_PX = 250  # Logo width in pixels for web display (try 200, 300, 400, 600, etc.)
-LOGO_PDF_WIDTH = 150  # Logo width in PDF reports (try 100, 150, 200, 300, etc.)
-LOGO_PDF_HEIGHT = 75  # Logo height in PDF reports (try 50, 100, 150, etc.)
+LOGO_WIDTH_PX = 250
+LOGO_PDF_WIDTH = 150
+LOGO_PDF_HEIGHT = 75
+
+st.set_page_config(page_title="Blink - Eye Health Check", page_icon="👁️", layout="wide")
 
 # ----------------------------
-# Page Config with Logo
-# ----------------------------
-st.set_page_config(
-    page_title="Blink - Eye Health Check",
-    page_icon="👁️",
-    layout="wide"
-)
-
-# ----------------------------
-# Display Logo at Top
+# Display Logo
 # ----------------------------
 def display_logo(width_px=LOGO_WIDTH_PX):
-    """Display the Blink logo at the top of the app
-    
-    Args:
-        width_px: Width of the logo in pixels (default from LOGO_WIDTH_PX config)
-    """
     try:
-        # Try to open from uploads directory
+        # Priority 1: Specific path provided in your snippet
         logo = Image.open("/mnt/user-data/uploads/1770146718890_image.png")
-        col1, col2, col3 = st.columns([1, 2, 1])
-        with col2:
-            st.image(logo, width=width_px)
-    except Exception as e:
-        # If that fails, try from current directory
+        st.image(logo, width=width_px)
+    except:
         try:
+            # Priority 2: Local directory
             logo = Image.open("blink_logo.png")
-            col1, col2, col3 = st.columns([1, 2, 1])
-            with col2:
-                st.image(logo, width=width_px)
+            st.image(logo, width=width_px)
         except:
-            st.info("💡 Tip: Place 'blink_logo.png' in the same directory as this script to display the logo.")
+            st.info("💡 Logo not found. Place 'blink_logo.png' in the script folder.")
 
-# Display logo
 display_logo()
 
 # ----------------------------
-# Data load
+# Data load logic
 # ----------------------------
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv(r"countries.csv")
-        expected = {"Country", "City", "Currency_Code", "Number"}
-        missing = expected - set(df.columns)
-        if missing:
-            st.error(f"countries.csv is missing columns: {missing}")
-            return pd.DataFrame(columns=["Country", "City", "Currency_Code", "Number"])
-        df["Country"] = df["Country"].astype(str)
-        df["City"] = df["City"].astype(str)
-        df["Currency_Code"] = df["Currency_Code"].astype(str)
-        df["Number"] = pd.to_numeric(df["Number"], errors="coerce")
+        df = pd.read_csv("countries.csv")
         return df
-    except FileNotFoundError:
-        st.error(r"Error: 'countries.csv' file not found. Please check the path.")
-        return pd.DataFrame(columns=["Country", "City", "Currency_Code", "Number"])
-    except Exception as e:
-        st.error(f"Failed to load countries.csv: {e}")
+    except:
         return pd.DataFrame(columns=["Country", "City", "Currency_Code", "Number"])
 
 df = load_data()
 
-def get_countries():
-    if not df.empty:
-        return sorted(df["Country"].dropna().unique().tolist())
-    return []
-
-def get_cities(country: str):
-    if not df.empty and country:
-        return sorted(df[df["Country"] == country]["City"].dropna().unique().tolist())
-    return []
-
-def get_numbers_from_file():
-    if df.empty or "Number" not in df.columns:
-        return []
-    nums = df["Number"].dropna().unique().tolist()
-    nums = sorted({int(x) for x in nums})
-    return nums
-
 # ----------------------------
-# PDF generation with logo
+# PDF generation logic
 # ----------------------------
-def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | None = None, logo_path: str | None = None):
+def generate_pdf_from_text_and_image(text_content, image_bytes=None, logo_path=None):
     buffer = io.BytesIO()
-    doc = SimpleDocTemplate(
-        buffer,
-        pagesize=letter,
-        rightMargin=72,
-        leftMargin=72,
-        topMargin=72,
-        bottomMargin=18
-    )
+    doc = SimpleDocTemplate(buffer, pagesize=letter)
     styles = getSampleStyleSheet()
     story = []
-
-    title_style = ParagraphStyle(
-        "CustomTitle",
-        parent=styles["Heading1"],
-        fontSize=16,
-        textColor=colors.HexColor("#1a1a1a"),
-        spaceAfter=14,
-        leading=20
-    )
-    normal_style = ParagraphStyle(
-        "CustomNormal",
-        parent=styles["Normal"],
-        fontSize=10,
-        spaceAfter=6,
-        leading=14
-    )
-
-    # Add logo to PDF if available
+    
     if logo_path:
         try:
             logo_img = RLImage(logo_path)
             logo_img._restrictSize(LOGO_PDF_WIDTH, LOGO_PDF_HEIGHT)
             story.append(logo_img)
-            story.append(Spacer(1, 10))
-        except Exception as e:
-            print(f"Could not add logo to PDF: {e}")
+        except: pass
 
-    story.append(Paragraph("Eye Photo + Gemini Notes", title_style))
-    story.append(Spacer(1, 10))
-
+    story.append(Paragraph("Eye Health Report", styles["Heading1"]))
+    
     if image_bytes:
         img_buf = io.BytesIO(image_bytes)
         rl_img = RLImage(img_buf)
-        rl_img._restrictSize(440, 280)
+        rl_img._restrictSize(400, 300)
         story.append(rl_img)
-        story.append(Spacer(1, 14))
 
-    lines = text_content.split("\n")
-    i = 0
-    while i < len(lines):
-        stripped = lines[i].strip()
-        if not stripped:
-            story.append(Spacer(1, 8))
-            i += 1
-            continue
-
-        if "|" in stripped and i + 1 < len(lines) and "|" in lines[i + 1]:
-            table_data = []
-            while i < len(lines) and "|" in lines[i].strip():
-                row = lines[i].strip()
-                if re.match(r"^[\|\s\-:]+$", row):
-                    i += 1
-                    continue
-                cells = [cell.strip() for cell in row.split("|") if cell.strip() != ""]
-                if cells:
-                    table_data.append(cells)
-                i += 1
-
-            if table_data:
-                t = Table(table_data, hAlign="CENTER")
-                t.setStyle(TableStyle([
-                    ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#3498db")),
-                    ("TEXTCOLOR", (0, 0), (-1, 0), colors.whitesmoke),
-                    ("ALIGN", (0, 0), (-1, -1), "CENTER"),
-                    ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
-                    ("FONTSIZE", (0, 0), (-1, 0), 10),
-                    ("BOTTOMPADDING", (0, 0), (-1, 0), 10),
-                    ("TOPPADDING", (0, 0), (-1, 0), 10),
-                    ("BACKGROUND", (0, 1), (-1, -1), colors.whitesmoke),
-                    ("GRID", (0, 0), (-1, -1), 0.5, colors.grey),
-                    ("FONTNAME", (0, 1), (-1, -1), "Helvetica"),
-                    ("FONTSIZE", (0, 1), (-1, -1), 9),
-                ]))
-                story.append(t)
-                story.append(Spacer(1, 12))
-            continue
-
-        story.append(Paragraph(stripped, normal_style))
-        i += 1
-
+    story.append(Paragraph(text_content.replace("\n", "<br/>"), styles["Normal"]))
     doc.build(story)
-    buffer.seek(0)
     return buffer.getvalue()
 
 # ----------------------------
-# Webcam Component with Hidden File Upload
+# THE FIX: Hidden Uploader & JavaScript
 # ----------------------------
+
+# 1. We create the uploader first so the DOM finds it
+st.markdown('<div id="uploader-container">', unsafe_allow_html=True)
+uploaded_file = st.file_uploader("Upload or Capture", type=["jpg", "png", "jpeg"])
+st.markdown('</div>', unsafe_allow_html=True)
+
+# 2. Hide the uploader UI using CSS
+st.markdown("""
+    <style>
+        [data-testid="stFileUploader"] { display: none; }
+    </style>
+""", unsafe_allow_html=True)
+
 def webcam_with_hidden_upload():
-    """
-    Captures frames and creates a Blob, then programmatically uploads via hidden file input
-    """
     html_code = """
-    <div style="border: 2px solid #3498db; padding: 20px; border-radius: 10px; background-color: #f9f9f9; text-align: center;">
-        <video id="video" width="640" height="480" autoplay style="border: 2px solid #333; border-radius: 8px; display: inline-block;"></video><br>
-        <button id="startBtn" style="
-            margin-top: 15px; 
-            padding: 12px 24px; 
-            font-size: 16px; 
-            background-color: #3498db; 
-            color: white; 
-            border: none; 
-            border-radius: 6px; 
-            cursor: pointer;
-            font-weight: bold;
-        ">
-            📸 Start Camera
+    <div style="text-align: center; border: 2px solid #3498db; padding: 10px; border-radius: 10px;">
+        <video id="video" width="400" height="300" autoplay style="border-radius: 5px;"></video><br>
+        <button id="captureBtn" style="background: #2ecc71; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">
+            📸 Capture & Analyze
         </button>
-        <button id="captureBtn" style="
-            margin-top: 15px; 
-            padding: 12px 24px; 
-            font-size: 16px; 
-            background-color: #2ecc71; 
-            color: white; 
-            border: none; 
-            border-radius: 6px; 
-            cursor: pointer;
-            display: none;
-            font-weight: bold;
-        ">
-            📷 Capture & Upload 120 Frames
-        </button>
-        <div id="status" style="margin-top: 15px; font-size: 16px; color: #555;"></div>
         <canvas id="canvas" style="display:none;"></canvas>
     </div>
 
     <script>
         const video = document.getElementById('video');
-        const startBtn = document.getElementById('startBtn');
         const captureBtn = document.getElementById('captureBtn');
         const canvas = document.getElementById('canvas');
-        const ctx = canvas.getContext('2d');
-        const status = document.getElementById('status');
 
-        startBtn.onclick = async () => {
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-                video.srcObject = stream;
-                startBtn.style.display = 'none';
-                captureBtn.style.display = 'inline-block';
-                status.textContent = '✅ Camera ready! Click "Capture & Upload 120 Frames" when ready.';
-                status.style.color = 'green';
-            } catch (err) {
-                status.textContent = '❌ Camera access denied: ' + err.message;
-                status.style.color = 'red';
-            }
-        };
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => { video.srcObject = stream; });
 
-        captureBtn.onclick = async () => {
-            captureBtn.disabled = true;
-            captureBtn.style.backgroundColor = '#95a5a6';
-            status.textContent = '⏳ Capturing frames...';
-            status.style.color = 'orange';
-
-            const frames = [];
-            const totalFrames = 120;
-            const interval = 100; // ms between frames
-
+        captureBtn.addEventListener('click', () => {
+            const context = canvas.getContext('2d');
             canvas.width = video.videoWidth;
             canvas.height = video.videoHeight;
-
-            for (let i = 0; i < totalFrames; i++) {
-                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-                const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg'));
-                frames.push(blob);
-                status.textContent = `📸 Captured ${i + 1}/${totalFrames} frames...`;
-                await new Promise(resolve => setTimeout(resolve, interval));
-            }
-
-            status.textContent = '🔄 Creating ZIP file...';
+            context.drawImage(video, 0, 0);
             
-            // Create ZIP using JSZip from CDN
-            const script = document.createElement('script');
-            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
-            script.onload = async () => {
-                const zip = new JSZip();
-                frames.forEach((blob, idx) => {
-                    zip.file(`frame_${String(idx).padStart(3, '0')}.jpg`, blob);
-                });
-
-                const zipBlob = await zip.generateAsync({type: 'blob'});
+            canvas.toBlob((blob) => {
+                const file = new File([blob], "capture.jpg", { type: "image/jpeg" });
+                const container = new DataTransfer();
+                container.items.add(file);
                 
-                // Create file and trigger upload
-                const file = new File([zipBlob], 'captured_frames.zip', {type: 'application/zip'});
-                const dataTransfer = new DataTransfer();
-                dataTransfer.items.add(file);
+                // This targets the Streamlit File Uploader in the parent window
+                const selector = 'input[type="file"]';
+                const fileInput = window.parent.document.querySelector(selector);
                 
-                const fileInput = window.parent.document.querySelector('input[type="file"][data-testid="stFileUploadDropzone"]');
                 if (fileInput) {
-                    fileInput.files = dataTransfer.files;
-                    fileInput.dispatchEvent(new Event('change', {bubbles: true}));
-                    status.textContent = '✅ Upload complete! Scroll down to see results.';
-                    status.style.color = 'green';
+                    fileInput.files = container.files;
+                    fileInput.dispatchEvent(new Event('change', { bubbles: true }));
                 } else {
-                    status.textContent = '❌ Could not find upload element. Please refresh the page.';
-                    status.style.color = 'red';
+                    alert("Streamlit input not found. Please refresh.");
                 }
-            };
-            document.head.appendChild(script);
-        };
+            }, 'image/jpeg');
+        });
     </script>
     """
-    st.components.v1.html(html_code, height=680)
+    components.html(html_code, height=450)
 
 # ----------------------------
-# Main App
+# Main App Execution
 # ----------------------------
-# Create centered layout
-col1, col2, col3 = st.columns([1, 3, 1])
-
-with col2:
-    st.title("Check your Eye Health & Safety")
-    
-    st.subheader("Step 1: Capture 120 frames")
-    
-    # Initialize session state
-    if 'captured_frames' not in st.session_state:
-        st.session_state.captured_frames = None
-    # 1. Create a container for the uploader
-uploader_placeholder = st.empty()
-
-# 2. Inside that placeholder, put the file uploader that the JS is looking for
-with uploader_placeholder:
-    # Use a unique key so the JS can find it
-    uploaded_file = st.file_uploader(
-        "Upload Eye Image", 
-        type=["jpg", "png", "jpeg"],
-        key="webcam_upload" # This key is important
-    )
-
-# 3. Use CSS to hide the uploader if you don't want the user to see it
-st.markdown("""
-    <style>
-        .stFileUploader {
-            display: none;
-        }
-    </style>
-    """, unsafe_allow_html=True)
-    # Render webcam component
+if not uploaded_file:
     webcam_with_hidden_upload()
+else:
+    st.success("Image Captured Successfully!")
+    st.image(uploaded_file)
     
-    # Hidden file uploader (will be auto-filled by JavaScript)
-    uploaded_zip = st.file_uploader("", type=['zip'], key="auto_upload", label_visibility="collapsed")
-    
-    # Process uploaded ZIP
-    if uploaded_zip is not None:
-        import zipfile
-        try:
-            with zipfile.ZipFile(uploaded_zip, 'r') as zip_ref:
-                frame_files = sorted([f for f in zip_ref.namelist() if f.endswith('.jpg')])
-                if len(frame_files) < 1:
-                    st.error("No JPG files found in the ZIP!")
-                else:
-                    frames_bytes = []
-                    for frame_file in frame_files:
-                        with zip_ref.open(frame_file) as f:
-                            frames_bytes.append(f.read())
-                    
-                    st.session_state.captured_frames = frames_bytes
-                    st.success(f"✅ Loaded {len(frames_bytes)} frames!")
-                    
-                    # Show first frame
-                    st.image(frames_bytes[0], caption=f"First frame (total: {len(frames_bytes)} frames)", use_column_width=True)
-        except Exception as e:
-            st.error(f"Error reading ZIP file: {e}")
-    
-    st.write("---")
-    st.subheader("Step 2: Where are you from?")
-    
-    patient_country = st.selectbox("Country:", get_countries(), key="h_country")
-    patient_city = st.selectbox("City:", get_cities(patient_country), key="h_city")
-    
-    st.subheader("Step 3: Your Age")
-    
-    numbers = get_numbers_from_file()
-    if not numbers:
-        st.error("No numbers found in the 'Number' column in countries.csv.")
-        st.stop()
-    
-    age_num = st.selectbox("Age", numbers, key="an")
-    
-    st.write("---")
-    
-    if st.button("Step 4: 📊 Analyze Frames with AI", key="analyze_btn"):
-        if st.session_state.captured_frames is None or len(st.session_state.captured_frames) == 0:
-            st.error("⚠️ Please capture frames first using the button above!")
-        else:
-            frames = st.session_state.captured_frames
-            
-            try:
-                st.image(frames[0], caption="Analyzing this frame and others...", use_column_width=True)
-            except Exception as e:
-                st.warning(f"Could not display preview image: {e}")
-    
-            prompt = f"""
-    You are given {len(frames)} sequential eye images (frames) from a webcam.
-    
-    Task: Check for possible blinking problems or abnormal blinking patterns.
-    - You cannot diagnose.
-    - Give careful observations and safe advice only.
-    - Keep it short and focused.
-    - List urgent red flags that require an eye doctor.
-    
-    Patient context:
-    - Country: {patient_country}
-    - City: {patient_city}
-    - Age: {age_num}
-    """
-    
-            # Prepare content for Gemini
-            contents = [prompt]
-            for frame_bytes in frames:
-                contents.append({"mime_type": "image/jpeg", "data": frame_bytes})
-    
-            with st.spinner(f"Analyzing {len(frames)} frames with Gemini AI..."):
-                response = model.generate_content(contents)
-    
-            st.subheader("Analysis Results:")
-            st.write(response.text)
-    
-            # Generate PDF with logo
-            logo_path = None
-            # Try to find logo in multiple locations
-            for path in ["/mnt/user-data/uploads/1770146718890_image.png", "blink_logo.png", "/home/claude/blink_logo.png"]:
-                try:
-                    with open(path, 'rb'):
-                        logo_path = path
-                        break
-                except:
-                    continue
-            
-            pdf_content = generate_pdf_from_text_and_image(response.text, frames[0], logo_path)
-    
-            if pdf_content:
-                st.subheader("Step 5: Download your Report")
-                st.download_button(
-                    label="Download PDF Report ⬇️",
-                    data=pdf_content,
-                    file_name="eye_health_recommendations.pdf",
-                    mime="application/pdf"
-                )
-
+    if st.button("Generate AI Analysis"):
+        img_data = uploaded_file.getvalue()
+        response = model.generate_content([
+            "Analyze this eye for health issues. Provide a clear summary.",
+            {"mime_type": "image/jpeg", "data": img_data}
+        ])
+        st.write(response.text)
+        
+        pdf_bytes = generate_pdf_from_text_and_image(response.text, img_data)
+        st.download_button("Download Report", pdf_bytes, "report.pdf")
