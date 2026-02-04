@@ -356,7 +356,7 @@ st.markdown("""
             display: none;
         }
     </style>
-""", unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
     # Render webcam component
     webcam_with_hidden_upload()
     
@@ -460,3 +460,4 @@ st.markdown("""
                     file_name="eye_health_recommendations.pdf",
                     mime="application/pdf"
                 )
+
