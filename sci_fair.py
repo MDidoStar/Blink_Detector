@@ -5,6 +5,7 @@ import streamlit as st
 import google.generativeai as genai
 import pandas as pd
 import streamlit.components.v1 as components
+
 from reportlab.platypus import (
     SimpleDocTemplate, Spacer, Table, TableStyle, Paragraph, Image as RLImage
 )
@@ -55,10 +56,34 @@ def get_cities(country: str):
     return []
 
 # ----------------------------
-# Webcam Component - FIXED FOR 120 FRAMES
+# Dropdowns
+# ----------------------------
+selected_country = st.selectbox("Select Country", get_countries())
+selected_city = st.selectbox("Select City", get_cities(selected_country))
+age = st.number_input("Enter Age", min_value=0, max_value=120, value=25)
+
+# ----------------------------
+# PDF generation
+# ----------------------------
+def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | None = None):
+    buffer = io.BytesIO()
+    doc = SimpleDocTemplate(buffer, pagesize=letter, rightMargin=72, leftMargin=72, topMargin=72, bottomMargin=18)
+    styles = getSampleStyleSheet()
+    story = [Paragraph("Eye Photo + Gemini Notes", styles["Heading1"]), Spacer(1, 10)]
+    if image_bytes:
+        img_buf = io.BytesIO(image_bytes)
+        rl_img = RLImage(img_buf)
+        rl_img._restrictSize(440, 280)
+        story.append(rl_img)
+    story.append(Paragraph(text_content.replace("\n", "<br/>"), styles["Normal"]))
+    doc.build(story)
+    buffer.seek(0)
+    return buffer.getvalue()
+
+# ----------------------------
+# Webcam Component - 120 Frames
 # ----------------------------
 def webcam_with_hidden_upload():
-    # CSS to hide the uploader as in original
     st.markdown("<style>.stFileUploader { display: none; }</style>", unsafe_allow_html=True)
     captured_zip = st.file_uploader("Upload", type=['zip'], key="webcam_capture")
 
@@ -77,7 +102,6 @@ def webcam_with_hidden_upload():
             <canvas id="canvas" style="display: none;"></canvas>
             <p id="status" style="margin-top: 10px; font-size: 14px; color: #555;"></p>
         </div>
-
         <script>
             const video = document.getElementById('video');
             const startBtn = document.getElementById('startBtn');
@@ -85,7 +109,7 @@ def webcam_with_hidden_upload():
             const status = document.getElementById('status');
             const canvas = document.getElementById('canvas');
             const zip = new JSZip();
-            
+
             startBtn.onclick = async () => {
                 const stream = await navigator.mediaDevices.getUserMedia({ video: true });
                 video.srcObject = stream;
@@ -94,17 +118,15 @@ def webcam_with_hidden_upload():
 
             captureBtn.onclick = async () => {
                 captureBtn.disabled = true;
-                const totalFrames = 120;
-                for (let i = 0; i < totalFrames; i++) {
-                    status.textContent = `📸 Capturing frame ${i+1}/${totalFrames}...`;
-                    canvas.width = video.videoWidth;
-                    canvas.height = video.videoHeight;
+                for (let i = 0; i < 120; i++) {
+                    status.textContent = `📸 Frame ${i+1}/120`;
+                    canvas.width = video.videoWidth; canvas.height = video.videoHeight;
                     canvas.getContext('2d').drawImage(video, 0, 0);
                     const blob = await new Promise(res => canvas.toBlob(res, 'image/jpeg'));
                     zip.file(`frame_${i}.jpg`, blob);
-                    await new Promise(r => setTimeout(r, 40)); // Approx 25fps capture
+                    await new Promise(r => setTimeout(r, 30));
                 }
-                status.textContent = "📦 Packaging ZIP...";
+                status.textContent = "📦 Processing...";
                 const content = await zip.generateAsync({type: "blob"});
                 const file = new File([content], "capture.zip", {type: "application/zip"});
                 const container = new DataTransfer();
@@ -123,13 +145,9 @@ def webcam_with_hidden_upload():
     return captured_zip
 
 # ----------------------------
-# Execution (Original Inputs & Logic)
+# Execution
 # ----------------------------
-selected_country = st.selectbox("Select Country", get_countries())
-selected_city = st.selectbox("Select City", get_cities(selected_country))
-age = st.number_input("Enter Age", min_value=0, max_value=120, value=25)
+zip_file = webcam_with_hidden_upload()
 
-result_zip = webcam_with_hidden_upload()
-
-if result_zip:
-    st.success("120 frames captured and uploaded in 'capture.zip'.")
+if zip_file:
+    st.success("120 frames captured successfully.")
