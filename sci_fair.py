@@ -384,16 +384,24 @@ def webcam_capture_component():
                     a.href = url;
                     a.download = 'captured_frames.zip';
                     document.body.appendChild(a);
+                    
+                    // Trigger download
                     a.click();
                     
-                    // Cleanup
+                    // Cleanup after download
                     setTimeout(() => {
                         document.body.removeChild(a);
                         URL.revokeObjectURL(url);
-                    }, 100);
+                    }, 1000);
 
-                    status.textContent = '✅ Download complete! Please upload the ZIP file below.';
+                    status.textContent = '✅ ZIP file downloaded! Scroll down and upload it below.';
                     status.style.color = '#27ae60';
+                    
+                    // Stop camera stream to free up resources
+                    if (stream) {
+                        stream.getTracks().forEach(track => track.stop());
+                        video.srcObject = null;
+                    }
 
                     // Re-enable button
                     captureBtn.disabled = false;
@@ -439,7 +447,7 @@ with col2:
     # Render webcam component
     webcam_capture_component()
     
-    st.info("📥 After capturing, a ZIP file will download automatically. Upload it below:")
+    st.info("💡 **How it works:** Click 'Capture & Download 120 Frames' above → ZIP file downloads → Upload it below")
     
     # Manual file uploader
     uploaded_zip = st.file_uploader("Upload the captured frames ZIP file", type=['zip'], key="manual_upload")
