@@ -1,3 +1,115 @@
+"""
+Standalone frame capture script - Run this first to capture 120 frames
+Then upload the generated ZIP to the Streamlit app
+"""
+
+import cv2
+import zipfile
+import os
+from datetime import datetime
+
+def capture_120_frames():
+    """Capture 120 frames from webcam and save as ZIP"""
+    
+    print("🎥 Starting webcam...")
+    cap = cv2.VideoCapture(0)
+    
+    if not cap.isOpened():
+        print("❌ Error: Could not open webcam")
+        return
+    
+    print("✅ Webcam ready!")
+    print("📸 Press SPACE to start capturing 120 frames")
+    print("Press ESC to quit")
+    
+    frames = []
+    capturing = False
+    frame_count = 0
+    total_frames = 120
+    
+    while True:
+        ret, frame = cap.read()
+        
+        if not ret:
+            print("❌ Error: Can't receive frame")
+            break
+        
+        # Display the frame
+        cv2.imshow('Eye Capture - Press SPACE to capture 120 frames, ESC to quit', frame)
+        
+        # Capture frames if started
+        if capturing and frame_count < total_frames:
+            frames.append(frame.copy())
+            frame_count += 1
+            print(f"📸 Captured {frame_count}/{total_frames} frames...", end='\r')
+            
+            if frame_count >= total_frames:
+                print(f"\n✅ Captured all {total_frames} frames!")
+                capturing = False
+                break
+        
+        # Wait for key press
+        key = cv2.waitKey(1) & 0xFF
+        
+        if key == 27:  # ESC key
+            print("\n❌ Cancelled by user")
+            break
+        elif key == 32 and not capturing:  # SPACE key
+            print("\n⏳ Starting capture...")
+            capturing = True
+            frames = []
+            frame_count = 0
+    
+    # Release webcam
+    cap.release()
+    cv2.destroyAllWindows()
+    
+    if len(frames) == total_frames:
+        # Create ZIP file
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        zip_filename = f"eye_frames_{timestamp}.zip"
+        
+        print(f"\n💾 Creating ZIP file: {zip_filename}")
+        
+        with zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
+            for i, frame in enumerate(frames):
+                # Save frame to memory
+                frame_filename = f"frame_{i:03d}.jpg"
+                cv2.imwrite(frame_filename, frame)
+                zipf.write(frame_filename)
+                os.remove(frame_filename)
+                
+                print(f"💾 Adding frame {i+1}/{total_frames} to ZIP...", end='\r')
+        
+        print(f"\n✅ Successfully created {zip_filename}")
+        print(f"📤 Upload this file to the Streamlit app!")
+        return zip_filename
+    else:
+        print(f"\n❌ Only captured {len(frames)} frames. Need {total_frames}.")
+        return None
+
+if __name__ == "__main__":
+    print("=" * 60)
+    print("  EYE FRAME CAPTURE TOOL")
+    print("=" * 60)
+    print()
+    
+    result = capture_120_frames()
+    
+    if result:
+        print(f"\n✅ Success! ZIP file ready: {result}")
+        print("📤 Now upload this file to the Streamlit app")
+    else:
+        print("\n❌ Capture failed or cancelled")
+    
+    print("\nPress Enter to exit...")
+    input()
+
+
+
+
+
+
 import io
 import re
 import base64
@@ -21,9 +133,9 @@ model = genai.GenerativeModel("gemini-2.5-flash")
 # ----------------------------
 # CONFIGURATION - Adjust these settings
 # ----------------------------
-LOGO_WIDTH_PX = 250  # Logo width in pixels for web display (try 200, 300, 400, 600, etc.)
-LOGO_PDF_WIDTH = 150  # Logo width in PDF reports (try 100, 150, 200, 300, etc.)
-LOGO_PDF_HEIGHT = 75  # Logo height in PDF reports (try 50, 100, 150, etc.)
+LOGO_WIDTH_PX = 250
+LOGO_PDF_WIDTH = 150
+LOGO_PDF_HEIGHT = 75
 
 # ----------------------------
 # Page Config with Logo
@@ -38,19 +150,13 @@ st.set_page_config(
 # Display Logo at Top
 # ----------------------------
 def display_logo(width_px=LOGO_WIDTH_PX):
-    """Display the Blink logo at the top of the app
-    
-    Args:
-        width_px: Width of the logo in pixels (default from LOGO_WIDTH_PX config)
-    """
+    """Display the Blink logo at the top of the app"""
     try:
-        # Try to open from uploads directory
         logo = Image.open("/mnt/user-data/uploads/1770146718890_image.png")
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
             st.image(logo, width=width_px)
     except Exception as e:
-        # If that fails, try from current directory
         try:
             logo = Image.open("blink_logo.png")
             col1, col2, col3 = st.columns([1, 2, 1])
@@ -59,7 +165,6 @@ def display_logo(width_px=LOGO_WIDTH_PX):
         except:
             st.info("💡 Tip: Place 'blink_logo.png' in the same directory as this script to display the logo.")
 
-# Display logo
 display_logo()
 
 # ----------------------------
@@ -137,7 +242,6 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
         leading=14
     )
 
-    # Add logo to PDF if available
     if logo_path:
         try:
             logo_img = RLImage(logo_path)
@@ -205,60 +309,208 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
     return buffer.getvalue()
 
 # ----------------------------
+# Webcam Component with 120 Frames - DOWNLOAD ZIP
+# ----------------------------
+def webcam_with_download_zip():
+    """
+    Captures 120 frames and provides a download link for the ZIP file
+    This is the most reliable method that actually works
+    """
+    html_code = """
+    <div style="border: 2px solid #3498db; padding: 20px; border-radius: 10px; background-color: #f9f9f9; text-align: center;">
+        <video id="video" width="640" height="480" autoplay style="border: 2px solid #333; border-radius: 8px; display: inline-block;"></video><br>
+        <button id="startBtn" style="
+            margin-top: 15px; 
+            padding: 12px 24px; 
+            font-size: 16px; 
+            background-color: #3498db; 
+            color: white; 
+            border: none; 
+            border-radius: 6px; 
+            cursor: pointer;
+            font-weight: bold;
+        ">
+            📸 Start Camera
+        </button>
+        <button id="captureBtn" style="
+            margin-top: 15px; 
+            padding: 12px 24px; 
+            font-size: 16px; 
+            background-color: #2ecc71; 
+            color: white; 
+            border: none; 
+            border-radius: 6px; 
+            cursor: pointer;
+            display: none;
+            font-weight: bold;
+        ">
+            📷 Capture 120 Frames
+        </button>
+        <a id="downloadBtn" style="
+            margin-top: 15px; 
+            padding: 12px 24px; 
+            font-size: 16px; 
+            background-color: #e74c3c; 
+            color: white; 
+            border: none; 
+            border-radius: 6px; 
+            cursor: pointer;
+            display: none;
+            text-decoration: none;
+            font-weight: bold;
+        " download="captured_frames.zip">
+            📥 Download ZIP File
+        </a>
+        <div id="status" style="margin-top: 15px; font-size: 16px; color: #555;"></div>
+        <canvas id="canvas" style="display:none;"></canvas>
+    </div>
+
+    <script>
+        const video = document.getElementById('video');
+        const startBtn = document.getElementById('startBtn');
+        const captureBtn = document.getElementById('captureBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const status = document.getElementById('status');
+        let stream = null;
+
+        startBtn.onclick = async () => {
+            try {
+                stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                video.srcObject = stream;
+                startBtn.style.display = 'none';
+                captureBtn.style.display = 'inline-block';
+                status.textContent = '✅ Camera ready! Click "Capture 120 Frames" when ready.';
+                status.style.color = 'green';
+            } catch (err) {
+                status.textContent = '❌ Camera access denied: ' + err.message;
+                status.style.color = 'red';
+            }
+        };
+
+        function stopCamera() {
+            if (stream) {
+                stream.getTracks().forEach(track => track.stop());
+                video.srcObject = null;
+                stream = null;
+            }
+        }
+
+        captureBtn.onclick = async () => {
+            captureBtn.disabled = true;
+            captureBtn.style.backgroundColor = '#95a5a6';
+            status.textContent = '⏳ Capturing frames...';
+            status.style.color = 'orange';
+
+            const frames = [];
+            const totalFrames = 120;
+            const interval = 100;
+
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+
+            for (let i = 0; i < totalFrames; i++) {
+                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', 0.8));
+                frames.push(blob);
+                status.textContent = `📸 Captured ${i + 1}/${totalFrames} frames...`;
+                await new Promise(resolve => setTimeout(resolve, interval));
+            }
+
+            stopCamera();
+            status.textContent = '🔄 Creating ZIP file...';
+            
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
+            script.onload = async () => {
+                const zip = new JSZip();
+                
+                for (let i = 0; i < frames.length; i++) {
+                    zip.file(`frame_${String(i).padStart(3, '0')}.jpg`, frames[i]);
+                    if (i % 10 === 0) {
+                        status.textContent = `🔄 Adding frame ${i}/${totalFrames} to ZIP...`;
+                    }
+                }
+
+                const zipBlob = await zip.generateAsync({type: 'blob'});
+                const url = URL.createObjectURL(zipBlob);
+                
+                downloadBtn.href = url;
+                downloadBtn.style.display = 'inline-block';
+                captureBtn.style.display = 'none';
+                
+                status.textContent = '✅ ZIP file ready! Click "Download ZIP File" button, then upload it below.';
+                status.style.color = 'green';
+                
+                captureBtn.disabled = false;
+                captureBtn.style.backgroundColor = '#2ecc71';
+            };
+            
+            script.onerror = () => {
+                status.textContent = '❌ Failed to load JSZip library. Please check your internet connection.';
+                status.style.color = 'red';
+                captureBtn.disabled = false;
+                captureBtn.style.backgroundColor = '#2ecc71';
+                stopCamera();
+            };
+            
+            document.head.appendChild(script);
+        };
+    </script>
+    """
+    st.components.v1.html(html_code, height=720)
+
+# ----------------------------
 # Main App
 # ----------------------------
-# Create centered layout
 col1, col2, col3 = st.columns([1, 3, 1])
 
 with col2:
     st.title("Check your Eye Health & Safety")
     
-    st.subheader("Step 1: Capture Eye Photos")
+    st.subheader("Step 1: Capture 120 frames")
+    st.info("📸 **Instructions**: Click 'Start Camera' → Click 'Capture 120 Frames' → Click 'Download ZIP File' → Upload the ZIP file below")
     
     # Initialize session state
     if 'captured_frames' not in st.session_state:
-        st.session_state.captured_frames = []
+        st.session_state.captured_frames = None
     
-    if 'photo_count' not in st.session_state:
-        st.session_state.photo_count = 0
+    # Render webcam component
+    webcam_with_download_zip()
     
-    # Instructions
-    st.info("📸 Take multiple photos of your eye blinking. Try to capture different blink stages. Aim for at least 5-10 photos for better analysis.")
+    st.write("---")
+    st.subheader("📤 Upload the captured ZIP file")
     
-    # Camera input
-    camera_photo = st.camera_input("Take a photo of your eye")
+    uploaded_zip = st.file_uploader("Upload the ZIP file you just downloaded", type=['zip'], key="zip_upload")
     
-    # Process captured photo
-    if camera_photo is not None:
-        # Convert to bytes
-        photo_bytes = camera_photo.read()
-        
-        # Add to session state if it's a new photo
-        if len(st.session_state.captured_frames) == 0 or photo_bytes != st.session_state.captured_frames[-1]:
-            st.session_state.captured_frames.append(photo_bytes)
-            st.session_state.photo_count += 1
-            st.success(f"✅ Photo {st.session_state.photo_count} captured!")
-    
-    # Display captured photos count
-    if st.session_state.photo_count > 0:
-        st.write(f"**Total photos captured: {st.session_state.photo_count}**")
-        
-        # Show thumbnails of captured photos
-        if st.session_state.captured_frames:
-            st.write("Captured photos:")
-            cols = st.columns(min(5, len(st.session_state.captured_frames)))
-            for idx, frame in enumerate(st.session_state.captured_frames[:5]):
-                with cols[idx]:
-                    st.image(frame, caption=f"Photo {idx+1}", use_column_width=True)
-            
-            if len(st.session_state.captured_frames) > 5:
-                st.write(f"...and {len(st.session_state.captured_frames) - 5} more photos")
-        
-        # Reset button
-        if st.button("🔄 Clear All Photos and Start Over"):
-            st.session_state.captured_frames = []
-            st.session_state.photo_count = 0
-            st.rerun()
+    # Process uploaded ZIP
+    if uploaded_zip is not None:
+        import zipfile
+        try:
+            with zipfile.ZipFile(uploaded_zip, 'r') as zip_ref:
+                frame_files = sorted([f for f in zip_ref.namelist() if f.lower().endswith(('.jpg', '.jpeg', '.png'))])
+                if len(frame_files) < 1:
+                    st.error("No image files found in the ZIP!")
+                else:
+                    frames_bytes = []
+                    for frame_file in frame_files:
+                        with zip_ref.open(frame_file) as f:
+                            frames_bytes.append(f.read())
+                    
+                    st.session_state.captured_frames = frames_bytes
+                    st.success(f"✅ Loaded {len(frames_bytes)} frames!")
+                    
+                    # Show first and last frame
+                    col_a, col_b = st.columns(2)
+                    with col_a:
+                        st.image(frames_bytes[0], caption=f"First frame", use_column_width=True)
+                    with col_b:
+                        st.image(frames_bytes[-1], caption=f"Last frame", use_column_width=True)
+                    
+                    st.write(f"**Total frames: {len(frames_bytes)}**")
+        except Exception as e:
+            st.error(f"Error reading ZIP file: {e}")
     
     st.write("---")
     st.subheader("Step 2: Where are you from?")
@@ -288,22 +540,21 @@ with col2:
     
     st.write("---")
     
-    if st.button("Step 4: 📊 Analyze Photos with AI", key="analyze_btn", type="primary"):
-        if not st.session_state.captured_frames or len(st.session_state.captured_frames) == 0:
-            st.error("⚠️ Please capture at least one photo first using the camera above!")
+    if st.button("Step 4: 📊 Analyze Frames with AI", key="analyze_btn", type="primary"):
+        if st.session_state.captured_frames is None or len(st.session_state.captured_frames) == 0:
+            st.error("⚠️ Please upload the ZIP file with captured frames first!")
         else:
             frames = st.session_state.captured_frames
             
-            # Display first photo
             try:
-                st.image(frames[0], caption=f"Analyzing {len(frames)} photo(s)...", use_column_width=True)
+                st.image(frames[0], caption="Analyzing this frame and others...", use_column_width=True)
             except Exception as e:
                 st.warning(f"Could not display preview image: {e}")
     
             prompt = f"""
-You are given {len(frames)} eye image(s) from a camera.
+You are given {len(frames)} sequential eye images (frames) from a webcam.
 
-Task: Check for possible blinking problems or abnormal blinking patterns based on the provided images.
+Task: Check for possible blinking problems or abnormal blinking patterns.
 - You cannot diagnose.
 - Give careful observations and safe advice only.
 - Keep it short and focused.
@@ -313,13 +564,6 @@ Patient context:
 - Country: {patient_country}
 - City: {patient_city}
 - Age: {age_num}
-
-Please provide:
-1. General observations about the eye appearance
-2. Any visible concerns (redness, swelling, asymmetry, etc.)
-3. Blinking pattern observations (if multiple images show different blink stages)
-4. Safe recommendations
-5. Red flags that need immediate medical attention
 """
     
             # Prepare content for Gemini
@@ -327,7 +571,7 @@ Please provide:
             for frame_bytes in frames:
                 contents.append({"mime_type": "image/jpeg", "data": frame_bytes})
     
-            with st.spinner(f"Analyzing {len(frames)} photo(s) with Gemini AI..."):
+            with st.spinner(f"Analyzing {len(frames)} frames with Gemini AI..."):
                 try:
                     response = model.generate_content(contents)
                     
@@ -336,7 +580,6 @@ Please provide:
     
                     # Generate PDF with logo
                     logo_path = None
-                    # Try to find logo in multiple locations
                     for path in ["/mnt/user-data/uploads/1770146718890_image.png", "blink_logo.png", "/home/claude/blink_logo.png"]:
                         try:
                             with open(path, 'rb'):
@@ -359,6 +602,14 @@ Please provide:
                     st.error(f"Error during AI analysis: {e}")
                     st.error("This might be due to API limits or connectivity issues. Please try again.")
 
-# Footer
 st.write("---")
 st.caption("⚠️ **Disclaimer**: This tool is for informational purposes only and does not replace professional medical advice. Always consult with an eye care professional for proper diagnosis and treatment.")
+
+
+
+
+
+
+
+
+
