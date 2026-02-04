@@ -22,6 +22,11 @@ model = genai.GenerativeModel("gemini-2.5-flash")
 # ----------------------------
 # Data load
 # ----------------------------
+st.set_page_config(
+    page_title="Blink - Eye Health Check",
+    page_icon="👁️",
+    layout="wide"
+)
 @st.cache_data
 def load_data():
     try:
@@ -297,11 +302,7 @@ def webcam_with_hidden_upload():
 # ----------------------------
 # Main App
 # ----------------------------
-st.set_page_config(
-    page_title="Blink - Eye Health Check",
-    page_icon="👁️",
-    layout="wide"
-)
+
 st.image(
     "blink_logo.png",
     use_column_width=False,
@@ -407,6 +408,7 @@ Patient context:
                 file_name="eye_health_recommendations.pdf",
                 mime="application/pdf"
             )
+
 
 
 
