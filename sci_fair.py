@@ -11,22 +11,12 @@ from reportlab.platypus import (
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.pagesizes import letter
 from reportlab.lib import colors
-from PIL import Image
 
 # ----------------------------
 # Gemini setup
 # ----------------------------
 genai.configure(api_key="AIzaSyD-UBEMP78gtwa1DVBj2zeaFZaPfRCiZAE")
 model = genai.GenerativeModel("gemini-2.5-flash")
-
-# ----------------------------
-# Logo Display
-# ----------------------------
-try:
-    logo = Image.open("blink_logo.png")
-    st.image(logo, width=250)
-except:
-    pass
 
 # ----------------------------
 # Data load
@@ -65,36 +55,12 @@ def get_cities(country: str):
     return []
 
 # ----------------------------
-# Form Inputs
-# ----------------------------
-selected_country = st.selectbox("Select Country", get_countries())
-selected_city = st.selectbox("Select City", get_cities(selected_country))
-age = st.number_input("Enter Age", min_value=0, max_value=120, value=25)
-
-# ----------------------------
-# PDF generation
-# ----------------------------
-def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | None = None):
-    buffer = io.BytesIO()
-    doc = SimpleDocTemplate(buffer, pagesize=letter, rightMargin=72, leftMargin=72, topMargin=72, bottomMargin=18)
-    styles = getSampleStyleSheet()
-    story = [Paragraph("Eye Photo + Gemini Notes", styles["Heading1"]), Spacer(1, 10)]
-    if image_bytes:
-        img_buf = io.BytesIO(image_bytes)
-        rl_img = RLImage(img_buf)
-        rl_img._restrictSize(440, 280)
-        story.append(rl_img)
-    story.append(Paragraph(text_content.replace("\n", "<br/>"), styles["Normal"]))
-    doc.build(story)
-    buffer.seek(0)
-    return buffer.getvalue()
-
-# ----------------------------
-# Webcam Component - RESTORED 120 FRAMES
+# Webcam Component - FIXED FOR 120 FRAMES
 # ----------------------------
 def webcam_with_hidden_upload():
+    # CSS to hide the uploader as in original
     st.markdown("<style>.stFileUploader { display: none; }</style>", unsafe_allow_html=True)
-    captured_zip = st.file_uploader("Upload", type=['zip'], key="webcam_zip")
+    captured_zip = st.file_uploader("Upload", type=['zip'], key="webcam_capture")
 
     html_code = """
     <!DOCTYPE html>
@@ -107,7 +73,7 @@ def webcam_with_hidden_upload():
             <video id="video" width="640" height="480" autoplay style="border: 2px solid #3498db; border-radius: 8px;"></video>
             <br><br>
             <button id="startBtn" style="padding: 10px 20px; font-size: 16px; background-color: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">Start Camera</button>
-            <button id="captureBtn" style="padding: 10px 20px; font-size: 16px; background-color: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer;" disabled>Capture & Upload 120 Frames</button>
+            <button id="captureBtn" style="padding: 10px 20px; font-size: 16px; background-color: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer;" disabled>Capture 120 Frames</button>
             <canvas id="canvas" style="display: none;"></canvas>
             <p id="status" style="margin-top: 10px; font-size: 14px; color: #555;"></p>
         </div>
@@ -136,9 +102,9 @@ def webcam_with_hidden_upload():
                     canvas.getContext('2d').drawImage(video, 0, 0);
                     const blob = await new Promise(res => canvas.toBlob(res, 'image/jpeg'));
                     zip.file(`frame_${i}.jpg`, blob);
-                    await new Promise(r => setTimeout(r, 30)); // Frame interval
+                    await new Promise(r => setTimeout(r, 40)); // Approx 25fps capture
                 }
-                status.textContent = "📦 Processing ZIP...";
+                status.textContent = "📦 Packaging ZIP...";
                 const content = await zip.generateAsync({type: "blob"});
                 const file = new File([content], "capture.zip", {type: "application/zip"});
                 const container = new DataTransfer();
@@ -157,9 +123,13 @@ def webcam_with_hidden_upload():
     return captured_zip
 
 # ----------------------------
-# Execution Logic
+# Execution (Original Inputs & Logic)
 # ----------------------------
-zip_result = webcam_with_hidden_upload()
+selected_country = st.selectbox("Select Country", get_countries())
+selected_city = st.selectbox("Select City", get_cities(selected_country))
+age = st.number_input("Enter Age", min_value=0, max_value=120, value=25)
 
-if zip_result:
-    st.success("120 frames uploaded successfully.")
+result_zip = webcam_with_hidden_upload()
+
+if result_zip:
+    st.success("120 frames captured and uploaded in 'capture.zip'.")
