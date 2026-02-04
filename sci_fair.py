@@ -298,7 +298,7 @@ def webcam_with_hidden_upload():
 # Main App
 # ----------------------------
 st.image(
-    "logo.png",
+    "blink_logo.png",
     use_column_width=False,
     width=180
 )
@@ -403,6 +403,7 @@ Patient context:
                 file_name="eye_health_recommendations.pdf",
                 mime="application/pdf"
             )
+
 
 
 
