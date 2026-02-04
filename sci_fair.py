@@ -68,7 +68,7 @@ display_logo()
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv(r"countries.csv")
+        df = pd.read_csv("countries.csv")  # Fixed: removed r"" raw string prefix
         expected = {"Country", "City", "Currency_Code", "Number"}
         missing = expected - set(df.columns)
         if missing:
@@ -80,7 +80,7 @@ def load_data():
         df["Number"] = pd.to_numeric(df["Number"], errors="coerce")
         return df
     except FileNotFoundError:
-        st.error(r"Error: 'countries.csv' file not found. Please check the path.")
+        st.error("Error: 'countries.csv' file not found. Please check the path.")
         return pd.DataFrame(columns=["Country", "City", "Currency_Code", "Number"])
     except Exception as e:
         st.error(f"Failed to load countries.csv: {e}")
@@ -205,11 +205,12 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
     return buffer.getvalue()
 
 # ----------------------------
-# Webcam Component with Hidden File Upload
+# Webcam Component with Hidden File Upload - FIXED VERSION
 # ----------------------------
 def webcam_with_hidden_upload():
     """
     Captures frames and creates a Blob, then programmatically uploads via hidden file input
+    FIXED: Camera now stops after capturing frames
     """
     html_code = """
     <div style="border: 2px solid #3498db; padding: 20px; border-radius: 10px; background-color: #f9f9f9; text-align: center;">
@@ -252,10 +253,11 @@ def webcam_with_hidden_upload():
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
         const status = document.getElementById('status');
+        let stream = null; // Store the stream to stop it later
 
         startBtn.onclick = async () => {
             try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                stream = await navigator.mediaDevices.getUserMedia({ video: true });
                 video.srcObject = stream;
                 startBtn.style.display = 'none';
                 captureBtn.style.display = 'inline-block';
@@ -266,6 +268,15 @@ def webcam_with_hidden_upload():
                 status.style.color = 'red';
             }
         };
+
+        // Function to stop camera
+        function stopCamera() {
+            if (stream) {
+                stream.getTracks().forEach(track => track.stop());
+                video.srcObject = null;
+                stream = null;
+            }
+        }
 
         captureBtn.onclick = async () => {
             captureBtn.disabled = true;
@@ -288,6 +299,8 @@ def webcam_with_hidden_upload():
                 await new Promise(resolve => setTimeout(resolve, interval));
             }
 
+            // FIXED: Stop the camera after capturing all frames
+            stopCamera();
             status.textContent = '🔄 Creating ZIP file...';
             
             // Create ZIP using JSZip from CDN
@@ -310,13 +323,30 @@ def webcam_with_hidden_upload():
                 if (fileInput) {
                     fileInput.files = dataTransfer.files;
                     fileInput.dispatchEvent(new Event('change', {bubbles: true}));
-                    status.textContent = '✅ Upload complete! Scroll down to see results.';
+                    status.textContent = '✅ Upload complete! Camera stopped. Scroll down to see results.';
                     status.style.color = 'green';
+                    
+                    // Re-enable capture button and hide it, show start button again
+                    captureBtn.disabled = false;
+                    captureBtn.style.backgroundColor = '#2ecc71';
+                    captureBtn.style.display = 'none';
+                    startBtn.style.display = 'inline-block';
                 } else {
                     status.textContent = '❌ Could not find upload element. Please refresh the page.';
                     status.style.color = 'red';
+                    captureBtn.disabled = false;
+                    captureBtn.style.backgroundColor = '#2ecc71';
                 }
             };
+            
+            script.onerror = () => {
+                status.textContent = '❌ Failed to load JSZip library. Please check your internet connection.';
+                status.style.color = 'red';
+                captureBtn.disabled = false;
+                captureBtn.style.backgroundColor = '#2ecc71';
+                stopCamera(); // Stop camera even if ZIP creation fails
+            };
+            
             document.head.appendChild(script);
         };
     </script>
@@ -369,8 +399,19 @@ with col2:
     st.write("---")
     st.subheader("Step 2: Where are you from?")
     
-    patient_country = st.selectbox("Country:", get_countries(), key="h_country")
-    patient_city = st.selectbox("City:", get_cities(patient_country), key="h_city")
+    countries_list = get_countries()
+    if not countries_list:
+        st.warning("No countries available. Please check countries.csv file.")
+        patient_country = ""
+    else:
+        patient_country = st.selectbox("Country:", countries_list, key="h_country")
+    
+    cities_list = get_cities(patient_country) if patient_country else []
+    if not cities_list and patient_country:
+        st.warning(f"No cities found for {patient_country}")
+        patient_city = ""
+    else:
+        patient_city = st.selectbox("City:", cities_list if cities_list else [""], key="h_city")
     
     st.subheader("Step 3: Your Age")
     
@@ -395,19 +436,19 @@ with col2:
                 st.warning(f"Could not display preview image: {e}")
     
             prompt = f"""
-    You are given {len(frames)} sequential eye images (frames) from a webcam.
-    
-    Task: Check for possible blinking problems or abnormal blinking patterns.
-    - You cannot diagnose.
-    - Give careful observations and safe advice only.
-    - Keep it short and focused.
-    - List urgent red flags that require an eye doctor.
-    
-    Patient context:
-    - Country: {patient_country}
-    - City: {patient_city}
-    - Age: {age_num}
-    """
+You are given {len(frames)} sequential eye images (frames) from a webcam.
+
+Task: Check for possible blinking problems or abnormal blinking patterns.
+- You cannot diagnose.
+- Give careful observations and safe advice only.
+- Keep it short and focused.
+- List urgent red flags that require an eye doctor.
+
+Patient context:
+- Country: {patient_country}
+- City: {patient_city}
+- Age: {age_num}
+"""
     
             # Prepare content for Gemini
             contents = [prompt]
@@ -415,29 +456,33 @@ with col2:
                 contents.append({"mime_type": "image/jpeg", "data": frame_bytes})
     
             with st.spinner(f"Analyzing {len(frames)} frames with Gemini AI..."):
-                response = model.generate_content(contents)
-    
-            st.subheader("Analysis Results:")
-            st.write(response.text)
-    
-            # Generate PDF with logo
-            logo_path = None
-            # Try to find logo in multiple locations
-            for path in ["/mnt/user-data/uploads/1770146718890_image.png", "blink_logo.png", "/home/claude/blink_logo.png"]:
                 try:
-                    with open(path, 'rb'):
-                        logo_path = path
-                        break
-                except:
-                    continue
-            
-            pdf_content = generate_pdf_from_text_and_image(response.text, frames[0], logo_path)
+                    response = model.generate_content(contents)
+                    
+                    st.subheader("Analysis Results:")
+                    st.write(response.text)
     
-            if pdf_content:
-                st.subheader("Step 5: Download your Report")
-                st.download_button(
-                    label="Download PDF Report ⬇️",
-                    data=pdf_content,
-                    file_name="eye_health_recommendations.pdf",
-                    mime="application/pdf"
-                )
+                    # Generate PDF with logo
+                    logo_path = None
+                    # Try to find logo in multiple locations
+                    for path in ["/mnt/user-data/uploads/1770146718890_image.png", "blink_logo.png", "/home/claude/blink_logo.png"]:
+                        try:
+                            with open(path, 'rb'):
+                                logo_path = path
+                                break
+                        except:
+                            continue
+                    
+                    pdf_content = generate_pdf_from_text_and_image(response.text, frames[0], logo_path)
+    
+                    if pdf_content:
+                        st.subheader("Step 5: Download your Report")
+                        st.download_button(
+                            label="Download PDF Report ⬇️",
+                            data=pdf_content,
+                            file_name="eye_health_recommendations.pdf",
+                            mime="application/pdf"
+                        )
+                except Exception as e:
+                    st.error(f"Error during AI analysis: {e}")
+                    st.error("This might be due to API limits or connectivity issues. Please try again.")
