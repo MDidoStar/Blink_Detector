@@ -10,4 +10,4 @@ opencv-python-headless
 cv2
 streamlit-webrtc==0.48.1
 av
-streamlit opencv-python
+opencv-python
