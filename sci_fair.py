@@ -1,10 +1,13 @@
-
 import io
 import re
 import base64
 import streamlit as st
 import google.generativeai as genai
 import pandas as pd
+import cv2
+import mediapipe as mp
+import time
+import numpy as np
 
 from reportlab.platypus import (
     SimpleDocTemplate, Spacer, Table, TableStyle, Paragraph, Image as RLImage
@@ -14,19 +17,23 @@ from reportlab.lib.pagesizes import letter
 from reportlab.lib import colors
 
 # ----------------------------
-# Gemini setup
+# Page Configuration
+# ----------------------------
+st.set_page_config(
+    page_title="Blink - Complete Eye Health Suite",
+    page_icon="👁️",
+    layout="wide"
+)
+
+# ----------------------------
+# Gemini setup for Tab 1
 # ----------------------------
 genai.configure(api_key="AIzaSyD_13Y30NRcVRGNO9m4vTkhyvxusTY1qK8")
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 # ----------------------------
-# Data load
+# Data load for Tab 1
 # ----------------------------
-st.set_page_config(
-    page_title="Blink - Eye Health Check",
-    page_icon="👁️",
-    layout="wide"
-)
 @st.cache_data
 def load_data():
     try:
@@ -78,7 +85,7 @@ def get_numbers_from_file():
 
 
 # ----------------------------
-# PDF generation
+# PDF generation for Tab 1
 # ----------------------------
 def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | None = None):
     buffer = io.BytesIO()
@@ -172,7 +179,7 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
 
 
 # ----------------------------
-# Webcam Component with Hidden File Upload
+# Webcam Component for Tab 1
 # ----------------------------
 def webcam_with_hidden_upload():
     """
@@ -300,79 +307,111 @@ def webcam_with_hidden_upload():
 
 
 # ----------------------------
-# Main App
+# Session State for Tab 2
+# ----------------------------
+def init_blink_session_state():
+    if 'blink_count' not in st.session_state:
+        st.session_state.blink_count = 0
+    if 'eyes_closed' not in st.session_state:
+        st.session_state.eyes_closed = False
+    if 'open_eye_reference' not in st.session_state:
+        st.session_state.open_eye_reference = None
+    if 'minute_start' not in st.session_state:
+        st.session_state.minute_start = time.time()
+    if 'start_time' not in st.session_state:
+        st.session_state.start_time = time.time()
+    if 'show_reminder' not in st.session_state:
+        st.session_state.show_reminder = False
+    if 'reminder_start' not in st.session_state:
+        st.session_state.reminder_start = 0
+    if 'camera_active' not in st.session_state:
+        st.session_state.camera_active = False
+
+
+# ----------------------------
+# Main App with Tabs
 # ----------------------------
 
-st.image(
-    "blink_logo.png",
-    use_column_width=False,
-    width=180
-)
+# Header
+st.title("👁️ Blink - Complete Eye Health Suite")
+st.markdown("### Professional eye health monitoring and blink rate tracking")
 
-st.subheader("Step 1: Capture 120 frames")
+# Create tabs
+tab1, tab2 = st.tabs(["🔬 AI Eye Health Check", "⏱️ Blink Rate Monitor"])
 
-# Initialize session state
-if 'captured_frames' not in st.session_state:
-    st.session_state.captured_frames = None
+# ----------------------------
+# TAB 1: Eye Health Check with Gemini AI
+# ----------------------------
+with tab1:
+    st.image(
+        "blink_logo.png",
+        use_column_width=False,
+        width=180
+    )
 
-# Render webcam component
-webcam_with_hidden_upload()
+    st.subheader("Step 1: Capture 120 frames")
 
-# Hidden file uploader (will be auto-filled by JavaScript)
-uploaded_zip = st.file_uploader("", type=['zip'], key="auto_upload", label_visibility="collapsed")
+    # Initialize session state
+    if 'captured_frames' not in st.session_state:
+        st.session_state.captured_frames = None
 
-# Process uploaded ZIP
-if uploaded_zip is not None:
-    import zipfile
-    try:
-        with zipfile.ZipFile(uploaded_zip, 'r') as zip_ref:
-            frame_files = sorted([f for f in zip_ref.namelist() if f.endswith('.jpg')])
-            
-            if len(frame_files) < 1:
-                st.error("No JPG files found in the ZIP!")
-            else:
-                frames_bytes = []
-                for frame_file in frame_files:
-                    with zip_ref.open(frame_file) as f:
-                        frames_bytes.append(f.read())
-                
-                st.session_state.captured_frames = frames_bytes
-                st.success(f"✅ Loaded {len(frames_bytes)} frames!")
-                
-                # Show first frame
-                st.image(frames_bytes[0], caption=f"First frame (total: {len(frames_bytes)} frames)", use_column_width=True)
-    
-    except Exception as e:
-        st.error(f"Error reading ZIP file: {e}")
+    # Render webcam component
+    webcam_with_hidden_upload()
 
-st.write("---")
+    # Hidden file uploader (will be auto-filled by JavaScript)
+    uploaded_zip = st.file_uploader("", type=['zip'], key="auto_upload", label_visibility="collapsed")
 
-st.subheader("Step 2: Where are you from?")
-patient_country = st.selectbox("Country:", get_countries(), key="h_country")
-patient_city = st.selectbox("City:", get_cities(patient_country), key="h_city")
-
-st.subheader("Step 3: Your Age")
-numbers = get_numbers_from_file()
-if not numbers:
-    st.error("No numbers found in the 'Number' column in countries.csv.")
-    st.stop()
-
-age_num = st.selectbox("Age", numbers, key="an")
-
-st.write("---")
-
-if st.button("Step 4: 📊 Analyze Frames with AI", key="analyze_btn"):
-    if st.session_state.captured_frames is None or len(st.session_state.captured_frames) == 0:
-        st.error("⚠️ Please capture frames first using the button above!")
-    else:
-        frames = st.session_state.captured_frames
-        
+    # Process uploaded ZIP
+    if uploaded_zip is not None:
+        import zipfile
         try:
-            st.image(frames[0], caption="Analyzing this frame and others...", use_column_width=True)
+            with zipfile.ZipFile(uploaded_zip, 'r') as zip_ref:
+                frame_files = sorted([f for f in zip_ref.namelist() if f.endswith('.jpg')])
+                
+                if len(frame_files) < 1:
+                    st.error("No JPG files found in the ZIP!")
+                else:
+                    frames_bytes = []
+                    for frame_file in frame_files:
+                        with zip_ref.open(frame_file) as f:
+                            frames_bytes.append(f.read())
+                    
+                    st.session_state.captured_frames = frames_bytes
+                    st.success(f"✅ Loaded {len(frames_bytes)} frames!")
+                    
+                    # Show first frame
+                    st.image(frames_bytes[0], caption=f"First frame (total: {len(frames_bytes)} frames)", use_column_width=True)
+        
         except Exception as e:
-            st.warning(f"Could not display preview image: {e}")
+            st.error(f"Error reading ZIP file: {e}")
 
-        prompt = f"""
+    st.write("---")
+
+    st.subheader("Step 2: Where are you from?")
+    patient_country = st.selectbox("Country:", get_countries(), key="h_country")
+    patient_city = st.selectbox("City:", get_cities(patient_country), key="h_city")
+
+    st.subheader("Step 3: Your Age")
+    numbers = get_numbers_from_file()
+    if not numbers:
+        st.error("No numbers found in the 'Number' column in countries.csv.")
+    else:
+        age_num = st.selectbox("Age", numbers, key="an")
+
+        st.write("---")
+
+        if st.button("Step 4: 📊 Analyze Frames with AI", key="analyze_btn"):
+            if st.session_state.captured_frames is None or len(st.session_state.captured_frames) == 0:
+                st.error("⚠️ Please capture frames first using the button above!")
+            else:
+                frames = st.session_state.captured_frames
+                
+                try:
+                    st.image(frames[0], caption="Analyzing this frame and others...", use_column_width=True)
+                except Exception as e:
+                    st.warning(f"Could not display preview image: {e}")
+
+                prompt = f"""
 You are given {len(frames)} sequential eye images (frames) from a webcam.
 Task: Check for possible blinking problems or abnormal blinking patterns.
 - You cannot diagnose.
@@ -386,33 +425,222 @@ Patient context:
 - Age: {age_num}
 """
 
-        # Prepare content for Gemini
-        contents = [prompt]
-        for frame_bytes in frames:
-            contents.append({"mime_type": "image/jpeg", "data": frame_bytes})
+                # Prepare content for Gemini
+                contents = [prompt]
+                for frame_bytes in frames:
+                    contents.append({"mime_type": "image/jpeg", "data": frame_bytes})
 
-        with st.spinner(f"Analyzing {len(frames)} frames with Gemini AI..."):
-            response = model.generate_content(contents)
+                with st.spinner(f"Analyzing {len(frames)} frames with Gemini AI..."):
+                    response = model.generate_content(contents)
 
-        st.subheader("Analysis Results:")
-        st.write(response.text)
+                st.subheader("Analysis Results:")
+                st.write(response.text)
 
-        # Generate PDF
-        pdf_content = generate_pdf_from_text_and_image(response.text, frames[0])
+                # Generate PDF
+                pdf_content = generate_pdf_from_text_and_image(response.text, frames[0])
 
-        if pdf_content:
-            st.subheader("Step 5: Download your Report")
-            st.download_button(
-                label="Download PDF Report ⬇️",
-                data=pdf_content,
-                file_name="eye_health_recommendations.pdf",
-                mime="application/pdf"
+                if pdf_content:
+                    st.subheader("Step 5: Download your Report")
+                    st.download_button(
+                        label="Download PDF Report ⬇️",
+                        data=pdf_content,
+                        file_name="eye_health_recommendations.pdf",
+                        mime="application/pdf"
+                    )
+
+
+# ----------------------------
+# TAB 2: Blink Rate Monitor
+# ----------------------------
+with tab2:
+    # Initialize session state
+    init_blink_session_state()
+    
+    # Constants
+    BLINK_RATIO = 0.4
+    TOTAL_TIME = 5 * 60  # 5 minutes
+    REMINDER_DURATION = 10  # seconds
+    NORMAL_MAX = 20
+
+    # MediaPipe Setup
+    mp_face = mp.solutions.face_mesh
+
+    st.markdown("### Monitor your blink rate to reduce eye strain")
+
+    col1, col2, col3 = st.columns([1, 1, 1])
+
+    with col1:
+        st.metric("Current Blinks", st.session_state.blink_count)
+
+    with col2:
+        total_elapsed = time.time() - st.session_state.start_time
+        remaining = TOTAL_TIME - int(total_elapsed)
+        minutes_left = remaining // 60
+        seconds_left = remaining % 60
+        st.metric("Time Remaining", f"{minutes_left}:{seconds_left:02d}")
+
+    with col3:
+        st.metric("Target", f"{NORMAL_MAX} blinks/min")
+
+    st.markdown("---")
+
+    # Control Buttons
+    col_btn1, col_btn2 = st.columns(2)
+
+    with col_btn1:
+        if st.button("🎥 Start Camera", disabled=st.session_state.camera_active, type="primary", key="start_blink_cam"):
+            st.session_state.camera_active = True
+            st.session_state.blink_count = 0
+            st.session_state.eyes_closed = False
+            st.session_state.open_eye_reference = None
+            st.session_state.minute_start = time.time()
+            st.session_state.start_time = time.time()
+            st.session_state.show_reminder = False
+            st.rerun()
+
+    with col_btn2:
+        if st.button("🛑 Stop Camera", disabled=not st.session_state.camera_active, type="secondary", key="stop_blink_cam"):
+            st.session_state.camera_active = False
+            st.rerun()
+
+    # Camera Feed
+    if st.session_state.camera_active:
+        # Create placeholder for video
+        video_placeholder = st.empty()
+        
+        # Open camera
+        camera = cv2.VideoCapture(0)
+        camera.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+        camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+        
+        # Initialize face mesh
+        face_mesh = mp_face.FaceMesh(refine_landmarks=True)
+        
+        # Stop button for real-time control
+        stop_button = st.button("⏹️ Stop", key="stop_realtime")
+        
+        while st.session_state.camera_active and not stop_button:
+            success, frame = camera.read()
+            if not success:
+                st.error("Failed to access camera")
+                break
+            
+            frame = cv2.flip(frame, 1)
+            image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            results = face_mesh.process(image)
+            
+            # Blink Detection
+            if results.multi_face_landmarks:
+                face = results.multi_face_landmarks[0]
+                
+                top = face.landmark[159]
+                bottom = face.landmark[145]
+                
+                eye_opening = abs(top.y - bottom.y)
+                
+                if st.session_state.open_eye_reference is None or eye_opening > st.session_state.open_eye_reference:
+                    st.session_state.open_eye_reference = eye_opening
+                
+                if st.session_state.open_eye_reference:
+                    if eye_opening < st.session_state.open_eye_reference * BLINK_RATIO:
+                        if not st.session_state.eyes_closed:
+                            st.session_state.blink_count += 1
+                            st.session_state.eyes_closed = True
+                    else:
+                        st.session_state.eyes_closed = False
+            
+            # Minute Handling
+            if time.time() - st.session_state.minute_start >= 60:
+                if st.session_state.blink_count < NORMAL_MAX:
+                    st.session_state.show_reminder = True
+                    st.session_state.reminder_start = time.time()
+                
+                st.session_state.blink_count = 0
+                st.session_state.minute_start = time.time()
+            
+            # Total Timer
+            total_elapsed = time.time() - st.session_state.start_time
+            if total_elapsed >= TOTAL_TIME:
+                st.session_state.camera_active = False
+                st.success("✅ Session completed! Great job!")
+                break
+            
+            remaining = TOTAL_TIME - int(total_elapsed)
+            minutes_left = remaining // 60
+            seconds_left = remaining % 60
+            
+            # Display on Frame
+            cv2.putText(
+                frame,
+                f"Blinks/min: {st.session_state.blink_count} / 20",
+                (10, frame.shape[0] - 10),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.6,
+                (0, 255, 0),
+                2
             )
+            
+            cv2.putText(
+                frame,
+                f"Time left: {minutes_left}:{seconds_left:02d}",
+                (10, 30),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.6,
+                (200, 200, 200),
+                2
+            )
+            
+            # Gentle Reminder
+            if st.session_state.show_reminder:
+                if time.time() - st.session_state.reminder_start <= REMINDER_DURATION:
+                    cx = frame.shape[1] - 60
+                    cy = 50
+                    
+                    # Open eye
+                    cv2.ellipse(frame, (cx, cy), (22, 11), 0, 0, 360, (255, 255, 255), 2)
+                    
+                    # Blinking pupil
+                    blink_phase = int(time.time() * 2) % 2
+                    if blink_phase == 0:
+                        cv2.circle(frame, (cx, cy), 3, (255, 255, 255), -1)
+                    
+                    cv2.putText(
+                        frame,
+                        "Blink",
+                        (cx - 20, cy + 25),
+                        cv2.FONT_HERSHEY_SIMPLEX,
+                        0.5,
+                        (255, 255, 255),
+                        2
+                    )
+                else:
+                    st.session_state.show_reminder = False
+            
+            # Convert BGR to RGB for Streamlit
+            frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            
+            # Display frame with controlled size
+            video_placeholder.image(frame_rgb, channels="RGB", width=640, caption="Your Video Feed")
+            
+            time.sleep(0.03)  # ~30 fps
+        
+        camera.release()
+        face_mesh.close()
+        
+        if stop_button:
+            st.session_state.camera_active = False
+            st.rerun()
 
+    else:
+        st.info("👆 Click 'Start Camera' to begin monitoring your blink rate")
+        st.markdown("""
+        **How it works:**
+        - The app tracks your blinks per minute in real-time
+        - Aim for at least 20 blinks per minute to keep your eyes healthy
+        - You'll see a gentle reminder (blinking eye icon) if you blink too little
+        - Session duration: 5 minutes
+        """)
 
-
-
-
-
-
-
+    # Footer
+    st.markdown("---")
+    st.markdown("💡 **Tip**: Remember to take breaks and blink regularly to prevent eye strain!")
