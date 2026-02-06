@@ -1,4 +1,3 @@
-
 import io
 import re
 import base64
@@ -33,7 +32,7 @@ st.set_page_config(
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv("countries.csv")  # Fixed: removed raw string
+        df = pd.read_csv("countries.csv")
         
         expected = {"Country", "City", "Currency_Code", "Number"}
         missing = expected - set(df.columns)
@@ -72,7 +71,7 @@ def get_numbers_from_file():
     if df.empty or "Number" not in df.columns:
         return []
     nums = df["Number"].dropna().unique().tolist()
-    nums = sorted({int(x) for x in nums if pd.notna(x)})  # Fixed: added notna check
+    nums = sorted({int(x) for x in nums if pd.notna(x)})
     return nums
 
 # ---------------------------
@@ -119,7 +118,7 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
         story.append(rl_img)
         story.append(Spacer(1, 14))
 
-    lines = text_content.split("\n")  # Fixed: changed \\n to \n
+    lines = text_content.split("\n")
     i = 0
     while i < len(lines):
         stripped = lines[i].strip()
@@ -134,7 +133,7 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
             while i < len(lines) and "|" in lines[i].strip():
                 row = lines[i].strip()
 
-                if re.match(r"^[\|\s\-:]+$", row):  # Fixed: escaped properly
+                if re.match(r"^[\|\s\-:]+$", row):
                     i += 1
                     continue
 
@@ -170,12 +169,13 @@ def generate_pdf_from_text_and_image(text_content: str, image_bytes: bytes | Non
     return buffer.getvalue()
 
 # ---------------------------
-# Webcam Component with Hidden File Upload
+# Webcam Component with Live Frame Preview
 # ---------------------------
 
 def webcam_with_hidden_upload():
     """
     Captures frames and creates a Blob, then programmatically uploads via hidden file input
+    NOW WITH LIVE FRAME PREVIEW!
     """
     
     html_code = """
@@ -188,6 +188,11 @@ def webcam_with_hidden_upload():
     <div style="text-align: center;">
         <video id="video" width="640" height="480" autoplay style="border: 2px solid #3498db; border-radius: 8px;"></video>
         <br><br>
+        
+        <!-- NEW: Live preview canvas -->
+        <canvas id="previewCanvas" width="320" height="240" style="border: 2px solid #27ae60; border-radius: 8px; display: none;"></canvas>
+        <br><br>
+        
         <button id="startBtn" style="padding: 10px 20px; font-size: 16px; background-color: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer; margin: 5px;">
             Start Camera
         </button>
@@ -202,11 +207,13 @@ def webcam_with_hidden_upload():
     <script>
         const video = document.getElementById('video');
         const canvas = document.getElementById('canvas');
+        const previewCanvas = document.getElementById('previewCanvas');
         const startBtn = document.getElementById('startBtn');
         const captureBtn = document.getElementById('captureBtn');
         const status = document.getElementById('status');
         const progress = document.getElementById('progress');
         const ctx = canvas.getContext('2d');
+        const previewCtx = previewCanvas.getContext('2d');
 
         let stream = null;
 
@@ -234,6 +241,9 @@ def webcam_with_hidden_upload():
 
             captureBtn.disabled = true;
             status.textContent = '📸 Capturing frames... Look at camera and blink normally.';
+            
+            // Show preview canvas
+            previewCanvas.style.display = 'inline-block';
 
             canvas.width = video.videoWidth;
             canvas.height = video.videoHeight;
@@ -243,6 +253,11 @@ def webcam_with_hidden_upload():
             // Capture 120 frames
             for (let i = 0; i < 120; i++) {
                 ctx.drawImage(video, 0, 0);
+
+                // NEW: Show current frame in preview (every 3rd frame to avoid lag)
+                if (i % 3 === 0) {
+                    previewCtx.drawImage(video, 0, 0, 320, 240);
+                }
 
                 // Convert to blob
                 const blob = await new Promise(resolve => {
@@ -284,6 +299,9 @@ def webcam_with_hidden_upload():
 
                 status.textContent = '✅ Frames uploaded successfully!';
                 progress.textContent = 'You can now analyze the frames below.';
+                
+                // Hide preview canvas after completion
+                previewCanvas.style.display = 'none';
             } else {
                 status.textContent = '❌ Could not find file uploader. Please refresh and try again.';
             }
@@ -295,7 +313,7 @@ def webcam_with_hidden_upload():
 </html>
 """
     
-    st.components.v1.html(html_code, height=680)
+    st.components.v1.html(html_code, height=780)  # Increased height for preview canvas
 
 # ---------------------------
 # Main App
