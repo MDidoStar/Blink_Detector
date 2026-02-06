@@ -24,7 +24,7 @@ with col1:
     - Get personalized recommendations
     """)
     if st.button("🔍 Go to Blink Analysis", type="primary", use_container_width=True):
-        st.switch_page("pages/1_Blink_Analysis.py")
+        st.switch_page("pages/Blink_Analysis.py")
 
 with col2:
     st.markdown("### ⏱️ Blink Monitor")
@@ -36,7 +36,7 @@ with col2:
     - Prevent eye strain
     """)
     if st.button("📊 Go to Blink Monitor", type="primary", use_container_width=True):
-        st.switch_page("pages/2_Blink_Monitor.py")
+        st.switch_page("pages/Blink_Monitor.py")
 
 st.markdown("---")
 
