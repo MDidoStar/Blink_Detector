@@ -4,7 +4,7 @@ import base64
 import streamlit as st
 import google.generativeai as genai
 import pandas as pd
-
+import os
 from reportlab.platypus import (
     SimpleDocTemplate, Spacer, Table, TableStyle, Paragraph, Image as RLImage
 )
@@ -16,8 +16,15 @@ from reportlab.lib import colors
 # Gemini setup
 # ---------------------------
 
-genai.configure(api_key="AIzaSyB6M4XrkU3cviGvE5PHE5xPvvtuFUlsDA8")
+api_key = st.secrets.get("GEMINI_API_KEY", os.getenv("GEMINI_API_KEY"))
+
+if not api_key:
+    st.error("Missing GEMINI_API_KEY. Add it in Streamlit Secrets.")
+    st.stop()
+
+genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-2.5-flash")
+
 
 # ---------------------------
 # Data load
@@ -425,4 +432,5 @@ Patient context:
                 file_name="eye_health_recommendations.pdf",
                 mime="application/pdf"
             )
+
 
