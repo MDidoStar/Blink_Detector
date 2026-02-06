@@ -34,8 +34,8 @@ layout="wide"
 )
 @st.cache_data
 def load_data():
-try:
-df = pd.read_csv(r"countries.csv")
+    try:
+        df = pd.read_csv(r"countries.csv")
 
 ```
     expected = {"Country", "City", "Currency_Code", "Number"}
@@ -439,3 +439,4 @@ Patient context:
           )
     
     ```
+
