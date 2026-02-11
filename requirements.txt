@@ -1,7 +1,7 @@
 streamlit==1.38.0
 streamlit-webrtc==0.48.1
-opencv-python==4.8.1.78
-numpy
+opencv-python-headless==4.5.5.64
+numpy<2.0
 pandas
 google-generativeai
 reportlab
