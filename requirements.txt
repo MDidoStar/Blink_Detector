@@ -7,5 +7,5 @@ google-generativeai
 reportlab
 Pillow
 av
-mediapipe
-
+mediapipe==0.10.14
+protobuf<5
