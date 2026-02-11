@@ -1,0 +1,10 @@
+streamlit==1.38.0
+streamlit-webrtc==0.48.1
+opencv-python-headless
+numpy
+pandas
+google-generativeai
+reportlab
+Pillow
+av
+mediapipe
