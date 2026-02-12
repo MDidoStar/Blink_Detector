@@ -7,7 +7,7 @@ st.set_page_config(
 )
 
 # Main landing page
-st.title("👁️ Eye Health Suite")
+st.title("👁️ Blink Smart")
 st.markdown("### Complete eye health monitoring and analysis")
 
 st.markdown("---")
@@ -65,6 +65,7 @@ Regular blinking is essential for:
 
 st.markdown("---")
 st.markdown("💡 **Tip**: Choose the tool that best fits your current needs!")
+
 
 
 
