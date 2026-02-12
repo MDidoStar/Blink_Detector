@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Eye Health Suite",
+    page_title="Blink Smart",
     page_icon="👁️",
     layout="wide"
 )
@@ -65,5 +65,6 @@ Regular blinking is essential for:
 
 st.markdown("---")
 st.markdown("💡 **Tip**: Choose the tool that best fits your current needs!")
+
 
 
