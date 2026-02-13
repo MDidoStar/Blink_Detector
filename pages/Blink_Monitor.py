@@ -209,5 +209,5 @@ st.markdown("""
 - Keep your face centered in the frame
 - If detection seems off, click "Reset Session" to recalibrate
 - Remember to take breaks and blink regularly to prevent eye strain!
-)
+""")
 
