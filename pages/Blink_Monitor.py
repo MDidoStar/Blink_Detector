@@ -209,17 +209,5 @@ st.markdown("""
 - Keep your face centered in the frame
 - If detection seems off, click "Reset Session" to recalibrate
 - Remember to take breaks and blink regularly to prevent eye strain!
+)
 
-### ⚠️ Troubleshooting:
-- If camera doesn't start, check browser permissions
-- Refresh the page if you see errors
-- Use Chrome or Firefox for best compatibility
-""")
-
-# Debug info (optional - can be removed in production)
-with st.expander("Debug Info"):
-    st.write(f"Blink Count: {st.session_state.blink_count}")
-    st.write(f"Eyes Closed: {st.session_state.eyes_closed}")
-    st.write(f"Reference: {st.session_state.open_eye_reference}")
-    st.write(f"Minute Start: {time.time() - st.session_state.minute_start:.1f}s ago")
-    st.write(f"Error Count: {st.session_state.error_count}")
