@@ -11,8 +11,6 @@ st.markdown("### Monitor your blink rate to reduce eye strain")
 
 st.info("🎥 This version uses HTML5 camera API for better compatibility")
 
-# HTML/JavaScript implementation with MediaPipe Face Mesh
-
 html_code = """
 <!DOCTYPE html>
 <html>
@@ -105,7 +103,6 @@ html_code = """
   </div>
 
   <script type="module">
-    // IMPORTANT: In module scope, sometimes globals must be accessed via window.
     const FaceMesh = window.FaceMesh;
 
     const video = document.getElementById('video');
@@ -144,18 +141,51 @@ html_code = """
     const NORMAL_MAX = 20;
 
     // Blink detection params (EAR based)
-    // Typical eye landmarks:
-    // Right eye: [33, 160, 158, 133, 153, 144]
-    // Left  eye: [362, 385, 387, 263, 373, 380]
     const R = { p1:33, p2:160, p3:158, p4:133, p5:153, p6:144 };
     const L = { p1:362, p2:385, p3:387, p4:263, p5:373, p6:380 };
 
-    let emaBaseEAR = null;         // baseline EAR (smoothed)
-    const EMA_ALPHA = 0.08;        // baseline smoothing
-    const THRESH_RATIO = 0.72;     // threshold = baseline * this
-    const MIN_CLOSED_FRAMES = 2;   // must be closed for at least this many frames
+    let emaBaseEAR = null;
+    const EMA_ALPHA = 0.08;
+    const THRESH_RATIO = 0.72;
+    const MIN_CLOSED_FRAMES = 2;
     let closedFrames = 0;
     let inBlink = false;
+
+    // ------------------ Beep (winsound-like) ------------------
+    // Browser audio must be triggered after a user gesture (Start Camera click),
+    // so we "unlock" audio context there.
+    let audioCtx = null;
+
+    function ensureAudio(){
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      // Some browsers start it in "suspended" state.
+      if (audioCtx.state === "suspended") audioCtx.resume();
+    }
+
+    // Similar to winsound.Beep(800, 1000)
+    function beep(freq = 800, durationMs = 1000, volume = 0.05){
+      if (!audioCtx) return;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+
+      osc.type = "sine";
+      osc.frequency.value = freq;
+      gain.gain.value = volume;
+
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      const now = audioCtx.currentTime;
+      osc.start(now);
+      osc.stop(now + durationMs / 1000);
+
+      // avoid clicks (tiny fade out)
+      gain.gain.setValueAtTime(volume, now);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + durationMs / 1000);
+    }
+    // ----------------------------------------------------------
 
     function dist(a, b){
       const dx = a.x - b.x;
@@ -177,11 +207,12 @@ html_code = """
 
     async function startCamera() {
       try {
+        // Unlock audio on user gesture
+        ensureAudio();
+
         statusDiv.textContent = 'Initializing camera...';
         statusDiv.className = 'status-warning';
 
-        // NOTE: If camera permissions are blocked inside an iframe by the browser,
-        // you’ll see the error here.
         const stream = await navigator.mediaDevices.getUserMedia({
           video: { width:{ideal:640}, height:{ideal:480}, frameRate:{ideal:30} }
         });
@@ -240,19 +271,16 @@ html_code = """
 
       const lm = results.multiFaceLandmarks[0];
 
-      // Compute EAR using both eyes then average (more stable)
       const earR = eyeEAR(lm, R);
       const earL = eyeEAR(lm, L);
       if (earR == null || earL == null) return;
 
       const ear = (earR + earL) / 2.0;
 
-      // Update baseline EAR only when we believe eyes are open (ear above a loose floor)
-      // This avoids dragging baseline down while blinking.
       if (emaBaseEAR === null) {
         emaBaseEAR = ear;
       } else {
-        const floor = emaBaseEAR * 0.6; // loose open condition
+        const floor = emaBaseEAR * 0.6;
         if (ear > floor) {
           emaBaseEAR = (1 - EMA_ALPHA) * emaBaseEAR + EMA_ALPHA * ear;
         }
@@ -264,23 +292,20 @@ html_code = """
       baseVal.textContent = emaBaseEAR.toFixed(4);
       thrVal.textContent = threshold.toFixed(4);
 
-      // Blink state machine
       if (ear < threshold) {
         closedFrames++;
         eyeStatusDiv.textContent = 'Eyes: CLOSED';
         eyeStatusDiv.className = 'eyes-closed';
 
         if (!inBlink && closedFrames >= MIN_CLOSED_FRAMES) {
-          inBlink = true; // entered blink
+          inBlink = true;
         }
 
       } else {
-        // eye open
         eyeStatusDiv.textContent = 'Eyes: OPEN';
         eyeStatusDiv.className = 'eyes-open';
 
         if (inBlink) {
-          // blink finished
           blinkCount++;
           blinkCountDiv.textContent = blinkCount;
         }
@@ -288,8 +313,6 @@ html_code = """
         closedFrames = 0;
       }
 
-      // (Optional) draw a simple point for debugging eye corners
-      // Right eye corner points (33 and 133)
       ctx.fillStyle = "rgba(52,152,219,0.9)";
       const pA = lm[33], pB = lm[133];
       ctx.beginPath(); ctx.arc(pA.x*canvas.width, pA.y*canvas.height, 3, 0, Math.PI*2); ctx.fill();
@@ -304,7 +327,11 @@ html_code = """
           showReminder = true;
           reminderStart = now;
           blinkReminder.style.display = 'block';
+
+          // ---- winsound.Beep equivalent ----
+          beep(800, 1000, 0.06);
         }
+
         blinkCount = 0;
         blinkCountDiv.textContent = blinkCount;
         minuteStart = now;
@@ -367,7 +394,6 @@ html_code = """
 </html>
 """
 
-# Render the HTML component
 components.html(html_code, height=900)
 
 st.markdown("---")
@@ -379,19 +405,5 @@ st.markdown("""
 3. Position your face in the frame
 4. Blink naturally - the system will track automatically
 5. Session runs for 5 minutes
-6. **Watch for the animated blink reminder** in the top-right corner every minute if you blink less than 20 times
-
-### 💡 Benefits of this version:
-- ✅ Better browser compatibility
-- ✅ Works without WebRTC
-- ✅ Shows real-time eye tracking overlay
-- ✅ More stable connection
-- ✅ **Animated blink reminder every minute** (if blinks < 20)
-
-### 🎯 Healthy Blinking:
-- Target: 15-20 blinks per minute
-- Less than 10/min = too dry
-- Take regular screen breaks
-- Follow the 20-20-20 rule
-- **White animated eye icon reminds you to blink**
+6. **If blinks < 20 in a minute, you’ll see the reminder AND hear a beep**
 """)
