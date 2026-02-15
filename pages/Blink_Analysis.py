@@ -196,7 +196,7 @@ def webcam_with_hidden_upload():
             Start Camera
         </button>
         <button id="captureBtn" style="padding: 10px 20px; font-size: 16px; background-color: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer; margin: 5px;" disabled>
-            Capture & Upload 120 Frames
+            Capture & Upload Frames
         </button>
         <canvas id="canvas" style="display: none;"></canvas>
         <p id="status" style="margin-top: 10px; font-size: 14px; color: #555;"></p>
