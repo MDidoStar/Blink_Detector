@@ -12,396 +12,357 @@ st.markdown("### Monitor your blink rate to reduce eye strain")
 st.info("🎥 This version uses HTML5 camera API for better compatibility")
 
 # HTML/JavaScript implementation with MediaPipe Face Mesh
+
 html_code = """
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-            background: #f5f5f5;
-        }
-        #videoContainer {
-            position: relative;
-            display: inline-block;
-            margin: 20px auto;
-        }
-        #video {
-            border: 3px solid #3498db;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        #canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        .metrics {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 20px 0;
-        }
-        .metric {
-            background: white;
-            padding: 15px 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .metric-value {
-            font-size: 32px;
-            font-weight: bold;
-            color: #3498db;
-        }
-        .metric-label {
-            font-size: 14px;
-            color: #666;
-            margin-top: 5px;
-        }
-        button {
-            padding: 12px 30px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 10px;
-            transition: all 0.3s;
-        }
-        #startBtn {
-            background: #3498db;
-            color: white;
-        }
-        #startBtn:hover {
-            background: #2980b9;
-        }
-        #resetBtn {
-            background: #e74c3c;
-            color: white;
-        }
-        #resetBtn:hover {
-            background: #c0392b;
-        }
-        #status {
-            margin: 20px 0;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .status-ready {
-            background: #d4edda;
-            color: #155724;
-        }
-        .status-error {
-            background: #f8d7da;
-            color: #721c24;
-        }
-        .status-warning {
-            background: #fff3cd;
-            color: #856404;
-        }
-        #eyeStatus {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 14px;
-        }
-        .eyes-open {
-            background: #27ae60;
-            color: white;
-        }
-        .eyes-closed {
-            background: #e74c3c;
-            color: white;
-        }
-        /* Blink reminder styles */
-        #blinkReminder {
-            position: absolute;
-            top: 50px;
-            right: 60px;
-            display: none;
-            text-align: center;
-        }
-        .reminder-text {
-            color: white;
-            font-size: 14px;
-            font-weight: bold;
-            margin-top: 5px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-    </style>
+  <meta charset="utf-8" />
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+
+  <style>
+    body { font-family: Arial, sans-serif; text-align:center; margin:0; padding:20px; background:#f5f5f5; }
+    #videoContainer { position:relative; display:inline-block; margin:20px auto; }
+    #video { border:3px solid #3498db; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,.1); }
+    #canvas { position:absolute; top:0; left:0; }
+
+    .metrics { display:flex; justify-content:center; gap:30px; margin:20px 0; flex-wrap:wrap; }
+    .metric { background:white; padding:15px 30px; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,.1); }
+    .metric-value { font-size:32px; font-weight:bold; color:#3498db; }
+    .metric-label { font-size:14px; color:#666; margin-top:5px; }
+
+    button { padding:12px 30px; font-size:16px; border:none; border-radius:5px; cursor:pointer; margin:10px; transition:all .3s; }
+    #startBtn { background:#3498db; color:white; }
+    #startBtn:hover { background:#2980b9; }
+    #resetBtn { background:#e74c3c; color:white; }
+    #resetBtn:hover { background:#c0392b; }
+
+    #status { margin:20px 0; padding:10px; border-radius:5px; font-size:16px; }
+    .status-ready { background:#d4edda; color:#155724; }
+    .status-error { background:#f8d7da; color:#721c24; }
+    .status-warning { background:#fff3cd; color:#856404; }
+
+    #eyeStatus {
+      position:absolute; top:10px; right:10px; padding:8px 12px; border-radius:5px;
+      font-weight:bold; font-size:14px;
+    }
+    .eyes-open { background:#27ae60; color:white; }
+    .eyes-closed { background:#e74c3c; color:white; }
+
+    #debugBox{
+      position:absolute; left:10px; top:10px; background:rgba(0,0,0,0.55);
+      color:white; padding:8px 10px; border-radius:6px; font-size:12px; text-align:left;
+      min-width:170px;
+    }
+
+    #blinkReminder { position:absolute; top:50px; right:60px; display:none; text-align:center; }
+    .reminder-text { color:white; font-size:14px; font-weight:bold; margin-top:5px; text-shadow:2px 2px 4px rgba(0,0,0,.5); }
+  </style>
 </head>
+
 <body>
-    <div class="metrics">
-        <div class="metric">
-            <div class="metric-value" id="blinkCount">0</div>
-            <div class="metric-label">Blinks This Minute</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value" id="timeRemaining">5:00</div>
-            <div class="metric-label">Time Remaining</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">15-20</div>
-            <div class="metric-label">Target Blinks/Min</div>
-        </div>
+  <div class="metrics">
+    <div class="metric">
+      <div class="metric-value" id="blinkCount">0</div>
+      <div class="metric-label">Blinks This Minute</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value" id="timeRemaining">5:00</div>
+      <div class="metric-label">Time Remaining</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">15-20</div>
+      <div class="metric-label">Target Blinks/Min</div>
+    </div>
+  </div>
+
+  <button id="startBtn">Start Camera</button>
+  <button id="resetBtn">Reset Session</button>
+
+  <div id="status" class="status-warning">Click "Start Camera" to begin monitoring</div>
+
+  <div id="videoContainer">
+    <video id="video" width="640" height="480" autoplay muted playsinline></video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <div id="debugBox">
+      EAR: <span id="earVal">-</span><br/>
+      Base: <span id="baseVal">-</span><br/>
+      Thr: <span id="thrVal">-</span><br/>
+      Face: <span id="faceVal">No</span>
     </div>
 
-    <button id="startBtn">Start Camera</button>
-    <button id="resetBtn">Reset Session</button>
+    <div id="eyeStatus" class="eyes-open">Eyes: OPEN</div>
 
-    <div id="status" class="status-warning">Click "Start Camera" to begin monitoring</div>
-
-    <div id="videoContainer">
-        <video id="video" width="640" height="480" autoplay muted playsinline></video>
-        <canvas id="canvas" width="640" height="480"></canvas>
-        <div id="eyeStatus" class="eyes-open">Eyes: OPEN</div>
-        <!-- Blink Reminder -->
-        <div id="blinkReminder">
-            <svg width="44" height="44" viewBox="0 0 44 44">
-                <!-- Eye ellipse -->
-                <ellipse cx="22" cy="22" rx="22" ry="11" fill="none" stroke="white" stroke-width="2"/>
-                <!-- Animated pupil -->
-                <circle id="pupil" cx="22" cy="22" r="3" fill="white"/>
-            </svg>
-            <div class="reminder-text">Blink</div>
-        </div>
+    <div id="blinkReminder">
+      <svg width="44" height="44" viewBox="0 0 44 44">
+        <ellipse cx="22" cy="22" rx="22" ry="11" fill="none" stroke="white" stroke-width="2"/>
+        <circle id="pupil" cx="22" cy="22" r="3" fill="white"/>
+      </svg>
+      <div class="reminder-text">Blink</div>
     </div>
+  </div>
 
-    <script type="module">
-        const video = document.getElementById('video');
-        const canvas = document.getElementById('canvas');
-        const ctx = canvas.getContext('2d');
-        const startBtn = document.getElementById('startBtn');
-        const resetBtn = document.getElementById('resetBtn');
-        const statusDiv = document.getElementById('status');
-        const blinkCountDiv = document.getElementById('blinkCount');
-        const timeRemainingDiv = document.getElementById('timeRemaining');
-        const eyeStatusDiv = document.getElementById('eyeStatus');
-        const blinkReminder = document.getElementById('blinkReminder');
-        const pupil = document.getElementById('pupil');
+  <script type="module">
+    // IMPORTANT: In module scope, sometimes globals must be accessed via window.
+    const FaceMesh = window.FaceMesh;
 
-        let blinkCount = 0;
-        let eyesClosed = false;
-        let openEyeReference = null;
-        let minuteStart = Date.now();
-        let sessionStart = Date.now();
-        let faceMesh = null;
-        let camera = null;
-        
-        // Reminder state
-        let showReminder = false;
-        let reminderStart = 0;
-        const REMINDER_DURATION = 10000; // 10 seconds in ms
-        
-        const BLINK_RATIO = 0.4;
-        const TOTAL_TIME = 5 * 60 * 1000; // 5 minutes in ms
-        const NORMAL_MAX = 20;
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
 
-        async function startCamera() {
-            try {
-                statusDiv.textContent = 'Initializing camera...';
-                statusDiv.className = 'status-warning';
+    const startBtn = document.getElementById('startBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const statusDiv = document.getElementById('status');
 
-                const stream = await navigator.mediaDevices.getUserMedia({
-                    video: {
-                        width: { ideal: 640 },
-                        height: { ideal: 480 },
-                        frameRate: { ideal: 30 }
-                    }
-                });
+    const blinkCountDiv = document.getElementById('blinkCount');
+    const timeRemainingDiv = document.getElementById('timeRemaining');
+    const eyeStatusDiv = document.getElementById('eyeStatus');
 
-                video.srcObject = stream;
-                
-                // Initialize MediaPipe Face Mesh
-                faceMesh = new FaceMesh({
-                    locateFile: (file) => {
-                        return `https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/${file}`;
-                    }
-                });
+    const blinkReminder = document.getElementById('blinkReminder');
+    const pupil = document.getElementById('pupil');
 
-                faceMesh.setOptions({
-                    maxNumFaces: 1,
-                    refineLandmarks: true,
-                    minDetectionConfidence: 0.5,
-                    minTrackingConfidence: 0.5
-                });
+    const earVal = document.getElementById('earVal');
+    const baseVal = document.getElementById('baseVal');
+    const thrVal = document.getElementById('thrVal');
+    const faceVal = document.getElementById('faceVal');
 
-                faceMesh.onResults(onResults);
+    let blinkCount = 0;
+    let minuteStart = Date.now();
+    let sessionStart = Date.now();
 
-                // Start processing
-                await video.play();
-                processFrame();
+    let faceMesh = null;
 
-                statusDiv.textContent = '✅ Camera active! Blink naturally and look at the camera.';
-                statusDiv.className = 'status-ready';
-                startBtn.disabled = true;
-                startBtn.style.opacity = '0.5';
+    // Reminder state
+    let showReminder = false;
+    let reminderStart = 0;
+    const REMINDER_DURATION = 10000;
 
-                // Start timer update
-                updateTimer();
-                // Start reminder animation
-                animateReminder();
+    // Session params
+    const TOTAL_TIME = 5 * 60 * 1000;
+    const NORMAL_MAX = 20;
 
-            } catch (err) {
-                console.error('Camera error:', err);
-                statusDiv.textContent = '❌ Camera access denied. Please allow camera permissions and refresh.';
-                statusDiv.className = 'status-error';
-            }
+    // Blink detection params (EAR based)
+    // Typical eye landmarks:
+    // Right eye: [33, 160, 158, 133, 153, 144]
+    // Left  eye: [362, 385, 387, 263, 373, 380]
+    const R = { p1:33, p2:160, p3:158, p4:133, p5:153, p6:144 };
+    const L = { p1:362, p2:385, p3:387, p4:263, p5:373, p6:380 };
+
+    let emaBaseEAR = null;         // baseline EAR (smoothed)
+    const EMA_ALPHA = 0.08;        // baseline smoothing
+    const THRESH_RATIO = 0.72;     // threshold = baseline * this
+    const MIN_CLOSED_FRAMES = 2;   // must be closed for at least this many frames
+    let closedFrames = 0;
+    let inBlink = false;
+
+    function dist(a, b){
+      const dx = a.x - b.x;
+      const dy = a.y - b.y;
+      return Math.sqrt(dx*dx + dy*dy);
+    }
+
+    function eyeEAR(lm, eye){
+      const p1 = lm[eye.p1], p2 = lm[eye.p2], p3 = lm[eye.p3],
+            p4 = lm[eye.p4], p5 = lm[eye.p5], p6 = lm[eye.p6];
+
+      const vert1 = dist(p2, p6);
+      const vert2 = dist(p3, p5);
+      const horiz = dist(p1, p4);
+
+      if (horiz <= 1e-6) return null;
+      return (vert1 + vert2) / (2.0 * horiz);
+    }
+
+    async function startCamera() {
+      try {
+        statusDiv.textContent = 'Initializing camera...';
+        statusDiv.className = 'status-warning';
+
+        // NOTE: If camera permissions are blocked inside an iframe by the browser,
+        // you’ll see the error here.
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: { width:{ideal:640}, height:{ideal:480}, frameRate:{ideal:30} }
+        });
+        video.srcObject = stream;
+
+        faceMesh = new FaceMesh({
+          locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/${file}`
+        });
+
+        faceMesh.setOptions({
+          maxNumFaces: 1,
+          refineLandmarks: true,
+          minDetectionConfidence: 0.5,
+          minTrackingConfidence: 0.5
+        });
+
+        faceMesh.onResults(onResults);
+
+        await video.play();
+        processFrame();
+
+        statusDiv.textContent = '✅ Camera active! Blink naturally and look at the camera.';
+        statusDiv.className = 'status-ready';
+
+        startBtn.disabled = true;
+        startBtn.style.opacity = '0.5';
+
+        updateTimer();
+        animateReminder();
+
+      } catch (err) {
+        console.error('Camera error:', err);
+        statusDiv.textContent = '❌ Camera failed. Allow camera permissions and refresh. (Some browsers block camera in iframes.)';
+        statusDiv.className = 'status-error';
+      }
+    }
+
+    async function processFrame(){
+      if (faceMesh && video.readyState === 4){
+        await faceMesh.send({ image: video });
+      }
+      requestAnimationFrame(processFrame);
+    }
+
+    function onResults(results){
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const hasFace = results.multiFaceLandmarks && results.multiFaceLandmarks.length > 0;
+      faceVal.textContent = hasFace ? "Yes" : "No";
+
+      if (!hasFace) {
+        eyeStatusDiv.textContent = 'Eyes: OPEN';
+        eyeStatusDiv.className = 'eyes-open';
+        return;
+      }
+
+      const lm = results.multiFaceLandmarks[0];
+
+      // Compute EAR using both eyes then average (more stable)
+      const earR = eyeEAR(lm, R);
+      const earL = eyeEAR(lm, L);
+      if (earR == null || earL == null) return;
+
+      const ear = (earR + earL) / 2.0;
+
+      // Update baseline EAR only when we believe eyes are open (ear above a loose floor)
+      // This avoids dragging baseline down while blinking.
+      if (emaBaseEAR === null) {
+        emaBaseEAR = ear;
+      } else {
+        const floor = emaBaseEAR * 0.6; // loose open condition
+        if (ear > floor) {
+          emaBaseEAR = (1 - EMA_ALPHA) * emaBaseEAR + EMA_ALPHA * ear;
+        }
+      }
+
+      const threshold = emaBaseEAR * THRESH_RATIO;
+
+      earVal.textContent = ear.toFixed(4);
+      baseVal.textContent = emaBaseEAR.toFixed(4);
+      thrVal.textContent = threshold.toFixed(4);
+
+      // Blink state machine
+      if (ear < threshold) {
+        closedFrames++;
+        eyeStatusDiv.textContent = 'Eyes: CLOSED';
+        eyeStatusDiv.className = 'eyes-closed';
+
+        if (!inBlink && closedFrames >= MIN_CLOSED_FRAMES) {
+          inBlink = true; // entered blink
         }
 
-        async function processFrame() {
-            if (faceMesh && video.readyState === 4) {
-                await faceMesh.send({ image: video });
-            }
-            requestAnimationFrame(processFrame);
+      } else {
+        // eye open
+        eyeStatusDiv.textContent = 'Eyes: OPEN';
+        eyeStatusDiv.className = 'eyes-open';
+
+        if (inBlink) {
+          // blink finished
+          blinkCount++;
+          blinkCountDiv.textContent = blinkCount;
         }
+        inBlink = false;
+        closedFrames = 0;
+      }
 
-        function onResults(results) {
-            // Clear canvas
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // (Optional) draw a simple point for debugging eye corners
+      // Right eye corner points (33 and 133)
+      ctx.fillStyle = "rgba(52,152,219,0.9)";
+      const pA = lm[33], pB = lm[133];
+      ctx.beginPath(); ctx.arc(pA.x*canvas.width, pA.y*canvas.height, 3, 0, Math.PI*2); ctx.fill();
+      ctx.beginPath(); ctx.arc(pB.x*canvas.width, pB.y*canvas.height, 3, 0, Math.PI*2); ctx.fill();
+    }
 
-            if (results.multiFaceLandmarks && results.multiFaceLandmarks.length > 0) {
-                const landmarks = results.multiFaceLandmarks[0];
-                
-                // Right eye landmarks: 159 (upper), 145 (lower)
-                const upperEyelid = landmarks[159];
-                const lowerEyelid = landmarks[145];
-                
-                // Calculate vertical eye opening
-                const eyeOpening = Math.abs(upperEyelid.y - lowerEyelid.y);
-                
-                // Establish reference (calibration)
-                if (openEyeReference === null || eyeOpening > openEyeReference) {
-                    openEyeReference = eyeOpening;
-                }
-                
-                // Detect blink
-                if (openEyeReference && openEyeReference > 0) {
-                    const currentRatio = eyeOpening / openEyeReference;
-                    
-                    if (currentRatio < BLINK_RATIO) {
-                        // Eye is closed
-                        if (!eyesClosed) {
-                            blinkCount++;
-                            blinkCountDiv.textContent = blinkCount;
-                            eyesClosed = true;
-                            eyeStatusDiv.textContent = 'Eyes: CLOSED';
-                            eyeStatusDiv.className = 'eyes-closed';
-                        }
-                    } else {
-                        // Eye is open
-                        if (eyesClosed) {
-                            eyesClosed = false;
-                            eyeStatusDiv.textContent = 'Eyes: OPEN';
-                            eyeStatusDiv.className = 'eyes-open';
-                        }
-                    }
-                }
-                
-                // Draw face mesh (optional - can be removed for cleaner look)
-                drawConnectors(ctx, landmarks, FACEMESH_TESSELATION, {color: 'rgba(52, 152, 219, 0.1)'});
-                drawConnectors(ctx, landmarks, FACEMESH_RIGHT_EYE, {color: 'rgb(46, 204, 113)'});
-                drawConnectors(ctx, landmarks, FACEMESH_LEFT_EYE, {color: 'rgb(46, 204, 113)'});
-            }
+    function updateTimer(){
+      const now = Date.now();
+
+      if (now - minuteStart >= 60000) {
+        if (blinkCount < NORMAL_MAX) {
+          showReminder = true;
+          reminderStart = now;
+          blinkReminder.style.display = 'block';
         }
+        blinkCount = 0;
+        blinkCountDiv.textContent = blinkCount;
+        minuteStart = now;
+      }
 
-        function drawConnectors(ctx, landmarks, connections, style) {
-            ctx.strokeStyle = style.color;
-            ctx.lineWidth = 1;
-            
-            for (const connection of connections) {
-                const [start, end] = connection;
-                const startPoint = landmarks[start];
-                const endPoint = landmarks[end];
-                
-                ctx.beginPath();
-                ctx.moveTo(startPoint.x * canvas.width, startPoint.y * canvas.height);
-                ctx.lineTo(endPoint.x * canvas.width, endPoint.y * canvas.height);
-                ctx.stroke();
-            }
-        }
+      if (showReminder && (now - reminderStart >= REMINDER_DURATION)) {
+        showReminder = false;
+        blinkReminder.style.display = 'none';
+      }
 
-        function updateTimer() {
-            const now = Date.now();
-            
-            // Reset blink count every minute
-            if (now - minuteStart >= 60000) {
-                // Check if blink count is below threshold
-                if (blinkCount < NORMAL_MAX) {
-                    showReminder = true;
-                    reminderStart = now;
-                    blinkReminder.style.display = 'block';
-                }
-                
-                blinkCount = 0;
-                blinkCountDiv.textContent = blinkCount;
-                minuteStart = now;
-            }
-            
-            // Hide reminder after duration
-            if (showReminder && (now - reminderStart >= REMINDER_DURATION)) {
-                showReminder = false;
-                blinkReminder.style.display = 'none';
-            }
-            
-            // Update remaining time
-            const elapsed = now - sessionStart;
-            const remaining = Math.max(0, TOTAL_TIME - elapsed);
-            const minutes = Math.floor(remaining / 60000);
-            const seconds = Math.floor((remaining % 60000) / 1000);
-            timeRemainingDiv.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-            
-            // Continue updating
-            if (remaining > 0) {
-                setTimeout(updateTimer, 1000);
-            } else {
-                statusDiv.textContent = '⏰ Session complete! Great job monitoring your blinks!';
-                statusDiv.className = 'status-ready';
-            }
-        }
+      const elapsed = now - sessionStart;
+      const remaining = Math.max(0, TOTAL_TIME - elapsed);
+      const minutes = Math.floor(remaining / 60000);
+      const seconds = Math.floor((remaining % 60000) / 1000);
+      timeRemainingDiv.textContent = `${minutes}:${seconds.toString().padStart(2,'0')}`;
 
-        function animateReminder() {
-            if (showReminder) {
-                // Animate pupil blinking
-                const phase = Math.floor(Date.now() / 500) % 2;
-                pupil.style.opacity = phase === 0 ? '1' : '0';
-            }
-            requestAnimationFrame(animateReminder);
-        }
+      if (remaining > 0) {
+        setTimeout(updateTimer, 1000);
+      } else {
+        statusDiv.textContent = '⏰ Session complete! Great job monitoring your blinks!';
+        statusDiv.className = 'status-ready';
+      }
+    }
 
-        function resetSession() {
-            blinkCount = 0;
-            eyesClosed = false;
-            openEyeReference = null;
-            minuteStart = Date.now();
-            sessionStart = Date.now();
-            showReminder = false;
-            reminderStart = 0;
-            blinkReminder.style.display = 'none';
-            blinkCountDiv.textContent = blinkCount;
-            eyeStatusDiv.textContent = 'Eyes: OPEN';
-            eyeStatusDiv.className = 'eyes-open';
-            statusDiv.textContent = 'Session reset! Camera still active.';
-            statusDiv.className = 'status-ready';
-            updateTimer();
-        }
+    function animateReminder(){
+      if (showReminder) {
+        const phase = Math.floor(Date.now()/500) % 2;
+        pupil.style.opacity = phase === 0 ? '1' : '0';
+      }
+      requestAnimationFrame(animateReminder);
+    }
 
-        // Face Mesh connection definitions
-        const FACEMESH_TESSELATION = [[127,34],[34,139],[139,127],[11,0],[0,37],[37,11],[232,231],[231,120],[120,232],[72,37],[37,39],[39,72],[128,121],[121,47],[47,128],[232,121],[121,128],[128,232],[104,69],[69,67],[67,104],[175,171],[171,148],[148,175],[118,50],[50,101],[101,118],[73,39],[39,40],[40,73],[9,151],[151,108],[108,9],[48,115],[115,131],[131,48],[194,204],[204,211],[211,194],[74,40],[40,185],[185,74],[80,42],[42,183],[183,80],[40,92],[92,186],[186,40],[230,229],[229,118],[118,230],[202,212],[212,214],[214,202],[83,18],[18,17],[17,83],[76,61],[61,146],[146,76],[160,29],[29,30],[30,160],[56,157],[157,173],[173,56],[106,204],[204,194],[194,106],[135,214],[214,192],[192,135],[203,165],[165,98],[98,203],[21,71],[71,68],[68,21],[51,45],[45,4],[4,51],[144,24],[24,23],[23,144],[77,146],[146,91],[91,77],[205,50],[50,187],[187,205],[201,200],[200,18],[18,201],[91,106],[106,182],[182,91],[90,91],[91,181],[181,90],[85,84],[84,17],[17,85],[206,203],[203,36],[36,206],[148,171],[171,140],[140,148],[92,40],[40,39],[39,92],[193,189],[189,244],[244,193],[159,158],[158,28],[28,159],[247,246],[246,161],[161,247],[236,3],[3,196],[196,236],[54,68],[68,104],[104,54],[193,168],[168,8],[8,193],[117,228],[228,31],[31,117],[189,193],[193,55],[55,189],[98,97],[97,99],[99,98],[126,47],[47,100],[100,126],[166,79],[79,218],[218,166],[155,154],[154,26],[26,155],[209,49],[49,131],[131,209],[135,136],[136,150],[150,135],[47,126],[126,217],[217,47],[223,52],[52,53],[53,223],[45,51],[51,134],[134,45],[211,170],[170,140],[140,211],[67,69],[69,108],[108,67],[43,106],[106,91],[91,43],[230,119],[119,120],[120,230],[226,130],[130,247],[247,226],[63,53],[53,52],[52,63],[238,20],[20,242],[242,238],[46,70],[70,156],[156,46],[78,62],[62,96],[96,78],[46,53],[53,63],[63,46],[143,34],[34,227],[227,143],[123,117],[117,111],[111,123],[44,125],[125,19],[19,44],[236,134],[134,51],[51,236],[216,206],[206,205],[205,216],[154,153],[153,22],[22,154],[39,37],[37,167],[167,39],[200,201],[201,208],[208,200],[36,142],[142,100],[100,36],[57,212],[212,202],[202,57],[20,60],[60,99],[99,20],[28,158],[158,157],[157,28],[35,226],[226,113],[113,35],[160,159],[159,27],[27,160],[204,202],[202,210],[210,204],[113,225],[225,46],[46,113],[43,202],[202,204],[204,43],[62,76],[76,77],[77,62],[137,123],[123,116],[116,137],[41,38],[38,72],[72,41],[203,129],[129,142],[142,203],[64,98],[98,240],[240,64],[49,102],[102,64],[64,49],[41,73],[73,74],[74,41],[212,216],[216,207],[207,212],[42,74],[74,184],[184,42],[169,170],[170,211],[211,169],[170,149],[149,176],[176,170],[105,66],[66,69],[69,105],[122,6],[6,168],[168,122],[123,147],[147,187],[187,123],[96,77],[77,90],[90,96],[65,55],[55,107],[107,65],[89,90],[90,180],[180,89],[101,100],[100,120],[120,101],[63,105],[105,104],[104,63],[93,137],[137,227],[227,93],[15,86],[86,85],[85,15],[129,102],[102,49],[49,129],[14,87],[87,86],[86,14],[55,8],[8,9],[9,55],[100,47],[47,121],[121,100],[145,23],[23,22],[22,145],[88,89],[89,179],[179,88],[6,122],[122,196],[196,6],[88,95],[95,96],[96,88],[138,172],[172,136],[136,138],[215,58],[58,172],[172,215],[115,48],[48,219],[219,115],[42,80],[80,81],[81,42],[195,3],[3,51],[51,195],[43,146],[146,61],[61,43],[171,175],[175,199],[199,171],[81,82],[82,38],[38,81],[53,46],[46,225],[225,53],[144,163],[163,110],[110,144],[52,65],[65,66],[66,52],[229,228],[228,117],[117,229],[34,127],[127,234],[234,34],[107,108],[108,69],[69,107],[109,108],[108,151],[151,109],[48,64],[64,235],[235,48],[62,78],[78,191],[191,62],[129,209],[209,126],[126,129],[111,35],[35,143],[143,111],[117,123],[123,50],[50,117],[222,65],[65,52],[52,222],[19,125],[125,141],[141,19],[221,55],[55,65],[65,221],[3,195],[195,197],[197,3],[25,7],[7,33],[33,25],[220,237],[237,44],[44,220],[70,71],[71,139],[139,70],[122,193],[193,245],[245,122],[247,130],[130,33],[33,247],[71,21],[21,162],[162,71],[170,169],[169,150],[150,170],[188,174],[174,196],[196,188],[216,186],[186,92],[92,216],[2,97],[97,167],[167,2],[141,125],[125,241],[241,141],[164,167],[167,37],[37,164],[72,38],[38,12],[12,72],[38,82],[82,13],[13,38],[63,68],[68,71],[71,63],[226,35],[35,111],[111,226],[101,50],[50,205],[205,101],[206,92],[92,165],[165,206],[209,198],[198,217],[217,209],[165,167],[167,97],[97,165],[220,115],[115,218],[218,220],[133,112],[112,243],[243,133],[239,238],[238,241],[241,239],[214,135],[135,169],[169,214],[190,173],[173,133],[133,190],[171,208],[208,32],[32,171],[125,44],[44,237],[237,125],[86,87],[87,178],[178,86],[85,86],[86,179],[179,85],[84,85],[85,180],[180,84],[83,84],[84,181],[181,83],[201,83],[83,182],[182,201],[137,93],[93,132],[132,137],[76,62],[62,183],[183,76],[61,76],[76,184],[184,61],[57,61],[61,185],[185,57],[212,57],[57,186],[186,212],[214,207],[207,187],[187,214],[34,143],[143,156],[156,34],[79,239],[239,237],[237,79],[123,137],[137,177],[177,123],[44,1],[1,4],[4,44],[201,194],[194,32],[32,201],[64,102],[102,129],[129,64],[213,215],[215,138],[138,213],[59,166],[166,219],[219,59],[242,99],[99,97],[97,242],[2,94],[94,141],[141,2],[75,59],[59,235],[235,75],[24,110],[110,228],[228,24],[25,130],[130,226],[226,25],[23,24],[24,229],[229,23],[22,23],[23,230],[230,22],[26,22],[22,231],[231,26],[112,26],[26,232],[232,112],[189,190],[190,243],[243,189],[221,56],[56,190],[190,221],[28,56],[56,221],[221,28],[27,28],[28,222],[222,27],[29,27],[27,223],[223,29],[30,29],[29,224],[224,30],[247,30],[30,225],[225,247],[238,79],[79,20],[20,238],[166,59],[59,75],[75,166],[60,75],[75,240],[240,60],[147,177],[177,215],[215,147],[20,79],[79,166],[166,20],[187,147],[147,213],[213,187],[112,233],[233,244],[244,112],[233,128],[128,245],[245,233],[128,114],[114,188],[188,128],[114,217],[217,174],[174,114],[131,115],[115,220],[220,131],[217,198],[198,236],[236,217],[198,131],[131,134],[134,198],[177,132],[132,58],[58,177],[143,35],[35,124],[124,143],[110,163],[163,7],[7,110],[228,110],[110,25],[25,228],[356,389],[389,368],[368,356],[11,302],[302,267],[267,11],[452,350],[350,349],[349,452],[302,303],[303,269],[269,302],[357,343],[343,277],[277,357],[452,453],[453,357],[357,452],[333,332],[332,297],[297,333],[175,152],[152,377],[377,175],[347,348],[348,330],[330,347],[303,304],[304,270],[270,303],[9,336],[336,337],[337,9],[278,279],[279,360],[360,278],[418,262],[262,431],[431,418],[304,408],[408,409],[409,304],[310,415],[415,407],[407,310],[270,409],[409,410],[410,270],[450,348],[348,347],[347,450],[422,430],[430,434],[434,422],[313,314],[314,17],[17,313],[306,307],[307,375],[375,306],[387,388],[388,260],[260,387],[286,414],[414,398],[398,286],[335,406],[406,418],[418,335],[364,367],[367,416],[416,364],[423,358],[358,327],[327,423],[251,284],[284,298],[298,251],[281,5],[5,4],[4,281],[373,374],[374,253],[253,373],[307,320],[320,321],[321,307],[425,427],[427,411],[411,425],[421,313],[313,18],[18,421],[321,405],[405,406],[406,321],[320,404],[404,405],[405,320],[315,16],[16,17],[17,315],[426,425],[425,266],[266,426],[377,400],[400,369],[369,377],[322,391],[391,269],[269,322],[417,465],[465,464],[464,417],[386,257],[257,258],[258,386],[466,260],[260,388],[388,466],[456,399],[399,419],[419,456],[284,332],[332,333],[333,284],[417,285],[285,8],[8,417],[346,340],[340,261],[261,346],[413,441],[441,285],[285,413],[327,460],[460,328],[328,327],[355,371],[371,329],[329,355],[392,439],[439,438],[438,392],[382,341],[341,256],[256,382],[429,420],[420,360],[360,429],[364,394],[394,379],[379,364],[277,343],[343,437],[437,277],[443,444],[444,283],[283,443],[275,440],[440,363],[363,275],[431,262],[262,369],[369,431],[297,338],[338,337],[337,297],[273,375],[375,321],[321,273],[450,451],[451,349],[349,450],[446,342],[342,467],[467,446],[293,334],[334,282],[282,293],[458,461],[461,462],[462,458],[276,353],[353,383],[383,276],[308,324],[324,325],[325,308],[276,300],[300,293],[293,276],[372,345],[345,447],[447,372],[352,345],[345,340],[340,352],[274,1],[1,19],[19,274],[456,248],[248,281],[281,456],[436,427],[427,425],[425,436],[381,256],[256,252],[252,381],[269,391],[391,393],[393,269],[200,199],[199,428],[428,200],[266,330],[330,329],[329,266],[287,273],[273,422],[422,287],[250,462],[462,328],[328,250],[258,286],[286,384],[384,258],[265,353],[353,342],[342,265],[387,259],[259,257],[257,387],[424,431],[431,430],[430,424],[342,353],[353,276],[276,342],[273,335],[335,424],[424,273],[292,325],[325,307],[307,292],[366,447],[447,345],[345,366],[271,303],[303,302],[302,271],[423,266],[266,371],[371,423],[294,455],[455,460],[460,294],[279,278],[278,294],[294,279],[271,272],[272,304],[304,271],[432,434],[434,427],[427,432],[272,407],[407,408],[408,272],[394,430],[430,431],[431,394],[395,369],[369,400],[400,395],[334,333],[333,299],[299,334],[351,417],[417,168],[168,351],[352,280],[280,411],[411,352],[325,319],[319,320],[320,325],[295,296],[296,336],[336,295],[319,403],[403,404],[404,319],[330,348],[348,349],[349,330],[293,298],[298,333],[333,293],[323,454],[454,447],[447,323],[15,16],[16,315],[315,15],[358,429],[429,279],[279,358],[14,15],[15,316],[316,14],[285,336],[336,9],[9,285],[329,349],[349,350],[350,329],[374,380],[380,252],[252,374],[318,402],[402,403],[403,318],[6,197],[197,419],[419,6],[318,319],[319,325],[325,318],[367,364],[364,365],[365,367],[435,367],[367,397],[397,435],[344,438],[438,439],[439,344],[272,271],[271,311],[311,272],[195,5],[5,281],[281,195],[273,287],[287,291],[291,273],[396,428],[428,199],[199,396],[311,271],[271,268],[268,311],[283,444],[444,445],[445,283],[373,254],[254,339],[339,373],[282,334],[334,296],[296,282],[449,347],[347,346],[346,449],[264,447],[447,454],[454,264],[336,296],[296,299],[299,336],[338,10],[10,151],[151,338],[278,439],[439,455],[455,278],[292,407],[407,415],[415,292],[358,371],[371,355],[355,358],[340,345],[345,372],[372,340],[346,347],[347,280],[280,346],[442,443],[443,282],[282,442],[19,94],[94,370],[370,19],[441,442],[442,295],[295,441],[248,419],[419,197],[197,248],[263,255],[255,359],[359,263],[440,275],[275,274],[274,440],[300,383],[383,368],[368,300],[351,412],[412,465],[465,351],[263,467],[467,466],[466,263],[301,368],[368,389],[389,301],[395,378],[378,379],[379,395],[412,351],[351,419],[419,412],[436,426],[426,322],[322,436],[2,164],[164,393],[393,2],[370,462],[462,461],[461,370],[164,0],[0,267],[267,164],[302,11],[11,12],[12,302],[268,12],[12,13],[13,268],[293,300],[300,301],[301,293],[446,261],[261,340],[340,446],[330,266],[266,425],[425,330],[426,423],[423,391],[391,426],[429,355],[355,437],[437,429],[391,327],[327,326],[326,391],[440,457],[457,438],[438,440],[341,382],[382,362],[362,341],[459,457],[457,461],[461,459],[434,430],[430,394],[394,434],[414,463],[463,362],[362,414],[396,369],[369,262],[262,396],[354,461],[461,457],[457,354],[316,403],[403,402],[402,316],[315,404],[404,403],[403,315],[314,405],[405,404],[404,314],[313,406],[406,405],[405,313],[421,418],[418,406],[406,421],[366,401],[401,361],[361,366],[306,408],[408,407],[407,306],[291,409],[409,408],[408,291],[287,410],[410,409],[409,287],[432,436],[436,410],[410,432],[434,416],[416,411],[411,434],[264,368],[368,383],[383,264],[309,438],[438,457],[457,309],[352,376],[376,401],[401,352],[274,275],[275,4],[4,274],[421,428],[428,262],[262,421],[294,327],[327,358],[358,294],[433,416],[416,367],[367,433],[289,455],[455,439],[439,289],[462,370],[370,326],[326,462],[2,326],[326,370],[370,2],[305,460],[460,455],[455,305],[254,449],[449,448],[448,254],[255,261],[261,446],[446,255],[253,450],[450,449],[449,253],[252,451],[451,450],[450,252],[256,452],[452,451],[451,256],[341,453],[453,452],[452,341],[413,464],[464,463],[463,413],[441,413],[413,414],[414,441],[258,442],[442,441],[441,258],[257,443],[443,442],[442,257],[259,444],[444,443],[443,259],[260,445],[445,444],[444,260],[467,342],[342,445],[445,467],[459,458],[458,250],[250,459],[289,392],[392,290],[290,289],[290,328],[328,460],[460,290],[376,433],[433,435],[435,376],[250,290],[290,392],[392,250],[411,416],[416,433],[433,411],[341,463],[463,464],[464,341],[453,464],[464,465],[465,453],[357,465],[465,412],[412,357],[343,412],[412,399],[399,343],[360,363],[363,440],[440,360],[437,399],[399,456],[456,437],[420,456],[456,363],[363,420],[401,435],[435,288],[288,401],[372,383],[383,353],[353,372],[339,255],[255,249],[249,339],[448,261],[261,255],[255,448],[133,243],[243,190],[190,133],[133,155],[155,112],[112,133],[33,246],[246,247],[247,33],[33,130],[130,25],[25,33],[398,384],[384,286],[286,398],[362,398],[398,414],[414,362],[362,463],[463,341],[341,362],[263,359],[359,467],[467,263],[263,249],[249,255],[255,263],[466,467],[467,260],[260,466],[75,60],[60,166],[166,75],[238,239],[239,79],[79,238],[162,127],[127,139],[139,162],[72,11],[11,37],[37,72],[121,232],[232,120],[120,121],[73,72],[72,39],[39,73],[114,128],[128,47],[47,114],[233,232],[232,128],[128,233],[103,104],[104,67],[67,103],[152,175],[175,148],[148,152],[119,118],[118,101],[101,119],[74,73],[73,40],[40,74],[107,9],[9,108],[108,107],[49,48],[48,131],[131,49],[32,194],[194,211],[211,32],[184,74],[74,185],[185,184],[191,80],[80,183],[183,191],[185,40],[40,186],[186,185],[119,230],[230,118],[118,119],[210,202],[202,214],[214,210],[84,83],[83,17],[17,84],[77,76],[76,146],[146,77],[161,160],[160,30],[30,161],[190,56],[56,173],[173,190],[182,106],[106,194],[194,182],[138,135],[135,192],[192,138],[129,203],[203,98],[98,129],[54,21],[21,68],[68,54],[5,51],[51,4],[4,5],[145,144],[144,23],[23,145],[90,77],[77,91],[91,90],[207,205],[205,187],[187,207],[83,201],[201,18],[18,83],[181,91],[91,182],[182,181],[180,90],[90,181],[181,180],[16,85],[85,17],[17,16],[205,206],[206,36],[36,205],[176,148],[148,140],[140,176],[165,92],[92,39],[39,165],[245,193],[193,244],[244,245],[27,159],[159,28],[28,27],[30,247],[247,161],[161,30],[174,236],[236,196],[196,174],[103,54],[54,104],[104,103],[55,193],[193,8],[8,55],[111,117],[117,31],[31,111],[221,189],[189,55],[55,221],[240,98],[98,99],[99,240],[142,126],[126,100],[100,142],[219,79],[79,218],[218,219],[151,155],[155,26],[26,151],[87,209],[209,131],[131,87],[135,150],[150,136],[136,135],[47,217],[217,126],[126,47],[166,79],[79,53],[53,166],[155,154],[154,26],[26,155],[209,49],[49,131],[131,209],[150,136],[136,135],[135,150],[126,217],[217,47],[47,126],[53,52],[52,223],[223,53],[45,134],[134,51],[51,45],[140,170],[170,211],[211,140],[108,69],[69,67],[67,108],[106,43],[43,91],[91,106],[230,119],[119,120],[120,230],[226,130],[130,247],[247,226],[63,53],[53,52],[52,63],[238,20],[20,242],[242,238],[46,70],[70,156],[156,46],[78,62],[62,96],[96,78],[46,53],[53,63],[63,46],[143,34],[34,227],[227,143],[123,117],[117,111],[111,123],[44,125],[125,19],[19,44],[236,134],[134,51],[51,236],[216,206],[206,205],[205,216],[154,153],[153,22],[22,154],[39,37],[37,167],[167,39],[200,201],[201,208],[208,200],[36,142],[142,100],[100,36],[57,212],[212,202],[202,57],[20,60],[60,99],[99,20],[28,158],[158,157],[157,28],[35,226],[226,113],[113,35],[160,159],[159,27],[27,160],[204,202],[202,210],[210,204],[113,225],[225,46],[46,113],[43,202],[202,204],[204,43],[62,76],[76,77],[77,62],[137,123],[123,116],[116,137],[41,38],[38,72],[72,41],[203,129],[129,142],[142,203],[64,98],[98,240],[240,64],[49,102],[102,64],[64,49],[41,73],[73,74],[74,41],[212,216],[216,207],[207,212],[42,74],[74,184],[184,42],[169,170],[170,211],[211,169],[170,149],[149,176],[176,170],[105,66],[66,69],[69,105],[122,6],[6,168],[168,122],[123,147],[147,187],[187,123],[96,77],[77,90],[90,96],[65,55],[55,107],[107,65],[89,90],[90,180],[180,89],[101,100],[100,120],[120,101],[63,105],[105,104],[104,63],[93,137],[137,227],[227,93],[15,86],[86,85],[85,15],[129,102],[102,49],[49,129],[14,87],[87,86],[86,14],[55,8],[8,9],[9,55],[100,47],[47,121],[121,100],[145,23],[23,22],[22,145],[88,89],[89,179],[179,88],[6,122],[122,196],[196,6],[88,95],[95,96],[96,88],[138,172],[172,136],[136,138],[215,58],[58,172],[172,215],[115,48],[48,219],[219,115],[42,80],[80,81],[81,42],[195,3],[3,51],[51,195],[43,146],[146,61],[61,43],[171,175],[175,199],[199,171],[81,82],[82,38],[38,81],[53,46],[46,225],[225,53],[144,163],[163,110],[110,144],[52,65],[65,66],[66,52],[229,228],[228,117],[117,229],[34,127],[127,234],[234,34],[107,108],[108,69],[69,107],[109,108],[108,151],[151,109],[48,64],[64,235],[235,48],[62,78],[78,191],[191,62],[129,209],[209,126],[126,129],[111,35],[35,143],[143,111],[117,123],[123,50],[50,117],[222,65],[65,52],[52,222],[19,125],[125,141],[141,19],[221,55],[55,65],[65,221],[3,195],[195,197],[197,3],[25,7],[7,33],[33,25],[220,237],[237,44],[44,220],[70,71],[71,139],[139,70],[122,193],[193,245],[245,122],[247,130],[130,33],[33,247],[71,21],[21,162],[162,71],[170,169],[169,150],[150,170],[188,174],[174,196],[196,188],[216,186],[186,92],[92,216],[2,97],[97,167],[167,2],[141,125],[125,241],[241,141],[164,167],[167,37],[37,164],[72,38],[38,12],[12,72],[38,82],[82,13],[13,38],[63,68],[68,71],[71,63],[226,35],[35,111],[111,226],[101,50],[50,205],[205,101],[206,92],[92,165],[165,206],[209,198],[198,217],[217,209],[165,167],[167,97],[97,165],[220,115],[115,218],[218,220],[133,112],[112,243],[243,133],[239,238],[238,241],[241,239],[214,135],[135,169],[169,214],[190,173],[173,133],[133,190],[171,208],[208,32],[32,171],[125,44],[44,237],[237,125],[86,87],[87,178],[178,86],[85,86],[86,179],[179,85],[84,85],[85,180],[180,84],[83,84],[84,181],[181,83],[201,83],[83,182],[182,201],[137,93],[93,132],[132,137],[76,62],[62,183],[183,76],[61,76],[76,184],[184,61],[57,61],[61,185],[185,57],[212,57],[57,186],[186,212],[214,207],[207,187],[187,214],[34,143],[143,156],[156,34],[79,239],[239,237],[237,79],[123,137],[137,177],[177,123],[44,1],[1,4],[4,44],[201,194],[194,32],[32,201],[64,102],[102,129],[129,64],[213,215],[215,138],[138,213],[59,166],[166,219],[219,59],[242,99],[99,97],[97,242],[2,94],[94,141],[141,2],[75,59],[59,235],[235,75],[24,110],[110,228],[228,24],[25,130],[130,226],[226,25],[23,24],[24,229],[229,23],[22,23],[23,230],[230,22],[26,22],[22,231],[231,26],[112,26],[26,232],[232,112],[189,190],[190,243],[243,189],[221,56],[56,190],[190,221],[28,56],[56,221],[221,28],[27,28],[28,222],[222,27],[29,27],[27,223],[223,29],[30,29],[29,224],[224,30],[247,30],[30,225],[225,247],[238,79],[79,20],[20,238],[166,59],[59,75],[75,166],[60,75],[75,240],[240,60],[147,177],[177,215],[215,147],[20,79],[79,166],[166,20],[187,147],[147,213],[213,187],[112,233],[233,244],[244,112],[233,128],[128,245],[245,233],[128,114],[114,188],[188,128],[114,217],[217,174],[174,114],[131,115],[115,220],[220,131],[217,198],[198,236],[236,217],[198,131],[131,134],[134,198],[177,132],[132,58],[58,177],[143,35],[35,124],[124,143],[110,163],[163,7],[7,110],[228,110],[110,25],[25,228]];
-        const FACEMESH_RIGHT_EYE = [[33,7],[7,163],[163,144],[144,145],[145,153],[153,154],[154,155],[155,133],[133,173],[173,157],[157,158],[158,159],[159,160],[160,161],[161,246],[246,33]];
-        const FACEMESH_LEFT_EYE = [[362,382],[382,381],[381,380],[380,374],[374,373],[373,390],[390,249],[249,263],[263,466],[466,388],[388,387],[387,386],[386,385],[385,384],[384,398],[398,362]];
+    function resetSession(){
+      blinkCount = 0;
+      minuteStart = Date.now();
+      sessionStart = Date.now();
 
-        startBtn.addEventListener('click', startCamera);
-        resetBtn.addEventListener('click', resetSession);
-    </script>
+      emaBaseEAR = null;
+      closedFrames = 0;
+      inBlink = false;
+
+      showReminder = false;
+      reminderStart = 0;
+      blinkReminder.style.display = 'none';
+
+      blinkCountDiv.textContent = blinkCount;
+      eyeStatusDiv.textContent = 'Eyes: OPEN';
+      eyeStatusDiv.className = 'eyes-open';
+
+      statusDiv.textContent = 'Session reset! Camera still active.';
+      statusDiv.className = 'status-ready';
+
+      updateTimer();
+    }
+
+    startBtn.addEventListener('click', startCamera);
+    resetBtn.addEventListener('click', resetSession);
+  </script>
 </body>
 </html>
 """
