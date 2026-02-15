@@ -324,7 +324,7 @@ if st.button("← Back to Home"):
 st.title("📸 Blink Analysis")
 st.markdown("### AI-Powered Eye Health Assessment")
 
-st.subheader("Step 1: Capture 120 frames")
+st.subheader("Step 1: Capture frames")
 
 # Initialize session state
 if 'captured_frames' not in st.session_state:
