@@ -1,5 +1,5 @@
 # Blink_Detector
-# 👁️ Eye Health Suite
+# 👁️ Blink Smart
 
 A comprehensive Streamlit application for eye health monitoring and analysis, combining AI-powered blink pattern analysis with real-time blink rate monitoring.
 
