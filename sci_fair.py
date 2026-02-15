@@ -11,7 +11,7 @@ col_logo1, col_logo2, col_title = st.columns([1, 2, 3])
 with col_logo1:
     st.image("1771169157130_image.png", width=150)
 with col_logo2:
-    st.image("blink_logo.png", width=150)
+    st.image("blink_logo.png", width=400)
 with col_title:
     st.title("👁️ Blink Smart")
     st.markdown("### Complete eye health monitoring and analysis")
