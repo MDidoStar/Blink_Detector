@@ -7,7 +7,7 @@ st.set_page_config(
 )
 
 # Main landing page with both logos
-col_logo1, col_logo2, col_title = st.columns([0, 1, 2])
+col_logo1, col_logo2, col_title = st.columns([1, 2, 3])
 with col_logo1:
     st.image("1771169157130_image.png", width=150)
 with col_logo2:
