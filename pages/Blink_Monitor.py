@@ -8,7 +8,6 @@ if st.button("← Back to Home"):
 
 st.title("👁️ Blink Monitor (HTML5 Version)")
 st.markdown("### Monitor your blink rate to reduce eye strain")
-
 st.info("🎥 This version uses HTML5 camera API for better compatibility")
 
 html_code = """
@@ -151,41 +150,53 @@ html_code = """
     let closedFrames = 0;
     let inBlink = false;
 
-    // ------------------ Beep (winsound-like) ------------------
-    // Browser audio must be triggered after a user gesture (Start Camera click),
-    // so we "unlock" audio context there.
+    // ------------------ Beep (winsound-like) SAFE ------------------
+    // This is intentionally wrapped so audio failures NEVER break blink detection.
+    // Browsers may block audio in iframes unless it follows a user gesture.
     let audioCtx = null;
 
-    function ensureAudio(){
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    function ensureAudioSafe(){
+      try{
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === "suspended") audioCtx.resume();
+        return true;
+      } catch(e){
+        console.warn("Audio disabled:", e);
+        return false;
       }
-      // Some browsers start it in "suspended" state.
-      if (audioCtx.state === "suspended") audioCtx.resume();
     }
 
     // Similar to winsound.Beep(800, 1000)
-    function beep(freq = 800, durationMs = 1000, volume = 0.05){
-      if (!audioCtx) return;
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
+    function beepSafe(freq = 800, durationMs = 1000, volume = 0.06){
+      try{
+        if (!audioCtx) return; // if audio isn't available, do nothing
 
-      osc.type = "sine";
-      osc.frequency.value = freq;
-      gain.gain.value = volume;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
 
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
+        osc.type = "sine";
+        osc.frequency.value = freq;
 
-      const now = audioCtx.currentTime;
-      osc.start(now);
-      osc.stop(now + durationMs / 1000);
+        // exponential ramp requires strictly positive values
+        const v = Math.max(0.0001, volume);
+        gain.gain.value = v;
 
-      // avoid clicks (tiny fade out)
-      gain.gain.setValueAtTime(volume, now);
-      gain.gain.exponentialRampToValueAtTime(0.0001, now + durationMs / 1000);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        const t0 = audioCtx.currentTime;
+        osc.start(t0);
+
+        // gentle fade to avoid click
+        gain.gain.setValueAtTime(v, t0);
+        gain.gain.exponentialRampToValueAtTime(0.0001, t0 + durationMs/1000);
+
+        osc.stop(t0 + durationMs/1000);
+      } catch(e){
+        console.warn("Beep failed (ignored):", e);
+      }
     }
-    // ----------------------------------------------------------
+    // ---------------------------------------------------------------
 
     function dist(a, b){
       const dx = a.x - b.x;
@@ -207,8 +218,8 @@ html_code = """
 
     async function startCamera() {
       try {
-        // Unlock audio on user gesture
-        ensureAudio();
+        // Unlock audio on user gesture (but never fail if blocked)
+        ensureAudioSafe();
 
         statusDiv.textContent = 'Initializing camera...';
         statusDiv.className = 'status-warning';
@@ -277,10 +288,11 @@ html_code = """
 
       const ear = (earR + earL) / 2.0;
 
+      // Update baseline only when likely open to avoid dragging down during blinks
       if (emaBaseEAR === null) {
         emaBaseEAR = ear;
       } else {
-        const floor = emaBaseEAR * 0.6;
+        const floor = emaBaseEAR * 0.6; // loose open condition
         if (ear > floor) {
           emaBaseEAR = (1 - EMA_ALPHA) * emaBaseEAR + EMA_ALPHA * ear;
         }
@@ -292,6 +304,7 @@ html_code = """
       baseVal.textContent = emaBaseEAR.toFixed(4);
       thrVal.textContent = threshold.toFixed(4);
 
+      // Blink state machine
       if (ear < threshold) {
         closedFrames++;
         eyeStatusDiv.textContent = 'Eyes: CLOSED';
@@ -313,6 +326,7 @@ html_code = """
         closedFrames = 0;
       }
 
+      // Optional debug points
       ctx.fillStyle = "rgba(52,152,219,0.9)";
       const pA = lm[33], pB = lm[133];
       ctx.beginPath(); ctx.arc(pA.x*canvas.width, pA.y*canvas.height, 3, 0, Math.PI*2); ctx.fill();
@@ -322,14 +336,15 @@ html_code = """
     function updateTimer(){
       const now = Date.now();
 
+      // Minute check
       if (now - minuteStart >= 60000) {
         if (blinkCount < NORMAL_MAX) {
           showReminder = true;
           reminderStart = now;
           blinkReminder.style.display = 'block';
 
-          // ---- winsound.Beep equivalent ----
-          beep(800, 1000, 0.06);
+          // winsound.Beep equivalent (SAFE)
+          beepSafe(800, 1000, 0.06);
         }
 
         blinkCount = 0;
@@ -337,11 +352,13 @@ html_code = """
         minuteStart = now;
       }
 
+      // Reminder hide
       if (showReminder && (now - reminderStart >= REMINDER_DURATION)) {
         showReminder = false;
         blinkReminder.style.display = 'none';
       }
 
+      // Session timer
       const elapsed = now - sessionStart;
       const remaining = Math.max(0, TOTAL_TIME - elapsed);
       const minutes = Math.floor(remaining / 60000);
@@ -405,5 +422,5 @@ st.markdown("""
 3. Position your face in the frame
 4. Blink naturally - the system will track automatically
 5. Session runs for 5 minutes
-6. **If blinks < 20 in a minute, you’ll see the reminder AND hear a beep**
+6. If blinks < 20 in a minute, you’ll see the reminder **and hear a beep** (if browser allows audio)
 """)
