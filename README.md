@@ -29,7 +29,7 @@ A comprehensive Streamlit application for eye health monitoring and analysis, co
 1. **Clone the repository**
    ```bash
    git clone <your-repo-url>
-   cd eye-health-suite
+   cd blink-smart
    ```
 
 2. **Install dependencies**
